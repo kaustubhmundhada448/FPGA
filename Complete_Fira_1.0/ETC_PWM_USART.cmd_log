@@ -1,0 +1,235 @@
+sch2hdl -intstyle ise -family spartan3e -verilog ETC_PWM_USART_drc.vf -w E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.sch 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 
+bitgen -intstyle ise -f ETC_PWM_USART.ut ETC_PWM_USART.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ETC_PWM_USART.ucf -p xc3s250e-cp132-5 ETC_PWM_USART.ngc ETC_PWM_USART.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ETC_PWM_USART_map.ncd ETC_PWM_USART.ngd ETC_PWM_USART.pcf 
+par -w -intstyle ise -ol high -t 1 ETC_PWM_USART_map.ncd ETC_PWM_USART.ncd ETC_PWM_USART.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ETC_PWM_USART.twx ETC_PWM_USART.ncd -o ETC_PWM_USART.twr ETC_PWM_USART.pcf -ucf ETC_PWM_USART.ucf 

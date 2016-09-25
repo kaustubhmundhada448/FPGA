@@ -1,0 +1,2 @@
+sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,E:/FPGA_Xilinx/FIRA_2.0/OCR_Generator.vf,-w,E:/FPGA_Xilinx/FIRA_2.0/OCR_Generator.sch
+sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.vf,-w,E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.sch

@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym bit4s G:/FPGA/BTP/QAMV1/bit4s.sch G:/FPGA/BTP/QAMV1/bit4s.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym bit4s G:/FPGA/BTP/QAMV1/bit4s.sch G:/FPGA/BTP/QAMV1/bit4s.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym bit4s G:/FPGA/BTP/QAMV1/bit4s.sch G:/FPGA/BTP/QAMV1/bit4s.sym 

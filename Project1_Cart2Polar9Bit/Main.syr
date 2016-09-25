@@ -1,0 +1,729 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "RShift_I_9.v" in library work
+Compiling verilog file "Mux_2_9.vf" in library work
+Module <RShift_I_9> compiled
+Compiling verilog file "Mux_2_8.vf" in library work
+Module <Mux_2_9> compiled
+Compiling verilog file "FD9CE.vf" in library work
+Module <Mux_2_8> compiled
+Compiling verilog file "ADSU9_V.v" in library work
+Module <FD9CE> compiled
+Compiling verilog file "Theta_Gen_9.v" in library work
+Module <ADSU9_V> compiled
+Compiling verilog file "Scale_9bit.v" in library work
+Module <Thetai_Gen_9> compiled
+Compiling verilog file "Cordic.vf" in library work
+Module <Scale_9bit> compiled
+Module <FD8CE_MXILINX_Cordic> compiled
+Module <FD9CE_MUSER_Cordic> compiled
+Module <Mux_2_9_MUSER_Cordic> compiled
+Module <Mux_2_8_MUSER_Cordic> compiled
+Module <ADSU8_MXILINX_Cordic> compiled
+Compiling verilog file "Cb4ce_Bus.vf" in library work
+Module <Cordic> compiled
+Module <FTCE_MXILINX_Cb4ce_Bus> compiled
+Module <CB4CE_MXILINX_Cb4ce_Bus> compiled
+Compiling verilog file "Main.vf" in library work
+Module <Cb4ce_Bus> compiled
+Module <FD8CE_MXILINX_Main> compiled
+Module <FD9CE_MUSER_Main> compiled
+Module <Mux_2_9_MUSER_Main> compiled
+Module <Mux_2_8_MUSER_Main> compiled
+Module <ADSU8_MXILINX_Main> compiled
+Module <Cordic_MUSER_Main> compiled
+Module <FTCE_MXILINX_Main> compiled
+Module <CB4CE_MXILINX_Main> compiled
+Module <Cb4ce_Bus_MUSER_Main> compiled
+Module <Main> compiled
+No errors in compilation
+Analysis of file <"Main.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Main> in library <work>.
+
+Analyzing hierarchy for module <Cb4ce_Bus_MUSER_Main> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FD9CE_MUSER_Main> in library <work>.
+
+Analyzing hierarchy for module <Thetai_Gen_9> in library <work>.
+
+Analyzing hierarchy for module <Cordic_MUSER_Main> in library <work>.
+
+Analyzing hierarchy for module <Scale_9bit> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_Main> in library <work>.
+
+Analyzing hierarchy for module <ADSU8_MXILINX_Main> in library <work>.
+
+Analyzing hierarchy for module <Mux_2_8_MUSER_Main> in library <work>.
+
+Analyzing hierarchy for module <RShift_I_9> in library <work>.
+
+Analyzing hierarchy for module <Mux_2_9_MUSER_Main> in library <work>.
+
+Analyzing hierarchy for module <FD9CE_MUSER_Main> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_Main> in library <work>.
+
+Analyzing hierarchy for module <ADSU9_V> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main> in library <work> with parameters.
+	INIT = "0"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Main>.
+Module <Main> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_20_7" for instance <XLXI_20> in unit <Main>.
+Analyzing module <Cb4ce_Bus_MUSER_Main> in library <work>.
+Module <Cb4ce_Bus_MUSER_Main> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_16_6" for instance <XLXI_16> in unit <Cb4ce_Bus_MUSER_Main>.
+Analyzing module <CB4CE_MXILINX_Main> in library <work>.
+Module <CB4CE_MXILINX_Main> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_2" for instance <I_Q0> in unit <CB4CE_MXILINX_Main>.
+    Set user-defined property "HU_SET =  I_Q1_3" for instance <I_Q1> in unit <CB4CE_MXILINX_Main>.
+    Set user-defined property "HU_SET =  I_Q2_4" for instance <I_Q2> in unit <CB4CE_MXILINX_Main>.
+    Set user-defined property "HU_SET =  I_Q3_5" for instance <I_Q3> in unit <CB4CE_MXILINX_Main>.
+Analyzing module <FTCE_MXILINX_Main.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.2>.
+Analyzing module <FTCE_MXILINX_Main.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.3>.
+Analyzing module <FTCE_MXILINX_Main.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.4>.
+Analyzing module <FTCE_MXILINX_Main.5> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.5>.
+Analyzing module <FTCE_MXILINX_Main.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main.1>.
+Analyzing module <FD9CE_MUSER_Main> in library <work>.
+Module <FD9CE_MUSER_Main> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD9CE_MUSER_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD9CE_MUSER_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD9CE_MUSER_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD9CE_MUSER_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD9CE_MUSER_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD9CE_MUSER_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD9CE_MUSER_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD9CE_MUSER_Main>.
+    Set user-defined property "INIT =  0" for instance <XLXI_9> in unit <FD9CE_MUSER_Main>.
+Analyzing module <Thetai_Gen_9> in library <work>.
+Module <Thetai_Gen_9> is correct for synthesis.
+ 
+Analyzing module <Cordic_MUSER_Main> in library <work>.
+Module <Cordic_MUSER_Main> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_4_0" for instance <XLXI_4> in unit <Cordic_MUSER_Main>.
+    Set user-defined property "HU_SET =  XLXI_84_1" for instance <XLXI_84> in unit <Cordic_MUSER_Main>.
+Analyzing module <ADSU8_MXILINX_Main> in library <work>.
+Module <ADSU8_MXILINX_Main> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_16> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_17> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_18> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_19> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_20> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_21> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_22> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_23> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_55> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_58> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_62> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_63> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_64> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_107> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_110> in unit <ADSU8_MXILINX_Main>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_111> in unit <ADSU8_MXILINX_Main>.
+Analyzing module <Mux_2_8_MUSER_Main> in library <work>.
+Module <Mux_2_8_MUSER_Main> is correct for synthesis.
+ 
+Analyzing module <RShift_I_9> in library <work>.
+Module <RShift_I_9> is correct for synthesis.
+ 
+Analyzing module <Mux_2_9_MUSER_Main> in library <work>.
+Module <Mux_2_9_MUSER_Main> is correct for synthesis.
+ 
+Analyzing module <FD8CE_MXILINX_Main> in library <work>.
+Module <FD8CE_MXILINX_Main> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_Main>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_Main>.
+Analyzing module <ADSU9_V> in library <work>.
+Module <ADSU9_V> is correct for synthesis.
+ 
+Analyzing module <Scale_9bit> in library <work>.
+Module <Scale_9bit> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Thetai_Gen_9>.
+    Related source file is "Theta_Gen_9.v".
+WARNING:Xst:646 - Signal <DataF<7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Thetai_Gen_9> synthesized.
+
+
+Synthesizing Unit <Scale_9bit>.
+    Related source file is "Scale_9bit.v".
+WARNING:Xst:646 - Signal <Temp<17>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Temp<7:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 9-bit adder for signal <Mod_inp$addsub0000> created at line 27.
+    Found 9-bit adder for signal <Otpt$addsub0000> created at line 30.
+    Found 16-bit adder carry out for signal <Temp$addsub0002> created at line 28.
+    Found 12-bit adder carry out for signal <Temp$addsub0003> created at line 28.
+    Found 13-bit adder carry out for signal <Temp$addsub0004> created at line 28.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+Unit <Scale_9bit> synthesized.
+
+
+Synthesizing Unit <RShift_I_9>.
+    Related source file is "RShift_I_9.v".
+    Found 9-bit shifter logical right for signal <Buffer2>.
+    Found 9-bit adder for signal <Otps$addsub0000> created at line 30.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <RShift_I_9> synthesized.
+
+
+Synthesizing Unit <ADSU9_V>.
+    Related source file is "ADSU9_V.v".
+WARNING:Xst:647 - Input <CI> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 9-bit addsub for signal <S>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <ADSU9_V> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_1>.
+    Related source file is "Main.vf".
+Unit <FTCE_MXILINX_Main_1> synthesized.
+
+
+Synthesizing Unit <FD9CE_MUSER_Main>.
+    Related source file is "Main.vf".
+Unit <FD9CE_MUSER_Main> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_2>.
+    Related source file is "Main.vf".
+Unit <FTCE_MXILINX_Main_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_3>.
+    Related source file is "Main.vf".
+Unit <FTCE_MXILINX_Main_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_4>.
+    Related source file is "Main.vf".
+Unit <FTCE_MXILINX_Main_4> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_5>.
+    Related source file is "Main.vf".
+Unit <FTCE_MXILINX_Main_5> synthesized.
+
+
+Synthesizing Unit <ADSU8_MXILINX_Main>.
+    Related source file is "Main.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADSU8_MXILINX_Main> synthesized.
+
+
+Synthesizing Unit <Mux_2_8_MUSER_Main>.
+    Related source file is "Main.vf".
+Unit <Mux_2_8_MUSER_Main> synthesized.
+
+
+Synthesizing Unit <Mux_2_9_MUSER_Main>.
+    Related source file is "Main.vf".
+Unit <Mux_2_9_MUSER_Main> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_Main>.
+    Related source file is "Main.vf".
+Unit <FD8CE_MXILINX_Main> synthesized.
+
+
+Synthesizing Unit <Cordic_MUSER_Main>.
+    Related source file is "Main.vf".
+Unit <Cordic_MUSER_Main> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_Main>.
+    Related source file is "Main.vf".
+Unit <CB4CE_MXILINX_Main> synthesized.
+
+
+Synthesizing Unit <Cb4ce_Bus_MUSER_Main>.
+    Related source file is "Main.vf".
+Unit <Cb4ce_Bus_MUSER_Main> synthesized.
+
+
+Synthesizing Unit <Main>.
+    Related source file is "Main.vf".
+Unit <Main> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 14
+ 12-bit adder carry out                                : 2
+ 13-bit adder carry out                                : 2
+ 16-bit adder carry out                                : 2
+ 9-bit adder                                           : 6
+ 9-bit addsub                                          : 2
+# Logic shifters                                       : 2
+ 9-bit shifter logical right                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 14
+ 12-bit adder carry out                                : 2
+ 13-bit adder carry out                                : 2
+ 16-bit adder carry out                                : 2
+ 9-bit adder                                           : 6
+ 9-bit addsub                                          : 2
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+# Logic shifters                                       : 2
+ 9-bit shifter logical right                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Main> ...
+
+Optimizing unit <Scale_9bit> ...
+
+Optimizing unit <RShift_I_9> ...
+
+Optimizing unit <FTCE_MXILINX_Main_1> ...
+
+Optimizing unit <FD9CE_MUSER_Main> ...
+
+Optimizing unit <FTCE_MXILINX_Main_2> ...
+
+Optimizing unit <FTCE_MXILINX_Main_3> ...
+
+Optimizing unit <FTCE_MXILINX_Main_4> ...
+
+Optimizing unit <FTCE_MXILINX_Main_5> ...
+
+Optimizing unit <ADSU8_MXILINX_Main> ...
+
+Optimizing unit <Mux_2_8_MUSER_Main> ...
+
+Optimizing unit <Mux_2_9_MUSER_Main> ...
+
+Optimizing unit <FD8CE_MXILINX_Main> ...
+
+Optimizing unit <Cordic_MUSER_Main> ...
+
+Optimizing unit <CB4CE_MXILINX_Main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Main.ngr
+Top Level Output File Name         : Main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 54
+
+Cell Usage :
+# BELS                             : 548
+#      AND2                        : 3
+#      AND3                        : 1
+#      AND4                        : 1
+#      BUF                         : 1
+#      GND                         : 2
+#      INV                         : 45
+#      LUT1                        : 30
+#      LUT2                        : 53
+#      LUT2_D                      : 1
+#      LUT3                        : 59
+#      LUT3_D                      : 2
+#      LUT4                        : 71
+#      LUT4_D                      : 7
+#      MULT_AND                    : 2
+#      MUXCY                       : 129
+#      MUXCY_D                     : 1
+#      MUXCY_L                     : 6
+#      MUXF5                       : 12
+#      VCC                         : 2
+#      XOR2                        : 6
+#      XOR3                        : 8
+#      XORCY                       : 106
+# FlipFlops/Latches                : 49
+#      FDCE                        : 49
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 53
+#      IBUF                        : 27
+#      OBUF                        : 26
+# Others                           : 8
+#      FMAP                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      185  out of   4656     3%  
+ Number of Slice Flip Flops:             49  out of   9312     0%  
+ Number of 4 input LUTs:                268  out of   9312     2%  
+ Number of IOs:                          54
+ Number of bonded IOBs:                  54  out of    232    23%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 49    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+XLXN_83(XLXI_26:G)                 | NONE(XLXI_24/I_Q0)     | 36    |
+Start_Pulse                        | IBUF                   | 13    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 14.397ns (Maximum Frequency: 69.460MHz)
+   Minimum input arrival time before clock: 3.854ns
+   Maximum output required time after clock: 4.063ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 14.397ns (frequency: 69.460MHz)
+  Total number of paths / destination ports: 727710 / 98
+-------------------------------------------------------------------------
+Delay:               14.397ns (Levels of Logic = 26)
+  Source:            XLXI_31/XLXI_76/I_Q0 (FF)
+  Destination:       XLXI_25/XLXI_9 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: XLXI_31/XLXI_76/I_Q0 to XLXI_25/XLXI_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.514   0.651  XLXI_31/XLXI_76/I_Q0 (XLXN_97<0>)
+     LUT1:I0->O            1   0.612   0.000  XLXI_34/Madd_Mod_inp_addsub0000_cy<0>_rt (XLXI_34/Madd_Mod_inp_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  XLXI_34/Madd_Mod_inp_addsub0000_cy<0> (XLXI_34/Madd_Mod_inp_addsub0000_cy<0>)
+     XORCY:CI->O           2   0.699   0.410  XLXI_34/Madd_Mod_inp_addsub0000_xor<1> (XLXI_34/Mod_inp_addsub0000<1>)
+     LUT3:I2->O            3   0.612   0.520  XLXI_34/Mod_inp<1>1 (XLXI_34/Mod_inp<1>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_34/Madd_Temp_addsub0003_lut<3> (XLXI_34/Madd_Temp_addsub0003_lut<3>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_34/Madd_Temp_addsub0003_cy<3> (XLXI_34/Madd_Temp_addsub0003_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_34/Madd_Temp_addsub0003_cy<4> (XLXI_34/Madd_Temp_addsub0003_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_34/Madd_Temp_addsub0003_cy<5> (XLXI_34/Madd_Temp_addsub0003_cy<5>)
+     XORCY:CI->O           1   0.699   0.426  XLXI_34/Madd_Temp_addsub0003_xor<6> (XLXI_34/Temp_addsub0003<6>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_34/Madd_Temp_addsub0004_lut<6> (XLXI_34/Madd_Temp_addsub0004_lut<6>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_34/Madd_Temp_addsub0004_cy<6> (XLXI_34/Madd_Temp_addsub0004_cy<6>)
+     XORCY:CI->O           1   0.699   0.426  XLXI_34/Madd_Temp_addsub0004_xor<7> (XLXI_34/Temp_addsub0004<7>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_34/Madd_Temp_addsub0002_lut<7> (XLXI_34/Madd_Temp_addsub0002_lut<7>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_34/Madd_Temp_addsub0002_cy<7> (XLXI_34/Madd_Temp_addsub0002_cy<7>)
+     XORCY:CI->O           2   0.699   0.532  XLXI_34/Madd_Temp_addsub0002_xor<8> (XLXI_34/Temp<8>)
+     LUT1:I0->O            1   0.612   0.000  XLXI_34/Madd_Otpt_addsub0000_cy<0>_rt (XLXI_34/Madd_Otpt_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  XLXI_34/Madd_Otpt_addsub0000_cy<0> (XLXI_34/Madd_Otpt_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_34/Madd_Otpt_addsub0000_cy<1> (XLXI_34/Madd_Otpt_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_34/Madd_Otpt_addsub0000_cy<2> (XLXI_34/Madd_Otpt_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_34/Madd_Otpt_addsub0000_cy<3> (XLXI_34/Madd_Otpt_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_34/Madd_Otpt_addsub0000_cy<4> (XLXI_34/Madd_Otpt_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_34/Madd_Otpt_addsub0000_cy<5> (XLXI_34/Madd_Otpt_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_34/Madd_Otpt_addsub0000_cy<6> (XLXI_34/Madd_Otpt_addsub0000_cy<6>)
+     MUXCY:CI->O           0   0.052   0.000  XLXI_34/Madd_Otpt_addsub0000_cy<7> (XLXI_34/Madd_Otpt_addsub0000_cy<7>)
+     XORCY:CI->O           1   0.699   0.387  XLXI_34/Madd_Otpt_addsub0000_xor<8> (XLXI_34/Otpt_addsub0000<8>)
+     LUT3:I2->O            1   0.612   0.000  XLXI_34/Otpt<8>1 (XLXN_98<8>)
+     FDCE:D                    0.268          XLXI_25/XLXI_9
+    ----------------------------------------
+    Total                     14.397ns (11.045ns logic, 3.352ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 52 / 26
+-------------------------------------------------------------------------
+Offset:              3.854ns (Levels of Logic = 4)
+  Source:            Start_Pulse (PAD)
+  Destination:       XLXI_31/XLXI_84/I_Q0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Start_Pulse to XLXI_31/XLXI_84/I_Q0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            39   1.106   1.227  Start_Pulse_IBUF (Start_Pulse_IBUF)
+     LUT1:I0->O            1   0.612   0.000  XLXI_31/XLXI_73/XLXI_18_rt (XLXI_31/XLXI_73/XLXI_18_rt)
+     MUXCY:S->O            1   0.641   0.000  XLXI_31/XLXI_73/XLXI_18 (XLXI_31/XLXN_197<1>)
+     FDCE:D                    0.268          XLXI_31/XLXI_76/I_Q1
+    ----------------------------------------
+    Total                      3.854ns (2.627ns logic, 1.227ns route)
+                                       (68.2% logic, 31.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 26 / 26
+-------------------------------------------------------------------------
+Offset:              4.063ns (Levels of Logic = 2)
+  Source:            XLXI_31/XLXI_84/I_Q7 (FF)
+  Destination:       Theta_Pre<7> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: XLXI_31/XLXI_84/I_Q7 to Theta_Pre<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.380  I_Q7 (Q<7>)
+     end scope: 'XLXI_31/XLXI_84'
+     OBUF:I->O                 3.169          Theta_Pre_7_OBUF (Theta_Pre<7>)
+    ----------------------------------------
+    Total                      4.063ns (3.683ns logic, 0.380ns route)
+                                       (90.6% logic, 9.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.30 secs
+ 
+--> 
+
+Total memory usage is 319928 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

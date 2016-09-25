@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Mux_2_4bit.vf
+// /___/   /\     Timestamp : 05/30/2015 19:32:02
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/FIRA_2.0/Mux_2_4bit.vf -w E:/FPGA_Xilinx/Fira_Fuzzy/Mux_2_4bit.sch
+//Design Name: Mux_2_4bit
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Mux_2_4bit(Inp0, 
+                  Inp1, 
+                  S, 
+                  OutP);
+
+    input [3:0] Inp0;
+    input [3:0] Inp1;
+    input S;
+   output [3:0] OutP;
+   
+   
+   MUXCY  XLXI_1 (.CI(Inp1[3]), 
+                 .DI(Inp0[3]), 
+                 .S(S), 
+                 .O(OutP[3]));
+   MUXCY  XLXI_2 (.CI(Inp1[2]), 
+                 .DI(Inp0[2]), 
+                 .S(S), 
+                 .O(OutP[2]));
+   MUXCY  XLXI_3 (.CI(Inp1[1]), 
+                 .DI(Inp0[1]), 
+                 .S(S), 
+                 .O(OutP[1]));
+   MUXCY  XLXI_4 (.CI(Inp1[0]), 
+                 .DI(Inp0[0]), 
+                 .S(S), 
+                 .O(OutP[0]));
+endmodule

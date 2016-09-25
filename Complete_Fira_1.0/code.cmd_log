@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {C:/Users/Kaustubh Mundhada/Dropbox/Work/krssg/FPGA/xillinxs project/Booths_algorithm - Copy/code.v} -lang verilog -prj Complete_Fira_1.0 -o code.spl -module code -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w code.spl E:/FPGA_Xilinx/Complete_Fira_1.0/code.sym 

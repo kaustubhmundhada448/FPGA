@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Sun Nov 29 20:43:02 2015
+# Process ID: 9816
+# Log file: G:/FPGA/BTP/QAMV1/planAhead_run_2/planAhead.log
+# Journal file: G:/FPGA/BTP/QAMV1/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/FPGA/BTP/QAMV1/pa.fromNetlist.tcl
+startgroup
+set_property package_pin P76 [get_ports CLK_16]
+endgroup
+startgroup
+set_property package_pin P81 [get_ports {OUTF[0]}]
+endgroup
+startgroup
+set_property package_pin P79 [get_ports {OUTF[0]}]
+endgroup
+startgroup
+set_property package_pin P81 [get_ports {OUTF[0]}]
+endgroup
+startgroup
+set_property package_pin P79 [get_ports {OUTF[0]}]
+endgroup
+startgroup
+set_property package_pin P81 [get_ports {OUTF[0]}]
+endgroup
+startgroup
+set_property package_pin P79 [get_ports {OUTF[1]}]
+endgroup
+startgroup
+set_property package_pin P100 [get_ports {OUTF[3]}]
+endgroup
+startgroup
+set_property package_pin P97 [get_ports {OUTF[3]}]
+endgroup
+startgroup
+set_property package_pin P93 [get_ports {OUTF[4]}]
+endgroup
+startgroup
+set_property package_pin P90 [get_ports {OUTF[5]}]
+endgroup
+startgroup
+set_property package_pin P94 [get_ports {OUTF[6]}]
+endgroup
+startgroup
+set_property package_pin P95 [get_ports {OUTF[7]}]
+endgroup
+startgroup
+set_property package_pin P96 [get_ports {OUTF[8]}]
+endgroup
+startgroup
+set_property package_pin P102 [get_ports {OUTF[9]}]
+endgroup
+startgroup
+set_property package_pin P101 [get_ports {OUTF[10]}]
+endgroup
+startgroup
+set_property package_pin P80 [get_ports {OUTF[11]}]
+endgroup
+startgroup
+set_property package_pin P100 [get_ports {OUTF[2]}]
+endgroup
+save_design

@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Sun Nov 29 19:08:16 2015
+# Process ID: 1768
+# Log file: G:/FPGA/BTP/QAMV1/planAhead_run_1/planAhead.log
+# Journal file: G:/FPGA/BTP/QAMV1/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/FPGA/BTP/QAMV1/pa.fromNetlist.tcl
+startgroup
+set_property package_pin P74 [get_ports en]
+endgroup
+startgroup
+set_property package_pin P76 [get_ports inp_clk]
+endgroup
+startgroup
+set_property package_pin P21 [get_ports inputsignal]
+endgroup
+set_property package_pin "" [get_ports [list  {cosine[0]}]]
+startgroup
+set_property package_pin P81 [get_ports {sine[0]}]
+endgroup
+startgroup
+set_property package_pin P79 [get_ports {sine[1]}]
+endgroup
+startgroup
+set_property package_pin P100 [get_ports {sine[2]}]
+endgroup
+startgroup
+set_property package_pin P97 [get_ports {sine[3]}]
+endgroup
+startgroup
+set_property package_pin P93 [get_ports {sine[4]}]
+endgroup
+startgroup
+set_property package_pin P90 [get_ports {sine[5]}]
+endgroup
+startgroup
+set_property package_pin P94 [get_ports {sine[6]}]
+endgroup
+startgroup
+set_property package_pin P95 [get_ports {sine[7]}]
+endgroup
+startgroup
+set_property package_pin P96 [get_ports {sine[8]}]
+endgroup
+startgroup
+set_property package_pin P102 [get_ports {sine[9]}]
+endgroup
+startgroup
+set_property package_pin P101 [get_ports {sine[10]}]
+endgroup
+startgroup
+set_property package_pin P80 [get_ports {sine[11]}]
+endgroup
+set_property is_loc_fixed false [get_ports [list  {sine[11]}]]
+set_property is_loc_fixed true [get_ports [list  {sine[11]}]]
+save_design

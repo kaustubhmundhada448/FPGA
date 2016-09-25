@@ -1,0 +1,8 @@
+verilog work "R_Shift_12.v"
+verilog work "FD12CE.vf"
+verilog work "Theta_Gen_12.v"
+verilog work "Scale_For_Cordic.v"
+verilog work "Cordic.v"
+verilog work "Cb4ce_Bus.vf"
+verilog work "Main_T.vf"
+verilog work "Main.v"

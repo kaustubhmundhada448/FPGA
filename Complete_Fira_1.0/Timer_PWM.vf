@@ -1,0 +1,503 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Timer_PWM.vf
+// /___/   /\     Timestamp : 05/12/2015 12:21:31
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/Complete_Fira_1.0/Timer_PWM.vf -w E:/FPGA_Xilinx/timerpwm/Timer_PWM.sch
+//Design Name: Timer_PWM
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTPE_MXILINX_Timer_PWM(C, 
+                              CE, 
+                              PRE, 
+                              T, 
+                              Q);
+
+   parameter INIT = 1'b1;
+   
+    input C;
+    input CE;
+    input PRE;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDPE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .D(TQ), 
+                 .PRE(PRE), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CC8CE_MXILINX_Timer_PWM(C, 
+                               CE, 
+                               CLR, 
+                               CEO, 
+                               Q, 
+                               TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output [7:0] Q;
+   output TC;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C7;
+   wire TQ0;
+   wire TQ1;
+   wire TQ2;
+   wire TQ3;
+   wire TQ4;
+   wire TQ5;
+   wire TQ6;
+   wire TQ7;
+   wire XLXN_22;
+   wire XLXN_33;
+   wire XLXN_41;
+   wire [7:0] Q_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_4 (.CI(C0), 
+                   .DI(XLXN_22), 
+                   .S(Q_DUMMY[0]), 
+                   .LO(C1));
+   XORCY  I_36_6 (.CI(C0), 
+                 .LI(Q_DUMMY[0]), 
+                 .O(TQ0));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_26 (.CI(C1), 
+                    .DI(XLXN_22), 
+                    .S(Q_DUMMY[1]), 
+                    .LO(C2));
+   XORCY  I_36_28 (.CI(C1), 
+                  .LI(Q_DUMMY[1]), 
+                  .O(TQ1));
+   (* RLOC = "X0Y0" *) 
+   FDCE #( .INIT(1'b0) ) I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ1), 
+                 .Q(Q_DUMMY[1]));
+   (* RLOC = "X0Y0" *) 
+   FDCE #( .INIT(1'b0) ) I_36_36 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ0), 
+                 .Q(Q_DUMMY[0]));
+   (* RLOC = "X0Y1" *) 
+   FDCE #( .INIT(1'b0) ) I_36_224 (.C(C), 
+                  .CE(CE), 
+                  .CLR(CLR), 
+                  .D(TQ2), 
+                  .Q(Q_DUMMY[2]));
+   XORCY  I_36_226 (.CI(C2), 
+                   .LI(Q_DUMMY[2]), 
+                   .O(TQ2));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_233 (.CI(C2), 
+                     .DI(XLXN_22), 
+                     .S(Q_DUMMY[2]), 
+                     .LO(C3));
+   (* RLOC = "X0Y1" *) 
+   FDCE #( .INIT(1'b0) ) I_36_237 (.C(C), 
+                  .CE(CE), 
+                  .CLR(CLR), 
+                  .D(TQ3), 
+                  .Q(Q_DUMMY[3]));
+   XORCY  I_36_239 (.CI(C3), 
+                   .LI(Q_DUMMY[3]), 
+                   .O(TQ3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_246 (.CI(C3), 
+                     .DI(XLXN_22), 
+                     .S(Q_DUMMY[3]), 
+                     .LO(C4));
+   (* RLOC = "X0Y2" *) 
+   FDCE #( .INIT(1'b0) ) I_36_250 (.C(C), 
+                  .CE(CE), 
+                  .CLR(CLR), 
+                  .D(TQ4), 
+                  .Q(Q_DUMMY[4]));
+   XORCY  I_36_252 (.CI(C4), 
+                   .LI(Q_DUMMY[4]), 
+                   .O(TQ4));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_259 (.CI(C4), 
+                     .DI(XLXN_22), 
+                     .S(Q_DUMMY[4]), 
+                     .LO(C5));
+   (* RLOC = "X0Y2" *) 
+   FDCE #( .INIT(1'b0) ) I_36_263 (.C(C), 
+                  .CE(CE), 
+                  .CLR(CLR), 
+                  .D(TQ5), 
+                  .Q(Q_DUMMY[5]));
+   XORCY  I_36_265 (.CI(C5), 
+                   .LI(Q_DUMMY[5]), 
+                   .O(TQ5));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_272 (.CI(C5), 
+                     .DI(XLXN_22), 
+                     .S(Q_DUMMY[5]), 
+                     .LO(C6));
+   (* RLOC = "X0Y3" *) 
+   FDCE #( .INIT(1'b0) ) I_36_276 (.C(C), 
+                  .CE(CE), 
+                  .CLR(CLR), 
+                  .D(TQ6), 
+                  .Q(Q_DUMMY[6]));
+   XORCY  I_36_278 (.CI(C6), 
+                   .LI(Q_DUMMY[6]), 
+                   .O(TQ6));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_L  I_36_285 (.CI(C6), 
+                     .DI(XLXN_22), 
+                     .S(Q_DUMMY[6]), 
+                     .LO(C7));
+   (* RLOC = "X0Y3" *) 
+   FDCE #( .INIT(1'b0) ) I_36_289 (.C(C), 
+                  .CE(CE), 
+                  .CLR(CLR), 
+                  .D(TQ7), 
+                  .Q(Q_DUMMY[7]));
+   XORCY  I_36_291 (.CI(C7), 
+                   .LI(Q_DUMMY[7]), 
+                   .O(TQ7));
+   (* RLOC = "X0Y3" *) 
+   MUXCY  I_36_298 (.CI(C7), 
+                   .DI(XLXN_22), 
+                   .S(Q_DUMMY[7]), 
+                   .O(XLXN_41));
+   GND  I_36_886 (.G(XLXN_22));
+   VCC  I_36_923 (.P(C0));
+   AND2  XLXI_1 (.I0(XLXN_33), 
+                .I1(XLXN_41), 
+                .O(TC));
+   AND3  XLXI_2 (.I0(XLXN_33), 
+                .I1(CE), 
+                .I2(XLXN_41), 
+                .O(CEO));
+   INV  XLXI_3 (.I(CLR), 
+               .O(XLXN_33));
+endmodule
+`timescale 1ns / 1ps
+
+module counter_MUSER_Timer_PWM(clear, 
+                               clk, 
+                               clockenable, 
+                               Enable, 
+                               inputpwmlength, 
+                               Outputpulse);
+
+    input clear;
+    input clk;
+    input clockenable;
+    input Enable;
+    input [7:0] inputpwmlength;
+   output Outputpulse;
+   
+   wire [7:0] counter;
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire XLXN_33;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_101;
+   wire XLXN_106;
+   wire XLXN_107;
+   wire XLXN_110;
+   wire XLXN_111;
+   wire XLXN_114;
+   wire XLXN_128;
+   wire XLXN_129;
+   wire XLXN_143;
+   wire XLXN_144;
+   
+   (* HU_SET = "XLXI_3_5" *) 
+   CC8CE_MXILINX_Timer_PWM  XLXI_3 (.C(clk), 
+                                   .CE(clockenable), 
+                                   .CLR(clear), 
+                                   .CEO(), 
+                                   .Q(counter[7:0]), 
+                                   .TC());
+   XOR2  XLXI_4 (.I0(counter[0]), 
+                .I1(inputpwmlength[0]), 
+                .O(XLXN_29));
+   XOR2  XLXI_5 (.I0(counter[1]), 
+                .I1(inputpwmlength[1]), 
+                .O(XLXN_30));
+   XOR2  XLXI_6 (.I0(counter[2]), 
+                .I1(inputpwmlength[2]), 
+                .O(XLXN_31));
+   XOR2  XLXI_7 (.I0(counter[3]), 
+                .I1(inputpwmlength[3]), 
+                .O(XLXN_32));
+   XOR2  XLXI_8 (.I0(counter[4]), 
+                .I1(inputpwmlength[4]), 
+                .O(XLXN_33));
+   XOR2  XLXI_9 (.I0(counter[5]), 
+                .I1(inputpwmlength[5]), 
+                .O(XLXN_34));
+   XOR2  XLXI_10 (.I0(counter[6]), 
+                 .I1(inputpwmlength[6]), 
+                 .O(XLXN_35));
+   XOR2  XLXI_11 (.I0(counter[7]), 
+                 .I1(inputpwmlength[7]), 
+                 .O(XLXN_36));
+   (* HU_SET = "XLXI_30_6" *) 
+   FTPE_MXILINX_Timer_PWM #( .INIT(1'b1) ) XLXI_30 (.C(clk), 
+                                   .CE(clockenable), 
+                                   .PRE(XLXN_129), 
+                                   .T(XLXN_101), 
+                                   .Q(XLXN_114));
+   OR4  XLXI_34 (.I0(XLXN_29), 
+                .I1(XLXN_30), 
+                .I2(XLXN_31), 
+                .I3(XLXN_32), 
+                .O(XLXN_110));
+   OR4  XLXI_35 (.I0(XLXN_33), 
+                .I1(XLXN_34), 
+                .I2(XLXN_35), 
+                .I3(XLXN_36), 
+                .O(XLXN_111));
+   NOR2  XLXI_36 (.I0(XLXN_110), 
+                 .I1(XLXN_111), 
+                 .O(XLXN_101));
+   OR4  XLXI_48 (.I0(counter[0]), 
+                .I1(counter[1]), 
+                .I2(counter[2]), 
+                .I3(counter[3]), 
+                .O(XLXN_106));
+   OR4  XLXI_49 (.I0(counter[4]), 
+                .I1(counter[5]), 
+                .I2(counter[6]), 
+                .I3(counter[7]), 
+                .O(XLXN_107));
+   NOR2  XLXI_50 (.I0(XLXN_106), 
+                 .I1(XLXN_107), 
+                 .O(XLXN_129));
+   AND3  XLXI_52 (.I0(Enable), 
+                 .I1(XLXN_114), 
+                 .I2(XLXN_128), 
+                 .O(Outputpulse));
+   OR4  XLXI_54 (.I0(inputpwmlength[4]), 
+                .I1(inputpwmlength[5]), 
+                .I2(inputpwmlength[6]), 
+                .I3(inputpwmlength[7]), 
+                .O(XLXN_143));
+   OR4  XLXI_55 (.I0(inputpwmlength[0]), 
+                .I1(inputpwmlength[1]), 
+                .I2(inputpwmlength[2]), 
+                .I3(inputpwmlength[3]), 
+                .O(XLXN_144));
+   OR2  XLXI_57 (.I0(XLXN_144), 
+                .I1(XLXN_143), 
+                .O(XLXN_128));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_Timer_PWM(C, 
+                              CE, 
+                              CLR, 
+                              T, 
+                              Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module FTRSE_MXILINX_Timer_PWM(C, 
+                               CE, 
+                               R, 
+                               S, 
+                               T, 
+                               Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input R;
+    input S;
+    input T;
+   output Q;
+   
+   wire CE_S;
+   wire D_S;
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDRE  I_36_35 (.C(C), 
+                 .CE(CE_S), 
+                 .D(D_S), 
+                 .R(R), 
+                 .Q(Q_DUMMY));
+   OR2  I_36_73 (.I0(S), 
+                .I1(TQ), 
+                .O(D_S));
+   OR2  I_36_77 (.I0(CE), 
+                .I1(S), 
+                .O(CE_S));
+endmodule
+`timescale 1ns / 1ps
+
+module CB2RE_MXILINX_Timer_PWM(C, 
+                               CE, 
+                               R, 
+                               CEO, 
+                               Q0, 
+                               Q1, 
+                               TC);
+
+    input C;
+    input CE;
+    input R;
+   output CEO;
+   output Q0;
+   output Q1;
+   output TC;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_7" *) 
+   FTRSE_MXILINX_Timer_PWM #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                 .CE(CE), 
+                                 .R(R), 
+                                 .S(XLXN_2), 
+                                 .T(XLXN_1), 
+                                 .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_8" *) 
+   FTRSE_MXILINX_Timer_PWM #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                 .CE(CE), 
+                                 .R(R), 
+                                 .S(XLXN_2), 
+                                 .T(Q0_DUMMY), 
+                                 .Q(Q1_DUMMY));
+   AND2  I_36_37 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   VCC  I_36_47 (.P(XLXN_1));
+   GND  I_36_54 (.G(XLXN_2));
+   AND2  I_36_55 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module Timer_PWM(CLK, 
+                 Enable, 
+                 OCR, 
+                 Outp);
+
+    input CLK;
+    input Enable;
+    input [7:0] OCR;
+   output Outp;
+   
+   wire XLXN_3;
+   wire XLXN_7;
+   wire XLXN_19;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_27;
+   wire XLXN_28;
+   
+   GND  XLXI_3 (.G(XLXN_3));
+   VCC  XLXI_6 (.P(XLXN_7));
+   AND2  XLXI_15 (.I0(XLXN_19), 
+                 .I1(XLXN_25), 
+                 .O(XLXN_21));
+   (* HU_SET = "XLXI_16_9" *) 
+   CB2RE_MXILINX_Timer_PWM  XLXI_16 (.C(CLK), 
+                                    .CE(XLXN_7), 
+                                    .R(XLXN_21), 
+                                    .CEO(), 
+                                    .Q0(XLXN_24), 
+                                    .Q1(XLXN_19), 
+                                    .TC());
+   (* HU_SET = "XLXI_18_10" *) 
+   FTCE_MXILINX_Timer_PWM #( .INIT(1'b0) ) XLXI_18 (.C(CLK), 
+                                   .CE(XLXN_21), 
+                                   .CLR(XLXN_23), 
+                                   .T(XLXN_22), 
+                                   .Q(XLXN_27));
+   VCC  XLXI_19 (.P(XLXN_22));
+   GND  XLXI_20 (.G(XLXN_23));
+   INV  XLXI_21 (.I(XLXN_24), 
+                .O(XLXN_25));
+   counter_MUSER_Timer_PWM  XLXI_25 (.clear(XLXN_3), 
+                                    .clk(XLXN_27), 
+                                    .clockenable(XLXN_28), 
+                                    .Enable(Enable), 
+                                    .inputpwmlength(OCR[7:0]), 
+                                    .Outputpulse(Outp));
+   VCC  XLXI_27 (.P(XLXN_28));
+endmodule

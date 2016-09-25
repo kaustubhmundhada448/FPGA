@@ -1,0 +1,13 @@
+ISim log file
+Running: E:\Acads\6th Sem\vlsilab\Xillinx\Final Submission\Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project\Project2_Scan_Conversion\Proj2_Scan_Conversion\Test_Final_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Test_Final_isim_beh.wdb 
+ISim P.28xd (signature 0xa0883be4)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1000.00us
+# run 10000.00us
+# run 100000.00us

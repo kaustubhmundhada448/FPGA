@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Tue May 12 12:29:35 2015
+# Process ID: 7152
+# Log file: E:/FPGA_Xilinx/Complete_Fira_1.0/planAhead_run_1/planAhead.log
+# Journal file: E:/FPGA_Xilinx/Complete_Fira_1.0/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/FPGA_Xilinx/Complete_Fira_1.0/pa.fromNetlist.tcl
+set_property is_loc_fixed false [get_ports [list  CLK]]
+set_property is_loc_fixed true [get_ports [list  CLK]]
+save_design

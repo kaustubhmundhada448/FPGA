@@ -1,0 +1,155 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Cb4ce_Bus.vf
+// /___/   /\     Timestamp : 04/17/2016 20:20:32
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Proj2_Scan_Conversion/Cb4ce_Bus.vf" -w "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Proj2_Scan_Conversion/Cb4ce_Bus.sch"
+//Design Name: Cb4ce_Bus
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_Cb4ce_Bus(C, 
+                              CE, 
+                              CLR, 
+                              T, 
+                              Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CE_MXILINX_Cb4ce_Bus(C, 
+                               CE, 
+                               CLR, 
+                               CEO, 
+                               Q0, 
+                               Q1, 
+                               Q2, 
+                               Q3, 
+                               TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_0" *) 
+   FTCE_MXILINX_Cb4ce_Bus #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(XLXN_1), 
+                                .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_1" *) 
+   FTCE_MXILINX_Cb4ce_Bus #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(Q0_DUMMY), 
+                                .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_2" *) 
+   FTCE_MXILINX_Cb4ce_Bus #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(T2), 
+                                .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_3" *) 
+   FTCE_MXILINX_Cb4ce_Bus #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(T3), 
+                                .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module Cb4ce_Bus(C, 
+                 CE, 
+                 CLR, 
+                 CEO, 
+                 Q, 
+                 TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output [3:0] Q;
+   output TC;
+   
+   
+   (* HU_SET = "XLXI_16_4" *) 
+   CB4CE_MXILINX_Cb4ce_Bus  XLXI_16 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .CEO(CEO), 
+                                    .Q0(Q[0]), 
+                                    .Q1(Q[1]), 
+                                    .Q2(Q[2]), 
+                                    .Q3(Q[3]), 
+                                    .TC(TC));
+endmodule

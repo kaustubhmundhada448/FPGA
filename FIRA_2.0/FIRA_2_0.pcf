@@ -1,0 +1,28 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Mon Sep 26 00:49:39 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Tx" LOCATE = SITE "B6" LEVEL 1;
+COMP "CLK" LOCATE = SITE "B8" LEVEL 1;
+COMP "PWM1" LOCATE = SITE "A10" LEVEL 1;
+COMP "PWM2" LOCATE = SITE "C9" LEVEL 1;
+COMP "Ticks<0>" LOCATE = SITE "M5" LEVEL 1;
+COMP "Ticks<1>" LOCATE = SITE "M11" LEVEL 1;
+COMP "Ticks<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "Ticks<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "Ticks<4>" LOCATE = SITE "N5" LEVEL 1;
+COMP "Ticks<5>" LOCATE = SITE "N4" LEVEL 1;
+COMP "Ticks<6>" LOCATE = SITE "P4" LEVEL 1;
+COMP "Ticks<7>" LOCATE = SITE "G1" LEVEL 1;
+COMP "Target_Inp<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "Target_Inp<1>" LOCATE = SITE "L3" LEVEL 1;
+COMP "Target_Inp<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "Target_Inp<3>" LOCATE = SITE "B4" LEVEL 1;
+COMP "Target_Inp<4>" LOCATE = SITE "G3" LEVEL 1;
+COMP "Target_Inp<5>" LOCATE = SITE "F3" LEVEL 1;
+COMP "Target_Inp<6>" LOCATE = SITE "E2" LEVEL 1;
+COMP "Target_Inp<7>" LOCATE = SITE "N3" LEVEL 1;
+NET "CLK_BUFGP/IBUFG" BEL "CLK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

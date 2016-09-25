@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym constant2048 G:/FPGA/BTP/QAMV1/constant2048.sch G:/FPGA/BTP/QAMV1/constant2048.sym 

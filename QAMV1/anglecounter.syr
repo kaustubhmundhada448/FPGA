@@ -1,0 +1,1059 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: anglecounter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "anglecounter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "anglecounter"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : anglecounter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "gnd16bit.vf" in library work
+Compiling verilog file "Counter_12.vf" in library work
+Module <gnd16bit> compiled
+Module <NOR16_MXILINX_Counter_12> compiled
+Module <FTCE_MXILINX_Counter_12> compiled
+Module <CB16CE_MXILINX_Counter_12> compiled
+Compiling verilog file "bit16to12.vf" in library work
+Module <Counter_12> compiled
+Compiling verilog file "anglecounter.vf" in library work
+Module <bit16to12> compiled
+Module <bit16to12_MUSER_anglecounter> compiled
+Module <ADD16_MXILINX_anglecounter> compiled
+Module <bit16buffermodified_MUSER_anglecounter> compiled
+Module <FTCE_MXILINX_anglecounter> compiled
+Module <CB4CE_MXILINX_anglecounter> compiled
+Module <gnd16bit_MUSER_anglecounter> compiled
+Module <FD16CE_MXILINX_anglecounter> compiled
+Module <NOR16_MXILINX_anglecounter> compiled
+Module <CB16CE_MXILINX_anglecounter> compiled
+Module <Counter_12_MUSER_anglecounter> compiled
+Module <anglecounter> compiled
+No errors in compilation
+Analysis of file <"anglecounter.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <anglecounter> in library <work>.
+
+Analyzing hierarchy for module <Counter_12_MUSER_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <FD16CE_MXILINX_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <FD16CE_MXILINX_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <gnd16bit_MUSER_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <bit16buffermodified_MUSER_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <bit16to12_MUSER_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <CB16CE_MXILINX_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <NOR16_MXILINX_anglecounter> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_anglecounter> in library <work> with parameters.
+	INIT = "0"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <anglecounter>.
+Module <anglecounter> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_13_68" for instance <XLXI_13> in unit <anglecounter>.
+    Set user-defined property "HU_SET =  XLXI_14_69" for instance <XLXI_14> in unit <anglecounter>.
+    Set user-defined property "HU_SET =  XLXI_15_70" for instance <XLXI_15> in unit <anglecounter>.
+    Set user-defined property "HU_SET =  XLXI_16_71" for instance <XLXI_16> in unit <anglecounter>.
+    Set user-defined property "HU_SET =  XLXI_55_72" for instance <XLXI_55> in unit <anglecounter>.
+    Set user-defined property "HU_SET =  XLXI_59_73" for instance <XLXI_59> in unit <anglecounter>.
+Analyzing module <Counter_12_MUSER_anglecounter> in library <work>.
+Module <Counter_12_MUSER_anglecounter> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_66" for instance <XLXI_1> in unit <Counter_12_MUSER_anglecounter>.
+    Set user-defined property "HU_SET =  XLXI_2_67" for instance <XLXI_2> in unit <Counter_12_MUSER_anglecounter>.
+Analyzing module <CB16CE_MXILINX_anglecounter> in library <work>.
+Module <CB16CE_MXILINX_anglecounter> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_51" for instance <I_Q0> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q1_50" for instance <I_Q1> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q10_60" for instance <I_Q10> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q11_61" for instance <I_Q11> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q12_62" for instance <I_Q12> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q13_63" for instance <I_Q13> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q14_64" for instance <I_Q14> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q15_65" for instance <I_Q15> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q2_53" for instance <I_Q2> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q3_52" for instance <I_Q3> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q4_57" for instance <I_Q4> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q5_56" for instance <I_Q5> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q6_55" for instance <I_Q6> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q7_54" for instance <I_Q7> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q8_58" for instance <I_Q8> in unit <CB16CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q9_59" for instance <I_Q9> in unit <CB16CE_MXILINX_anglecounter>.
+Analyzing module <FTCE_MXILINX_anglecounter.5> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.5>.
+Analyzing module <FTCE_MXILINX_anglecounter.6> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.6> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.6>.
+Analyzing module <FTCE_MXILINX_anglecounter.7> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.7> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.7>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.7>.
+Analyzing module <FTCE_MXILINX_anglecounter.8> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.8> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.8>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.8>.
+Analyzing module <FTCE_MXILINX_anglecounter.9> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.9> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.9>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.9>.
+Analyzing module <FTCE_MXILINX_anglecounter.10> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.10> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.10>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.10>.
+Analyzing module <FTCE_MXILINX_anglecounter.11> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.11> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.11>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.11>.
+Analyzing module <FTCE_MXILINX_anglecounter.12> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.12> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.12>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.12>.
+Analyzing module <FTCE_MXILINX_anglecounter.13> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.13> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.13>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.13>.
+Analyzing module <FTCE_MXILINX_anglecounter.14> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.14> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.14>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.14>.
+Analyzing module <FTCE_MXILINX_anglecounter.15> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.15> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.15>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.15>.
+Analyzing module <FTCE_MXILINX_anglecounter.16> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.16> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.16>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.16>.
+Analyzing module <FTCE_MXILINX_anglecounter.17> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.17> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.17>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.17>.
+Analyzing module <FTCE_MXILINX_anglecounter.18> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.18> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.18>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.18>.
+Analyzing module <FTCE_MXILINX_anglecounter.19> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.19> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.19>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.19>.
+Analyzing module <FTCE_MXILINX_anglecounter.20> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.20> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.20>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.20>.
+Analyzing module <NOR16_MXILINX_anglecounter> in library <work>.
+Module <NOR16_MXILINX_anglecounter> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_2> in unit <NOR16_MXILINX_anglecounter>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_29> in unit <NOR16_MXILINX_anglecounter>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_129> in unit <NOR16_MXILINX_anglecounter>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_138> in unit <NOR16_MXILINX_anglecounter>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_142> in unit <NOR16_MXILINX_anglecounter>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_147> in unit <NOR16_MXILINX_anglecounter>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_165> in unit <NOR16_MXILINX_anglecounter>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_170> in unit <NOR16_MXILINX_anglecounter>.
+Analyzing module <ADD16_MXILINX_anglecounter.1> in library <work>.
+Module <ADD16_MXILINX_anglecounter.1> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_anglecounter.1>.
+Analyzing module <FD16CE_MXILINX_anglecounter.1> in library <work>.
+Module <FD16CE_MXILINX_anglecounter.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16CE_MXILINX_anglecounter.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16CE_MXILINX_anglecounter.1>.
+Analyzing module <ADD16_MXILINX_anglecounter.2> in library <work>.
+Module <ADD16_MXILINX_anglecounter.2> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_anglecounter.2>.
+Analyzing module <FD16CE_MXILINX_anglecounter.2> in library <work>.
+Module <FD16CE_MXILINX_anglecounter.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16CE_MXILINX_anglecounter.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16CE_MXILINX_anglecounter.2>.
+Analyzing module <gnd16bit_MUSER_anglecounter> in library <work>.
+Module <gnd16bit_MUSER_anglecounter> is correct for synthesis.
+ 
+Analyzing module <CB4CE_MXILINX_anglecounter> in library <work>.
+Module <CB4CE_MXILINX_anglecounter> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_46" for instance <I_Q0> in unit <CB4CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q1_47" for instance <I_Q1> in unit <CB4CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q2_48" for instance <I_Q2> in unit <CB4CE_MXILINX_anglecounter>.
+    Set user-defined property "HU_SET =  I_Q3_49" for instance <I_Q3> in unit <CB4CE_MXILINX_anglecounter>.
+Analyzing module <FTCE_MXILINX_anglecounter.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.1>.
+Analyzing module <FTCE_MXILINX_anglecounter.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.2>.
+Analyzing module <FTCE_MXILINX_anglecounter.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.3>.
+Analyzing module <FTCE_MXILINX_anglecounter.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_anglecounter.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_anglecounter.4>.
+Analyzing module <bit16buffermodified_MUSER_anglecounter> in library <work>.
+Module <bit16buffermodified_MUSER_anglecounter> is correct for synthesis.
+ 
+Analyzing module <ADD16_MXILINX_anglecounter.3> in library <work>.
+Module <ADD16_MXILINX_anglecounter.3> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_anglecounter.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_anglecounter.3>.
+Analyzing module <bit16to12_MUSER_anglecounter> in library <work>.
+Module <bit16to12_MUSER_anglecounter> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ADD16_MXILINX_anglecounter_1>.
+    Related source file is "anglecounter.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_anglecounter_1> synthesized.
+
+
+Synthesizing Unit <FD16CE_MXILINX_anglecounter_1>.
+    Related source file is "anglecounter.vf".
+Unit <FD16CE_MXILINX_anglecounter_1> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_anglecounter_2>.
+    Related source file is "anglecounter.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_anglecounter_2> synthesized.
+
+
+Synthesizing Unit <FD16CE_MXILINX_anglecounter_2>.
+    Related source file is "anglecounter.vf".
+Unit <FD16CE_MXILINX_anglecounter_2> synthesized.
+
+
+Synthesizing Unit <gnd16bit_MUSER_anglecounter>.
+    Related source file is "anglecounter.vf".
+Unit <gnd16bit_MUSER_anglecounter> synthesized.
+
+
+Synthesizing Unit <bit16buffermodified_MUSER_anglecounter>.
+    Related source file is "anglecounter.vf".
+Unit <bit16buffermodified_MUSER_anglecounter> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_anglecounter_3>.
+    Related source file is "anglecounter.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_anglecounter_3> synthesized.
+
+
+Synthesizing Unit <bit16to12_MUSER_anglecounter>.
+    Related source file is "anglecounter.vf".
+WARNING:Xst:647 - Input <buffinput<15:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <bit16to12_MUSER_anglecounter> synthesized.
+
+
+Synthesizing Unit <NOR16_MXILINX_anglecounter>.
+    Related source file is "anglecounter.vf".
+Unit <NOR16_MXILINX_anglecounter> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_5>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_5> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_6>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_6> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_7>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_7> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_8>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_8> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_9>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_9> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_10>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_10> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_11>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_11> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_12>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_12> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_13>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_13> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_14>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_14> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_15>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_15> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_16>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_16> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_17>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_17> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_18>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_18> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_19>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_19> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_20>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_20> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_1>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_1> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_2>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_3>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_anglecounter_4>.
+    Related source file is "anglecounter.vf".
+Unit <FTCE_MXILINX_anglecounter_4> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_anglecounter>.
+    Related source file is "anglecounter.vf".
+Unit <CB4CE_MXILINX_anglecounter> synthesized.
+
+
+Synthesizing Unit <CB16CE_MXILINX_anglecounter>.
+    Related source file is "anglecounter.vf".
+Unit <CB16CE_MXILINX_anglecounter> synthesized.
+
+
+Synthesizing Unit <Counter_12_MUSER_anglecounter>.
+    Related source file is "anglecounter.vf".
+WARNING:Xst:646 - Signal <XLXN_2<15:12>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Counter_12_MUSER_anglecounter> synthesized.
+
+
+Synthesizing Unit <anglecounter>.
+    Related source file is "anglecounter.vf".
+Unit <anglecounter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <anglecounter> ...
+
+Optimizing unit <ADD16_MXILINX_anglecounter_1> ...
+
+Optimizing unit <FD16CE_MXILINX_anglecounter_1> ...
+
+Optimizing unit <ADD16_MXILINX_anglecounter_2> ...
+
+Optimizing unit <FD16CE_MXILINX_anglecounter_2> ...
+
+Optimizing unit <gnd16bit_MUSER_anglecounter> ...
+
+Optimizing unit <bit16buffermodified_MUSER_anglecounter> ...
+
+Optimizing unit <ADD16_MXILINX_anglecounter_3> ...
+
+Optimizing unit <bit16to12_MUSER_anglecounter> ...
+
+Optimizing unit <NOR16_MXILINX_anglecounter> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_5> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_6> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_7> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_8> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_9> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_10> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_11> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_12> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_13> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_14> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_15> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_16> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_17> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_18> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_19> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_20> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_1> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_2> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_3> ...
+
+Optimizing unit <FTCE_MXILINX_anglecounter_4> ...
+
+Optimizing unit <CB4CE_MXILINX_anglecounter> ...
+
+Optimizing unit <CB16CE_MXILINX_anglecounter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block anglecounter, actual ratio is 1.
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_13/I0> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_13/I1> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_13/I2> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_13/I3> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_13/I4> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_13/I5> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_13/I6> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_13/I7> may hinder timing optimization.
+   You may achieve better results by removing this property
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : anglecounter.ngr
+Top Level Output File Name         : anglecounter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 271
+#      AND2                        : 19
+#      AND3                        : 5
+#      AND4                        : 5
+#      AND5                        : 3
+#      BUF                         : 58
+#      GND                         : 5
+#      MUXCY                       : 4
+#      MUXCY_D                     : 3
+#      MUXCY_L                     : 45
+#      VCC                         : 4
+#      XOR2                        : 72
+#      XORCY                       : 48
+# FlipFlops/Latches                : 52
+#      FDCE                        : 52
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      OBUF                        : 13
+# Logical                          : 4
+#      NOR4                        : 4
+# Others                           : 52
+#      FMAP                        : 52
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                       26  out of   3584     0%  
+ Number of Slice Flip Flops:             52  out of   7168     0%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    141     9%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+XLXI_55/I_Q3/Q_DUMMY1              | BUFG                   | 48    |
+CLK_16                             | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------+----------------------------------+-------+
+Control Signal                             | Buffer(FF name)                  | Load  |
+-------------------------------------------+----------------------------------+-------+
+XLXN_105(XLXI_97:G)                        | NONE(XLXI_10/XLXI_1/I_Q0/I_36_35)| 36    |
+XLXI_10/XLXI_2/O(XLXI_10/XLXI_2/I_36_165:O)| NONE(XLXI_14/I_Q0)               | 16    |
+-------------------------------------------+----------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.046ns (Maximum Frequency: 110.546MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 16.458ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_55/I_Q3/Q_DUMMY1'
+  Clock period: 9.046ns (frequency: 110.546MHz)
+  Total number of paths / destination ports: 784 / 48
+-------------------------------------------------------------------------
+Delay:               9.046ns (Levels of Logic = 6)
+  Source:            XLXI_10/XLXI_1/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_10/XLXI_1/I_Q13/I_36_35 (FF)
+  Source Clock:      XLXI_55/I_Q3/Q_DUMMY1 rising
+  Destination Clock: XLXI_55/I_Q3/Q_DUMMY1 rising
+
+  Data Path: XLXI_10/XLXI_1/I_Q0/I_36_35 to XLXI_10/XLXI_1/I_Q13/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.720   1.003  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND4:I3->O            5   0.551   0.921  I_36_10 (T4)
+     AND5:I4->O            5   0.551   0.921  I_36_14 (T8)
+     AND5:I4->O            5   0.551   0.921  I_36_29 (T12)
+     AND2:I1->O            1   0.551   0.801  I_36_23 (T13)
+     begin scope: 'I_Q13'
+     XOR2:I0->O            1   0.551   0.801  I_36_32 (TQ)
+     FDCE:D                    0.203          I_36_35
+    ----------------------------------------
+    Total                      9.046ns (3.678ns logic, 5.368ns route)
+                                       (40.7% logic, 59.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_16'
+  Clock period: 4.548ns (frequency: 219.877MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               4.548ns (Levels of Logic = 3)
+  Source:            XLXI_55/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_55/I_Q2/I_36_35 (FF)
+  Source Clock:      CLK_16 rising
+  Destination Clock: CLK_16 rising
+
+  Data Path: XLXI_55/I_Q0/I_36_35 to XLXI_55/I_Q2/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.720   0.921  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND3:I2->O            1   0.551   0.801  I_36_32 (T3)
+     begin scope: 'I_Q3'
+     XOR2:I0->O            1   0.551   0.801  I_36_32 (TQ)
+     FDCE:D                    0.203          I_36_35
+    ----------------------------------------
+    Total                      4.548ns (2.025ns logic, 2.523ns route)
+                                       (44.5% logic, 55.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_55/I_Q3/Q_DUMMY1'
+  Total number of paths / destination ports: 368 / 13
+-------------------------------------------------------------------------
+Offset:              16.458ns (Levels of Logic = 20)
+  Source:            XLXI_10/XLXI_1/I_Q10/I_36_35 (FF)
+  Destination:       OUTF<11> (PAD)
+  Source Clock:      XLXI_55/I_Q3/Q_DUMMY1 rising
+
+  Data Path: XLXI_10/XLXI_1/I_Q10/I_36_35 to OUTF<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.720   0.921  I_36_35 (Q)
+     end scope: 'I_Q10'
+     end scope: 'XLXI_10/XLXI_1'
+     BUF:I->O              1   0.551   0.801  XLXI_10/XLXI_9 (XLXN_34)
+     XOR2:I0->O           13   0.551   1.170  XLXI_11 (Quad_Change_OBUF)
+     AND2:I1->O            1   0.551   0.801  XLXI_61 (XLXN_68<0>)
+     begin scope: 'XLXI_59'
+     XOR2:I0->O            1   0.551   0.000  I_36_354 (I0)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_255 (C0)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_254 (C1)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_253 (C2)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_252 (C3)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_251 (C4)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_250 (C5)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_249 (C6)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_248 (C7)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_111 (C8)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_55 (C9)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_62 (C10)
+     XORCY:CI->O           1   0.904   0.801  I_36_75 (S<11>)
+     end scope: 'XLXI_59'
+     BUF:I->O              1   0.551   0.801  XLXI_60/XLXI_5 (OUTF_11_OBUF)
+     OBUF:I->O                 5.644          OUTF_11_OBUF (OUTF<11>)
+    ----------------------------------------
+    Total                     16.458ns (11.163ns logic, 5.295ns route)
+                                       (67.8% logic, 32.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.42 secs
+ 
+--> 
+
+Total memory usage is 250580 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

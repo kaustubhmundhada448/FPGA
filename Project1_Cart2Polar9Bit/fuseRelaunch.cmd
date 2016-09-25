@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "simprims_ver" -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Project1_Cart2Polar9Bit/Main_Main_sch_tb_isim_par.exe" -prj "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Project1_Cart2Polar9Bit/Main_Main_sch_tb_par.prj" "work.Main_Main_sch_tb" "work.glbl" 

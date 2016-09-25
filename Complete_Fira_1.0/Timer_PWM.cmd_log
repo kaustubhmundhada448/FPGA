@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Timer_PWM E:/FPGA_Xilinx/timerpwm/Timer_PWM.sch E:/FPGA_Xilinx/Complete_Fira_1.0/Timer_PWM.sym 

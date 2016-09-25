@@ -1,0 +1,18 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "en" LOC = P74;
+NET "inp_clk" LOC = P76;
+NET "inputsignal" LOC = P21;
+NET "sine[0]" LOC = P81;
+NET "sine[1]" LOC = P79;
+NET "sine[2]" LOC = P100;
+NET "sine[3]" LOC = P97;
+NET "sine[4]" LOC = P93;
+NET "sine[5]" LOC = P90;
+NET "sine[6]" LOC = P94;
+NET "sine[7]" LOC = P95;
+NET "sine[8]" LOC = P96;
+NET "sine[9]" LOC = P102;
+NET "sine[10]" LOC = P101;
+NET "sine[11]" LOC = P80;

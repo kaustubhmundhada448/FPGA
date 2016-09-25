@@ -1,0 +1,6 @@
+verilog work "gnd16bit.vf"
+verilog work "Counter_12.vf"
+verilog work "bit16to12.vf"
+verilog work "anglecounter.vf"
+verilog work "Angle_Couner_test.v"
+verilog work "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Bit8_to_bit9 E:/FPGA_Xilinx/Buffers_for_bit_conversion/Bit8_to_bit9.sch E:/FPGA_Xilinx/Complete_Fira_1.0/Bit8_to_bit9.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog Bit8_to_bit9_drc.vf -w E:/FPGA_Xilinx/Buffers_for_bit_conversion/Bit8_to_bit9.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym Bit8_to_bit9 E:/FPGA_Xilinx/Buffers_for_bit_conversion/Bit8_to_bit9.sch E:/FPGA_Xilinx/Complete_Fira_1.0/Bit8_to_bit9.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog Bit8_to_bit9_drc.vf -w E:/FPGA_Xilinx/Buffers_for_bit_conversion/Bit8_to_bit9.sch 

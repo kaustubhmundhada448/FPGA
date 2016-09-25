@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Multiplier_8 E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/Multiplier_8.sch E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/Multiplier_8.sym 

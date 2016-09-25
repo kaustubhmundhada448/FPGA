@@ -1,0 +1,10 @@
+Command line:
+   Fial_Combine_Fial_Combine_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  2
+     -socket  12151
+
+Sun Nov 29 11:52:34 2015
+
+
+ Elaboration Time: 0.171875 sec

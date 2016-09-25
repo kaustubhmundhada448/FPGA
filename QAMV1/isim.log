@@ -1,0 +1,16 @@
+ISim log file
+Running: C:\Users\Kaustubh_mundhada\Desktop\QAMV1\QAMV1\anglecounter_anglecounter_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/anglecounter_anglecounter_sch_tb_isim_beh.wdb 
+ISim P.28xd (signature 0xa0883be4)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1000.00us
+# run 4000.00us
+# restart
+# run 4000.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

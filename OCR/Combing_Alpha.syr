@@ -1,0 +1,1030 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> Reading design: Combing_Alpha.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Combing_Alpha.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Combing_Alpha"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-cp132
+
+---- Source Options
+Top Module Name                    : Combing_Alpha
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "OneByN.v" in library work
+Compiling verilog file "mux_2_4bit.vf" in library work
+Module <OneByN> compiled
+Compiling verilog file "MAX_2_32.v" in library work
+Module <mux_2_4bit> compiled
+Compiling verilog file "Into_1_min_1_by_n.v" in library work
+Module <MAX_2_32> compiled
+Compiling verilog file "Into1byN.v" in library work
+Module <Into_1_min_1_by_n> compiled
+Compiling verilog file "FD4CE_B.vf" in library work
+Module <Into1byN> compiled
+Compiling verilog file "FD32CE.v" in library work
+Module <FD4CE_B> compiled
+Compiling verilog file "Booth_Comb.v" in library work
+Module <FD32CE> compiled
+Compiling verilog file "Adder_32.v" in library work
+Module <Booth_Comb> compiled
+Compiling verilog file "Memory_txt.v" in library work
+Module <Adder_32> compiled
+Compiling verilog file "Max_at_num.vf" in library work
+Module <Memory_txt> compiled
+Module <mux_2_4bit_MUSER_Max_at_num> compiled
+Module <FD4CE_B_MUSER_Max_at_num> compiled
+Compiling verilog file "Main_Module.vf" in library work
+Module <Max_at_num> compiled
+Compiling verilog file "Counters.vf" in library work
+Module <Main_Module> compiled
+Module <FTCE_MXILINX_Counters> compiled
+Module <CB8CE_MXILINX_Counters> compiled
+Module <CB4CE_MXILINX_Counters> compiled
+Compiling verilog file "Combing_Alpha.vf" in library work
+Module <Counters> compiled
+Module <Main_Module_MUSER_Combing_Alpha> compiled
+Module <FTCE_MXILINX_Combing_Alpha> compiled
+Module <CB8CE_MXILINX_Combing_Alpha> compiled
+Module <CB4CE_MXILINX_Combing_Alpha> compiled
+Module <Counters_MUSER_Combing_Alpha> compiled
+Module <mux_2_4bit_MUSER_Combing_Alpha> compiled
+Module <FD4CE_B_MUSER_Combing_Alpha> compiled
+Module <Max_at_num_MUSER_Combing_Alpha> compiled
+Module <Combing_Alpha> compiled
+No errors in compilation
+Analysis of file <"Combing_Alpha.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Combing_Alpha> in library <work>.
+
+Analyzing hierarchy for module <Max_at_num_MUSER_Combing_Alpha> in library <work>.
+
+Analyzing hierarchy for module <Counters_MUSER_Combing_Alpha> in library <work>.
+
+Analyzing hierarchy for module <Main_Module_MUSER_Combing_Alpha> in library <work>.
+
+Analyzing hierarchy for module <Memory_txt> in library <work>.
+
+Analyzing hierarchy for module <mux_2_4bit_MUSER_Combing_Alpha> in library <work>.
+
+Analyzing hierarchy for module <FD4CE_B_MUSER_Combing_Alpha> in library <work>.
+
+Analyzing hierarchy for module <FD32CE> in library <work>.
+
+Analyzing hierarchy for module <MAX_2_32> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_Combing_Alpha> in library <work>.
+
+Analyzing hierarchy for module <CB8CE_MXILINX_Combing_Alpha> in library <work>.
+
+Analyzing hierarchy for module <Booth_Comb> in library <work>.
+
+Analyzing hierarchy for module <Into1byN> in library <work>.
+
+Analyzing hierarchy for module <OneByN> in library <work>.
+
+Analyzing hierarchy for module <Adder_32> in library <work>.
+
+Analyzing hierarchy for module <Into_1_min_1_by_n> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Combing_Alpha> in library <work> with parameters.
+	INIT = "0"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Combing_Alpha>.
+Module <Combing_Alpha> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_8> in unit <Combing_Alpha>.
+Analyzing module <Max_at_num_MUSER_Combing_Alpha> in library <work>.
+Module <Max_at_num_MUSER_Combing_Alpha> is correct for synthesis.
+ 
+Analyzing module <mux_2_4bit_MUSER_Combing_Alpha> in library <work>.
+Module <mux_2_4bit_MUSER_Combing_Alpha> is correct for synthesis.
+ 
+Analyzing module <FD4CE_B_MUSER_Combing_Alpha> in library <work>.
+Module <FD4CE_B_MUSER_Combing_Alpha> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD4CE_B_MUSER_Combing_Alpha>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD4CE_B_MUSER_Combing_Alpha>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD4CE_B_MUSER_Combing_Alpha>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD4CE_B_MUSER_Combing_Alpha>.
+Analyzing module <FD32CE> in library <work>.
+Module <FD32CE> is correct for synthesis.
+ 
+Analyzing module <MAX_2_32> in library <work>.
+Module <MAX_2_32> is correct for synthesis.
+ 
+Analyzing module <Counters_MUSER_Combing_Alpha> in library <work>.
+Module <Counters_MUSER_Combing_Alpha> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_26" for instance <XLXI_1> in unit <Counters_MUSER_Combing_Alpha>.
+    Set user-defined property "HU_SET =  XLXI_4_27" for instance <XLXI_4> in unit <Counters_MUSER_Combing_Alpha>.
+Analyzing module <CB4CE_MXILINX_Combing_Alpha> in library <work>.
+Module <CB4CE_MXILINX_Combing_Alpha> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_22" for instance <I_Q0> in unit <CB4CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q1_23" for instance <I_Q1> in unit <CB4CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q2_24" for instance <I_Q2> in unit <CB4CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q3_25" for instance <I_Q3> in unit <CB4CE_MXILINX_Combing_Alpha>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.1>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.2>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.3>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.4>.
+Analyzing module <CB8CE_MXILINX_Combing_Alpha> in library <work>.
+Module <CB8CE_MXILINX_Combing_Alpha> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_20" for instance <I_Q0> in unit <CB8CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q1_21" for instance <I_Q1> in unit <CB8CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q2_17" for instance <I_Q2> in unit <CB8CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q3_18" for instance <I_Q3> in unit <CB8CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q4_19" for instance <I_Q4> in unit <CB8CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q5_16" for instance <I_Q5> in unit <CB8CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q6_15" for instance <I_Q6> in unit <CB8CE_MXILINX_Combing_Alpha>.
+    Set user-defined property "HU_SET =  I_Q7_14" for instance <I_Q7> in unit <CB8CE_MXILINX_Combing_Alpha>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.5> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.5>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.6> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.6> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.6>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.7> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.7> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.7>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.7>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.8> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.8> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.8>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.8>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.9> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.9> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.9>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.9>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.10> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.10> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.10>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.10>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.11> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.11> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.11>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.11>.
+Analyzing module <FTCE_MXILINX_Combing_Alpha.12> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Combing_Alpha.12> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.12>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Combing_Alpha.12>.
+Analyzing module <Main_Module_MUSER_Combing_Alpha> in library <work>.
+Module <Main_Module_MUSER_Combing_Alpha> is correct for synthesis.
+ 
+Analyzing module <Booth_Comb> in library <work>.
+Module <Booth_Comb> is correct for synthesis.
+ 
+Analyzing module <Into1byN> in library <work>.
+Module <Into1byN> is correct for synthesis.
+ 
+Analyzing module <OneByN> in library <work>.
+INFO:Xst:2546 - "OneByN.v" line 25: reading initialization file "onebyn.txt".
+Module <OneByN> is correct for synthesis.
+ 
+Analyzing module <Adder_32> in library <work>.
+Module <Adder_32> is correct for synthesis.
+ 
+Analyzing module <Into_1_min_1_by_n> in library <work>.
+Module <Into_1_min_1_by_n> is correct for synthesis.
+ 
+Analyzing module <Memory_txt> in library <work>.
+INFO:Xst:2546 - "Memory_txt.v" line 13: reading initialization file "all.txt".
+INFO:Xst:2546 - "Memory_txt.v" line 14: reading initialization file "all.txt".
+INFO:Xst:1433 - Contents of array <my_memory> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1433 - Contents of array <readin> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <Memory_txt> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Memory_txt>.
+    Related source file is "Memory_txt.v".
+WARNING:Xst:1781 - Signal <readin> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <my_memory> is used but never assigned. Tied to default value.
+    Found 2560x8-bit ROM for signal <opA>.
+    Found 2560x8-bit ROM for signal <opT>.
+    Summary:
+	inferred   2 ROM(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <Memory_txt> synthesized.
+
+
+Synthesizing Unit <FD32CE>.
+    Related source file is "FD32CE.v".
+    Found 32-bit register for signal <Q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <FD32CE> synthesized.
+
+
+Synthesizing Unit <MAX_2_32>.
+    Related source file is "MAX_2_32.v".
+    Found 32-bit comparator greater for signal <C$cmp_gt0000> created at line 27.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <MAX_2_32> synthesized.
+
+
+Synthesizing Unit <Booth_Comb>.
+    Related source file is "Booth_Comb.v".
+WARNING:Xst:646 - Signal <process> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bb> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ans> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <aa> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit adder carry out for signal <old_process_12$addsub0001> created at line 22.
+    Found 1-bit adder carry out for signal <old_process_16$addsub0001> created at line 22.
+    Found 1-bit adder carry out for signal <old_process_20$addsub0001> created at line 22.
+    Found 1-bit adder carry out for signal <old_process_24$addsub0001> created at line 22.
+    Found 1-bit adder carry out for signal <old_process_28$addsub0001> created at line 22.
+    Found 1-bit adder carry out for signal <old_process_32$addsub0001> created at line 22.
+    Found 1-bit adder carry out for signal <old_process_36$addsub0001> created at line 22.
+    Found 1-bit adder carry out for signal <old_process_40$addsub0001> created at line 22.
+    Found 1-bit adder carry out for signal <old_process_7$addsub0001> created at line 22.
+    Summary:
+	inferred  36 Adder/Subtractor(s).
+	inferred 171 Multiplexer(s).
+Unit <Booth_Comb> synthesized.
+
+
+Synthesizing Unit <Into1byN>.
+    Related source file is "Into1byN.v".
+WARNING:Xst:646 - Signal <mult<7:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 17x17-bit multiplier for signal <mult$mult0000> created at line 29.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <Into1byN> synthesized.
+
+
+Synthesizing Unit <OneByN>.
+    Related source file is "OneByN.v".
+WARNING:Xst:1781 - Signal <readin> is used but never assigned. Tied to default value.
+    Found 256x17-bit ROM for signal <OneByN>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <OneByN> synthesized.
+
+
+Synthesizing Unit <Adder_32>.
+    Related source file is "Adder_32.v".
+    Found 32-bit adder carry out for signal <AUX_44$addsub0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Adder_32> synthesized.
+
+
+Synthesizing Unit <Into_1_min_1_by_n>.
+    Related source file is "Into_1_min_1_by_n.v".
+WARNING:Xst:646 - Signal <prod_48<50:48>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <One_min_1byN> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 51-bit adder for signal <prod_48>.
+    Found 17-bit adder for signal <t>.
+    Found 17x17-bit multiplier for signal <tmp$mult0000> created at line 36.
+    Found 17x17-bit multiplier for signal <tmp1$mult0000> created at line 37.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+Unit <Into_1_min_1_by_n> synthesized.
+
+
+Synthesizing Unit <Main_Module_MUSER_Combing_Alpha>.
+    Related source file is "Combing_Alpha.vf".
+Unit <Main_Module_MUSER_Combing_Alpha> synthesized.
+
+
+Synthesizing Unit <mux_2_4bit_MUSER_Combing_Alpha>.
+    Related source file is "Combing_Alpha.vf".
+Unit <mux_2_4bit_MUSER_Combing_Alpha> synthesized.
+
+
+Synthesizing Unit <FD4CE_B_MUSER_Combing_Alpha>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FD4CE_B_MUSER_Combing_Alpha> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_1>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_1> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_2>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_3>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_4>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_4> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_5>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_5> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_6>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_6> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_7>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_7> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_8>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_8> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_9>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_9> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_10>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_10> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_11>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_11> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Combing_Alpha_12>.
+    Related source file is "Combing_Alpha.vf".
+Unit <FTCE_MXILINX_Combing_Alpha_12> synthesized.
+
+
+Synthesizing Unit <Max_at_num_MUSER_Combing_Alpha>.
+    Related source file is "Combing_Alpha.vf".
+Unit <Max_at_num_MUSER_Combing_Alpha> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_Combing_Alpha>.
+    Related source file is "Combing_Alpha.vf".
+Unit <CB4CE_MXILINX_Combing_Alpha> synthesized.
+
+
+Synthesizing Unit <CB8CE_MXILINX_Combing_Alpha>.
+    Related source file is "Combing_Alpha.vf".
+Unit <CB8CE_MXILINX_Combing_Alpha> synthesized.
+
+
+Synthesizing Unit <Counters_MUSER_Combing_Alpha>.
+    Related source file is "Combing_Alpha.vf".
+Unit <Counters_MUSER_Combing_Alpha> synthesized.
+
+
+Synthesizing Unit <Combing_Alpha>.
+    Related source file is "Combing_Alpha.vf".
+Unit <Combing_Alpha> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 2560x8-bit ROM                                        : 2
+ 256x17-bit ROM                                        : 1
+# Multipliers                                          : 3
+ 17x17-bit multiplier                                  : 3
+# Adders/Subtractors                                   : 41
+ 1-bit adder carry out                                 : 9
+ 16-bit adder                                          : 2
+ 17-bit adder                                          : 1
+ 19-bit adder                                          : 9
+ 19-bit subtractor                                     : 9
+ 2-bit adder                                           : 9
+ 32-bit adder carry out                                : 1
+ 51-bit adder                                          : 1
+# Registers                                            : 2
+ 32-bit register                                       : 2
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 9
+ 19-bit 4-to-1 multiplexer                             : 9
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 2560x8-bit ROM                                        : 2
+ 256x17-bit ROM                                        : 1
+# Multipliers                                          : 3
+ 17x17-bit multiplier                                  : 3
+# Adders/Subtractors                                   : 41
+ 1-bit adder carry out                                 : 9
+ 12-bit adder                                          : 2
+ 17-bit adder                                          : 1
+ 19-bit adder                                          : 9
+ 19-bit subtractor                                     : 9
+ 2-bit adder                                           : 9
+ 32-bit adder carry out                                : 1
+ 48-bit adder                                          : 1
+# Registers                                            : 81
+ Flip-Flops                                            : 81
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 9
+ 19-bit 4-to-1 multiplexer                             : 9
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Combing_Alpha> ...
+
+Optimizing unit <FD32CE> ...
+
+Optimizing unit <MAX_2_32> ...
+
+Optimizing unit <Booth_Comb> ...
+
+Optimizing unit <Into_1_min_1_by_n> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_1> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_2> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_3> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_4> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_5> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_6> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_7> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_8> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_9> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_10> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_11> ...
+
+Optimizing unit <FTCE_MXILINX_Combing_Alpha_12> ...
+
+Optimizing unit <CB4CE_MXILINX_Combing_Alpha> ...
+
+Optimizing unit <CB8CE_MXILINX_Combing_Alpha> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Combing_Alpha, actual ratio is 51.
+PACKER Warning: Lut XLXI_12/XLXI_2/Madd__old_ans_13_lut<10> driving carry XLXI_12/XLXI_2/Madd__old_ans_13_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 81
+ Flip-Flops                                            : 81
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Combing_Alpha.ngr
+Top Level Output File Name         : Combing_Alpha
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 3491
+#      AND2                        : 5
+#      AND3                        : 3
+#      AND4                        : 3
+#      AND5                        : 1
+#      BUF                         : 18
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 19
+#      LUT2                        : 215
+#      LUT2_D                      : 17
+#      LUT2_L                      : 11
+#      LUT3                        : 635
+#      LUT3_D                      : 23
+#      LUT3_L                      : 27
+#      LUT4                        : 1173
+#      LUT4_D                      : 70
+#      LUT4_L                      : 52
+#      MUXCY                       : 233
+#      MUXF5                       : 484
+#      MUXF6                       : 181
+#      MUXF7                       : 60
+#      MUXF8                       : 14
+#      OR2                         : 1
+#      VCC                         : 3
+#      XOR2                        : 12
+#      XORCY                       : 215
+# FlipFlops/Latches                : 81
+#      FD                          : 1
+#      FDCE                        : 80
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 5
+#      OBUF                        : 4
+# MULTs                            : 3
+#      MULT18X18SIO                : 3
+# Logical                          : 1
+#      NAND2                       : 1
+=========================================================================
+PACKER Warning: Lut XLXI_12/XLXI_2/Madd__old_ans_13_lut<10> driving carry XLXI_12/XLXI_2/Madd__old_ans_13_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250ecp132-5 
+
+ Number of Slices:                     1218  out of   2448    49%  
+ Number of Slice Flip Flops:             81  out of   4896     1%  
+ Number of 4 input LUTs:               2257  out of   4896    46%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of     92    10%  
+ Number of MULT18X18SIOs:                 3  out of     12    25%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 81    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-------------------------+-------+
+Control Signal                     | Buffer(FF name)         | Load  |
+-----------------------------------+-------------------------+-------+
+CLR                                | IBUF                    | 48    |
+XLXN_69(XLXI_10:O)                 | NONE(XLXI_12/XLXI_6/Q_0)| 32    |
+-----------------------------------+-------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 47.690ns (Maximum Frequency: 20.969MHz)
+   Minimum input arrival time before clock: 41.223ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 47.690ns (frequency: 20.969MHz)
+  Total number of paths / destination ports: 4067510726709741 / 161
+-------------------------------------------------------------------------
+Delay:               47.690ns (Levels of Logic = 75)
+  Source:            XLXI_7/XLXI_4/I_Q4/I_36_35 (FF)
+  Destination:       XLXI_12/XLXI_6/Q_31 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: XLXI_7/XLXI_4/I_Q4/I_36_35 to XLXI_12/XLXI_6/Q_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.380  I_36_35 (Q_DUMMY)
+     BUF:I->O              5   0.612   0.538  I_36_35_1 (I_36_35_1)
+     end scope: 'I_Q4'
+     BUF:I->O            407   0.612   1.174  I_Q4_Q_1 (I_Q4_Q_1)
+     end scope: 'XLXI_7/XLXI_4'
+     BUF:I->O            409   0.612   1.326  XLXI_7/XLXI_4_Q<4>_1 (XLXI_7/XLXI_4_Q<4>_1)
+     LUT4:I0->O            1   0.612   0.000  XLXI_13/Mrom_opT1071_20_F (N1757)
+     MUXF5:I0->O           2   0.278   0.449  XLXI_13/Mrom_opT1071_20 (XLXI_13/Mrom_opA1071_20)
+     LUT3:I1->O            1   0.612   0.000  IP_CNT<7>10_SW0_G (N1588)
+     MUXF5:I1->O           1   0.278   0.387  IP_CNT<7>10_SW0 (N287)
+     LUT3:I2->O            1   0.612   0.360  IP_CNT<7>10 (IP_CNT<7>16)
+     LUT4:I3->O            1   0.612   0.000  XLXI_13/Mrom_opA1071_5 (XLXI_13/Mrom_opA1071_5)
+     MUXF5:I0->O           1   0.278   0.000  XLXI_13/Mrom_opA1071_3_f5 (XLXI_13/Mrom_opA1071_3_f5)
+     MUXF6:I1->O          32   0.451   1.225  XLXI_13/Mrom_opA1071_2_f6 (Xn<0>1)
+     LUT3_L:I0->LO         1   0.612   0.103  XLXI_12/XLXI_2/Mmux__old_ans_11711_SW0_SW0_SW0_SW0 (N1076)
+     LUT4:I3->O            2   0.612   0.410  XLXI_12/XLXI_2/Mmux__old_ans_11723 (XLXI_12/XLXI_2/Mmux__old_ans_11723)
+     LUT4:I2->O            2   0.612   0.383  XLXI_12/XLXI_2/_old_ans_11<15>_inv1 (XLXI_12/XLXI_2/_old_ans_11<15>)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_13_lut<15> (XLXI_12/XLXI_2/Madd__old_ans_13_lut<15>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_13_cy<15> (XLXI_12/XLXI_2/Madd__old_ans_13_cy<15>)
+     XORCY:CI->O           3   0.699   0.520  XLXI_12/XLXI_2/Madd__old_ans_13_xor<16> (XLXI_12/XLXI_2/_old_ans_13<16>)
+     LUT2:I1->O            2   0.612   0.383  XLXI_12/XLXI_2/_old_ans_15<15>_inv1_SW0 (N1441)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_17_lut<15> (XLXI_12/XLXI_2/Madd__old_ans_17_lut<15>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_17_cy<15> (XLXI_12/XLXI_2/Madd__old_ans_17_cy<15>)
+     XORCY:CI->O           2   0.699   0.383  XLXI_12/XLXI_2/Madd__old_ans_17_xor<16> (XLXI_12/XLXI_2/_old_ans_17<16>)
+     LUT4_D:I3->O          2   0.612   0.383  XLXI_12/XLXI_2/_old_ans_19<15>_inv_SW0 (N343)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_21_lut<15> (XLXI_12/XLXI_2/Madd__old_ans_21_lut<15>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_21_cy<15> (XLXI_12/XLXI_2/Madd__old_ans_21_cy<15>)
+     XORCY:CI->O           2   0.699   0.383  XLXI_12/XLXI_2/Madd__old_ans_21_xor<16> (XLXI_12/XLXI_2/_old_ans_21<16>)
+     LUT4:I3->O            2   0.612   0.383  XLXI_12/XLXI_2/Madd__old_ans_25_lut<15>_SW0 (N702)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_25_lut<15> (XLXI_12/XLXI_2/Madd__old_ans_25_lut<15>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_25_cy<15> (XLXI_12/XLXI_2/Madd__old_ans_25_cy<15>)
+     XORCY:CI->O           3   0.699   0.481  XLXI_12/XLXI_2/Madd__old_ans_25_xor<16> (XLXI_12/XLXI_2/_old_ans_25<16>)
+     LUT3_D:I2->LO         1   0.612   0.103  XLXI_12/XLXI_2/Mmux__old_ans_272145_SW0 (N1902)
+     LUT4:I3->O            0   0.612   0.000  XLXI_12/XLXI_2/_old_ans_27<15>_inv1 (XLXI_12/XLXI_2/_old_ans_27<15>)
+     MUXCY:DI->O           1   0.773   0.000  XLXI_12/XLXI_2/Msub__old_ans_30_cy<15> (XLXI_12/XLXI_2/Msub__old_ans_30_cy<15>)
+     XORCY:CI->O           2   0.699   0.383  XLXI_12/XLXI_2/Msub__old_ans_30_xor<16> (XLXI_12/XLXI_2/_old_ans_30<16>)
+     LUT4:I3->O            2   0.612   0.383  XLXI_12/XLXI_2/Madd__old_ans_33_lut<15>_SW0 (N1703)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_33_lut<15> (XLXI_12/XLXI_2/Madd__old_ans_33_lut<15>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_33_cy<15> (XLXI_12/XLXI_2/Madd__old_ans_33_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_2/Madd__old_ans_33_cy<16> (XLXI_12/XLXI_2/Madd__old_ans_33_cy<16>)
+     XORCY:CI->O           3   0.699   0.454  XLXI_12/XLXI_2/Madd__old_ans_33_xor<17> (XLXI_12/XLXI_2/_old_ans_33<17>)
+     LUT4_D:I3->O          2   0.612   0.383  XLXI_12/XLXI_2/_old_ans_35<16>_inv_SW0 (N312)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_37_lut<16> (XLXI_12/XLXI_2/Madd__old_ans_37_lut<16>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_37_cy<16> (XLXI_12/XLXI_2/Madd__old_ans_37_cy<16>)
+     XORCY:CI->O           2   0.699   0.383  XLXI_12/XLXI_2/Madd__old_ans_37_xor<17> (XLXI_12/XLXI_2/_old_ans_37<17>)
+     LUT4:I3->O            1   0.612   0.360  XLXI_12/XLXI_2/_old_ans_39<16>_inv_SW0 (N359)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_41_lut<16> (XLXI_12/XLXI_2/Madd__old_ans_41_lut<16>)
+     MUXCY:S->O            0   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_41_cy<16> (XLXI_12/XLXI_2/Madd__old_ans_41_cy<16>)
+     XORCY:CI->O           1   0.699   0.387  XLXI_12/XLXI_2/Madd__old_ans_41_xor<17> (XLXI_12/XLXI_2/_old_ans_41<17>)
+     LUT3:I2->O            1   0.612   0.357  XLXI_12/XLXI_2/Mmux__old_ans_432125 (XLXI_12/A_B<15>)
+     MULT18X18SIO:A15->P15    1   4.297   0.426  XLXI_12/XLXI_3/Mmult_mult_mult0000 (XLXI_12/ABOneByN<7>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_lut<7> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_lut<7>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<7> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<8> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<9> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<10> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<11> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<12> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<13> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<14> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<15> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<16> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<17> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<18> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<19> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<20> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<21> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<22> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<23> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<24> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<25> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<26> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<27> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<28> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<29> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<30> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_xor<31> (XLXI_12/Sum_XnCn_Byn<31>)
+     FDCE:D                    0.268          XLXI_12/XLXI_6/Q_31
+    ----------------------------------------
+    Total                     47.690ns (34.420ns logic, 13.270ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 17652575895641 / 32
+-------------------------------------------------------------------------
+Offset:              41.223ns (Levels of Logic = 73)
+  Source:            Test<0> (PAD)
+  Destination:       XLXI_12/XLXI_6/Q_31 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Test<0> to XLXI_12/XLXI_6/Q_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            44   1.106   1.228  Test_0_IBUF (Test_0_IBUF)
+     LUT3:I0->O            1   0.612   0.000  XLXI_13/Mrom_opT1071_10_f5_F (N1541)
+     MUXF5:I0->O           1   0.278   0.387  XLXI_13/Mrom_opT1071_10_f5 (XLXI_13/Mrom_opT1071_10_f5)
+     LUT3:I2->O            1   0.612   0.000  XLXI_13/Mrom_opT1071_6 (XLXI_13/Mrom_opT1071_6)
+     MUXF5:I0->O           1   0.278   0.000  XLXI_13/Mrom_opT1071_4_f5 (XLXI_13/Mrom_opT1071_4_f5)
+     MUXF6:I0->O          75   0.451   1.153  XLXI_13/Mrom_opT1071_2_f6 (Cn<0>1)
+     LUT3:I1->O            1   0.612   0.426  XLXI_12/XLXI_2/_old_ans_11<10>_inv1 (XLXI_12/XLXI_2/_old_ans_11<10>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_12/XLXI_2/Msub__old_ans_14_lut<10> (XLXI_12/XLXI_2/Msub__old_ans_14_lut<10>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Msub__old_ans_14_cy<10> (XLXI_12/XLXI_2/Msub__old_ans_14_cy<10>)
+     XORCY:CI->O           3   0.699   0.454  XLXI_12/XLXI_2/Msub__old_ans_14_xor<11> (XLXI_12/XLXI_2/_old_ans_14<11>)
+     LUT4:I3->O            2   0.612   0.410  XLXI_12/XLXI_2/Mmux__old_ans_195721 (XLXI_12/XLXI_2/N50)
+     LUT4:I2->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_17_lut<10> (XLXI_12/XLXI_2/Madd__old_ans_17_lut<10>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_17_cy<10> (XLXI_12/XLXI_2/Madd__old_ans_17_cy<10>)
+     XORCY:CI->O           1   0.699   0.360  XLXI_12/XLXI_2/Madd__old_ans_17_xor<11> (XLXI_12/XLXI_2/_old_ans_17<11>)
+     LUT4_D:I3->LO         1   0.612   0.103  XLXI_12/XLXI_2/Mmux__old_ans_196107_SW0 (N1891)
+     LUT4:I3->O            1   0.612   0.426  XLXI_12/XLXI_2/_old_ans_19<10>_inv1 (XLXI_12/XLXI_2/_old_ans_19<10>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_12/XLXI_2/Msub__old_ans_22_lut<10> (XLXI_12/XLXI_2/Msub__old_ans_22_lut<10>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Msub__old_ans_22_cy<10> (XLXI_12/XLXI_2/Msub__old_ans_22_cy<10>)
+     XORCY:CI->O           3   0.699   0.454  XLXI_12/XLXI_2/Msub__old_ans_22_xor<11> (XLXI_12/XLXI_2/_old_ans_22<11>)
+     LUT4:I3->O            1   0.612   0.426  XLXI_12/XLXI_2/_old_ans_23<10>_inv (XLXI_12/XLXI_2/_old_ans_23<10>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_12/XLXI_2/Msub__old_ans_26_lut<10> (XLXI_12/XLXI_2/Msub__old_ans_26_lut<10>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Msub__old_ans_26_cy<10> (XLXI_12/XLXI_2/Msub__old_ans_26_cy<10>)
+     XORCY:CI->O           3   0.699   0.454  XLXI_12/XLXI_2/Msub__old_ans_26_xor<11> (XLXI_12/XLXI_2/_old_ans_26<11>)
+     LUT4:I3->O            1   0.612   0.426  XLXI_12/XLXI_2/_old_ans_27<10>_inv (XLXI_12/XLXI_2/_old_ans_27<10>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_12/XLXI_2/Msub__old_ans_30_lut<10> (XLXI_12/XLXI_2/Msub__old_ans_30_lut<10>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Msub__old_ans_30_cy<10> (XLXI_12/XLXI_2/Msub__old_ans_30_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_2/Msub__old_ans_30_cy<11> (XLXI_12/XLXI_2/Msub__old_ans_30_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_2/Msub__old_ans_30_cy<12> (XLXI_12/XLXI_2/Msub__old_ans_30_cy<12>)
+     XORCY:CI->O           2   0.699   0.383  XLXI_12/XLXI_2/Msub__old_ans_30_xor<13> (XLXI_12/XLXI_2/_old_ans_30<13>)
+     LUT4:I3->O            2   0.612   0.383  XLXI_12/XLXI_2/Madd__old_ans_33_lut<12>_SW1 (N1701)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_33_lut<12> (XLXI_12/XLXI_2/Madd__old_ans_33_lut<12>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_33_cy<12> (XLXI_12/XLXI_2/Madd__old_ans_33_cy<12>)
+     XORCY:CI->O           4   0.699   0.502  XLXI_12/XLXI_2/Madd__old_ans_33_xor<13> (XLXI_12/XLXI_2/_old_ans_33<13>)
+     LUT4:I3->O            2   0.612   0.383  XLXI_12/XLXI_2/Madd__old_ans_37_lut<12>_SW0 (N674)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_37_lut<12> (XLXI_12/XLXI_2/Madd__old_ans_37_lut<12>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_37_cy<12> (XLXI_12/XLXI_2/Madd__old_ans_37_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_2/Madd__old_ans_37_cy<13> (XLXI_12/XLXI_2/Madd__old_ans_37_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_2/Madd__old_ans_37_cy<14> (XLXI_12/XLXI_2/Madd__old_ans_37_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_2/Madd__old_ans_37_cy<15> (XLXI_12/XLXI_2/Madd__old_ans_37_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_2/Madd__old_ans_37_cy<16> (XLXI_12/XLXI_2/Madd__old_ans_37_cy<16>)
+     XORCY:CI->O           2   0.699   0.383  XLXI_12/XLXI_2/Madd__old_ans_37_xor<17> (XLXI_12/XLXI_2/_old_ans_37<17>)
+     LUT4:I3->O            1   0.612   0.360  XLXI_12/XLXI_2/_old_ans_39<16>_inv_SW0 (N359)
+     LUT4:I3->O            1   0.612   0.000  XLXI_12/XLXI_2/Madd__old_ans_41_lut<16> (XLXI_12/XLXI_2/Madd__old_ans_41_lut<16>)
+     MUXCY:S->O            0   0.404   0.000  XLXI_12/XLXI_2/Madd__old_ans_41_cy<16> (XLXI_12/XLXI_2/Madd__old_ans_41_cy<16>)
+     XORCY:CI->O           1   0.699   0.387  XLXI_12/XLXI_2/Madd__old_ans_41_xor<17> (XLXI_12/XLXI_2/_old_ans_41<17>)
+     LUT3:I2->O            1   0.612   0.357  XLXI_12/XLXI_2/Mmux__old_ans_432125 (XLXI_12/A_B<15>)
+     MULT18X18SIO:A15->P15    1   4.297   0.426  XLXI_12/XLXI_3/Mmult_mult_mult0000 (XLXI_12/ABOneByN<7>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_lut<7> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_lut<7>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<7> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<8> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<9> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<10> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<11> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<12> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<13> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<14> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<15> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<16> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<17> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<18> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<19> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<20> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<21> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<22> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<23> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<24> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<25> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<26> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<27> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<28> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<29> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<30> (XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.000  XLXI_12/XLXI_5/Madd_AUX_44_addsub0000_xor<31> (XLXI_12/Sum_XnCn_Byn<31>)
+     FDCE:D                    0.268          XLXI_12/XLXI_6/Q_31
+    ----------------------------------------
+    Total                     41.223ns (30.950ns logic, 10.272ns route)
+                                       (75.1% logic, 24.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            XLXI_6/XLXI_8/I_Q3 (FF)
+  Destination:       OCR<3> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: XLXI_6/XLXI_8/I_Q3 to OCR<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.514   0.357  XLXI_6/XLXI_8/I_Q3 (OCR_3_OBUF)
+     OBUF:I->O                 3.169          OCR_3_OBUF (OCR<3>)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 96.00 secs
+Total CPU time to Xst completion: 96.60 secs
+ 
+--> 
+
+Total memory usage is 359000 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

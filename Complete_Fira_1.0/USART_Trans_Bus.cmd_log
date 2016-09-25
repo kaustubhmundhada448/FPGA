@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym USART_Trans_Bus E:/FPGA_Xilinx/ETC_WITH_LEDs/USART_Trans_Bus.sch E:/FPGA_Xilinx/Complete_Fira_1.0/USART_Trans_Bus.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog USART_Trans_Bus_drc.vf -w E:/FPGA_Xilinx/ETC_WITH_LEDs/USART_Trans_Bus.sch 

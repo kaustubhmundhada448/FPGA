@@ -1,0 +1,117 @@
+Release 14.2 par P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+KAUSTUBH::  Mon Sep 26 01:36:56 2016
+
+par -w -intstyle ise -ol high -t 1 Combing_Alpha_map.ncd Combing_Alpha.ncd
+Combing_Alpha.pcf 
+
+
+Constraints file: Combing_Alpha.pcf.
+Loading device for application Rf_Device from file '3s250e.nph' in environment C:\Xilinx\14.2\ISE_DS\ISE\.
+   "Combing_Alpha" is an NCD, version 3.2, device xc3s250e, package cp132, speed -5
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.27 2012-07-09".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          10 out of 92     10%
+
+   Number of External Input IOBs                  6
+
+      Number of External Input IBUFs              6
+        Number of LOCed External Input IBUFs      6 out of 6     100%
+
+
+   Number of External Output IOBs                 4
+
+      Number of External Output IOBs              4
+        Number of LOCed External Output IOBs      4 out of 4     100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of MULT18X18SIOs                   3 out of 12     25%
+   Number of Slices                       1424 out of 2448   58%
+      Number of SLICEMs                    120 out of 1224    9%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 4 secs 
+Total CPU  time at the beginning of Placer: 4 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:d8b58437) REAL time: 5 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:d8b58437) REAL time: 5 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:d8b58437) REAL time: 5 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+
+Phase 4.2  Initial Clock and IO Placement (Checksum:7bbb0e4f) REAL time: 5 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:7bbb0e4f) REAL time: 5 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:7bbb0e4f) REAL time: 5 secs 
+
+Phase 7.8  Global Placement
+..............
+...................................................................................................................
+......................
+.............................................................................................................................................
+...............................................................................................
+..............................................................................
+Phase 7.8  Global Placement (Checksum:e5f032ac) REAL time: 18 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:e5f032ac) REAL time: 18 secs 
+
+Phase 9.18  Placement Optimization
+Phase 9.18  Placement Optimization (Checksum:3052ffb5) REAL time: 22 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:3052ffb5) REAL time: 22 secs 
+
+Total REAL time to Placer completion: 23 secs 
+Total CPU  time to Placer completion: 22 secs 
+Writing design to file Combing_Alpha.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 9057 unrouted;      REAL time: 28 secs 
+
+Phase  2  : 8979 unrouted;      REAL time: 33 secs 
+
+Phase  3  : 3009 unrouted;      REAL time: 36 secs 
+
+Phase  4  : 3499 unrouted; (Par is working to improve performance)     REAL time: 53 secs 

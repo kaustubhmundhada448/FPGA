@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Counter_18 E:/FPGA_Xilinx/ETC_WITH_LEDs/Counter_18.sch E:/FPGA_Xilinx/Complete_Fira_1.0/Counter_18.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog Counter_18_drc.vf -w E:/FPGA_Xilinx/ETC_WITH_LEDs/Counter_18.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym Counter_18 E:/FPGA_Xilinx/ETC_WITH_LEDs/Counter_18.sch E:/FPGA_Xilinx/Complete_Fira_1.0/Counter_18.sym 

@@ -1,0 +1,240 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : output_enable.vf
+// /___/   /\     Timestamp : 11/26/2015 20:41:37
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog G:/FPGA/BTP/QAMV1/output_enable.vf -w G:/FPGA/BTP/QAMV1/output_enable.sch
+//Design Name: output_enable
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module bit16to12_MUSER_output_enable(buffinput, 
+                                     buffoutput);
+
+    input [15:0] buffinput;
+   output [11:0] buffoutput;
+   
+   
+   BUF  XLXI_5 (.I(buffinput[11]), 
+               .O(buffoutput[11]));
+   BUF  XLXI_6 (.I(buffinput[10]), 
+               .O(buffoutput[10]));
+   BUF  XLXI_7 (.I(buffinput[9]), 
+               .O(buffoutput[9]));
+   BUF  XLXI_8 (.I(buffinput[8]), 
+               .O(buffoutput[8]));
+   BUF  XLXI_9 (.I(buffinput[7]), 
+               .O(buffoutput[7]));
+   BUF  XLXI_10 (.I(buffinput[6]), 
+                .O(buffoutput[6]));
+   BUF  XLXI_11 (.I(buffinput[5]), 
+                .O(buffoutput[5]));
+   BUF  XLXI_12 (.I(buffinput[4]), 
+                .O(buffoutput[4]));
+   BUF  XLXI_13 (.I(buffinput[3]), 
+                .O(buffoutput[3]));
+   BUF  XLXI_14 (.I(buffinput[2]), 
+                .O(buffoutput[2]));
+   BUF  XLXI_15 (.I(buffinput[1]), 
+                .O(buffoutput[1]));
+   BUF  XLXI_16 (.I(buffinput[0]), 
+                .O(buffoutput[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module bit16buffermodified_MUSER_output_enable(buffinput, 
+                                               buffoutput);
+
+    input [11:0] buffinput;
+   output [15:0] buffoutput;
+   
+   
+   BUF  XLXI_1 (.I(buffinput[11]), 
+               .O(buffoutput[15]));
+   BUF  XLXI_2 (.I(buffinput[11]), 
+               .O(buffoutput[14]));
+   BUF  XLXI_3 (.I(buffinput[11]), 
+               .O(buffoutput[13]));
+   BUF  XLXI_4 (.I(buffinput[11]), 
+               .O(buffoutput[12]));
+   BUF  XLXI_5 (.I(buffinput[11]), 
+               .O(buffoutput[11]));
+   BUF  XLXI_6 (.I(buffinput[10]), 
+               .O(buffoutput[10]));
+   BUF  XLXI_7 (.I(buffinput[9]), 
+               .O(buffoutput[9]));
+   BUF  XLXI_8 (.I(buffinput[8]), 
+               .O(buffoutput[8]));
+   BUF  XLXI_9 (.I(buffinput[7]), 
+               .O(buffoutput[7]));
+   BUF  XLXI_10 (.I(buffinput[6]), 
+                .O(buffoutput[6]));
+   BUF  XLXI_11 (.I(buffinput[5]), 
+                .O(buffoutput[5]));
+   BUF  XLXI_12 (.I(buffinput[4]), 
+                .O(buffoutput[4]));
+   BUF  XLXI_13 (.I(buffinput[3]), 
+                .O(buffoutput[3]));
+   BUF  XLXI_14 (.I(buffinput[2]), 
+                .O(buffoutput[2]));
+   BUF  XLXI_15 (.I(buffinput[1]), 
+                .O(buffoutput[1]));
+   BUF  XLXI_16 (.I(buffinput[0]), 
+                .O(buffoutput[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module FD16CE_MXILINX_output_enable(C, 
+                                    CE, 
+                                    CLR, 
+                                    D, 
+                                    Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [15:0] D;
+   output [15:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+   FDCE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[8]), 
+              .Q(Q[8]));
+   FDCE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[9]), 
+              .Q(Q[9]));
+   FDCE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[10]), 
+               .Q(Q[10]));
+   FDCE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[11]), 
+               .Q(Q[11]));
+   FDCE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[12]), 
+               .Q(Q[12]));
+   FDCE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[13]), 
+               .Q(Q[13]));
+   FDCE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[14]), 
+               .Q(Q[14]));
+   FDCE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[15]), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module output_enable(enable, 
+                     IndataC, 
+                     IndataS, 
+                     OutdataC, 
+                     OutdataS);
+
+    input enable;
+    input [11:0] IndataC;
+    input [11:0] IndataS;
+   output [11:0] OutdataC;
+   output [11:0] OutdataS;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire [15:0] XLXN_8;
+   wire [15:0] XLXN_9;
+   wire [15:0] XLXN_10;
+   wire [15:0] XLXN_11;
+   wire XLXN_14;
+   wire XLXN_15;
+   
+   (* HU_SET = "XLXI_1_104" *) 
+   FD16CE_MXILINX_output_enable  XLXI_1 (.C(enable), 
+                                        .CE(XLXN_14), 
+                                        .CLR(XLXN_3), 
+                                        .D(XLXN_8[15:0]), 
+                                        .Q(XLXN_10[15:0]));
+   (* HU_SET = "XLXI_2_105" *) 
+   FD16CE_MXILINX_output_enable  XLXI_2 (.C(enable), 
+                                        .CE(XLXN_15), 
+                                        .CLR(XLXN_2), 
+                                        .D(XLXN_9[15:0]), 
+                                        .Q(XLXN_11[15:0]));
+   GND  XLXI_3 (.G(XLXN_3));
+   GND  XLXI_4 (.G(XLXN_2));
+   bit16buffermodified_MUSER_output_enable  XLXI_5 (.buffinput(IndataC[11:0]), 
+                                                   .buffoutput(XLXN_8[15:0]));
+   bit16buffermodified_MUSER_output_enable  XLXI_6 (.buffinput(IndataS[11:0]), 
+                                                   .buffoutput(XLXN_9[15:0]));
+   bit16to12_MUSER_output_enable  XLXI_7 (.buffinput(XLXN_10[15:0]), 
+                                         .buffoutput(OutdataC[11:0]));
+   bit16to12_MUSER_output_enable  XLXI_8 (.buffinput(XLXN_11[15:0]), 
+                                         .buffoutput(OutdataS[11:0]));
+   VCC  XLXI_9 (.P(XLXN_14));
+   VCC  XLXI_10 (.P(XLXN_15));
+endmodule

@@ -1,0 +1,45 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/FPGA_Xilinx/USART_updated_3may/test_usart_test_usart_sch_tb_isim_beh.exe -prj E:/FPGA_Xilinx/USART_updated_3may/test_usart_test_usart_sch_tb_beh.prj work.test_usart_test_usart_sch_tb work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/Reg_4bit.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/Add_sub_4bit.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/SIPO_reg.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/Parity_gen.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/outputreg_at_end_ofinput.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/nin_counter.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/Incrementer_Decrementer.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/Flip_flip9.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/Digital_Filter.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/decade_counter_new.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/bit10datareg_to_transmit.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/usart_transmiter.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/usart_receiver.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/Precale_434.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/test_usart.vf" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" into library work
+Analyzing Verilog file "E:/FPGA_Xilinx/USART_updated_3may/bit_11.vf" into library work
+Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:267 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 35: Cannot find port CLK_rec on this module
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 36: Module <test_usart> does not have a port named <O_0>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 37: Module <test_usart> does not have a port named <O_1>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 38: Module <test_usart> does not have a port named <O_2>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 39: Module <test_usart> does not have a port named <O_3>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 40: Module <test_usart> does not have a port named <O_4>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 41: Module <test_usart> does not have a port named <O_5>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 42: Module <test_usart> does not have a port named <O_6>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 43: Module <test_usart> does not have a port named <O_7>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 45: Module <test_usart> does not have a port named <I_0>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 46: Module <test_usart> does not have a port named <I_1>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 47: Module <test_usart> does not have a port named <I_2>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 48: Module <test_usart> does not have a port named <I_3>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 49: Module <test_usart> does not have a port named <I_4>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 50: Module <test_usart> does not have a port named <I_5>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 51: Module <test_usart> does not have a port named <I_6>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 52: Module <test_usart> does not have a port named <I_7>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 55: Module <test_usart> does not have a port named <transfer>.
+ERROR:HDLCompiler:25 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 56: Module <test_usart> does not have a port named <CLK_rec>.
+WARNING:HDLCompiler:1016 - "E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 35: Port Data_Tx is not connected to this instance
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym Fuzzy_PID E:/FPGA_Xilinx/Fuzzy_PID/Fuzzy_PID.sch E:/FPGA_Xilinx/FIRA_2.0/Fuzzy_PID.sym 

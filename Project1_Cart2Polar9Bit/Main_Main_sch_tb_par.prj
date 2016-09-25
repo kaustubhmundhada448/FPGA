@@ -1,0 +1,2 @@
+verilog work "netgen/par/Main_timesim.v"
+verilog work "Main_test_FF.v"

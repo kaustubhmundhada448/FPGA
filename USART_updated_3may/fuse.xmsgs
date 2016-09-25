@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="267" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 35: Cannot find port <arg fmt="%s" index="1">CLK_rec</arg> on this module
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 36: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">O_0</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 37: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">O_1</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 38: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">O_2</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 39: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">O_3</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 40: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">O_4</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 41: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">O_5</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 42: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">O_6</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 43: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">O_7</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 45: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">I_0</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 46: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">I_1</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 47: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">I_2</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 48: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">I_3</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 49: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">I_4</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 50: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">I_5</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 51: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">I_6</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 52: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">I_7</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 55: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">transfer</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 56: Module &lt;<arg fmt="%s" index="1">test_usart</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">CLK_rec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"E:/FPGA_Xilinx/USART_updated_3may/test_usart_1.v" Line 35: Port <arg fmt="%s" index="1">Data_Tx</arg> is not connected to this instance
+</msg>
+
+<msg type="error" file="Simulator" num="778" delta="unknown" >Static elaboration of top level Verilog design unit(s) in library <arg fmt="%s" index="1">work</arg> failed
+</msg>
+
+</messages>
+

@@ -1,0 +1,5 @@
+set -tmpdir "E:/FPGA_Xilinx/Complete_Fira_1.0/xst/projnav.tmp"
+set -xsthdpdir "E:/FPGA_Xilinx/Complete_Fira_1.0/xst"
+elaborate
+-ifn code.prj
+-ifmt mixed

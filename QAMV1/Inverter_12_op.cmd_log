@@ -1,0 +1,4 @@
+sch2hdl -intstyle ise -family spartan3 -verilog Inverter_12_op_drc.vf -w G:/FPGA/BTP/QAMV1/Inverter_12_op.sch 
+sch2sym -intstyle ise -family spartan3 -w -refsym Inverter_12_op G:/FPGA/BTP/QAMV1/Inverter_12_op.sch G:/FPGA/BTP/QAMV1/Inverter_12_op.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym Inverter_12_op G:/FPGA/BTP/QAMV1/Inverter_12_op.sch G:/FPGA/BTP/QAMV1/Inverter_12_op.sym 
+sch2hdl -intstyle ise -family spartan3 -verilog Inverter_12_op_drc.vf -w G:/FPGA/BTP/QAMV1/Inverter_12_op.sch 

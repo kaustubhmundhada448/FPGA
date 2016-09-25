@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan3e -verilog Flip_flip9_drc.vf -w E:/FPGA_Xilinx/Error/Flip_flip9.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym Flip_flip9 E:/FPGA_Xilinx/Error/Flip_flip9.sch E:/FPGA_Xilinx/Complete_Fira_1.0/Flip_flip9.sym 

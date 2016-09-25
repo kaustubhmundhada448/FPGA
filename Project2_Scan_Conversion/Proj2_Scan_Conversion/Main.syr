@@ -1,0 +1,736 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "R_Shift_12.v" in library work
+Compiling verilog file "FD12CE.vf" in library work
+Module <R_Shift_12> compiled
+Compiling verilog file "Theta_Gen_12.v" in library work
+Module <FD12CE> compiled
+Compiling verilog file "Scale_For_Cordic.v" in library work
+Module <Theta_Gen_12> compiled
+Compiling verilog file "Cordic.v" in library work
+Module <Scale_For_Cordic> compiled
+Compiling verilog file "Cb4ce_Bus.vf" in library work
+Module <Cordic> compiled
+Module <FTCE_MXILINX_Cb4ce_Bus> compiled
+Module <CB4CE_MXILINX_Cb4ce_Bus> compiled
+Compiling verilog file "Main_T.vf" in library work
+Module <Cb4ce_Bus> compiled
+Module <FD12CE_MUSER_Main_T> compiled
+Module <FTCE_MXILINX_Main_T> compiled
+Module <CB4CE_MXILINX_Main_T> compiled
+Module <Cb4ce_Bus_MUSER_Main_T> compiled
+Compiling verilog file "Main.v" in library work
+Module <Main_T> compiled
+Module <Main> compiled
+No errors in compilation
+Analysis of file <"Main.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Main> in library <work>.
+
+Analyzing hierarchy for module <Main_T> in library <work>.
+
+Analyzing hierarchy for module <Cb4ce_Bus_MUSER_Main_T> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main_T> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <Cordic> in library <work>.
+
+Analyzing hierarchy for module <Theta_Gen_12> in library <work>.
+
+Analyzing hierarchy for module <FD12CE_MUSER_Main_T> in library <work>.
+
+Analyzing hierarchy for module <Scale_For_Cordic> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_Main_T> in library <work>.
+
+Analyzing hierarchy for module <R_Shift_12> in library <work>.
+
+Analyzing hierarchy for module <FD12CE> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main_T> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main_T> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main_T> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Main_T> in library <work> with parameters.
+	INIT = "0"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Main>.
+Module <Main> is correct for synthesis.
+ 
+Analyzing module <Main_T> in library <work>.
+Module <Main_T> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_15_10" for instance <XLXI_15> in unit <Main_T>.
+Analyzing module <Cb4ce_Bus_MUSER_Main_T> in library <work>.
+Module <Cb4ce_Bus_MUSER_Main_T> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_16_9" for instance <XLXI_16> in unit <Cb4ce_Bus_MUSER_Main_T>.
+Analyzing module <CB4CE_MXILINX_Main_T> in library <work>.
+Module <CB4CE_MXILINX_Main_T> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_5" for instance <I_Q0> in unit <CB4CE_MXILINX_Main_T>.
+    Set user-defined property "HU_SET =  I_Q1_6" for instance <I_Q1> in unit <CB4CE_MXILINX_Main_T>.
+    Set user-defined property "HU_SET =  I_Q2_7" for instance <I_Q2> in unit <CB4CE_MXILINX_Main_T>.
+    Set user-defined property "HU_SET =  I_Q3_8" for instance <I_Q3> in unit <CB4CE_MXILINX_Main_T>.
+Analyzing module <FTCE_MXILINX_Main_T.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main_T.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.2>.
+Analyzing module <FTCE_MXILINX_Main_T.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main_T.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.3>.
+Analyzing module <FTCE_MXILINX_Main_T.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main_T.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.4>.
+Analyzing module <FTCE_MXILINX_Main_T.5> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main_T.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.5>.
+Analyzing module <FTCE_MXILINX_Main_T.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Main_T.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Main_T.1>.
+Analyzing module <Cordic> in library <work>.
+Module <Cordic> is correct for synthesis.
+ 
+Analyzing module <R_Shift_12> in library <work>.
+Module <R_Shift_12> is correct for synthesis.
+ 
+Analyzing module <FD12CE> in library <work>.
+Module <FD12CE> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <XLXI_9> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <XLXI_10> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <XLXI_11> in unit <FD12CE>.
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <FD12CE>.
+Analyzing module <Theta_Gen_12> in library <work>.
+Module <Theta_Gen_12> is correct for synthesis.
+ 
+Analyzing module <FD12CE_MUSER_Main_T> in library <work>.
+Module <FD12CE_MUSER_Main_T> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <XLXI_9> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <XLXI_10> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <XLXI_11> in unit <FD12CE_MUSER_Main_T>.
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <FD12CE_MUSER_Main_T>.
+Analyzing module <Scale_For_Cordic> in library <work>.
+Module <Scale_For_Cordic> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Theta_Gen_12>.
+    Related source file is "Theta_Gen_12.v".
+    Found 16x12-bit ROM for signal <Thetai>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <Theta_Gen_12> synthesized.
+
+
+Synthesizing Unit <Scale_For_Cordic>.
+    Related source file is "Scale_For_Cordic.v".
+WARNING:Xst:646 - Signal <Temp<23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Temp<10:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 12-bit adder for signal <Mod_inp$addsub0000> created at line 27.
+    Found 12-bit adder for signal <Otpt$addsub0000> created at line 30.
+    Found 22-bit adder carry out for signal <Temp$addsub0002> created at line 28.
+    Found 18-bit adder carry out for signal <Temp$addsub0003> created at line 28.
+    Found 19-bit adder carry out for signal <Temp$addsub0004> created at line 28.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+Unit <Scale_For_Cordic> synthesized.
+
+
+Synthesizing Unit <R_Shift_12>.
+    Related source file is "R_Shift_12.v".
+    Found 12-bit shifter logical right for signal <Buffer2>.
+    Found 12-bit adder for signal <Otps$addsub0000> created at line 30.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <R_Shift_12> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_T_1>.
+    Related source file is "Main_T.vf".
+Unit <FTCE_MXILINX_Main_T_1> synthesized.
+
+
+Synthesizing Unit <FD12CE_MUSER_Main_T>.
+    Related source file is "Main_T.vf".
+Unit <FD12CE_MUSER_Main_T> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_T_2>.
+    Related source file is "Main_T.vf".
+Unit <FTCE_MXILINX_Main_T_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_T_3>.
+    Related source file is "Main_T.vf".
+Unit <FTCE_MXILINX_Main_T_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_T_4>.
+    Related source file is "Main_T.vf".
+Unit <FTCE_MXILINX_Main_T_4> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Main_T_5>.
+    Related source file is "Main_T.vf".
+Unit <FTCE_MXILINX_Main_T_5> synthesized.
+
+
+Synthesizing Unit <FD12CE>.
+    Related source file is "FD12CE.vf".
+Unit <FD12CE> synthesized.
+
+
+Synthesizing Unit <Cordic>.
+    Related source file is "Cordic.v".
+    Found 12-bit addsub for signal <FF_Theta_In>.
+    Found 12-bit addsub for signal <FF_X_In>.
+    Found 12-bit addsub for signal <FF_Y_In>.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+Unit <Cordic> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_Main_T>.
+    Related source file is "Main_T.vf".
+Unit <CB4CE_MXILINX_Main_T> synthesized.
+
+
+Synthesizing Unit <Cb4ce_Bus_MUSER_Main_T>.
+    Related source file is "Main_T.vf".
+Unit <Cb4ce_Bus_MUSER_Main_T> synthesized.
+
+
+Synthesizing Unit <Main_T>.
+    Related source file is "Main_T.vf".
+Unit <Main_T> synthesized.
+
+
+Synthesizing Unit <Main>.
+    Related source file is "Main.v".
+    Found 12-bit subtractor for signal <R_Otp>.
+    Found 12-bit subtractor for signal <The_Otp>.
+    Found 12-bit subtractor for signal <X_Off>.
+    Found 12-bit subtractor for signal <Y_Off>.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <Main> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x12-bit ROM                                         : 1
+# Adders/Subtractors                                   : 19
+ 12-bit adder                                          : 6
+ 12-bit addsub                                         : 3
+ 12-bit subtractor                                     : 4
+ 18-bit adder carry out                                : 2
+ 19-bit adder carry out                                : 2
+ 22-bit adder carry out                                : 2
+# Logic shifters                                       : 2
+ 12-bit shifter logical right                          : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x12-bit ROM                                         : 1
+# Adders/Subtractors                                   : 19
+ 12-bit adder                                          : 6
+ 12-bit addsub                                         : 3
+ 12-bit subtractor                                     : 4
+ 18-bit adder carry out                                : 2
+ 19-bit adder carry out                                : 2
+ 22-bit adder carry out                                : 2
+# Registers                                            : 65
+ Flip-Flops                                            : 65
+# Logic shifters                                       : 2
+ 12-bit shifter logical right                          : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Main> ...
+
+Optimizing unit <Scale_For_Cordic> ...
+
+Optimizing unit <R_Shift_12> ...
+
+Optimizing unit <FTCE_MXILINX_Main_T_1> ...
+
+Optimizing unit <FD12CE_MUSER_Main_T> ...
+
+Optimizing unit <FTCE_MXILINX_Main_T_2> ...
+
+Optimizing unit <FTCE_MXILINX_Main_T_3> ...
+
+Optimizing unit <FTCE_MXILINX_Main_T_4> ...
+
+Optimizing unit <FTCE_MXILINX_Main_T_5> ...
+
+Optimizing unit <FD12CE> ...
+
+Optimizing unit <Cordic> ...
+
+Optimizing unit <CB4CE_MXILINX_Main_T> ...
+
+Optimizing unit <Main_T> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 65
+ Flip-Flops                                            : 65
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Main.ngr
+Top Level Output File Name         : Main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 110
+
+Cell Usage :
+# BELS                             : 892
+#      AND2                        : 2
+#      AND3                        : 1
+#      AND4                        : 1
+#      GND                         : 1
+#      INV                         : 47
+#      LUT1                        : 4
+#      LUT2                        : 135
+#      LUT2_D                      : 1
+#      LUT3                        : 123
+#      LUT3_D                      : 4
+#      LUT3_L                      : 2
+#      LUT4                        : 107
+#      LUT4_D                      : 4
+#      LUT4_L                      : 4
+#      MULT_AND                    : 2
+#      MUXCY                       : 215
+#      MUXF5                       : 14
+#      VCC                         : 2
+#      XOR2                        : 5
+#      XORCY                       : 218
+# FlipFlops/Latches                : 65
+#      FDCE                        : 65
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 109
+#      IBUF                        : 73
+#      OBUF                        : 36
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      239  out of   4656     5%  
+ Number of Slice Flip Flops:             65  out of   9312     0%  
+ Number of 4 input LUTs:                431  out of   9312     4%  
+ Number of IOs:                         110
+ Number of bonded IOBs:                 110  out of    232    47%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 65    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------------+-------+
+Control Signal                     | Buffer(FF name)              | Load  |
+-----------------------------------+------------------------------+-------+
+N0(XST_GND:G)                      | NONE(Cart2Pol/XLXI_33/X/I_Q0)| 48    |
+Start                              | IBUF                         | 17    |
+-----------------------------------+------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 14.551ns (Maximum Frequency: 68.723MHz)
+   Minimum input arrival time before clock: 5.151ns
+   Maximum output required time after clock: 6.802ns
+   Maximum combinational path delay: 7.288ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 14.551ns (frequency: 68.723MHz)
+  Total number of paths / destination ports: 2223244 / 130
+-------------------------------------------------------------------------
+Delay:               14.551ns (Levels of Logic = 29)
+  Source:            Cart2Pol/XLXI_33/X/I_Q0 (FF)
+  Destination:       Cart2Pol/XLXI_43/XLXI_12 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: Cart2Pol/XLXI_33/X/I_Q0 to Cart2Pol/XLXI_43/XLXI_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.514   0.651  Cart2Pol/XLXI_33/X/I_Q0 (Cart2Pol/X_PRE<0>)
+     LUT1:I0->O            1   0.612   0.000  Cart2Pol/XLXI_45/Madd_Mod_inp_addsub0000_cy<0>_rt (Cart2Pol/XLXI_45/Madd_Mod_inp_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  Cart2Pol/XLXI_45/Madd_Mod_inp_addsub0000_cy<0> (Cart2Pol/XLXI_45/Madd_Mod_inp_addsub0000_cy<0>)
+     XORCY:CI->O           2   0.699   0.410  Cart2Pol/XLXI_45/Madd_Mod_inp_addsub0000_xor<1> (Cart2Pol/XLXI_45/Mod_inp_addsub0000<1>)
+     LUT3:I2->O            3   0.612   0.520  Cart2Pol/XLXI_45/Mod_inp<1>1 (Cart2Pol/XLXI_45/Mod_inp<1>)
+     LUT2:I1->O            1   0.612   0.000  Cart2Pol/XLXI_45/Madd_Temp_addsub0003_lut<3> (Cart2Pol/XLXI_45/Madd_Temp_addsub0003_lut<3>)
+     MUXCY:S->O            1   0.404   0.000  Cart2Pol/XLXI_45/Madd_Temp_addsub0003_cy<3> (Cart2Pol/XLXI_45/Madd_Temp_addsub0003_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Temp_addsub0003_cy<4> (Cart2Pol/XLXI_45/Madd_Temp_addsub0003_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Temp_addsub0003_cy<5> (Cart2Pol/XLXI_45/Madd_Temp_addsub0003_cy<5>)
+     XORCY:CI->O           1   0.699   0.426  Cart2Pol/XLXI_45/Madd_Temp_addsub0003_xor<6> (Cart2Pol/XLXI_45/Temp_addsub0003<9>)
+     LUT2:I1->O            1   0.612   0.000  Cart2Pol/XLXI_45/Madd_Temp_addsub0004_lut<6> (Cart2Pol/XLXI_45/Madd_Temp_addsub0004_lut<6>)
+     MUXCY:S->O            1   0.404   0.000  Cart2Pol/XLXI_45/Madd_Temp_addsub0004_cy<6> (Cart2Pol/XLXI_45/Madd_Temp_addsub0004_cy<6>)
+     XORCY:CI->O           1   0.699   0.426  Cart2Pol/XLXI_45/Madd_Temp_addsub0004_xor<7> (Cart2Pol/XLXI_45/Temp_addsub0004<10>)
+     LUT2:I1->O            1   0.612   0.000  Cart2Pol/XLXI_45/Madd_Temp_addsub0002_lut<7> (Cart2Pol/XLXI_45/Madd_Temp_addsub0002_lut<7>)
+     MUXCY:S->O            1   0.404   0.000  Cart2Pol/XLXI_45/Madd_Temp_addsub0002_cy<7> (Cart2Pol/XLXI_45/Madd_Temp_addsub0002_cy<7>)
+     XORCY:CI->O           2   0.699   0.532  Cart2Pol/XLXI_45/Madd_Temp_addsub0002_xor<8> (Cart2Pol/XLXI_45/Temp<11>)
+     LUT1:I0->O            1   0.612   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<0>_rt (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<0> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<1> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<2> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<3> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<4> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<5> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<6> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<7> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<8> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<9> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<9>)
+     MUXCY:CI->O           0   0.052   0.000  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<10> (Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_cy<10>)
+     XORCY:CI->O           1   0.699   0.387  Cart2Pol/XLXI_45/Madd_Otpt_addsub0000_xor<11> (Cart2Pol/XLXI_45/Otpt_addsub0000<11>)
+     LUT3:I2->O            1   0.612   0.000  Cart2Pol/XLXI_45/Otpt<11>1 (Cart2Pol/Scaled_X<11>)
+     FDCE:D                    0.268          Cart2Pol/XLXI_43/XLXI_12
+    ----------------------------------------
+    Total                     14.551ns (11.199ns logic, 3.352ns route)
+                                       (77.0% logic, 23.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 480 / 36
+-------------------------------------------------------------------------
+Offset:              5.151ns (Levels of Logic = 15)
+  Source:            Y_Inp<0> (PAD)
+  Destination:       Cart2Pol/XLXI_33/Y/XLXI_12 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Y_Inp<0> to Cart2Pol/XLXI_33/Y/XLXI_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.509  Y_Inp_0_IBUF (Y_Inp_0_IBUF)
+     LUT2:I0->O            1   0.612   0.000  Msub_Y_Off_lut<0> (Msub_Y_Off_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Msub_Y_Off_cy<0> (Msub_Y_Off_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Y_Off_cy<1> (Msub_Y_Off_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Y_Off_cy<2> (Msub_Y_Off_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Y_Off_cy<3> (Msub_Y_Off_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Y_Off_cy<4> (Msub_Y_Off_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Y_Off_cy<5> (Msub_Y_Off_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Y_Off_cy<6> (Msub_Y_Off_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Y_Off_cy<7> (Msub_Y_Off_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Y_Off_cy<8> (Msub_Y_Off_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Y_Off_cy<9> (Msub_Y_Off_cy<9>)
+     MUXCY:CI->O           0   0.052   0.000  Msub_Y_Off_cy<10> (Msub_Y_Off_cy<10>)
+     XORCY:CI->O           1   0.699   0.426  Msub_Y_Off_xor<11> (Y_Off<11>)
+     LUT3:I1->O            1   0.612   0.000  Cart2Pol/XLXI_33/FF_Y_Out<11>1 (Cart2Pol/XLXI_33/FF_Y_Out<11>)
+     FDCE:D                    0.268          Cart2Pol/XLXI_33/Y/XLXI_12
+    ----------------------------------------
+    Total                      5.151ns (4.216ns logic, 0.935ns route)
+                                       (81.8% logic, 18.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 300 / 36
+-------------------------------------------------------------------------
+Offset:              6.802ns (Levels of Logic = 14)
+  Source:            Cart2Pol/XLXI_33/Theta/I_Q0 (FF)
+  Destination:       The_Otp<11> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: Cart2Pol/XLXI_33/Theta/I_Q0 to The_Otp<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.532  Cart2Pol/XLXI_33/Theta/I_Q0 (The_Off<0>)
+     LUT2:I0->O            1   0.612   0.000  Msub_The_Otp_lut<0> (Msub_The_Otp_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Msub_The_Otp_cy<0> (Msub_The_Otp_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<1> (Msub_The_Otp_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<2> (Msub_The_Otp_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<3> (Msub_The_Otp_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<4> (Msub_The_Otp_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<5> (Msub_The_Otp_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<6> (Msub_The_Otp_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<7> (Msub_The_Otp_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<8> (Msub_The_Otp_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<9> (Msub_The_Otp_cy<9>)
+     MUXCY:CI->O           0   0.051   0.000  Msub_The_Otp_cy<10> (Msub_The_Otp_cy<10>)
+     XORCY:CI->O           1   0.699   0.357  Msub_The_Otp_xor<11> (The_Otp_11_OBUF)
+     OBUF:I->O                 3.169          The_Otp_11_OBUF (The_Otp<11>)
+    ----------------------------------------
+    Total                      6.802ns (5.913ns logic, 0.889ns route)
+                                       (86.9% logic, 13.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 156 / 24
+-------------------------------------------------------------------------
+Delay:               7.288ns (Levels of Logic = 15)
+  Source:            The_Offset<0> (PAD)
+  Destination:       The_Otp<11> (PAD)
+
+  Data Path: The_Offset<0> to The_Otp<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.426  The_Offset_0_IBUF (The_Offset_0_IBUF)
+     LUT2:I1->O            1   0.612   0.000  Msub_The_Otp_lut<0> (Msub_The_Otp_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Msub_The_Otp_cy<0> (Msub_The_Otp_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<1> (Msub_The_Otp_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<2> (Msub_The_Otp_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<3> (Msub_The_Otp_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<4> (Msub_The_Otp_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<5> (Msub_The_Otp_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<6> (Msub_The_Otp_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<7> (Msub_The_Otp_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<8> (Msub_The_Otp_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_The_Otp_cy<9> (Msub_The_Otp_cy<9>)
+     MUXCY:CI->O           0   0.051   0.000  Msub_The_Otp_cy<10> (Msub_The_Otp_cy<10>)
+     XORCY:CI->O           1   0.699   0.357  Msub_The_Otp_xor<11> (The_Otp_11_OBUF)
+     OBUF:I->O                 3.169          The_Otp_11_OBUF (The_Otp<11>)
+    ----------------------------------------
+    Total                      7.288ns (6.505ns logic, 0.783ns route)
+                                       (89.3% logic, 10.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.95 secs
+ 
+--> 
+
+Total memory usage is 303708 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

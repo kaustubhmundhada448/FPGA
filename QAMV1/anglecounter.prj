@@ -1,0 +1,4 @@
+verilog work "gnd16bit.vf"
+verilog work "Counter_12.vf"
+verilog work "bit16to12.vf"
+verilog work "anglecounter.vf"

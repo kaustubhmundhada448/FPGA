@@ -1,0 +1,3 @@
+MODULE USART_Trans_Bus
+	SUBMODULE combine_shiftreg_dec
+		INSTANCE XLXI_1

@@ -1,0 +1,66 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : OCR_8.vf
+// /___/   /\     Timestamp : 08/22/2015 20:51:10
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/Complete_Fira_1.0/OCR_8.vf -w "C:/Users/Kaustubh Mundhada/Dropbox/FIRA_FPGA/Encoder_Ticks_Counter/OCR_8.sch"
+//Design Name: OCR_8
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module OCR_8(Inp0, 
+             Sel, 
+             Outpt);
+
+    input [15:0] Inp0;
+    input Sel;
+   output [7:0] Outpt;
+   
+   wire XLXN_56;
+   
+   MUXCY  XLXI_18 (.CI(XLXN_56), 
+                  .DI(Inp0[1]), 
+                  .S(Sel), 
+                  .O(Outpt[1]));
+   MUXCY  XLXI_19 (.CI(XLXN_56), 
+                  .DI(Inp0[0]), 
+                  .S(Sel), 
+                  .O(Outpt[0]));
+   MUXCY  XLXI_20 (.CI(XLXN_56), 
+                  .DI(Inp0[2]), 
+                  .S(Sel), 
+                  .O(Outpt[2]));
+   MUXCY  XLXI_21 (.CI(XLXN_56), 
+                  .DI(Inp0[3]), 
+                  .S(Sel), 
+                  .O(Outpt[3]));
+   MUXCY  XLXI_24 (.CI(XLXN_56), 
+                  .DI(Inp0[4]), 
+                  .S(Sel), 
+                  .O(Outpt[4]));
+   MUXCY  XLXI_25 (.CI(XLXN_56), 
+                  .DI(Inp0[5]), 
+                  .S(Sel), 
+                  .O(Outpt[5]));
+   MUXCY  XLXI_26 (.CI(XLXN_56), 
+                  .DI(Inp0[6]), 
+                  .S(Sel), 
+                  .O(Outpt[6]));
+   MUXCY  XLXI_27 (.CI(XLXN_56), 
+                  .DI(Inp0[7]), 
+                  .S(Sel), 
+                  .O(Outpt[7]));
+   VCC  XLXI_67 (.P(XLXN_56));
+endmodule

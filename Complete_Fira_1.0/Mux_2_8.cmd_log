@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Mux_2_8 {C:/Users/Kaustubh Mundhada/Dropbox/FIRA_FPGA/Encoder_Ticks_Counter/Mux_2_8.sch} E:/FPGA_Xilinx/Complete_Fira_1.0/Mux_2_8.sym 

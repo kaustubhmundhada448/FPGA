@@ -1,0 +1,82 @@
+sch2hdl -intstyle ise -family spartan3e -verilog FIRA_2_0_drc.vf -w E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog FIRA_2_0_drc.vf -w E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog FIRA_2_0_drc.vf -w E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog FIRA_2_0_drc.vf -w E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.sch 
+sch2sym -intstyle ise -family spartan3e -refsym FIRA_2_0 E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.sch E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.sym 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FIRA_2_0.ucf -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf -ucf FIRA_2_0.ucf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FIRA_2_0.ucf -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf -ucf FIRA_2_0.ucf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FIRA_2_0.ucf -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf -ucf FIRA_2_0.ucf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FIRA_2_0.ucf -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf -ucf FIRA_2_0.ucf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FIRA_2_0.ucf -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf -ucf FIRA_2_0.ucf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FIRA_2_0.ucf -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf -ucf FIRA_2_0.ucf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FIRA_2_0.ucf -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf -ucf FIRA_2_0.ucf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FIRA_2_0.ucf -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.xst" -ofn "E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FIRA_2_0.ucf -p xc3s250e-cp132-5 FIRA_2_0.ngc FIRA_2_0.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o FIRA_2_0_map.ncd FIRA_2_0.ngd FIRA_2_0.pcf 
+par -w -intstyle ise -ol high -t 1 FIRA_2_0_map.ncd FIRA_2_0.ncd FIRA_2_0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FIRA_2_0.twx FIRA_2_0.ncd -o FIRA_2_0.twr FIRA_2_0.pcf -ucf FIRA_2_0.ucf 
+bitgen -intstyle ise -f FIRA_2_0.ut FIRA_2_0.ncd 

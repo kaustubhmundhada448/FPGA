@@ -1,0 +1,11 @@
+MODULE error_derror_range_generator
+	SUBMODULE Mux_2_8
+		INSTANCE XLXI_8
+	SUBMODULE negative_mux
+		INSTANCE XLXI_46
+	SUBMODULE negative_mux
+		INSTANCE XLXI_64
+	SUBMODULE negative_mux
+		INSTANCE XLXI_66
+	SUBMODULE twos_compliment_using_inverter
+		INSTANCE XLXI_72

@@ -1,0 +1,115 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Sun Nov 29 19:08:16 2015
+# Process ID: 1768
+# Log file: G:/FPGA/BTP/QAMV1/planAhead_run_1/planAhead.log
+# Journal file: G:/FPGA/BTP/QAMV1/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source G:/FPGA/BTP/QAMV1/pa.fromNetlist.tcl
+# create_project -name QAMV1 -dir "G:/FPGA/BTP/QAMV1/planAhead_run_2" -part xc3s400pq208-4
+Parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Finished parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Finished parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+Finished parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "G:/FPGA/BTP/QAMV1/Fial_Combine.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {G:/FPGA/BTP/QAMV1} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "Fial_Combine.ucf" [current_fileset -constrset]
+Adding file 'G:/FPGA/BTP/QAMV1/Fial_Combine.ucf' to fileset 'constrs_1'
+# add_files [list {Fial_Combine.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s400pq208-4
+Release 14.2 - ngc2edif P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design Fial_Combine.ngc ...
+WARNING:NetListWriters:298 - No output is written to Fial_Combine.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file Fial_Combine.edif ...
+ngc2edif: Total memory usage is 80220 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/QAMV1.data/cache/Fial_Combine_ngc_33b11598.edif]
+Finished Parsing EDIF File [./planAhead_run_2/QAMV1.data/cache/Fial_Combine_ngc_33b11598.edif]
+CRITICAL WARNING: [EDIF 20-96] Could not resolve non-primitive black box cell 'FMAP' defined in file 'Fial_Combine.ngc' instantiated as 'XLXI_2/XLXI_10/XLXI_2/I_36_29'.
+INFO: [Designutils 20-910] Reading macro library C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3/spartan3/xc3s400/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3/spartan3/xc3s400/ClockBuffers.xml
+Loading package from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3/spartan3/xc3s400/pq208/Package.xml
+Loading io standards from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3/spartan3/xc3s400/pq208/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3/drc.xml
+INFO: [Timing 38-77] Reading timing library C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3/spartan3/spartan3-4.lib.
+INFO: [Timing 38-34] Done reading timing library C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3/spartan3/spartan3-4.lib.
+Parsing UCF File [G:/FPGA/BTP/QAMV1/Fial_Combine.ucf]
+Finished Parsing UCF File [G:/FPGA/BTP/QAMV1/Fial_Combine.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  AND5 => AND5 (HD_LUT_F, HD_LUT_G): 6 instances
+
+Phase 0 | Netlist Checksum: 48e232ec
+link_design: Time (s): elapsed = 00:00:12 . Memory (MB): peak = 499.824 ; gain = 81.141
+startgroup
+set_property package_pin P74 [get_ports en]
+endgroup
+startgroup
+set_property package_pin P76 [get_ports inp_clk]
+endgroup
+startgroup
+set_property package_pin P21 [get_ports inputsignal]
+endgroup
+set_property package_pin "" [get_ports [list  {cosine[0]}]]
+startgroup
+set_property package_pin P81 [get_ports {sine[0]}]
+endgroup
+startgroup
+set_property package_pin P79 [get_ports {sine[1]}]
+endgroup
+startgroup
+set_property package_pin P100 [get_ports {sine[2]}]
+endgroup
+startgroup
+set_property package_pin P97 [get_ports {sine[3]}]
+endgroup
+startgroup
+set_property package_pin P93 [get_ports {sine[4]}]
+endgroup
+startgroup
+set_property package_pin P90 [get_ports {sine[5]}]
+endgroup
+startgroup
+set_property package_pin P94 [get_ports {sine[6]}]
+endgroup
+startgroup
+set_property package_pin P95 [get_ports {sine[7]}]
+endgroup
+startgroup
+set_property package_pin P96 [get_ports {sine[8]}]
+endgroup
+startgroup
+set_property package_pin P102 [get_ports {sine[9]}]
+endgroup
+startgroup
+set_property package_pin P101 [get_ports {sine[10]}]
+endgroup
+startgroup
+set_property package_pin P80 [get_ports {sine[11]}]
+endgroup
+set_property is_loc_fixed false [get_ports [list  {sine[11]}]]
+set_property is_loc_fixed true [get_ports [list  {sine[11]}]]
+save_design

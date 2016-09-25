@@ -1,0 +1,3090 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Fuzzy_PID.vf
+// /___/   /\     Timestamp : 09/25/2016 23:20:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/FIRA_2.0/Fuzzy_PID.vf -w E:/FPGA_Xilinx/FIRA_2.0/Fuzzy_PID.sch
+//Design Name: Fuzzy_PID
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ADD16_MXILINX_Fuzzy_PID(A, 
+                               B, 
+                               CI, 
+                               CO, 
+                               OFL, 
+                               S);
+
+    input [15:0] A;
+    input [15:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [15:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C7;
+   wire C8;
+   wire C9;
+   wire C10;
+   wire C11;
+   wire C12;
+   wire C13;
+   wire C14;
+   wire C14O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I7;
+   wire I8;
+   wire I9;
+   wire I10;
+   wire I11;
+   wire I12;
+   wire I13;
+   wire I14;
+   wire I15;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X0Y4" *) 
+   FMAP  I_36_16 (.I1(A[8]), 
+                 .I2(B[8]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I8));
+   (* RLOC = "X0Y4" *) 
+   FMAP  I_36_17 (.I1(A[9]), 
+                 .I2(B[9]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I9));
+   (* RLOC = "X0Y5" *) 
+   FMAP  I_36_18 (.I1(A[10]), 
+                 .I2(B[10]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I10));
+   (* RLOC = "X0Y5" *) 
+   FMAP  I_36_19 (.I1(A[11]), 
+                 .I2(B[11]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I11));
+   (* RLOC = "X0Y6" *) 
+   FMAP  I_36_20 (.I1(A[12]), 
+                 .I2(B[12]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I12));
+   (* RLOC = "X0Y6" *) 
+   FMAP  I_36_21 (.I1(A[13]), 
+                 .I2(B[13]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I13));
+   (* RLOC = "X0Y7" *) 
+   FMAP  I_36_22 (.I1(A[14]), 
+                 .I2(B[14]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I14));
+   (* RLOC = "X0Y7" *) 
+   FMAP  I_36_23 (.I1(A[15]), 
+                 .I2(B[15]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I15));
+   (* RLOC = "X0Y4" *) 
+   MUXCY_L  I_36_55 (.CI(C8), 
+                    .DI(A[9]), 
+                    .S(I9), 
+                    .LO(C9));
+   (* RLOC = "X0Y5" *) 
+   MUXCY_L  I_36_58 (.CI(C10), 
+                    .DI(A[11]), 
+                    .S(I11), 
+                    .LO(C11));
+   (* RLOC = "X0Y5" *) 
+   MUXCY_L  I_36_62 (.CI(C9), 
+                    .DI(A[10]), 
+                    .S(I10), 
+                    .LO(C10));
+   (* RLOC = "X0Y6" *) 
+   MUXCY_L  I_36_63 (.CI(C11), 
+                    .DI(A[12]), 
+                    .S(I12), 
+                    .LO(C12));
+   (* RLOC = "X0Y7" *) 
+   MUXCY  I_36_64 (.CI(C14), 
+                  .DI(A[15]), 
+                  .S(I15), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(C7), 
+                  .LI(I8), 
+                  .O(S[8]));
+   XORCY  I_36_74 (.CI(C8), 
+                  .LI(I9), 
+                  .O(S[9]));
+   XORCY  I_36_75 (.CI(C10), 
+                  .LI(I11), 
+                  .O(S[11]));
+   XORCY  I_36_76 (.CI(C9), 
+                  .LI(I10), 
+                  .O(S[10]));
+   XORCY  I_36_77 (.CI(C12), 
+                  .LI(I13), 
+                  .O(S[13]));
+   XORCY  I_36_78 (.CI(C11), 
+                  .LI(I12), 
+                  .O(S[12]));
+   XORCY  I_36_80 (.CI(C14), 
+                  .LI(I15), 
+                  .O(S[15]));
+   XORCY  I_36_81 (.CI(C13), 
+                  .LI(I14), 
+                  .O(S[14]));
+   (* RLOC = "X0Y7" *) 
+   MUXCY_D  I_36_107 (.CI(C13), 
+                     .DI(A[14]), 
+                     .S(I14), 
+                     .LO(C14), 
+                     .O(C14O));
+   (* RLOC = "X0Y6" *) 
+   MUXCY_L  I_36_110 (.CI(C12), 
+                     .DI(A[13]), 
+                     .S(I13), 
+                     .LO(C13));
+   (* RLOC = "X0Y4" *) 
+   MUXCY_L  I_36_111 (.CI(C7), 
+                     .DI(A[8]), 
+                     .S(I8), 
+                     .LO(C8));
+   XORCY  I_36_226 (.CI(CI), 
+                   .LI(I0), 
+                   .O(S[0]));
+   XORCY  I_36_227 (.CI(C0), 
+                   .LI(I1), 
+                   .O(S[1]));
+   XORCY  I_36_228 (.CI(C2), 
+                   .LI(I3), 
+                   .O(S[3]));
+   XORCY  I_36_229 (.CI(C1), 
+                   .LI(I2), 
+                   .O(S[2]));
+   XORCY  I_36_230 (.CI(C4), 
+                   .LI(I5), 
+                   .O(S[5]));
+   XORCY  I_36_231 (.CI(C3), 
+                   .LI(I4), 
+                   .O(S[4]));
+   XORCY  I_36_233 (.CI(C6), 
+                   .LI(I7), 
+                   .O(S[7]));
+   XORCY  I_36_234 (.CI(C5), 
+                   .LI(I6), 
+                   .O(S[6]));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_L  I_36_248 (.CI(C6), 
+                     .DI(A[7]), 
+                     .S(I7), 
+                     .LO(C7));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_L  I_36_249 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_250 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_251 (.CI(C3), 
+                     .DI(A[4]), 
+                     .S(I4), 
+                     .LO(C4));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_252 (.CI(C2), 
+                     .DI(A[3]), 
+                     .S(I3), 
+                     .LO(C3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_253 (.CI(C1), 
+                     .DI(A[2]), 
+                     .S(I2), 
+                     .LO(C2));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_254 (.CI(C0), 
+                     .DI(A[1]), 
+                     .S(I1), 
+                     .LO(C1));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_255 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_272 (.I1(A[1]), 
+                  .I2(B[1]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_275 (.I1(A[0]), 
+                  .I2(B[0]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_279 (.I1(A[2]), 
+                  .I2(B[2]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_283 (.I1(A[3]), 
+                  .I2(B[3]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I3));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_287 (.I1(A[4]), 
+                  .I2(B[4]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I4));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_291 (.I1(A[5]), 
+                  .I2(B[5]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I5));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_295 (.I1(A[6]), 
+                  .I2(B[6]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I6));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_299 (.I1(A[7]), 
+                  .I2(B[7]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I7));
+   XOR2  I_36_354 (.I0(A[0]), 
+                  .I1(B[0]), 
+                  .O(I0));
+   XOR2  I_36_355 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .O(I1));
+   XOR2  I_36_356 (.I0(A[2]), 
+                  .I1(B[2]), 
+                  .O(I2));
+   XOR2  I_36_357 (.I0(A[3]), 
+                  .I1(B[3]), 
+                  .O(I3));
+   XOR2  I_36_358 (.I0(A[4]), 
+                  .I1(B[4]), 
+                  .O(I4));
+   XOR2  I_36_359 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .O(I5));
+   XOR2  I_36_360 (.I0(A[6]), 
+                  .I1(B[6]), 
+                  .O(I6));
+   XOR2  I_36_361 (.I0(A[7]), 
+                  .I1(B[7]), 
+                  .O(I7));
+   XOR2  I_36_362 (.I0(A[8]), 
+                  .I1(B[8]), 
+                  .O(I8));
+   XOR2  I_36_363 (.I0(A[9]), 
+                  .I1(B[9]), 
+                  .O(I9));
+   XOR2  I_36_364 (.I0(A[10]), 
+                  .I1(B[10]), 
+                  .O(I10));
+   XOR2  I_36_365 (.I0(A[11]), 
+                  .I1(B[11]), 
+                  .O(I11));
+   XOR2  I_36_366 (.I0(A[12]), 
+                  .I1(B[12]), 
+                  .O(I12));
+   XOR2  I_36_367 (.I0(A[13]), 
+                  .I1(B[13]), 
+                  .O(I13));
+   XOR2  I_36_368 (.I0(A[14]), 
+                  .I1(B[14]), 
+                  .O(I14));
+   XOR2  I_36_369 (.I0(A[15]), 
+                  .I1(B[15]), 
+                  .O(I15));
+   XOR2  I_36_375 (.I0(C14O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module Mux_2_16_MUSER_Fuzzy_PID(Inp0, 
+                                Inp1, 
+                                S_0, 
+                                Output);
+
+    input [15:0] Inp0;
+    input [15:0] Inp1;
+    input S_0;
+   output [15:0] Output;
+   
+   
+   MUXCY  XLXI_1 (.CI(Inp1[3]), 
+                 .DI(Inp0[3]), 
+                 .S(S_0), 
+                 .O(Output[3]));
+   MUXCY  XLXI_9 (.CI(Inp1[0]), 
+                 .DI(Inp0[0]), 
+                 .S(S_0), 
+                 .O(Output[0]));
+   MUXCY  XLXI_18 (.CI(Inp1[1]), 
+                  .DI(Inp0[1]), 
+                  .S(S_0), 
+                  .O(Output[1]));
+   MUXCY  XLXI_24 (.CI(Inp1[4]), 
+                  .DI(Inp0[4]), 
+                  .S(S_0), 
+                  .O(Output[4]));
+   MUXCY  XLXI_25 (.CI(Inp1[5]), 
+                  .DI(Inp0[5]), 
+                  .S(S_0), 
+                  .O(Output[5]));
+   MUXCY  XLXI_26 (.CI(Inp1[6]), 
+                  .DI(Inp0[6]), 
+                  .S(S_0), 
+                  .O(Output[6]));
+   MUXCY  XLXI_27 (.CI(Inp1[7]), 
+                  .DI(Inp0[7]), 
+                  .S(S_0), 
+                  .O(Output[7]));
+   MUXCY  XLXI_28 (.CI(Inp1[8]), 
+                  .DI(Inp0[8]), 
+                  .S(S_0), 
+                  .O(Output[8]));
+   MUXCY  XLXI_31 (.CI(Inp1[9]), 
+                  .DI(Inp0[9]), 
+                  .S(S_0), 
+                  .O(Output[9]));
+   MUXCY  XLXI_35 (.CI(Inp1[10]), 
+                  .DI(Inp0[10]), 
+                  .S(S_0), 
+                  .O(Output[10]));
+   MUXCY  XLXI_37 (.CI(Inp1[11]), 
+                  .DI(Inp0[11]), 
+                  .S(S_0), 
+                  .O(Output[11]));
+   MUXCY  XLXI_47 (.CI(Inp1[12]), 
+                  .DI(Inp0[12]), 
+                  .S(S_0), 
+                  .O(Output[12]));
+   MUXCY  XLXI_48 (.CI(Inp1[13]), 
+                  .DI(Inp0[13]), 
+                  .S(S_0), 
+                  .O(Output[13]));
+   MUXCY  XLXI_49 (.CI(Inp1[14]), 
+                  .DI(Inp0[14]), 
+                  .S(S_0), 
+                  .O(Output[14]));
+   MUXCY  XLXI_53 (.CI(Inp1[2]), 
+                  .DI(Inp0[2]), 
+                  .S(S_0), 
+                  .O(Output[2]));
+   MUXCY  XLXI_57 (.CI(Inp1[15]), 
+                  .DI(Inp0[15]), 
+                  .S(S_0), 
+                  .O(Output[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module Mult_9bit_3Bit_Comb_MUSER_Fuzzy_PID(Multiplicant, 
+                                           Multiplier, 
+                                           Product);
+
+    input [8:0] Multiplicant;
+    input [2:0] Multiplier;
+   output [15:0] Product;
+   
+   wire [15:0] Multiplicant_1;
+   wire [15:0] Multiplicant_2;
+   wire [15:0] Multiplicant_4;
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   wire [15:0] XLXN_7;
+   wire [15:0] XLXN_8;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire [15:0] Zero16;
+   
+   Mux_2_16_MUSER_Fuzzy_PID  XLXI_2 (.Inp0(Zero16[15:0]), 
+                                    .Inp1(Multiplicant_1[15:0]), 
+                                    .S_0(Multiplier[0]), 
+                                    .Output(XLXN_5[15:0]));
+   Mux_2_16_MUSER_Fuzzy_PID  XLXI_3 (.Inp0(Zero16[15:0]), 
+                                    .Inp1(Multiplicant_2[15:0]), 
+                                    .S_0(Multiplier[1]), 
+                                    .Output(XLXN_6[15:0]));
+   Mux_2_16_MUSER_Fuzzy_PID  XLXI_4 (.Inp0(Zero16[15:0]), 
+                                    .Inp1(Multiplicant_4[15:0]), 
+                                    .S_0(Multiplier[2]), 
+                                    .Output(XLXN_7[15:0]));
+   GND  XLXI_5 (.G(Zero16[0]));
+   GND  XLXI_6 (.G(Zero16[1]));
+   GND  XLXI_7 (.G(Zero16[2]));
+   GND  XLXI_8 (.G(Zero16[3]));
+   GND  XLXI_9 (.G(Zero16[4]));
+   GND  XLXI_10 (.G(Zero16[5]));
+   GND  XLXI_11 (.G(Zero16[6]));
+   GND  XLXI_12 (.G(Zero16[7]));
+   GND  XLXI_13 (.G(Zero16[8]));
+   GND  XLXI_14 (.G(Zero16[9]));
+   GND  XLXI_15 (.G(Zero16[10]));
+   GND  XLXI_16 (.G(Zero16[11]));
+   GND  XLXI_17 (.G(Zero16[12]));
+   GND  XLXI_18 (.G(Zero16[13]));
+   GND  XLXI_19 (.G(Zero16[14]));
+   GND  XLXI_20 (.G(Zero16[15]));
+   (* HU_SET = "XLXI_21_75" *) 
+   ADD16_MXILINX_Fuzzy_PID  XLXI_21 (.A(XLXN_5[15:0]), 
+                                    .B(XLXN_6[15:0]), 
+                                    .CI(XLXN_48), 
+                                    .CO(), 
+                                    .OFL(), 
+                                    .S(XLXN_8[15:0]));
+   (* HU_SET = "XLXI_22_76" *) 
+   ADD16_MXILINX_Fuzzy_PID  XLXI_22 (.A(XLXN_8[15:0]), 
+                                    .B(XLXN_7[15:0]), 
+                                    .CI(XLXN_49), 
+                                    .CO(), 
+                                    .OFL(), 
+                                    .S(Product[15:0]));
+   GND  XLXI_23 (.G(Multiplicant_1[10]));
+   GND  XLXI_24 (.G(Multiplicant_1[11]));
+   GND  XLXI_25 (.G(Multiplicant_1[12]));
+   GND  XLXI_26 (.G(Multiplicant_1[13]));
+   GND  XLXI_27 (.G(Multiplicant_1[14]));
+   GND  XLXI_28 (.G(Multiplicant_1[15]));
+   GND  XLXI_51 (.G(Multiplicant_1[9]));
+   GND  XLXI_52 (.G(Multiplicant_2[15]));
+   GND  XLXI_53 (.G(Multiplicant_2[14]));
+   GND  XLXI_54 (.G(Multiplicant_2[13]));
+   GND  XLXI_55 (.G(Multiplicant_2[12]));
+   GND  XLXI_56 (.G(Multiplicant_2[11]));
+   GND  XLXI_57 (.G(Multiplicant_2[10]));
+   GND  XLXI_58 (.G(Multiplicant_2[0]));
+   GND  XLXI_59 (.G(Multiplicant_4[15]));
+   GND  XLXI_60 (.G(Multiplicant_4[14]));
+   GND  XLXI_61 (.G(Multiplicant_4[13]));
+   GND  XLXI_62 (.G(Multiplicant_4[12]));
+   GND  XLXI_63 (.G(Multiplicant_4[11]));
+   GND  XLXI_64 (.G(Multiplicant_4[1]));
+   GND  XLXI_65 (.G(Multiplicant_4[0]));
+   GND  XLXI_66 (.G(XLXN_48));
+   GND  XLXI_67 (.G(XLXN_49));
+   BUF  XLXI_68 (.I(Multiplicant[8]), 
+                .O(Multiplicant_2[9]));
+   BUF  XLXI_69 (.I(Multiplicant[7]), 
+                .O(Multiplicant_2[8]));
+   BUF  XLXI_70 (.I(Multiplicant[6]), 
+                .O(Multiplicant_2[7]));
+   BUF  XLXI_71 (.I(Multiplicant[5]), 
+                .O(Multiplicant_2[6]));
+   BUF  XLXI_72 (.I(Multiplicant[4]), 
+                .O(Multiplicant_2[5]));
+   BUF  XLXI_73 (.I(Multiplicant[3]), 
+                .O(Multiplicant_2[4]));
+   BUF  XLXI_74 (.I(Multiplicant[2]), 
+                .O(Multiplicant_2[3]));
+   BUF  XLXI_75 (.I(Multiplicant[1]), 
+                .O(Multiplicant_2[2]));
+   BUF  XLXI_76 (.I(Multiplicant[0]), 
+                .O(Multiplicant_2[1]));
+   BUF  XLXI_77 (.I(Multiplicant[0]), 
+                .O(Multiplicant_4[2]));
+   BUF  XLXI_78 (.I(Multiplicant[1]), 
+                .O(Multiplicant_4[3]));
+   BUF  XLXI_79 (.I(Multiplicant[2]), 
+                .O(Multiplicant_4[4]));
+   BUF  XLXI_80 (.I(Multiplicant[3]), 
+                .O(Multiplicant_4[5]));
+   BUF  XLXI_81 (.I(Multiplicant[4]), 
+                .O(Multiplicant_4[6]));
+   BUF  XLXI_82 (.I(Multiplicant[5]), 
+                .O(Multiplicant_4[7]));
+   BUF  XLXI_83 (.I(Multiplicant[6]), 
+                .O(Multiplicant_4[8]));
+   BUF  XLXI_84 (.I(Multiplicant[7]), 
+                .O(Multiplicant_4[9]));
+   BUF  XLXI_85 (.I(Multiplicant[8]), 
+                .O(Multiplicant_4[10]));
+   BUF  XLXI_86 (.I(Multiplicant[0]), 
+                .O(Multiplicant_1[0]));
+   BUF  XLXI_87 (.I(Multiplicant[1]), 
+                .O(Multiplicant_1[1]));
+   BUF  XLXI_88 (.I(Multiplicant[2]), 
+                .O(Multiplicant_1[2]));
+   BUF  XLXI_89 (.I(Multiplicant[3]), 
+                .O(Multiplicant_1[3]));
+   BUF  XLXI_90 (.I(Multiplicant[4]), 
+                .O(Multiplicant_1[4]));
+   BUF  XLXI_91 (.I(Multiplicant[5]), 
+                .O(Multiplicant_1[5]));
+   BUF  XLXI_92 (.I(Multiplicant[6]), 
+                .O(Multiplicant_1[6]));
+   BUF  XLXI_93 (.I(Multiplicant[7]), 
+                .O(Multiplicant_1[7]));
+   BUF  XLXI_94 (.I(Multiplicant[8]), 
+                .O(Multiplicant_1[8]));
+endmodule
+`timescale 1ns / 1ps
+
+module FD8CE_MXILINX_Fuzzy_PID(C, 
+                               CE, 
+                               CLR, 
+                               D, 
+                               Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [7:0] D;
+   output [7:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_Fuzzy_PID(C, 
+                              CE, 
+                              CLR, 
+                              T, 
+                              Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CE_MXILINX_Fuzzy_PID(C, 
+                               CE, 
+                               CLR, 
+                               CEO, 
+                               Q0, 
+                               Q1, 
+                               Q2, 
+                               Q3, 
+                               TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_77" *) 
+   FTCE_MXILINX_Fuzzy_PID #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(XLXN_1), 
+                                .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_78" *) 
+   FTCE_MXILINX_Fuzzy_PID #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(Q0_DUMMY), 
+                                .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_79" *) 
+   FTCE_MXILINX_Fuzzy_PID #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(T2), 
+                                .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_80" *) 
+   FTCE_MXILINX_Fuzzy_PID #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(T3), 
+                                .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module FD9CE_MUSER_Fuzzy_PID(C, 
+                             CE, 
+                             CLR, 
+                             D, 
+                             Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [8:0] D;
+   output [8:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+   FDCE #( .INIT(1'b0) ) XLXI_9 (.C(C), 
+                .CE(CE), 
+                .CLR(CLR), 
+                .D(D[8]), 
+                .Q(Q[8]));
+endmodule
+`timescale 1ns / 1ps
+
+module Left_Shift_8Bit_MUSER_Fuzzy_PID(Inp, 
+                                       Out_0, 
+                                       Outp);
+
+    input [7:0] Inp;
+    input Out_0;
+   output [7:0] Outp;
+   
+   
+   BUF  XLXI_2 (.I(Inp[6]), 
+               .O(Outp[7]));
+   BUF  XLXI_3 (.I(Inp[5]), 
+               .O(Outp[6]));
+   BUF  XLXI_4 (.I(Inp[4]), 
+               .O(Outp[5]));
+   BUF  XLXI_5 (.I(Inp[3]), 
+               .O(Outp[4]));
+   BUF  XLXI_7 (.I(Out_0), 
+               .O(Outp[0]));
+   BUF  XLXI_9 (.I(Inp[1]), 
+               .O(Outp[2]));
+   BUF  XLXI_10 (.I(Inp[0]), 
+                .O(Outp[1]));
+   BUF  XLXI_11 (.I(Inp[2]), 
+                .O(Outp[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module Mux_2_8Bit_MUSER_Fuzzy_PID(Inp0, 
+                                  Inp1, 
+                                  Sel, 
+                                  Outp);
+
+    input [7:0] Inp0;
+    input [7:0] Inp1;
+    input Sel;
+   output [7:0] Outp;
+   
+   
+   MUXCY  XLXI_18 (.CI(Inp1[1]), 
+                  .DI(Inp0[1]), 
+                  .S(Sel), 
+                  .O(Outp[1]));
+   MUXCY  XLXI_19 (.CI(Inp1[0]), 
+                  .DI(Inp0[0]), 
+                  .S(Sel), 
+                  .O(Outp[0]));
+   MUXCY  XLXI_20 (.CI(Inp1[2]), 
+                  .DI(Inp0[2]), 
+                  .S(Sel), 
+                  .O(Outp[2]));
+   MUXCY  XLXI_21 (.CI(Inp1[3]), 
+                  .DI(Inp0[3]), 
+                  .S(Sel), 
+                  .O(Outp[3]));
+   MUXCY  XLXI_24 (.CI(Inp1[4]), 
+                  .DI(Inp0[4]), 
+                  .S(Sel), 
+                  .O(Outp[4]));
+   MUXCY  XLXI_25 (.CI(Inp1[5]), 
+                  .DI(Inp0[5]), 
+                  .S(Sel), 
+                  .O(Outp[5]));
+   MUXCY  XLXI_26 (.CI(Inp1[6]), 
+                  .DI(Inp0[6]), 
+                  .S(Sel), 
+                  .O(Outp[6]));
+   MUXCY  XLXI_27 (.CI(Inp1[7]), 
+                  .DI(Inp0[7]), 
+                  .S(Sel), 
+                  .O(Outp[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module Bit8_to_bit9_MUSER_Fuzzy_PID(Data_8, 
+                                    Data_9);
+
+    input [7:0] Data_8;
+   output [8:0] Data_9;
+   
+   
+   BUF  XLXI_1 (.I(Data_8[0]), 
+               .O(Data_9[0]));
+   BUF  XLXI_2 (.I(Data_8[1]), 
+               .O(Data_9[1]));
+   BUF  XLXI_3 (.I(Data_8[2]), 
+               .O(Data_9[2]));
+   BUF  XLXI_4 (.I(Data_8[3]), 
+               .O(Data_9[3]));
+   BUF  XLXI_5 (.I(Data_8[4]), 
+               .O(Data_9[4]));
+   BUF  XLXI_6 (.I(Data_8[5]), 
+               .O(Data_9[5]));
+   BUF  XLXI_7 (.I(Data_8[6]), 
+               .O(Data_9[6]));
+   BUF  XLXI_8 (.I(Data_8[7]), 
+               .O(Data_9[7]));
+   BUF  XLXI_9 (.I(Data_8[7]), 
+               .O(Data_9[8]));
+endmodule
+`timescale 1ns / 1ps
+
+module sub9bit_MUSER_Fuzzy_PID(A, 
+                               ADD, 
+                               B, 
+                               CI, 
+                               CO, 
+                               OFL, 
+                               S);
+
+    input [8:0] A;
+    input ADD;
+    input [8:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [8:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C6O;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I8;
+   wire SUB0;
+   wire SUB1;
+   wire SUB2;
+   wire SUB3;
+   wire SUB4;
+   wire SUB5;
+   wire SUB6;
+   wire SUB7;
+   wire SUB8;
+   wire XLXN_329;
+   wire XLXN_346;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   XOR3  I_36_50 (.I0(A[0]), 
+                 .I1(B[0]), 
+                 .I2(SUB0), 
+                 .O(I0));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A[1]), 
+                    .S(I1), 
+                    .LO(C1));
+   XOR3  I_36_56 (.I0(A[2]), 
+                 .I1(B[2]), 
+                 .I2(SUB2), 
+                 .O(I2));
+   XOR3  I_36_57 (.I0(A[3]), 
+                 .I1(B[3]), 
+                 .I2(SUB3), 
+                 .O(I3));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_58 (.CI(C2), 
+                    .DI(A[3]), 
+                    .S(I3), 
+                    .LO(C3));
+   XOR3  I_36_59 (.I0(A[6]), 
+                 .I1(B[6]), 
+                 .I2(SUB6), 
+                 .O(I6));
+   XOR3  I_36_60 (.I0(A[4]), 
+                 .I1(B[4]), 
+                 .I2(SUB4), 
+                 .O(I4));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_62 (.CI(C1), 
+                    .DI(A[2]), 
+                    .S(I2), 
+                    .LO(C2));
+ 
+   MUXCY_L  I_36_63 (.CI(C3), 
+                    .DI(A[4]), 
+                    .S(I4), 
+                    .LO(C4));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S[0]));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S[1]));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S[3]));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S[2]));
+   XORCY  I_36_77 (.CI(C4), 
+                  .LI(I5), 
+                  .O(S[5]));
+   XORCY  I_36_78 (.CI(C3), 
+                  .LI(I4), 
+                  .O(S[4]));
+   XOR3  I_36_79 (.I0(A[7]), 
+                 .I1(B[7]), 
+                 .I2(SUB7), 
+                 .O(XLXN_329));
+   XORCY  I_36_80 (.CI(C6), 
+                  .LI(XLXN_329), 
+                  .O(S[7]));
+   XORCY  I_36_81 (.CI(C5), 
+                  .LI(I6), 
+                  .O(S[6]));
+   XOR3  I_36_100 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .I2(SUB1), 
+                  .O(I1));
+   XOR3  I_36_109 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .I2(SUB5), 
+                  .O(I5));
+
+   MUXCY_L  I_36_110 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   INV  I_36_112 (.I(ADD), 
+                 .O(SUB0));
+   XOR2  I_36_221 (.I0(C6O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+   INV  I_36_222 (.I(ADD), 
+                 .O(SUB1));
+   INV  I_36_223 (.I(ADD), 
+                 .O(SUB2));
+   INV  I_36_224 (.I(ADD), 
+                 .O(SUB3));
+   INV  I_36_225 (.I(ADD), 
+                 .O(SUB4));
+   INV  I_36_226 (.I(ADD), 
+                 .O(SUB5));
+   INV  I_36_227 (.I(ADD), 
+                 .O(SUB6));
+   INV  I_36_228 (.I(ADD), 
+                 .O(SUB7));
+   (* RLOC = "X1Y3" *) 
+   MUXCY  XLXI_151 (.CI(XLXN_346), 
+                   .DI(A[8]), 
+                   .S(I8), 
+                   .O(CO_DUMMY));
+   XORCY  XLXI_152 (.CI(XLXN_346), 
+                   .LI(I8), 
+                   .O(S[8]));
+   INV  XLXI_153 (.I(ADD), 
+                 .O(SUB8));
+   XOR3  XLXI_154 (.I0(A[8]), 
+                  .I1(B[8]), 
+                  .I2(SUB8), 
+                  .O(I8));
+   (* RLOC = "X1Y3" *) 
+   MUXCY_D  XLXI_155 (.CI(C6), 
+                     .DI(A[7]), 
+                     .S(XLXN_329), 
+                     .LO(XLXN_346), 
+                     .O(C6O));
+
+   MUXCY_L  XLXI_156 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6));
+endmodule
+`timescale 1ns / 1ps
+
+module Mux_2_8_MUSER_Fuzzy_PID(Inp0, 
+                               Inp1, 
+                               Sel, 
+                               Outp);
+
+    input [8:0] Inp0;
+    input [8:0] Inp1;
+    input Sel;
+   output [8:0] Outp;
+   
+   
+   MUXCY  XLXI_18 (.CI(Inp1[1]), 
+                  .DI(Inp0[1]), 
+                  .S(Sel), 
+                  .O(Outp[1]));
+   MUXCY  XLXI_19 (.CI(Inp1[0]), 
+                  .DI(Inp0[0]), 
+                  .S(Sel), 
+                  .O(Outp[0]));
+   MUXCY  XLXI_20 (.CI(Inp1[2]), 
+                  .DI(Inp0[2]), 
+                  .S(Sel), 
+                  .O(Outp[2]));
+   MUXCY  XLXI_21 (.CI(Inp1[3]), 
+                  .DI(Inp0[3]), 
+                  .S(Sel), 
+                  .O(Outp[3]));
+   MUXCY  XLXI_24 (.CI(Inp1[4]), 
+                  .DI(Inp0[4]), 
+                  .S(Sel), 
+                  .O(Outp[4]));
+   MUXCY  XLXI_25 (.CI(Inp1[5]), 
+                  .DI(Inp0[5]), 
+                  .S(Sel), 
+                  .O(Outp[5]));
+   MUXCY  XLXI_26 (.CI(Inp1[6]), 
+                  .DI(Inp0[6]), 
+                  .S(Sel), 
+                  .O(Outp[6]));
+   MUXCY  XLXI_27 (.CI(Inp1[7]), 
+                  .DI(Inp0[7]), 
+                  .S(Sel), 
+                  .O(Outp[7]));
+   MUXCY  XLXI_28 (.CI(Inp1[8]), 
+                  .DI(Inp0[8]), 
+                  .S(Sel), 
+                  .O(Outp[8]));
+endmodule
+`timescale 1ns / 1ps
+
+module Left_Shift_9Bit_MUSER_Fuzzy_PID(Inp, 
+                                       Out_0, 
+                                       Outp);
+
+    input [8:0] Inp;
+    input Out_0;
+   output [8:0] Outp;
+   
+   
+   BUF  XLXI_1 (.I(Inp[7]), 
+               .O(Outp[8]));
+   BUF  XLXI_2 (.I(Inp[6]), 
+               .O(Outp[7]));
+   BUF  XLXI_3 (.I(Inp[5]), 
+               .O(Outp[6]));
+   BUF  XLXI_4 (.I(Inp[4]), 
+               .O(Outp[5]));
+   BUF  XLXI_5 (.I(Inp[3]), 
+               .O(Outp[4]));
+   BUF  XLXI_7 (.I(Out_0), 
+               .O(Outp[0]));
+   BUF  XLXI_9 (.I(Inp[1]), 
+               .O(Outp[2]));
+   BUF  XLXI_10 (.I(Inp[0]), 
+                .O(Outp[1]));
+   BUF  XLXI_11 (.I(Inp[2]), 
+                .O(Outp[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module Divide_8bit_8bit_restore_MUSER_Fuzzy_PID(CLK, 
+                                                Dividend, 
+                                                Divisor, 
+                                                Sel, 
+                                                Enable, 
+                                                Quotient, 
+                                                Remainder);
+
+    input CLK;
+    input [7:0] Dividend;
+    input [7:0] Divisor;
+    input Sel;
+   output Enable;
+   output [7:0] Quotient;
+   output [8:0] Remainder;
+   
+   wire [7:0] Quo_1;
+   wire [8:0] Remainder_new;
+   wire [8:0] Rem_man;
+   wire [8:0] XLXN_3;
+   wire [8:0] XLXN_10;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire [7:0] XLXN_65;
+   wire XLXN_70;
+   wire XLXN_82;
+   wire XLXN_89;
+   wire XLXN_94;
+   wire Enable_DUMMY;
+   wire [7:0] Quotient_DUMMY;
+   wire [8:0] Remainder_DUMMY;
+   
+   assign Enable = Enable_DUMMY;
+   assign Quotient[7:0] = Quotient_DUMMY[7:0];
+   assign Remainder[8:0] = Remainder_DUMMY[8:0];
+   Mux_2_8_MUSER_Fuzzy_PID  XLXI_2 (.Inp0(), 
+                                   .Inp1(), 
+                                   .Sel(Rem_man[8]), 
+                                   .Output());
+   FD9CE_MUSER_Fuzzy_PID  XLXI_3 (.C(CLK), 
+                                 .CE(Enable_DUMMY), 
+                                 .CLR(Sel), 
+                                 .D(Remainder_new[8:0]), 
+                                 .Q(Remainder_DUMMY[8:0]));
+   Left_Shift_9Bit_MUSER_Fuzzy_PID  XLXI_4 (.Inp(Remainder_DUMMY[8:0]), 
+                                           .Out_0(Quotient_DUMMY[7]), 
+                                           .Outp(XLXN_3[8:0]));
+   sub9bit_MUSER_Fuzzy_PID  XLXI_5 (.A(XLXN_3[8:0]), 
+                                   .ADD(XLXN_12), 
+                                   .B(XLXN_10[8:0]), 
+                                   .CI(XLXN_13), 
+                                   .CO(), 
+                                   .OFL(), 
+                                   .S(Rem_man[8:0]));
+   GND  XLXI_7 (.G(XLXN_12));
+   VCC  XLXI_8 (.P(XLXN_13));
+   Bit8_to_bit9_MUSER_Fuzzy_PID  XLXI_13 (.Data_8(Divisor[7:0]), 
+                                         .Data_9(XLXN_10[8:0]));
+   (* HU_SET = "XLXI_41_82" *) 
+   FD8CE_MXILINX_Fuzzy_PID  XLXI_41 (.C(CLK), 
+                                    .CE(XLXN_94), 
+                                    .CLR(XLXN_82), 
+                                    .D(Quo_1[7:0]), 
+                                    .Q(Quotient_DUMMY[7:0]));
+   Mux_2_8Bit_MUSER_Fuzzy_PID  XLXI_43 (.Inp0(XLXN_65[7:0]), 
+                                       .Inp1(Dividend[7:0]), 
+                                       .Sel(Sel), 
+                                       .Outp(Quo_1[7:0]));
+   Left_Shift_8Bit_MUSER_Fuzzy_PID  XLXI_45 (.Inp(Quotient_DUMMY[7:0]), 
+                                            .Out_0(XLXN_70), 
+                                            .Outp(XLXN_65[7:0]));
+   INV  XLXI_46 (.I(Rem_man[8]), 
+                .O(XLXN_70));
+   NOR2  XLXI_49 (.I0(XLXN_89), 
+                 .I1(Sel), 
+                 .O(Enable_DUMMY));
+   GND  XLXI_51 (.G(XLXN_82));
+   (* HU_SET = "XLXI_54_81" *) 
+   CB4CE_MXILINX_Fuzzy_PID  XLXI_54 (.C(CLK), 
+                                    .CE(Enable_DUMMY), 
+                                    .CLR(Sel), 
+                                    .CEO(), 
+                                    .Q0(), 
+                                    .Q1(), 
+                                    .Q2(), 
+                                    .Q3(XLXN_89), 
+                                    .TC());
+   OR2  XLXI_56 (.I0(Sel), 
+                .I1(Enable_DUMMY), 
+                .O(XLXN_94));
+endmodule
+`timescale 1ns / 1ps
+
+module ADD4_MXILINX_Fuzzy_PID(A0, 
+                              A1, 
+                              A2, 
+                              A3, 
+                              B0, 
+                              B1, 
+                              B2, 
+                              B3, 
+                              CI, 
+                              CO, 
+                              OFL, 
+                              S0, 
+                              S1, 
+                              S2, 
+                              S3);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input CI;
+   output CO;
+   output OFL;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C2O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A1), 
+                    .S(I1), 
+                    .LO(C1));
+   (* RLOC = "X0Y1" *) 
+   MUXCY  I_36_58 (.CI(C2), 
+                  .DI(A3), 
+                  .S(I3), 
+                  .O(CO_DUMMY));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_D  I_36_62 (.CI(C1), 
+                    .DI(A2), 
+                    .S(I2), 
+                    .LO(C2), 
+                    .O(C2O));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S0));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S1));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S3));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S2));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A0), 
+                     .S(I0), 
+                     .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_175 (.I1(A1), 
+                  .I2(B1), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_178 (.I1(A0), 
+                  .I2(B0), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_182 (.I1(A2), 
+                  .I2(B2), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_206 (.I1(A3), 
+                  .I2(B3), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I3));
+   XOR2  I_36_239 (.I0(A0), 
+                  .I1(B0), 
+                  .O(I0));
+   XOR2  I_36_240 (.I0(A1), 
+                  .I1(B1), 
+                  .O(I1));
+   XOR2  I_36_241 (.I0(A2), 
+                  .I1(B2), 
+                  .O(I2));
+   XOR2  I_36_242 (.I0(A3), 
+                  .I1(B3), 
+                  .O(I3));
+   XOR2  I_36_259 (.I0(C2O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module add4_bus_MUSER_Fuzzy_PID(A, 
+                                B, 
+                                Outp);
+
+    input [3:0] A;
+    input [3:0] B;
+   output [3:0] Outp;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_83" *) 
+   ADD4_MXILINX_Fuzzy_PID  XLXI_1 (.A0(A[0]), 
+                                  .A1(A[1]), 
+                                  .A2(A[2]), 
+                                  .A3(A[3]), 
+                                  .B0(B[0]), 
+                                  .B1(B[1]), 
+                                  .B2(B[2]), 
+                                  .B3(B[3]), 
+                                  .CI(XLXN_1), 
+                                  .CO(), 
+                                  .OFL(), 
+                                  .S0(Outp[0]), 
+                                  .S1(Outp[1]), 
+                                  .S2(Outp[2]), 
+                                  .S3(Outp[3]));
+   GND  XLXI_2 (.G(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
+module add6_MUSER_Fuzzy_PID(A, 
+                            B, 
+                            CI, 
+                            CO, 
+                            OFL, 
+                            S);
+
+    input [5:0] A;
+    input [5:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [5:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C6O;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A[1]), 
+                    .S(I1), 
+                    .LO(C1));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_58 (.CI(C2), 
+                    .DI(A[3]), 
+                    .S(I3), 
+                    .LO(C3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_62 (.CI(C1), 
+                    .DI(A[2]), 
+                    .S(I2), 
+                    .LO(C2));
+   (* RLOC = "X0Y3" *) 
+   MUXCY  I_36_64 (.CI(C4), 
+                  .DI(A[5]), 
+                  .S(I5), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S[0]));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S[1]));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S[3]));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S[2]));
+   XORCY  I_36_80 (.CI(C4), 
+                  .LI(I5), 
+                  .O(S[5]));
+   XORCY  I_36_81 (.CI(C3), 
+                  .LI(I4), 
+                  .O(S[4]));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_D  I_36_107 (.CI(C3), 
+                     .DI(A[4]), 
+                     .S(I4), 
+                     .LO(C4), 
+                     .O(C6O));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   XOR2  I_36_221 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .O(I5));
+   XOR2  I_36_222 (.I0(A[4]), 
+                  .I1(B[4]), 
+                  .O(I4));
+   XOR2  I_36_225 (.I0(A[3]), 
+                  .I1(B[3]), 
+                  .O(I3));
+   XOR2  I_36_228 (.I0(A[0]), 
+                  .I1(B[0]), 
+                  .O(I0));
+   XOR2  I_36_229 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .O(I1));
+   XOR2  I_36_230 (.I0(A[2]), 
+                  .I1(B[2]), 
+                  .O(I2));
+   XOR2  I_36_239 (.I0(C6O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module Multiply_4Bit_5_MUSER_Fuzzy_PID(Inp, 
+                                       Outp);
+
+    input [3:0] Inp;
+   output [5:0] Outp;
+   
+   wire XLXN_5;
+   wire XLXN_13;
+   wire XLXN_16;
+   
+   BUF  XLXI_1 (.I(Inp[0]), 
+               .O(Outp[0]));
+   (* HU_SET = "XLXI_2_84" *) 
+   ADD4_MXILINX_Fuzzy_PID  XLXI_2 (.A0(Inp[2]), 
+                                  .A1(Inp[3]), 
+                                  .A2(XLXN_16), 
+                                  .A3(XLXN_13), 
+                                  .B0(Inp[0]), 
+                                  .B1(Inp[1]), 
+                                  .B2(Inp[2]), 
+                                  .B3(Inp[3]), 
+                                  .CI(XLXN_5), 
+                                  .CO(), 
+                                  .OFL(), 
+                                  .S0(Outp[2]), 
+                                  .S1(Outp[3]), 
+                                  .S2(Outp[4]), 
+                                  .S3(Outp[5]));
+   GND  XLXI_3 (.G(XLXN_5));
+   GND  XLXI_4 (.G(XLXN_13));
+   BUF  XLXI_5 (.I(Inp[1]), 
+               .O(Outp[1]));
+   GND  XLXI_6 (.G(XLXN_16));
+endmodule
+`timescale 1ns / 1ps
+
+module Multiply_4Bit_3_MUSER_Fuzzy_PID(Inp, 
+                                       Outp);
+
+    input [3:0] Inp;
+   output [5:0] Outp;
+   
+   wire XLXN_5;
+   wire XLXN_13;
+   
+   BUF  XLXI_1 (.I(Inp[0]), 
+               .O(Outp[0]));
+   (* HU_SET = "XLXI_2_85" *) 
+   ADD4_MXILINX_Fuzzy_PID  XLXI_2 (.A0(Inp[1]), 
+                                  .A1(Inp[2]), 
+                                  .A2(Inp[3]), 
+                                  .A3(XLXN_13), 
+                                  .B0(Inp[0]), 
+                                  .B1(Inp[1]), 
+                                  .B2(Inp[2]), 
+                                  .B3(Inp[3]), 
+                                  .CI(XLXN_5), 
+                                  .CO(), 
+                                  .OFL(), 
+                                  .S0(Outp[1]), 
+                                  .S1(Outp[2]), 
+                                  .S2(Outp[3]), 
+                                  .S3(Outp[4]));
+   GND  XLXI_3 (.G(XLXN_5));
+   GND  XLXI_4 (.G(XLXN_13));
+   GND  XLXI_5 (.G(Outp[5]));
+endmodule
+`timescale 1ns / 1ps
+
+module Mux_2_4bit_MUSER_Fuzzy_PID(Inp0, 
+                                  Inp1, 
+                                  S, 
+                                  OutP);
+
+    input [3:0] Inp0;
+    input [3:0] Inp1;
+    input S;
+   output [3:0] OutP;
+   
+   
+   MUXCY  XLXI_1 (.CI(Inp1[3]), 
+                 .DI(Inp0[3]), 
+                 .S(S), 
+                 .O(OutP[3]));
+   MUXCY  XLXI_2 (.CI(Inp1[2]), 
+                 .DI(Inp0[2]), 
+                 .S(S), 
+                 .O(OutP[2]));
+   MUXCY  XLXI_3 (.CI(Inp1[1]), 
+                 .DI(Inp0[1]), 
+                 .S(S), 
+                 .O(OutP[1]));
+   MUXCY  XLXI_4 (.CI(Inp1[0]), 
+                 .DI(Inp0[0]), 
+                 .S(S), 
+                 .O(OutP[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module COMPM4_MXILINX_Fuzzy_PID(A0, 
+                                A1, 
+                                A2, 
+                                A3, 
+                                B0, 
+                                B1, 
+                                B2, 
+                                B3, 
+                                GT, 
+                                LT);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+   output GT;
+   output LT;
+   
+   wire EQ_1;
+   wire EQ_3;
+   wire EQ2_3;
+   wire GE0_1;
+   wire GE2_3;
+   wire GTA;
+   wire GTB;
+   wire GT_1;
+   wire GT_3;
+   wire GT0_1;
+   wire LE0_1;
+   wire LE2_3;
+   wire LTA;
+   wire LTB;
+   wire LT_1;
+   wire LT_3;
+   wire LT0_1;
+   
+   AND2  I_36_1 (.I0(GT0_1), 
+                .I1(EQ2_3), 
+                .O(GTA));
+   AND2  I_36_2 (.I0(EQ2_3), 
+                .I1(LT0_1), 
+                .O(LTA));
+   NOR2  I_36_3 (.I0(GTB), 
+                .I1(LTB), 
+                .O(EQ2_3));
+   AND2B1  I_36_4 (.I0(A3), 
+                  .I1(B3), 
+                  .O(LT_3));
+   OR2  I_36_5 (.I0(LT_1), 
+               .I1(LE0_1), 
+               .O(LT0_1));
+   AND2B1  I_36_6 (.I0(B3), 
+                  .I1(A3), 
+                  .O(GT_3));
+   AND2B1  I_36_7 (.I0(A1), 
+                  .I1(B1), 
+                  .O(LT_1));
+   XNOR2  I_36_8 (.I0(A3), 
+                 .I1(B3), 
+                 .O(EQ_3));
+   AND2B1  I_36_9 (.I0(B1), 
+                  .I1(A1), 
+                  .O(GT_1));
+   OR2  I_36_11 (.I0(LTB), 
+                .I1(LTA), 
+                .O(LT));
+   OR2  I_36_12 (.I0(GTB), 
+                .I1(GTA), 
+                .O(GT));
+   XNOR2  I_36_13 (.I0(A1), 
+                  .I1(B1), 
+                  .O(EQ_1));
+   AND3B1  I_36_14 (.I0(B2), 
+                   .I1(EQ_3), 
+                   .I2(A2), 
+                   .O(GE2_3));
+   AND3B1  I_36_15 (.I0(A2), 
+                   .I1(EQ_3), 
+                   .I2(B2), 
+                   .O(LE2_3));
+   AND3B1  I_36_16 (.I0(B0), 
+                   .I1(EQ_1), 
+                   .I2(A0), 
+                   .O(GE0_1));
+   AND3B1  I_36_17 (.I0(A0), 
+                   .I1(EQ_1), 
+                   .I2(B0), 
+                   .O(LE0_1));
+   OR2  I_36_18 (.I0(GT_1), 
+                .I1(GE0_1), 
+                .O(GT0_1));
+   OR2  I_36_19 (.I0(GT_3), 
+                .I1(GE2_3), 
+                .O(GTB));
+   OR2  I_36_20 (.I0(LT_3), 
+                .I1(LE2_3), 
+                .O(LTB));
+endmodule
+`timescale 1ns / 1ps
+
+module Max_4bit_MUSER_Fuzzy_PID(A, 
+                                B, 
+                                Min);
+
+    input [3:0] A;
+    input [3:0] B;
+   output [3:0] Min;
+   
+   wire XLXN_14;
+   
+   (* HU_SET = "XLXI_1_86" *) 
+   COMPM4_MXILINX_Fuzzy_PID  XLXI_1 (.A0(A[0]), 
+                                    .A1(A[1]), 
+                                    .A2(A[2]), 
+                                    .A3(A[3]), 
+                                    .B0(B[0]), 
+                                    .B1(B[1]), 
+                                    .B2(B[2]), 
+                                    .B3(B[3]), 
+                                    .GT(XLXN_14), 
+                                    .LT());
+   Mux_2_4bit_MUSER_Fuzzy_PID  XLXI_2 (.Inp0(B[3:0]), 
+                                      .Inp1(A[3:0]), 
+                                      .S(XLXN_14), 
+                                      .OutP(Min[3:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Kd_Deffuzy_MUSER_Fuzzy_PID(Inp_0, 
+                                  Inp_1, 
+                                  Inp_2, 
+                                  Inp_3, 
+                                  Inp_4, 
+                                  Inp_5, 
+                                  Inp_6, 
+                                  Inp_7, 
+                                  Inp_8, 
+                                  Kd_Large_w, 
+                                  Kd_Med_w, 
+                                  Kd_small_w);
+
+    input [3:0] Inp_0;
+    input [3:0] Inp_1;
+    input [3:0] Inp_2;
+    input [3:0] Inp_3;
+    input [3:0] Inp_4;
+    input [3:0] Inp_5;
+    input [3:0] Inp_6;
+    input [3:0] Inp_7;
+    input [3:0] Inp_8;
+   output [3:0] Kd_Large_w;
+   output [3:0] Kd_Med_w;
+   output [3:0] Kd_small_w;
+   
+   wire [3:0] XLXN_24;
+   wire [3:0] XLXN_25;
+   wire [3:0] XLXN_27;
+   
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_7 (.A(Inp_0[3:0]), 
+                                    .B(Inp_1[3:0]), 
+                                    .Min(XLXN_25[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_8 (.A(Inp_7[3:0]), 
+                                    .B(Inp_8[3:0]), 
+                                    .Min(XLXN_27[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_9 (.A(XLXN_25[3:0]), 
+                                    .B(XLXN_27[3:0]), 
+                                    .Min(Kd_Med_w[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_10 (.A(Inp_2[3:0]), 
+                                     .B(Inp_4[3:0]), 
+                                     .Min(XLXN_24[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_11 (.A(XLXN_24[3:0]), 
+                                     .B(Inp_6[3:0]), 
+                                     .Min(Kd_small_w[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_12 (.A(Inp_3[3:0]), 
+                                     .B(Inp_5[3:0]), 
+                                     .Min(Kd_Large_w[3:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Kp_Defuzzy_MUSER_Fuzzy_PID(Inp_0, 
+                                  Inp_1, 
+                                  Inp_2, 
+                                  Inp_3, 
+                                  Inp_5, 
+                                  Inp_6, 
+                                  Inp_7, 
+                                  Inp_8, 
+                                  Large_W, 
+                                  Mid_w);
+
+    input [3:0] Inp_0;
+    input [3:0] Inp_1;
+    input [3:0] Inp_2;
+    input [3:0] Inp_3;
+    input [3:0] Inp_5;
+    input [3:0] Inp_6;
+    input [3:0] Inp_7;
+    input [3:0] Inp_8;
+   output [3:0] Large_W;
+   output [3:0] Mid_w;
+   
+   wire [3:0] XLXN_1;
+   wire [3:0] XLXN_2;
+   wire [3:0] XLXN_3;
+   wire [3:0] XLXN_5;
+   
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_1 (.A(Inp_0[3:0]), 
+                                    .B(Inp_1[3:0]), 
+                                    .Min(XLXN_1[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_2 (.A(Inp_3[3:0]), 
+                                    .B(Inp_5[3:0]), 
+                                    .Min(XLXN_2[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_3 (.A(XLXN_1[3:0]), 
+                                    .B(XLXN_2[3:0]), 
+                                    .Min(XLXN_3[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_4 (.A(XLXN_3[3:0]), 
+                                    .B(XLXN_5[3:0]), 
+                                    .Min(Mid_w[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_5 (.A(Inp_7[3:0]), 
+                                    .B(Inp_8[3:0]), 
+                                    .Min(XLXN_5[3:0]));
+   Max_4bit_MUSER_Fuzzy_PID  XLXI_6 (.A(Inp_2[3:0]), 
+                                    .B(Inp_6[3:0]), 
+                                    .Min(Large_W[3:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Min_4bit_MUSER_Fuzzy_PID(A, 
+                                B, 
+                                Min);
+
+    input [3:0] A;
+    input [3:0] B;
+   output [3:0] Min;
+   
+   wire XLXN_13;
+   
+   (* HU_SET = "XLXI_1_87" *) 
+   COMPM4_MXILINX_Fuzzy_PID  XLXI_1 (.A0(A[0]), 
+                                    .A1(A[1]), 
+                                    .A2(A[2]), 
+                                    .A3(A[3]), 
+                                    .B0(B[0]), 
+                                    .B1(B[1]), 
+                                    .B2(B[2]), 
+                                    .B3(B[3]), 
+                                    .GT(), 
+                                    .LT(XLXN_13));
+   Mux_2_4bit_MUSER_Fuzzy_PID  XLXI_2 (.Inp0(B[3:0]), 
+                                      .Inp1(A[3:0]), 
+                                      .S(XLXN_13), 
+                                      .OutP(Min[3:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Min_Array_3_by_3_MUSER_Fuzzy_PID(Inp1_0, 
+                                        Inp1_1, 
+                                        Inp1_2, 
+                                        Inp2_0, 
+                                        Inp2_1, 
+                                        Inp2_2, 
+                                        Outp0_0, 
+                                        Outp0_1, 
+                                        Outp0_2, 
+                                        Outp1_0, 
+                                        Outp1_1, 
+                                        Outp1_2, 
+                                        Outp2_0, 
+                                        Outp2_1, 
+                                        Outp2_2);
+
+    input [3:0] Inp1_0;
+    input [3:0] Inp1_1;
+    input [3:0] Inp1_2;
+    input [3:0] Inp2_0;
+    input [3:0] Inp2_1;
+    input [3:0] Inp2_2;
+   output [3:0] Outp0_0;
+   output [3:0] Outp0_1;
+   output [3:0] Outp0_2;
+   output [3:0] Outp1_0;
+   output [3:0] Outp1_1;
+   output [3:0] Outp1_2;
+   output [3:0] Outp2_0;
+   output [3:0] Outp2_1;
+   output [3:0] Outp2_2;
+   
+   
+   Min_4bit_MUSER_Fuzzy_PID  XLXI_1 (.A(Inp1_0[3:0]), 
+                                    .B(Inp2_0[3:0]), 
+                                    .Min(Outp0_0[3:0]));
+   Min_4bit_MUSER_Fuzzy_PID  XLXI_2 (.A(Inp1_0[3:0]), 
+                                    .B(Inp2_1[3:0]), 
+                                    .Min(Outp0_1[3:0]));
+   Min_4bit_MUSER_Fuzzy_PID  XLXI_3 (.A(Inp1_0[3:0]), 
+                                    .B(Inp2_2[3:0]), 
+                                    .Min(Outp0_2[3:0]));
+   Min_4bit_MUSER_Fuzzy_PID  XLXI_4 (.A(Inp1_1[3:0]), 
+                                    .B(Inp2_0[3:0]), 
+                                    .Min(Outp1_0[3:0]));
+   Min_4bit_MUSER_Fuzzy_PID  XLXI_5 (.A(Inp1_1[3:0]), 
+                                    .B(Inp2_1[3:0]), 
+                                    .Min(Outp1_1[3:0]));
+   Min_4bit_MUSER_Fuzzy_PID  XLXI_6 (.A(Inp1_1[3:0]), 
+                                    .B(Inp2_2[3:0]), 
+                                    .Min(Outp1_2[3:0]));
+   Min_4bit_MUSER_Fuzzy_PID  XLXI_7 (.A(Inp1_2[3:0]), 
+                                    .B(Inp2_0[3:0]), 
+                                    .Min(Outp2_0[3:0]));
+   Min_4bit_MUSER_Fuzzy_PID  XLXI_8 (.A(Inp1_2[3:0]), 
+                                    .B(Inp2_1[3:0]), 
+                                    .Min(Outp2_1[3:0]));
+   Min_4bit_MUSER_Fuzzy_PID  XLXI_9 (.A(Inp1_2[3:0]), 
+                                    .B(Inp2_2[3:0]), 
+                                    .Min(Outp2_2[3:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Incrementer_Decrementer_MUSER_Fuzzy_PID(add_0, 
+                                               I_0, 
+                                               I_1, 
+                                               I_2, 
+                                               I_3, 
+                                               I_4, 
+                                               I_5, 
+                                               I_6, 
+                                               I_7, 
+                                               I_8, 
+                                               O_0, 
+                                               O_1, 
+                                               O_2, 
+                                               O_3, 
+                                               O_4, 
+                                               O_5, 
+                                               O_6, 
+                                               O_7, 
+                                               O_8);
+
+    input add_0;
+    input I_0;
+    input I_1;
+    input I_2;
+    input I_3;
+    input I_4;
+    input I_5;
+    input I_6;
+    input I_7;
+    input I_8;
+   output O_0;
+   output O_1;
+   output O_2;
+   output O_3;
+   output O_4;
+   output O_5;
+   output O_6;
+   output O_7;
+   output O_8;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire XLXN_52;
+   wire XLXN_55;
+   wire XLXN_57;
+   wire XLXN_59;
+   wire XLXN_62;
+   wire XLXN_63;
+   wire XLXN_64;
+   wire XLXN_65;
+   wire XLXN_66;
+   wire XLXN_67;
+   wire XLXN_68;
+   wire XLXN_69;
+   wire XLXN_70;
+   wire XLXN_71;
+   wire XLXN_73;
+   wire XLXN_74;
+   wire XLXN_75;
+   
+   XOR2  XLXI_1 (.I0(add_0), 
+                .I1(I_3), 
+                .O(XLXN_2));
+   XOR2  XLXI_2 (.I0(add_0), 
+                .I1(I_2), 
+                .O(XLXN_3));
+   XOR2  XLXI_3 (.I0(add_0), 
+                .I1(I_1), 
+                .O(XLXN_4));
+   INV  XLXI_4 (.I(XLXN_52), 
+               .O(XLXN_63));
+   XOR2  XLXI_5 (.I0(add_0), 
+                .I1(I_5), 
+                .O(XLXN_1));
+   XOR2  XLXI_6 (.I0(add_0), 
+                .I1(I_6), 
+                .O(XLXN_62));
+   XOR2  XLXI_7 (.I0(add_0), 
+                .I1(I_7), 
+                .O(XLXN_5));
+   XOR2  XLXI_8 (.I0(add_0), 
+                .I1(I_4), 
+                .O(XLXN_59));
+   XOR2  XLXI_9 (.I0(add_0), 
+                .I1(I_0), 
+                .O(XLXN_52));
+   XOR2  XLXI_10 (.I0(XLXN_4), 
+                 .I1(XLXN_52), 
+                 .O(XLXN_64));
+   XOR2  XLXI_11 (.I0(XLXN_5), 
+                 .I1(XLXN_75), 
+                 .O(XLXN_68));
+   XOR2  XLXI_12 (.I0(XLXN_62), 
+                 .I1(XLXN_46), 
+                 .O(XLXN_69));
+   XOR2  XLXI_13 (.I0(XLXN_1), 
+                 .I1(XLXN_47), 
+                 .O(XLXN_70));
+   XOR2  XLXI_14 (.I0(XLXN_59), 
+                 .I1(XLXN_48), 
+                 .O(XLXN_67));
+   XOR2  XLXI_15 (.I0(XLXN_2), 
+                 .I1(XLXN_57), 
+                 .O(XLXN_66));
+   XOR2  XLXI_16 (.I0(XLXN_3), 
+                 .I1(XLXN_55), 
+                 .O(XLXN_65));
+   AND2  XLXI_17 (.I0(XLXN_62), 
+                 .I1(XLXN_46), 
+                 .O(XLXN_75));
+   AND2  XLXI_18 (.I0(XLXN_1), 
+                 .I1(XLXN_47), 
+                 .O(XLXN_46));
+   AND2  XLXI_19 (.I0(XLXN_59), 
+                 .I1(XLXN_48), 
+                 .O(XLXN_47));
+   AND2  XLXI_20 (.I0(XLXN_2), 
+                 .I1(XLXN_57), 
+                 .O(XLXN_48));
+   AND2  XLXI_21 (.I0(XLXN_3), 
+                 .I1(XLXN_55), 
+                 .O(XLXN_57));
+   AND2  XLXI_35 (.I0(XLXN_4), 
+                 .I1(XLXN_52), 
+                 .O(XLXN_55));
+   XOR2  XLXI_38 (.I0(add_0), 
+                 .I1(XLXN_63), 
+                 .O(O_0));
+   XOR2  XLXI_39 (.I0(add_0), 
+                 .I1(XLXN_64), 
+                 .O(O_1));
+   XOR2  XLXI_40 (.I0(add_0), 
+                 .I1(XLXN_65), 
+                 .O(O_2));
+   XOR2  XLXI_41 (.I0(add_0), 
+                 .I1(XLXN_66), 
+                 .O(O_3));
+   XOR2  XLXI_42 (.I0(add_0), 
+                 .I1(XLXN_67), 
+                 .O(O_4));
+   XOR2  XLXI_43 (.I0(add_0), 
+                 .I1(XLXN_68), 
+                 .O(O_7));
+   XOR2  XLXI_44 (.I0(add_0), 
+                 .I1(XLXN_69), 
+                 .O(O_6));
+   XOR2  XLXI_45 (.I0(add_0), 
+                 .I1(XLXN_70), 
+                 .O(O_5));
+   XOR2  XLXI_46 (.I0(add_0), 
+                 .I1(XLXN_71), 
+                 .O(O_8));
+   XOR2  XLXI_48 (.I0(XLXN_74), 
+                 .I1(XLXN_73), 
+                 .O(XLXN_71));
+   AND2  XLXI_49 (.I0(XLXN_5), 
+                 .I1(XLXN_75), 
+                 .O(XLXN_73));
+   XOR2  XLXI_50 (.I0(add_0), 
+                 .I1(I_8), 
+                 .O(XLXN_74));
+endmodule
+`timescale 1ns / 1ps
+
+module twos_compliment_using_inverter_MUSER_Fuzzy_PID(data_input, 
+                                                      data_output);
+
+    input [8:0] data_input;
+   output [8:0] data_output;
+   
+   wire XLXN_3;
+   wire XLXN_53;
+   wire XLXN_54;
+   wire XLXN_55;
+   wire XLXN_56;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_59;
+   wire XLXN_60;
+   wire XLXN_61;
+   
+   Incrementer_Decrementer_MUSER_Fuzzy_PID  XLXI_2 (.add_0(XLXN_3), 
+                                                   .I_0(XLXN_61), 
+                                                   .I_1(XLXN_60), 
+                                                   .I_2(XLXN_59), 
+                                                   .I_3(XLXN_58), 
+                                                   .I_4(XLXN_57), 
+                                                   .I_5(XLXN_56), 
+                                                   .I_6(XLXN_55), 
+                                                   .I_7(XLXN_54), 
+                                                   .I_8(XLXN_53), 
+                                                   .O_0(data_output[0]), 
+                                                   .O_1(data_output[1]), 
+                                                   .O_2(data_output[2]), 
+                                                   .O_3(data_output[3]), 
+                                                   .O_4(data_output[4]), 
+                                                   .O_5(data_output[5]), 
+                                                   .O_6(data_output[6]), 
+                                                   .O_7(data_output[7]), 
+                                                   .O_8(data_output[8]));
+   GND  XLXI_3 (.G(XLXN_3));
+   INV  XLXI_14 (.I(data_input[8]), 
+                .O(XLXN_53));
+   INV  XLXI_15 (.I(data_input[7]), 
+                .O(XLXN_54));
+   INV  XLXI_16 (.I(data_input[6]), 
+                .O(XLXN_55));
+   INV  XLXI_17 (.I(data_input[5]), 
+                .O(XLXN_56));
+   INV  XLXI_18 (.I(data_input[4]), 
+                .O(XLXN_57));
+   INV  XLXI_19 (.I(data_input[3]), 
+                .O(XLXN_58));
+   INV  XLXI_20 (.I(data_input[2]), 
+                .O(XLXN_59));
+   INV  XLXI_21 (.I(data_input[1]), 
+                .O(XLXN_60));
+   INV  XLXI_22 (.I(data_input[0]), 
+                .O(XLXN_61));
+endmodule
+`timescale 1ns / 1ps
+
+module ADSU4_MXILINX_Fuzzy_PID(ADD, 
+                               A0, 
+                               A1, 
+                               A2, 
+                               A3, 
+                               B0, 
+                               B1, 
+                               B2, 
+                               B3, 
+                               CI, 
+                               CO, 
+                               OFL, 
+                               S0, 
+                               S1, 
+                               S2, 
+                               S3);
+
+    input ADD;
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input CI;
+   output CO;
+   output OFL;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C2O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire SUB0;
+   wire SUB1;
+   wire SUB2;
+   wire SUB3;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   XOR3  I_36_50 (.I0(A0), 
+                 .I1(B0), 
+                 .I2(SUB0), 
+                 .O(I0));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A1), 
+                    .S(I1), 
+                    .LO(C1));
+   XOR3  I_36_56 (.I0(A2), 
+                 .I1(B2), 
+                 .I2(SUB2), 
+                 .O(I2));
+   XOR3  I_36_57 (.I0(A3), 
+                 .I1(B3), 
+                 .I2(SUB3), 
+                 .O(I3));
+   (* RLOC = "X1Y1" *) 
+   MUXCY  I_36_58 (.CI(C2), 
+                  .DI(A3), 
+                  .S(I3), 
+                  .O(CO_DUMMY));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_D  I_36_62 (.CI(C1), 
+                    .DI(A2), 
+                    .S(I2), 
+                    .LO(C2), 
+                    .O(C2O));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S0));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S1));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S3));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S2));
+   XOR3  I_36_100 (.I0(A1), 
+                  .I1(B1), 
+                  .I2(SUB1), 
+                  .O(I1));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A0), 
+                     .S(I0), 
+                     .LO(C0));
+   INV  I_36_112 (.I(ADD), 
+                 .O(SUB0));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_175 (.I1(A1), 
+                  .I2(B1), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_178 (.I1(A0), 
+                  .I2(B0), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_182 (.I1(A2), 
+                  .I2(B2), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_206 (.I1(A3), 
+                  .I2(B3), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I3));
+   XOR2  I_36_241 (.I0(C2O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+   INV  I_36_244 (.I(ADD), 
+                 .O(SUB1));
+   INV  I_36_245 (.I(ADD), 
+                 .O(SUB2));
+   INV  I_36_246 (.I(ADD), 
+                 .O(SUB3));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1E_MXILINX_Fuzzy_PID(D0, 
+                               D1, 
+                               E, 
+                               S0, 
+                               O);
+
+    input D0;
+    input D1;
+    input E;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND3  I_36_30 (.I0(D1), 
+                 .I1(E), 
+                 .I2(S0), 
+                 .O(M1));
+   AND3B1  I_36_31 (.I0(S0), 
+                   .I1(E), 
+                   .I2(D0), 
+                   .O(M0));
+   OR2  I_36_38 (.I0(M1), 
+                .I1(M0), 
+                .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module M4_1E_MXILINX_Fuzzy_PID(D0, 
+                               D1, 
+                               D2, 
+                               D3, 
+                               E, 
+                               S0, 
+                               S1, 
+                               O);
+
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+    input E;
+    input S0;
+    input S1;
+   output O;
+   
+   wire M01;
+   wire M23;
+   
+   (* HU_SET = "I_M01_89" *) 
+   M2_1E_MXILINX_Fuzzy_PID  I_M01 (.D0(D0), 
+                                  .D1(D1), 
+                                  .E(E), 
+                                  .S0(S0), 
+                                  .O(M01));
+   (* HU_SET = "I_M23_88" *) 
+   M2_1E_MXILINX_Fuzzy_PID  I_M23 (.D0(D2), 
+                                  .D1(D3), 
+                                  .E(E), 
+                                  .S0(S0), 
+                                  .O(M23));
+   MUXF5  I_O (.I0(M01), 
+              .I1(M23), 
+              .S(S1), 
+              .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module negative_mux_MUSER_Fuzzy_PID(in0, 
+                                    in1, 
+                                    in2, 
+                                    in3, 
+                                    S0, 
+                                    S1, 
+                                    op);
+
+    input [3:0] in0;
+    input [3:0] in1;
+    input [3:0] in2;
+    input [3:0] in3;
+    input S0;
+    input S1;
+   output [3:0] op;
+   
+   wire E;
+   wire mux0_0;
+   wire mux0_1;
+   wire mux0_2;
+   wire mux0_3;
+   wire mux1_0;
+   wire mux1_1;
+   wire mux1_2;
+   wire mux1_3;
+   wire mux2_0;
+   wire mux2_1;
+   wire mux2_2;
+   wire mux2_3;
+   wire mux3_0;
+   wire mux3_1;
+   wire mux3_2;
+   wire mux3_3;
+   
+   (* HU_SET = "XLXI_2_90" *) 
+   M4_1E_MXILINX_Fuzzy_PID  XLXI_2 (.D0(mux0_0), 
+                                   .D1(mux0_1), 
+                                   .D2(mux0_2), 
+                                   .D3(mux0_3), 
+                                   .E(E), 
+                                   .S0(S0), 
+                                   .S1(S1), 
+                                   .O(op[0]));
+   BUF  XLXI_6 (.I(in0[0]), 
+               .O(mux0_0));
+   BUF  XLXI_7 (.I(in0[1]), 
+               .O(mux1_0));
+   BUF  XLXI_8 (.I(in0[2]), 
+               .O(mux2_0));
+   BUF  XLXI_9 (.I(in0[3]), 
+               .O(mux3_0));
+   BUF  XLXI_10 (.I(in1[0]), 
+                .O(mux0_1));
+   BUF  XLXI_11 (.I(in1[1]), 
+                .O(mux1_1));
+   BUF  XLXI_13 (.I(in1[2]), 
+                .O(mux2_1));
+   BUF  XLXI_14 (.I(in1[3]), 
+                .O(mux3_1));
+   BUF  XLXI_15 (.I(in2[0]), 
+                .O(mux0_2));
+   BUF  XLXI_16 (.I(in2[1]), 
+                .O(mux1_2));
+   BUF  XLXI_17 (.I(in2[2]), 
+                .O(mux2_2));
+   BUF  XLXI_18 (.I(in2[3]), 
+                .O(mux3_2));
+   BUF  XLXI_19 (.I(in3[0]), 
+                .O(mux0_3));
+   BUF  XLXI_20 (.I(in3[1]), 
+                .O(mux1_3));
+   BUF  XLXI_21 (.I(in3[2]), 
+                .O(mux2_3));
+   BUF  XLXI_22 (.I(in3[3]), 
+                .O(mux3_3));
+   (* HU_SET = "XLXI_23_91" *) 
+   M4_1E_MXILINX_Fuzzy_PID  XLXI_23 (.D0(mux1_0), 
+                                    .D1(mux1_1), 
+                                    .D2(mux1_2), 
+                                    .D3(mux1_3), 
+                                    .E(E), 
+                                    .S0(S0), 
+                                    .S1(S1), 
+                                    .O(op[1]));
+   (* HU_SET = "XLXI_24_92" *) 
+   M4_1E_MXILINX_Fuzzy_PID  XLXI_24 (.D0(mux2_0), 
+                                    .D1(mux2_1), 
+                                    .D2(mux2_2), 
+                                    .D3(mux2_3), 
+                                    .E(E), 
+                                    .S0(S0), 
+                                    .S1(S1), 
+                                    .O(op[2]));
+   (* HU_SET = "XLXI_25_93" *) 
+   M4_1E_MXILINX_Fuzzy_PID  XLXI_25 (.D0(mux3_0), 
+                                    .D1(mux3_1), 
+                                    .D2(mux3_2), 
+                                    .D3(mux3_3), 
+                                    .E(E), 
+                                    .S0(S0), 
+                                    .S1(S1), 
+                                    .O(op[3]));
+   VCC  XLXI_26 (.P(E));
+endmodule
+`timescale 1ns / 1ps
+
+module error_derror_range_generator_MUSER_Fuzzy_PID(error, 
+                                                    error_neg, 
+                                                    error_pos, 
+                                                    error_zero);
+
+    input [8:0] error;
+   output [3:0] error_neg;
+   output [3:0] error_pos;
+   output [3:0] error_zero;
+   
+   wire a;
+   wire above16;
+   wire b;
+   wire [3:0] gnd_wire;
+   wire [8:0] moderror;
+   wire [3:0] moderror_4bit;
+   wire [3:0] ten;
+   wire XLXN_107;
+   wire XLXN_114;
+   wire XLXN_123;
+   wire XLXN_124;
+   wire [3:0] XLXN_135;
+   wire [8:0] XLXN_136;
+   wire XLXN_146;
+   wire XLXN_148;
+   
+   Mux_2_8_MUSER_Fuzzy_PID  XLXI_8 (.Inp0(), 
+                                   .Inp1(), 
+                                   .Sel(error[8]), 
+                                   .Output());
+   (* HU_SET = "XLXI_9_94" *) 
+   COMPM4_MXILINX_Fuzzy_PID  XLXI_9 (.A0(moderror[0]), 
+                                    .A1(moderror[1]), 
+                                    .A2(moderror[2]), 
+                                    .A3(moderror[3]), 
+                                    .B0(ten[0]), 
+                                    .B1(ten[1]), 
+                                    .B2(ten[2]), 
+                                    .B3(ten[3]), 
+                                    .GT(XLXN_148), 
+                                    .LT());
+   BUF  XLXI_44 (.I(error[8]), 
+                .O(a));
+   negative_mux_MUSER_Fuzzy_PID  XLXI_46 (.in0(gnd_wire[3:0]), 
+                                         .in1(moderror_4bit[3:0]), 
+                                         .in2(gnd_wire[3:0]), 
+                                         .in3(ten[3:0]), 
+                                         .S0(a), 
+                                         .S1(b), 
+                                         .op(error_neg[3:0]));
+   GND  XLXI_47 (.G(gnd_wire[3]));
+   GND  XLXI_48 (.G(gnd_wire[2]));
+   GND  XLXI_49 (.G(gnd_wire[1]));
+   GND  XLXI_50 (.G(gnd_wire[0]));
+   BUF  XLXI_52 (.I(moderror[3]), 
+                .O(moderror_4bit[3]));
+   BUF  XLXI_53 (.I(moderror[2]), 
+                .O(moderror_4bit[2]));
+   BUF  XLXI_54 (.I(moderror[1]), 
+                .O(moderror_4bit[1]));
+   BUF  XLXI_56 (.I(moderror[0]), 
+                .O(moderror_4bit[0]));
+   negative_mux_MUSER_Fuzzy_PID  XLXI_64 (.in0(gnd_wire[3:0]), 
+                                         .in1(moderror_4bit[3:0]), 
+                                         .in2(gnd_wire[3:0]), 
+                                         .in3(ten[3:0]), 
+                                         .S0(XLXN_107), 
+                                         .S1(b), 
+                                         .op(error_pos[3:0]));
+   INV  XLXI_65 (.I(a), 
+                .O(XLXN_107));
+   negative_mux_MUSER_Fuzzy_PID  XLXI_66 (.in0(XLXN_135[3:0]), 
+                                         .in1(gnd_wire[3:0]), 
+                                         .in2(gnd_wire[3:0]), 
+                                         .in3(gnd_wire[3:0]), 
+                                         .S0(b), 
+                                         .S1(XLXN_114), 
+                                         .op(error_zero[3:0]));
+   (* HU_SET = "XLXI_68_95" *) 
+   ADSU4_MXILINX_Fuzzy_PID  XLXI_68 (.ADD(XLXN_124), 
+                                    .A0(ten[0]), 
+                                    .A1(ten[1]), 
+                                    .A2(ten[2]), 
+                                    .A3(ten[3]), 
+                                    .B0(moderror_4bit[0]), 
+                                    .B1(moderror_4bit[1]), 
+                                    .B2(moderror_4bit[2]), 
+                                    .B3(moderror_4bit[3]), 
+                                    .CI(XLXN_123), 
+                                    .CO(), 
+                                    .OFL(), 
+                                    .S0(XLXN_135[0]), 
+                                    .S1(XLXN_135[1]), 
+                                    .S2(XLXN_135[2]), 
+                                    .S3(XLXN_135[3]));
+   GND  XLXI_71 (.G(XLXN_114));
+   twos_compliment_using_inverter_MUSER_Fuzzy_PID  XLXI_72 
+         (.data_input(error[8:0]), 
+                                                           
+         .data_output(XLXN_136[8:0]));
+   OR4  XLXI_73 (.I0(moderror[5]), 
+                .I1(moderror[6]), 
+                .I2(moderror[7]), 
+                .I3(moderror[8]), 
+                .O(XLXN_146));
+   OR2  XLXI_74 (.I0(moderror[4]), 
+                .I1(XLXN_146), 
+                .O(above16));
+   OR2  XLXI_75 (.I0(XLXN_148), 
+                .I1(above16), 
+                .O(b));
+   GND  XLXI_78 (.G(XLXN_124));
+   VCC  XLXI_79 (.P(XLXN_123));
+   GND  XLXI_80 (.G(ten[1]));
+   GND  XLXI_81 (.G(ten[3]));
+   VCC  XLXI_82 (.P(ten[0]));
+   VCC  XLXI_83 (.P(ten[2]));
+endmodule
+`timescale 1ns / 1ps
+
+module FIRA_Fuzzy_1_0_MUSER_Fuzzy_PID(CLK, 
+                                      D_Error, 
+                                      Error, 
+                                      TInt, 
+                                      Data_ready, 
+                                      Kd0, 
+                                      Kp0);
+
+    input CLK;
+    input [8:0] D_Error;
+    input [8:0] Error;
+    input TInt;
+   output Data_ready;
+   output [2:0] Kd0;
+   output [2:0] Kp0;
+   
+   wire Data_ready1;
+   wire [3:0] D_ERROR_NEG;
+   wire [3:0] D_ERROR_POS;
+   wire [3:0] D_ERROR_ZERO;
+   wire [3:0] ERROR_NEG;
+   wire [3:0] ERROR_POS;
+   wire [3:0] ERROR_ZERO;
+   wire [7:0] Kd;
+   wire [7:0] Kp;
+   wire [5:0] Kp_w_sum;
+   wire [7:0] Kp_w_sum8;
+   wire [7:0] Kp_W_8;
+   wire [5:0] Sum_Kp_w;
+   wire [3:0] Sum_w;
+   wire [3:0] Sum_w_for_kp;
+   wire [7:0] Sum_w_for_kp8;
+   wire [7:0] Sum_W_8;
+   wire [5:0] W_S;
+   wire [3:0] W_small_Kd;
+   wire [5:0] W_S_kd;
+   wire [3:0] W_0;
+   wire [3:0] W_1;
+   wire [3:0] W_2;
+   wire [3:0] W_3;
+   wire [3:0] W_4;
+   wire [3:0] W_5;
+   wire [3:0] W_6;
+   wire [3:0] W_7;
+   wire [3:0] W_8;
+   wire [3:0] XLXN_23;
+   wire [3:0] XLXN_24;
+   wire [3:0] XLXN_53;
+   wire [3:0] XLXN_54;
+   wire [5:0] XLXN_58;
+   wire [5:0] XLXN_59;
+   wire [5:0] XLXN_60;
+   wire [5:0] XLXN_61;
+   wire XLXN_62;
+   wire XLXN_63;
+   wire [5:0] XLXN_64;
+   wire [5:0] XLXN_65;
+   wire [3:0] XLXN_124;
+   wire [3:0] XLXN_125;
+   wire XLXN_298;
+   wire XLXN_299;
+   wire XLXN_304;
+   wire XLXN_305;
+   wire XLXN_306;
+   
+   error_derror_range_generator_MUSER_Fuzzy_PID  XLXI_1 (.error(Error[8:0]), 
+                                                        
+         .error_neg(ERROR_NEG[3:0]), 
+                                                        
+         .error_pos(ERROR_POS[3:0]), 
+                                                        
+         .error_zero(ERROR_ZERO[3:0]));
+   error_derror_range_generator_MUSER_Fuzzy_PID  XLXI_2 (.error(D_Error[8:0]), 
+                                                        
+         .error_neg(D_ERROR_NEG[3:0]), 
+                                                        
+         .error_pos(D_ERROR_POS[3:0]), 
+                                                        
+         .error_zero(D_ERROR_ZERO[3:0]));
+   Kp_Defuzzy_MUSER_Fuzzy_PID  XLXI_4 (.Inp_0(W_0[3:0]), 
+                                      .Inp_1(W_1[3:0]), 
+                                      .Inp_2(W_2[3:0]), 
+                                      .Inp_3(W_3[3:0]), 
+                                      .Inp_5(W_5[3:0]), 
+                                      .Inp_6(W_6[3:0]), 
+                                      .Inp_7(W_7[3:0]), 
+                                      .Inp_8(W_8[3:0]), 
+                                      .Large_W(XLXN_23[3:0]), 
+                                      .Mid_w(XLXN_24[3:0]));
+   Kd_Deffuzy_MUSER_Fuzzy_PID  XLXI_7 (.Inp_0(W_0[3:0]), 
+                                      .Inp_1(W_1[3:0]), 
+                                      .Inp_2(W_2[3:0]), 
+                                      .Inp_3(W_3[3:0]), 
+                                      .Inp_4(W_4[3:0]), 
+                                      .Inp_5(W_5[3:0]), 
+                                      .Inp_6(W_6[3:0]), 
+                                      .Inp_7(W_7[3:0]), 
+                                      .Inp_8(W_8[3:0]), 
+                                      .Kd_Large_w(XLXN_54[3:0]), 
+                                      .Kd_Med_w(XLXN_53[3:0]), 
+                                      .Kd_small_w(W_small_Kd[3:0]));
+   Min_Array_3_by_3_MUSER_Fuzzy_PID  XLXI_9 (.Inp1_0(D_ERROR_NEG[3:0]), 
+                                            .Inp1_1(D_ERROR_ZERO[3:0]), 
+                                            .Inp1_2(D_ERROR_POS[3:0]), 
+                                            .Inp2_0(ERROR_NEG[3:0]), 
+                                            .Inp2_1(ERROR_ZERO[3:0]), 
+                                            .Inp2_2(ERROR_POS[3:0]), 
+                                            .Outp0_0(W_0[3:0]), 
+                                            .Outp0_1(W_1[3:0]), 
+                                            .Outp0_2(W_2[3:0]), 
+                                            .Outp1_0(W_3[3:0]), 
+                                            .Outp1_1(W_4[3:0]), 
+                                            .Outp1_2(W_5[3:0]), 
+                                            .Outp2_0(W_6[3:0]), 
+                                            .Outp2_1(W_7[3:0]), 
+                                            .Outp2_2(W_8[3:0]));
+   Multiply_4Bit_3_MUSER_Fuzzy_PID  XLXI_10 (.Inp(XLXN_24[3:0]), 
+                                            .Outp(XLXN_58[5:0]));
+   Multiply_4Bit_3_MUSER_Fuzzy_PID  XLXI_11 (.Inp(XLXN_53[3:0]), 
+                                            .Outp(XLXN_61[5:0]));
+   Multiply_4Bit_5_MUSER_Fuzzy_PID  XLXI_12 (.Inp(XLXN_54[3:0]), 
+                                            .Outp(XLXN_60[5:0]));
+   Multiply_4Bit_5_MUSER_Fuzzy_PID  XLXI_13 (.Inp(XLXN_23[3:0]), 
+                                            .Outp(XLXN_59[5:0]));
+   add6_MUSER_Fuzzy_PID  XLXI_15 (.A(XLXN_60[5:0]), 
+                                 .B(XLXN_61[5:0]), 
+                                 .CI(XLXN_63), 
+                                 .CO(), 
+                                 .OFL(), 
+                                 .S(XLXN_64[5:0]));
+   add6_MUSER_Fuzzy_PID  XLXI_16 (.A(XLXN_58[5:0]), 
+                                 .B(XLXN_59[5:0]), 
+                                 .CI(XLXN_62), 
+                                 .CO(), 
+                                 .OFL(), 
+                                 .S(XLXN_65[5:0]));
+   add6_MUSER_Fuzzy_PID  XLXI_17 (.A(XLXN_65[5:0]), 
+                                 .B(W_S[5:0]), 
+                                 .CI(XLXN_306), 
+                                 .CO(), 
+                                 .OFL(), 
+                                 .S(Kp_w_sum[5:0]));
+   add6_MUSER_Fuzzy_PID  XLXI_18 (.A(XLXN_64[5:0]), 
+                                 .B(W_S_kd[5:0]), 
+                                 .CI(XLXN_305), 
+                                 .CO(), 
+                                 .OFL(), 
+                                 .S(Sum_Kp_w[5:0]));
+   GND  XLXI_19 (.G(XLXN_63));
+   GND  XLXI_20 (.G(XLXN_62));
+   BUF  XLXI_33 (.I(W_4[3]), 
+                .O(W_S[3]));
+   BUF  XLXI_34 (.I(W_4[2]), 
+                .O(W_S[2]));
+   BUF  XLXI_35 (.I(W_4[1]), 
+                .O(W_S[1]));
+   BUF  XLXI_36 (.I(W_4[0]), 
+                .O(W_S[0]));
+   BUF  XLXI_37 (.I(W_small_Kd[3]), 
+                .O(W_S_kd[3]));
+   BUF  XLXI_38 (.I(W_small_Kd[2]), 
+                .O(W_S_kd[2]));
+   BUF  XLXI_39 (.I(W_small_Kd[1]), 
+                .O(W_S_kd[1]));
+   BUF  XLXI_40 (.I(W_small_Kd[0]), 
+                .O(W_S_kd[0]));
+   GND  XLXI_41 (.G(W_S_kd[4]));
+   GND  XLXI_42 (.G(W_S_kd[5]));
+   GND  XLXI_43 (.G(W_S[4]));
+   GND  XLXI_44 (.G(W_S[5]));
+   Divide_8bit_8bit_restore_MUSER_Fuzzy_PID  XLXI_52 (.CLK(CLK), 
+                                                     .Dividend(Kp_W_8[7:0]), 
+                                                     .Divisor(Sum_W_8[7:0]), 
+                                                     .Sel(XLXN_304), 
+                                                     .Enable(XLXN_298), 
+                                                     .Quotient(Kd[7:0]), 
+                                                     .Remainder());
+   BUF  XLXI_53 (.I(Sum_w[3]), 
+                .O(Sum_W_8[3]));
+   BUF  XLXI_54 (.I(Sum_w[2]), 
+                .O(Sum_W_8[2]));
+   BUF  XLXI_55 (.I(Sum_w[1]), 
+                .O(Sum_W_8[1]));
+   BUF  XLXI_56 (.I(Sum_w[0]), 
+                .O(Sum_W_8[0]));
+   BUF  XLXI_57 (.I(Sum_Kp_w[1]), 
+                .O(Kp_W_8[1]));
+   BUF  XLXI_58 (.I(Sum_Kp_w[2]), 
+                .O(Kp_W_8[2]));
+   BUF  XLXI_59 (.I(Sum_Kp_w[3]), 
+                .O(Kp_W_8[3]));
+   BUF  XLXI_60 (.I(Sum_Kp_w[4]), 
+                .O(Kp_W_8[4]));
+   BUF  XLXI_61 (.I(Sum_Kp_w[5]), 
+                .O(Kp_W_8[5]));
+   BUF  XLXI_67 (.I(Sum_Kp_w[0]), 
+                .O(Kp_W_8[0]));
+   GND  XLXI_68 (.G(Kp_W_8[7]));
+   GND  XLXI_69 (.G(Kp_W_8[6]));
+   GND  XLXI_70 (.G(Sum_W_8[7]));
+   GND  XLXI_71 (.G(Sum_W_8[5]));
+   GND  XLXI_72 (.G(Sum_W_8[4]));
+   GND  XLXI_73 (.G(Sum_W_8[6]));
+   Divide_8bit_8bit_restore_MUSER_Fuzzy_PID  XLXI_74 (.CLK(CLK), 
+                                                     .Dividend(Kp_w_sum8[7:0]), 
+                                                     
+         .Divisor(Sum_w_for_kp8[7:0]), 
+                                                     .Sel(XLXN_304), 
+                                                     .Enable(XLXN_299), 
+                                                     .Quotient(Kp[7:0]), 
+                                                     .Remainder());
+   BUF  XLXI_75 (.I(Sum_w_for_kp[0]), 
+                .O(Sum_w_for_kp8[0]));
+   BUF  XLXI_76 (.I(Sum_w_for_kp[1]), 
+                .O(Sum_w_for_kp8[1]));
+   BUF  XLXI_77 (.I(Sum_w_for_kp[2]), 
+                .O(Sum_w_for_kp8[2]));
+   BUF  XLXI_78 (.I(Sum_w_for_kp[3]), 
+                .O(Sum_w_for_kp8[3]));
+   BUF  XLXI_79 (.I(Kp_w_sum[5]), 
+                .O(Kp_w_sum8[5]));
+   BUF  XLXI_80 (.I(Kp_w_sum[4]), 
+                .O(Kp_w_sum8[4]));
+   BUF  XLXI_81 (.I(Kp_w_sum[3]), 
+                .O(Kp_w_sum8[3]));
+   BUF  XLXI_82 (.I(Kp_w_sum[2]), 
+                .O(Kp_w_sum8[2]));
+   BUF  XLXI_83 (.I(Kp_w_sum[1]), 
+                .O(Kp_w_sum8[1]));
+   BUF  XLXI_84 (.I(Kp_w_sum[0]), 
+                .O(Kp_w_sum8[0]));
+   GND  XLXI_85 (.G(Sum_w_for_kp8[4]));
+   GND  XLXI_86 (.G(Sum_w_for_kp8[5]));
+   GND  XLXI_87 (.G(Sum_w_for_kp8[6]));
+   GND  XLXI_88 (.G(Sum_w_for_kp8[7]));
+   GND  XLXI_89 (.G(Kp_w_sum8[6]));
+   GND  XLXI_90 (.G(Kp_w_sum8[7]));
+   NOR3  XLXI_109 (.I0(XLXN_304), 
+                  .I1(XLXN_298), 
+                  .I2(XLXN_299), 
+                  .O(Data_ready));
+   INV  XLXI_110 (.I(TInt), 
+                 .O(XLXN_304));
+   add4_bus_MUSER_Fuzzy_PID  XLXI_114 (.A(XLXN_24[3:0]), 
+                                      .B(XLXN_23[3:0]), 
+                                      .Outp(XLXN_124[3:0]));
+   add4_bus_MUSER_Fuzzy_PID  XLXI_115 (.A(XLXN_124[3:0]), 
+                                      .B(W_4[3:0]), 
+                                      .Outp(Sum_w_for_kp[3:0]));
+   add4_bus_MUSER_Fuzzy_PID  XLXI_116 (.A(XLXN_53[3:0]), 
+                                      .B(XLXN_54[3:0]), 
+                                      .Outp(XLXN_125[3:0]));
+   add4_bus_MUSER_Fuzzy_PID  XLXI_117 (.A(XLXN_125[3:0]), 
+                                      .B(W_small_Kd[3:0]), 
+                                      .Outp(Sum_w[3:0]));
+   GND  XLXI_118 (.G(XLXN_305));
+   GND  XLXI_119 (.G(XLXN_306));
+   FD #( .INIT(1'b0) ) XLXI_126 (.C(Data_ready1), 
+                .D(Kp[0]), 
+                .Q(Kp0[0]));
+   FD #( .INIT(1'b0) ) XLXI_129 (.C(Data_ready1), 
+                .D(Kd[0]), 
+                .Q(Kd0[0]));
+   FD #( .INIT(1'b0) ) XLXI_132 (.C(Data_ready1), 
+                .D(Kd[1]), 
+                .Q(Kd0[1]));
+   FD #( .INIT(1'b0) ) XLXI_133 (.C(Data_ready1), 
+                .D(Kd[2]), 
+                .Q(Kd0[2]));
+   FD #( .INIT(1'b0) ) XLXI_136 (.C(Data_ready1), 
+                .D(Kp[1]), 
+                .Q(Kp0[1]));
+   FD #( .INIT(1'b0) ) XLXI_137 (.C(Data_ready1), 
+                .D(Kp[2]), 
+                .Q(Kp0[2]));
+endmodule
+`timescale 1ns / 1ps
+
+module Flip_flip9_MUSER_Fuzzy_PID(CE, 
+                                  C_0, 
+                                  I_0, 
+                                  I_1, 
+                                  I_2, 
+                                  I_3, 
+                                  I_4, 
+                                  I_5, 
+                                  I_6, 
+                                  I_7, 
+                                  I_8, 
+                                  RST, 
+                                  O_0, 
+                                  O_1, 
+                                  O_2, 
+                                  O_3, 
+                                  O_4, 
+                                  O_5, 
+                                  O_6, 
+                                  O_7, 
+                                  O_8);
+
+    input CE;
+    input C_0;
+    input I_0;
+    input I_1;
+    input I_2;
+    input I_3;
+    input I_4;
+    input I_5;
+    input I_6;
+    input I_7;
+    input I_8;
+    input RST;
+   output O_0;
+   output O_1;
+   output O_2;
+   output O_3;
+   output O_4;
+   output O_5;
+   output O_6;
+   output O_7;
+   output O_8;
+   
+   
+   FDCE #( .INIT(1'b0) ) XLXI_12 (.C(C_0), 
+                 .CE(CE), 
+                 .CLR(RST), 
+                 .D(I_5), 
+                 .Q(O_5));
+   FDCE #( .INIT(1'b0) ) XLXI_13 (.C(C_0), 
+                 .CE(CE), 
+                 .CLR(RST), 
+                 .D(I_4), 
+                 .Q(O_4));
+   FDCE #( .INIT(1'b0) ) XLXI_14 (.C(C_0), 
+                 .CE(CE), 
+                 .CLR(RST), 
+                 .D(I_3), 
+                 .Q(O_3));
+   FDCE #( .INIT(1'b0) ) XLXI_15 (.C(C_0), 
+                 .CE(CE), 
+                 .CLR(RST), 
+                 .D(I_2), 
+                 .Q(O_2));
+   FDCE #( .INIT(1'b0) ) XLXI_16 (.C(C_0), 
+                 .CE(CE), 
+                 .CLR(RST), 
+                 .D(I_1), 
+                 .Q(O_1));
+   FDCE #( .INIT(1'b0) ) XLXI_17 (.C(C_0), 
+                 .CE(CE), 
+                 .CLR(RST), 
+                 .D(I_0), 
+                 .Q(O_0));
+   FDCE #( .INIT(1'b0) ) XLXI_18 (.C(C_0), 
+                 .CE(CE), 
+                 .CLR(RST), 
+                 .D(I_8), 
+                 .Q(O_8));
+   FDCE #( .INIT(1'b0) ) XLXI_19 (.C(C_0), 
+                 .CE(CE), 
+                 .CLR(RST), 
+                 .D(I_7), 
+                 .Q(O_7));
+   FDCE #( .INIT(1'b0) ) XLXI_20 (.C(C_0), 
+                 .CE(CE), 
+                 .CLR(RST), 
+                 .D(I_6), 
+                 .Q(O_6));
+endmodule
+`timescale 1ns / 1ps
+
+module D_error_MUSER_Fuzzy_PID(clk_32, 
+                               Err, 
+                               DErr);
+
+    input clk_32;
+    input [8:0] Err;
+   output [8:0] DErr;
+   
+   wire XLXN_25;
+   
+   Flip_flip9_MUSER_Fuzzy_PID  XLXI_1 (.C_0(clk_32), 
+                                      .I_0(Err[0]), 
+                                      .I_1(Err[1]), 
+                                      .I_2(Err[2]), 
+                                      .I_3(Err[3]), 
+                                      .I_4(Err[4]), 
+                                      .I_5(Err[5]), 
+                                      .I_6(Err[6]), 
+                                      .I_7(Err[7]), 
+                                      .I_8(Err[8]), 
+                                      .RST(XLXN_25), 
+                                      .O_0(DErr[0]), 
+                                      .O_1(DErr[1]), 
+                                      .O_2(DErr[2]), 
+                                      .O_3(DErr[3]), 
+                                      .O_4(DErr[4]), 
+                                      .O_5(DErr[5]), 
+                                      .O_6(DErr[6]), 
+                                      .O_7(DErr[7]), 
+                                      .O_8(DErr[8]));
+   GND  XLXI_2 (.G(XLXN_25));
+endmodule
+`timescale 1ns / 1ps
+
+module Error_D_Error_Gen_MUSER_Fuzzy_PID(clk_32, 
+                                         Target, 
+                                         Ticks, 
+                                         D_ERROR, 
+                                         Err);
+
+    input clk_32;
+    input [8:0] Target;
+    input [8:0] Ticks;
+   output [8:0] D_ERROR;
+   output [8:0] Err;
+   
+   wire [8:0] XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire [8:0] Err_DUMMY;
+   
+   assign Err[8:0] = Err_DUMMY[8:0];
+   D_error_MUSER_Fuzzy_PID  XLXI_1 (.clk_32(clk_32), 
+                                   .Err(Err_DUMMY[8:0]), 
+                                   .DErr(XLXN_17[8:0]));
+   sub9bit_MUSER_Fuzzy_PID  XLXI_23 (.A(Err_DUMMY[8:0]), 
+                                    .ADD(XLXN_24), 
+                                    .B(XLXN_17[8:0]), 
+                                    .CI(XLXN_25), 
+                                    .CO(), 
+                                    .OFL(), 
+                                    .S(D_ERROR[8:0]));
+   sub9bit_MUSER_Fuzzy_PID  XLXI_29 (.A(Target[8:0]), 
+                                    .ADD(XLXN_19), 
+                                    .B(Ticks[8:0]), 
+                                    .CI(XLXN_18), 
+                                    .CO(), 
+                                    .OFL(), 
+                                    .S(Err_DUMMY[8:0]));
+   GND  XLXI_30 (.G(XLXN_19));
+   VCC  XLXI_31 (.P(XLXN_18));
+   VCC  XLXI_32 (.P(XLXN_25));
+   GND  XLXI_33 (.G(XLXN_24));
+endmodule
+`timescale 1ns / 1ps
+
+module Fuzzy_PID(CLK, 
+                 Target, 
+                 Ticks, 
+                 TInt, 
+                 Data_Ready, 
+                 OCR_Corr);
+
+    input CLK;
+    input [8:0] Target;
+    input [8:0] Ticks;
+    input TInt;
+   output Data_Ready;
+   output [15:0] OCR_Corr;
+   
+   wire [2:0] XLXN_1;
+   wire [2:0] XLXN_4;
+   wire [8:0] XLXN_5;
+   wire [8:0] XLXN_7;
+   wire XLXN_27;
+   wire [15:0] XLXN_29;
+   wire [15:0] XLXN_30;
+   wire XLXN_33;
+   wire XLXN_40;
+   wire XLXN_42;
+   
+   Error_D_Error_Gen_MUSER_Fuzzy_PID  XLXI_2 (.clk_32(TInt), 
+                                             .Target(Target[8:0]), 
+                                             .Ticks(Ticks[8:0]), 
+                                             .D_ERROR(XLXN_7[8:0]), 
+                                             .Err(XLXN_5[8:0]));
+   FIRA_Fuzzy_1_0_MUSER_Fuzzy_PID  XLXI_3 (.CLK(CLK), 
+                                          .D_Error(XLXN_7[8:0]), 
+                                          .Error(XLXN_5[8:0]), 
+                                          .TInt(XLXN_42), 
+                                          .Data_ready(XLXN_27), 
+                                          .Kd0(XLXN_1[2:0]), 
+                                          .Kp0(XLXN_4[2:0]));
+   Mult_9bit_3Bit_Comb_MUSER_Fuzzy_PID  XLXI_4 (.Multiplicant(XLXN_7[8:0]), 
+                                               .Multiplier(XLXN_1[2:0]), 
+                                               .Product(XLXN_30[15:0]));
+   Mult_9bit_3Bit_Comb_MUSER_Fuzzy_PID  XLXI_5 (.Multiplicant(XLXN_5[8:0]), 
+                                               .Multiplier(XLXN_4[2:0]), 
+                                               .Product(XLXN_29[15:0]));
+   FD #( .INIT(1'b0) ) XLXI_7 (.C(CLK), 
+              .D(TInt), 
+              .Q(XLXN_40));
+   FD #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+              .D(XLXN_27), 
+              .Q(Data_Ready));
+   (* HU_SET = "XLXI_9_96" *) 
+   ADD16_MXILINX_Fuzzy_PID  XLXI_9 (.A(XLXN_30[15:0]), 
+                                   .B(XLXN_29[15:0]), 
+                                   .CI(XLXN_33), 
+                                   .CO(), 
+                                   .OFL(), 
+                                   .S(OCR_Corr[15:0]));
+   GND  XLXI_10 (.G(XLXN_33));
+   FD #( .INIT(1'b0) ) XLXI_12 (.C(CLK), 
+               .D(XLXN_40), 
+               .Q(XLXN_42));
+endmodule

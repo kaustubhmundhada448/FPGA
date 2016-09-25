@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="QAMV1.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Counter_12.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="Counter_12.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Counter_12.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Counter_12.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Counter_12.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Counter_12.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Counter_12.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Counter_12.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Counter_12.syr"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Counter_12.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Counter_12.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Counter_12_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="DACout.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="DACout.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="DACout_DACout_sch_tb_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Fial_Combine.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Fial_Combine.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="Fial_Combine.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Fial_Combine.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="Fial_Combine.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Fial_Combine.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="Fial_Combine.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Fial_Combine.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="Fial_Combine.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="Fial_Combine.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Fial_Combine.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Fial_Combine.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Fial_Combine.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Fial_Combine.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="Fial_Combine.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="Fial_Combine.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="Fial_Combine.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="Fial_Combine.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Fial_Combine.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Fial_Combine.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Fial_Combine_Fial_Combine_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Fial_Combine_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="Fial_Combine_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Fial_Combine_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Fial_Combine_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="Fial_Combine_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="Fial_Combine_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="Fial_Combine_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="Fial_Combine_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Fial_Combine_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Fial_Combine_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Inverter_12_op.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Inverter_12_op_drc.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="LUTtable.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="LUTtable.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Mux_2_16.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Mux_2_16.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="SineCosine.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="SineCosine.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Z_register.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Z_register.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="addshiftr2.ngr"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="addshiftr2.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="addshiftr2.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="anglecounter.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="anglecounter.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="anglecounter.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="anglecounter.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="anglecounter.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="anglecounter.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="anglecounter.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="anglecounter.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="anglecounter.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="anglecounter.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="anglecounter.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="anglecounter.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="anglecounter.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="anglecounter.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="anglecounter.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="anglecounter.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="anglecounter.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="anglecounter.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="anglecounter.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="anglecounter.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="anglecounter.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="anglecounter.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="anglecounter.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="anglecounter.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="anglecounter.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="anglecounter.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="anglecounter_anglecounter_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="anglecounter_anglecounter_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="anglecounter_anglecounter_sch_tb_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="anglecounter_anglecounter_sch_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="anglecounter_drc.vf"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="anglecounter_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="anglecounter_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="anglecounter_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="anglecounter_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="anglecounter_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="anglecounter_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="anglecounter_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="anglecounter_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="anglecounter_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="anglecounter_par.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="anglecounter_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="anglecounter_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="anglecounter_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="bit16buffermodified.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bit16to12.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="bit16to12.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bit4s.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="bit4s.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="constant2048.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="constant2048.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="fial_combine.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="fial_combine.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="fial_combine.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="final_block.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="final_block.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="final_block.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="final_block.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="final_block.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="final_block.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="final_block.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="final_block.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="final_block.syr"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="final_block.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="final_block.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="final_block_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="final_block_final_block_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="final_block_final_block_sch_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="final_block_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="final_block_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="gnd16bit.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="iteration.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="iteration.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="output_enable.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="output_enable.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="qamtheta.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="qamtheta.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="qamtheta.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="qamtheta.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="qamtheta.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="qamtheta.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="qamtheta.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="qamtheta.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="qamtheta.syr"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="qamtheta.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="qamtheta.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="qamtheta_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="qamtheta_qamtheta_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="qamtheta_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="qamtheta_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="shifter.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="shifter.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="shifter_full.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="shifter_full.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="shifterhigh.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="shifterhigh.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="shiftr2.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="x_initial.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="x_initial.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="y_initial.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="y_initial.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1448823819" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1448823819">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1448823819" xil_pn:in_ck="-8648304102420461522" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1448823819">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Angle_Couner_test.v"/>
+      <outfile xil_pn:name="DACtest.v"/>
+      <outfile xil_pn:name="Final_Combinetest.v"/>
+      <outfile xil_pn:name="qamtheta_test.v"/>
+      <outfile xil_pn:name="testv1.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1448823819" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5727166294921815158" xil_pn:start_ts="1448823819">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1448856199" xil_pn:in_ck="-1495478460920454479" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2195354861294358574" xil_pn:start_ts="1448856184">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1448823830" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8083504749696645260" xil_pn:start_ts="1448823830">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1448856199" xil_pn:in_ck="-6736035282209826987" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1448856199">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1448880354" xil_pn:in_ck="-6736035282209826987" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-8304916247559745880" xil_pn:start_ts="1448880350">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1448880354" xil_pn:in_ck="-82250799968237616" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6492776024978053877" xil_pn:start_ts="1448880354">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1448550679" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1448550679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1474836999" xil_pn:in_ck="-1495478460920454479" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="9058857764240407623" xil_pn:start_ts="1474836995">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Counter_12.vf"/>
+      <outfile xil_pn:name="DACout.vf"/>
+      <outfile xil_pn:name="Fial_Combine.vf"/>
+      <outfile xil_pn:name="LUTtable.vf"/>
+      <outfile xil_pn:name="Mux_2_16.vf"/>
+      <outfile xil_pn:name="SineCosine.vf"/>
+      <outfile xil_pn:name="Z_register.vf"/>
+      <outfile xil_pn:name="addshiftr2.vf"/>
+      <outfile xil_pn:name="anglecounter.vf"/>
+      <outfile xil_pn:name="bit16buffermodified.vf"/>
+      <outfile xil_pn:name="bit16to12.vf"/>
+      <outfile xil_pn:name="bit4s.vf"/>
+      <outfile xil_pn:name="constant2048.vf"/>
+      <outfile xil_pn:name="final_block.vf"/>
+      <outfile xil_pn:name="gnd16bit.vf"/>
+      <outfile xil_pn:name="iteration.vf"/>
+      <outfile xil_pn:name="output_enable.vf"/>
+      <outfile xil_pn:name="qamtheta.vf"/>
+      <outfile xil_pn:name="shifter.vf"/>
+      <outfile xil_pn:name="shifter_full.vf"/>
+      <outfile xil_pn:name="shifterhigh.vf"/>
+      <outfile xil_pn:name="shiftr2.vf"/>
+      <outfile xil_pn:name="x_initial.vf"/>
+      <outfile xil_pn:name="y_initial.vf"/>
+    </transform>
+    <transform xil_pn:end_ts="1474836993" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="1526298947327362149" xil_pn:start_ts="1474836993">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1474836993" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1474836993">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1474836993" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-3004947167405654641" xil_pn:start_ts="1474836993">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1474836999" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-6388418249795389316" xil_pn:start_ts="1474836999">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1474836999" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-3684742210609378321" xil_pn:start_ts="1474836999">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1474837042" xil_pn:in_ck="7052951604128978727" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="608920855715377637" xil_pn:start_ts="1474836999">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Counter_12.ngr"/>
+      <outfile xil_pn:name="Fial_Combine.jhd"/>
+      <outfile xil_pn:name="Fial_Combine.lso"/>
+      <outfile xil_pn:name="Fial_Combine.ngc"/>
+      <outfile xil_pn:name="Fial_Combine.ngr"/>
+      <outfile xil_pn:name="Fial_Combine.prj"/>
+      <outfile xil_pn:name="Fial_Combine.stx"/>
+      <outfile xil_pn:name="Fial_Combine.syr"/>
+      <outfile xil_pn:name="Fial_Combine.xst"/>
+      <outfile xil_pn:name="Fial_Combine_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="addshiftr2.ngr"/>
+      <outfile xil_pn:name="anglecounter.ngr"/>
+      <outfile xil_pn:name="final_block.ngr"/>
+      <outfile xil_pn:name="qamtheta.ngr"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1448810100" xil_pn:in_ck="-8402388056760908681" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8034272052528760919" xil_pn:start_ts="1448810100">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+  </transforms>
+
+</generated_project>

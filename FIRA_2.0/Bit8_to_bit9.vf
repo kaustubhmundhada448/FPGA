@@ -1,0 +1,48 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Bit8_to_bit9.vf
+// /___/   /\     Timestamp : 05/30/2015 19:31:56
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/FIRA_2.0/Bit8_to_bit9.vf -w E:/FPGA_Xilinx/Buffers_for_bit_conversion/Bit8_to_bit9.sch
+//Design Name: Bit8_to_bit9
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Bit8_to_bit9(Data_8, 
+                    Data_9);
+
+    input [7:0] Data_8;
+   output [8:0] Data_9;
+   
+   
+   BUF  XLXI_1 (.I(Data_8[0]), 
+               .O(Data_9[0]));
+   BUF  XLXI_2 (.I(Data_8[1]), 
+               .O(Data_9[1]));
+   BUF  XLXI_3 (.I(Data_8[2]), 
+               .O(Data_9[2]));
+   BUF  XLXI_4 (.I(Data_8[3]), 
+               .O(Data_9[3]));
+   BUF  XLXI_5 (.I(Data_8[4]), 
+               .O(Data_9[4]));
+   BUF  XLXI_6 (.I(Data_8[5]), 
+               .O(Data_9[5]));
+   BUF  XLXI_7 (.I(Data_8[6]), 
+               .O(Data_9[6]));
+   BUF  XLXI_8 (.I(Data_8[7]), 
+               .O(Data_9[7]));
+   BUF  XLXI_9 (.I(Data_8[7]), 
+               .O(Data_9[8]));
+endmodule

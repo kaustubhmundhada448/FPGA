@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/qamtheta.xst" -ofn "G:/FPGA/BTP/QAMV1/qamtheta.syr" 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/qamtheta.xst" -ofn "G:/FPGA/BTP/QAMV1/qamtheta.syr" 
+sch2sym -intstyle ise -family spartan3 -w -refsym qamtheta G:/FPGA/BTP/QAMV1/qamtheta.sch G:/FPGA/BTP/QAMV1/qamtheta.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym qamtheta G:/FPGA/BTP/QAMV1/qamtheta.sch G:/FPGA/BTP/QAMV1/qamtheta.sym 

@@ -1,0 +1,2788 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: Fial_Combine.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Fial_Combine.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Fial_Combine"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : Fial_Combine
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "bit16buffermodified.vf" in library work
+Compiling verilog file "shiftr2.vf" in library work
+Module <bit16buffermodified> compiled
+Module <bit16buffermodified_MUSER_shiftr2> compiled
+Compiling verilog file "shifterhigh.vf" in library work
+Module <shiftr2> compiled
+Module <M2_1_MXILINX_shifterhigh> compiled
+Module <M2_1E_MXILINX_shifterhigh> compiled
+Module <M16_1E_MXILINX_shifterhigh> compiled
+Compiling verilog file "shifter.vf" in library work
+Module <shifterhigh> compiled
+Module <M2_1_MXILINX_shifter> compiled
+Module <M2_1E_MXILINX_shifter> compiled
+Module <M16_1E_MXILINX_shifter> compiled
+Compiling verilog file "gnd16bit.vf" in library work
+Module <shifter> compiled
+Compiling verilog file "y_initial.vf" in library work
+Module <gnd16bit> compiled
+Compiling verilog file "x_initial.vf" in library work
+Module <y_initial> compiled
+Compiling verilog file "shifter_full.vf" in library work
+Module <x_initial> compiled
+Module <M2_1_MXILINX_shifter_full> compiled
+Module <M2_1E_MXILINX_shifter_full> compiled
+Module <M16_1E_MXILINX_shifter_full> compiled
+Module <shifterhigh_MUSER_shifter_full> compiled
+Module <shifter_MUSER_shifter_full> compiled
+Compiling verilog file "Mux_2_16.vf" in library work
+Module <shifter_full> compiled
+Compiling verilog file "LUTtable.vf" in library work
+Module <Mux_2_16> compiled
+Compiling verilog file "bit4s.vf" in library work
+Module <LUTtable> compiled
+Module <FTCE_MXILINX_bit4s> compiled
+Module <CB2CE_MXILINX_bit4s> compiled
+Compiling verilog file "bit16to12.vf" in library work
+Module <bit4s> compiled
+Compiling verilog file "addshiftr2.vf" in library work
+Module <bit16to12> compiled
+Module <gnd16bit_MUSER_addshiftr2> compiled
+Module <bit16buffermodified_MUSER_addshiftr2> compiled
+Module <shiftr2_MUSER_addshiftr2> compiled
+Module <ADSU16_MXILINX_addshiftr2> compiled
+Module <ADD16_MXILINX_addshiftr2> compiled
+Compiling verilog file "Z_register.vf" in library work
+Module <addshiftr2> compiled
+Module <LUTtable_MUSER_Z_register> compiled
+Module <bit16buffermodified_MUSER_Z_register> compiled
+Module <Mux_2_16_MUSER_Z_register> compiled
+Module <FD16CE_MXILINX_Z_register> compiled
+Module <ADSU16_MXILINX_Z_register> compiled
+Compiling verilog file "SineCosine.vf" in library work
+Module <Z_register> compiled
+Module <bit16buffermodified_MUSER_SineCosine> compiled
+Module <M2_1_MXILINX_SineCosine> compiled
+Module <M2_1E_MXILINX_SineCosine> compiled
+Module <M16_1E_MXILINX_SineCosine> compiled
+Module <shifterhigh_MUSER_SineCosine> compiled
+Module <shifter_MUSER_SineCosine> compiled
+Module <shifter_full_MUSER_SineCosine> compiled
+Module <y_initial_MUSER_SineCosine> compiled
+Module <bit16to12_MUSER_SineCosine> compiled
+Module <x_initial_MUSER_SineCosine> compiled
+Module <Mux_2_16_MUSER_SineCosine> compiled
+Module <FD16CE_MXILINX_SineCosine> compiled
+Module <ADSU16_MXILINX_SineCosine> compiled
+Compiling verilog file "qamtheta.vf" in library work
+Module <SineCosine> compiled
+Module <gnd16bit_MUSER_qamtheta> compiled
+Module <bit16buffermodified_MUSER_qamtheta> compiled
+Module <shiftr2_MUSER_qamtheta> compiled
+Module <ADSU16_MXILINX_qamtheta> compiled
+Module <ADD16_MXILINX_qamtheta> compiled
+Module <addshiftr2_MUSER_qamtheta> compiled
+Module <FTCE_MXILINX_qamtheta> compiled
+Module <CB2CE_MXILINX_qamtheta> compiled
+Module <bit4s_MUSER_qamtheta> compiled
+Compiling verilog file "output_enable.vf" in library work
+Module <qamtheta> compiled
+Module <bit16to12_MUSER_output_enable> compiled
+Module <bit16buffermodified_MUSER_output_enable> compiled
+Module <FD16CE_MXILINX_output_enable> compiled
+Compiling verilog file "iteration.vf" in library work
+Module <output_enable> compiled
+Module <COMP4_MXILINX_iteration> compiled
+Module <FTCE_MXILINX_iteration> compiled
+Module <CB4CE_MXILINX_iteration> compiled
+Compiling verilog file "Counter_12.vf" in library work
+Module <iteration> compiled
+Module <NOR16_MXILINX_Counter_12> compiled
+Module <FTCE_MXILINX_Counter_12> compiled
+Module <CB16CE_MXILINX_Counter_12> compiled
+Compiling verilog file "constant2048.vf" in library work
+Module <Counter_12> compiled
+Compiling verilog file "final_block.vf" in library work
+Module <constant2048> compiled
+Module <gnd16bit_MUSER_final_block> compiled
+Module <bit16buffermodified_MUSER_final_block> compiled
+Module <shiftr2_MUSER_final_block> compiled
+Module <ADSU16_MXILINX_final_block> compiled
+Module <ADD16_MXILINX_final_block> compiled
+Module <addshiftr2_MUSER_final_block> compiled
+Module <FTCE_MXILINX_final_block> compiled
+Module <CB2CE_MXILINX_final_block> compiled
+Module <bit4s_MUSER_final_block> compiled
+Module <qamtheta_MUSER_final_block> compiled
+Module <CB4CE_MXILINX_final_block> compiled
+Module <bit16to12_MUSER_final_block> compiled
+Module <FD16CE_MXILINX_final_block> compiled
+Module <output_enable_MUSER_final_block> compiled
+Module <COMP4_MXILINX_final_block> compiled
+Module <iteration_MUSER_final_block> compiled
+Module <LUTtable_MUSER_final_block> compiled
+Module <Mux_2_16_MUSER_final_block> compiled
+Module <Z_register_MUSER_final_block> compiled
+Module <M2_1_MXILINX_final_block> compiled
+Module <M2_1E_MXILINX_final_block> compiled
+Module <M16_1E_MXILINX_final_block> compiled
+Module <shifterhigh_MUSER_final_block> compiled
+Module <shifter_MUSER_final_block> compiled
+Module <shifter_full_MUSER_final_block> compiled
+Module <y_initial_MUSER_final_block> compiled
+Module <x_initial_MUSER_final_block> compiled
+Module <SineCosine_MUSER_final_block> compiled
+Compiling verilog file "DACout.vf" in library work
+Module <final_block> compiled
+Module <constant2048_MUSER_DACout> compiled
+Module <gnd16bit_MUSER_DACout> compiled
+Module <ADSU16_MXILINX_DACout> compiled
+Module <ADD16_MXILINX_DACout> compiled
+Module <Mux_2_16_MUSER_DACout> compiled
+Compiling verilog file "anglecounter.vf" in library work
+Module <DACout> compiled
+Module <FD16RE_MXILINX_anglecounter> compiled
+Module <bit16to12_MUSER_anglecounter> compiled
+Module <ADD16_MXILINX_anglecounter> compiled
+Module <FTCE_MXILINX_anglecounter> compiled
+Module <CB4CE_MXILINX_anglecounter> compiled
+Module <gnd16bit_MUSER_anglecounter> compiled
+Module <NOR16_MXILINX_anglecounter> compiled
+Module <CB16CE_MXILINX_anglecounter> compiled
+Module <Counter_12_MUSER_anglecounter> compiled
+Compiling verilog file "Fial_Combine.vf" in library work
+Module <anglecounter> compiled
+Module <FTCE_MXILINX_Fial_Combine> compiled
+Module <CB16CE_MXILINX_Fial_Combine> compiled
+Module <constant2048_MUSER_Fial_Combine> compiled
+Module <gnd16bit_MUSER_Fial_Combine> compiled
+Module <ADSU16_MXILINX_Fial_Combine> compiled
+Module <ADD16_MXILINX_Fial_Combine> compiled
+Module <Mux_2_16_MUSER_Fial_Combine> compiled
+Module <DACout_MUSER_Fial_Combine> compiled
+Module <bit16buffermodified_MUSER_Fial_Combine> compiled
+Module <shiftr2_MUSER_Fial_Combine> compiled
+Module <addshiftr2_MUSER_Fial_Combine> compiled
+Module <CB2CE_MXILINX_Fial_Combine> compiled
+Module <bit4s_MUSER_Fial_Combine> compiled
+Module <qamtheta_MUSER_Fial_Combine> compiled
+Module <CB4CE_MXILINX_Fial_Combine> compiled
+Module <bit16to12_MUSER_Fial_Combine> compiled
+Module <FD16CE_MXILINX_Fial_Combine> compiled
+Module <output_enable_MUSER_Fial_Combine> compiled
+Module <COMP4_MXILINX_Fial_Combine> compiled
+Module <iteration_MUSER_Fial_Combine> compiled
+Module <LUTtable_MUSER_Fial_Combine> compiled
+Module <Z_register_MUSER_Fial_Combine> compiled
+Module <M2_1_MXILINX_Fial_Combine> compiled
+Module <M2_1E_MXILINX_Fial_Combine> compiled
+Module <M16_1E_MXILINX_Fial_Combine> compiled
+Module <shifterhigh_MUSER_Fial_Combine> compiled
+Module <shifter_MUSER_Fial_Combine> compiled
+Module <shifter_full_MUSER_Fial_Combine> compiled
+Module <y_initial_MUSER_Fial_Combine> compiled
+Module <x_initial_MUSER_Fial_Combine> compiled
+Module <SineCosine_MUSER_Fial_Combine> compiled
+Module <final_block_MUSER_Fial_Combine> compiled
+Module <FD16RE_MXILINX_Fial_Combine> compiled
+Module <NOR16_MXILINX_Fial_Combine> compiled
+Module <Counter_12_MUSER_Fial_Combine> compiled
+Module <anglecounter_MUSER_Fial_Combine> compiled
+Module <Fial_Combine> compiled
+No errors in compilation
+Analysis of file <"Fial_Combine.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <final_block_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <anglecounter_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <CB16CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <DACout_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <CB16CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <SineCosine_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <Z_register_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <iteration_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <output_enable_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <qamtheta_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <Counter_12_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <gnd16bit_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <bit16to12_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FD16RE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FD16RE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <Mux_2_16_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADSU16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <constant2048_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FD16CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADSU16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <bit16buffermodified_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADSU16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FD16CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <x_initial_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <y_initial_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <shifter_full_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADSU16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FD16CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <LUTtable_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <COMP4_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FD16CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FD16CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <addshiftr2_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <bit4s_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <CB16CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <NOR16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <shifter_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <shifterhigh_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <bit16buffermodified_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <ADSU16_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <shiftr2_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <gnd16bit_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <CB2CE_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M16_1E_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <bit16buffermodified_MUSER_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_Fial_Combine> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <M2_1_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_Fial_Combine> in library <work>.
+
+Analyzing hierarchy for module <M2_1E_MXILINX_Fial_Combine> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Fial_Combine>.
+Module <Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_10_109" for instance <XLXI_10> in unit <Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_4_108" for instance <XLXI_4> in unit <Fial_Combine>.
+Analyzing module <final_block_MUSER_Fial_Combine> in library <work>.
+Module <final_block_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_6_99" for instance <XLXI_6> in unit <final_block_MUSER_Fial_Combine>.
+Analyzing module <SineCosine_MUSER_Fial_Combine> in library <work>.
+Module <SineCosine_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_13_98" for instance <XLXI_13> in unit <SineCosine_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_4_95" for instance <XLXI_4> in unit <SineCosine_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_5_96" for instance <XLXI_5> in unit <SineCosine_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_8_97" for instance <XLXI_8> in unit <SineCosine_MUSER_Fial_Combine>.
+Analyzing module <Mux_2_16_MUSER_Fial_Combine> in library <work>.
+Module <Mux_2_16_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <FD16CE_MXILINX_Fial_Combine.1> in library <work>.
+Module <FD16CE_MXILINX_Fial_Combine.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16CE_MXILINX_Fial_Combine.1>.
+Analyzing module <ADSU16_MXILINX_Fial_Combine.2> in library <work>.
+Module <ADSU16_MXILINX_Fial_Combine.2> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_16> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_17> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_18> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_19> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_20> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_21> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_22> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_23> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_55> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_58> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_62> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_63> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_64> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_107> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_110> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_111> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_248> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_249> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_250> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_251> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_252> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_253> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_254> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_255> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_272> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_275> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_279> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_283> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_287> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_291> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_295> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_299> in unit <ADSU16_MXILINX_Fial_Combine.2>.
+Analyzing module <bit16buffermodified_MUSER_Fial_Combine> in library <work>.
+Module <bit16buffermodified_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <ADSU16_MXILINX_Fial_Combine.3> in library <work>.
+Module <ADSU16_MXILINX_Fial_Combine.3> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_16> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_17> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_18> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_19> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_20> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_21> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_22> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_23> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_55> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_58> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_62> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_63> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_64> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_107> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_110> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_111> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_248> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_249> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_250> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_251> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_252> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_253> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_254> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_255> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_272> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_275> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_279> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_283> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_287> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_291> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_295> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_299> in unit <ADSU16_MXILINX_Fial_Combine.3>.
+Analyzing module <FD16CE_MXILINX_Fial_Combine.2> in library <work>.
+Module <FD16CE_MXILINX_Fial_Combine.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16CE_MXILINX_Fial_Combine.2>.
+Analyzing module <x_initial_MUSER_Fial_Combine> in library <work>.
+Module <x_initial_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <bit16to12_MUSER_Fial_Combine> in library <work>.
+Module <bit16to12_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <y_initial_MUSER_Fial_Combine> in library <work>.
+Module <y_initial_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <shifter_full_MUSER_Fial_Combine> in library <work>.
+Module <shifter_full_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <shifter_MUSER_Fial_Combine> in library <work>.
+Module <shifter_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_89" for instance <XLXI_1> in unit <shifter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_2_90" for instance <XLXI_2> in unit <shifter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_3_91" for instance <XLXI_3> in unit <shifter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_4_92" for instance <XLXI_4> in unit <shifter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_5_93" for instance <XLXI_5> in unit <shifter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_6_94" for instance <XLXI_6> in unit <shifter_MUSER_Fial_Combine>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.1> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.1> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.1>.
+Analyzing module <M2_1_MXILINX_Fial_Combine.1> in library <work>.
+Module <M2_1_MXILINX_Fial_Combine.1> is correct for synthesis.
+ 
+Analyzing module <M2_1_MXILINX_Fial_Combine.2> in library <work>.
+Module <M2_1_MXILINX_Fial_Combine.2> is correct for synthesis.
+ 
+Analyzing module <M2_1_MXILINX_Fial_Combine.3> in library <work>.
+Module <M2_1_MXILINX_Fial_Combine.3> is correct for synthesis.
+ 
+Analyzing module <M2_1_MXILINX_Fial_Combine.4> in library <work>.
+Module <M2_1_MXILINX_Fial_Combine.4> is correct for synthesis.
+ 
+Analyzing module <M2_1_MXILINX_Fial_Combine.5> in library <work>.
+Module <M2_1_MXILINX_Fial_Combine.5> is correct for synthesis.
+ 
+Analyzing module <M2_1_MXILINX_Fial_Combine.6> in library <work>.
+Module <M2_1_MXILINX_Fial_Combine.6> is correct for synthesis.
+ 
+Analyzing module <M2_1_MXILINX_Fial_Combine.7> in library <work>.
+Module <M2_1_MXILINX_Fial_Combine.7> is correct for synthesis.
+ 
+Analyzing module <M2_1_MXILINX_Fial_Combine.8> in library <work>.
+Module <M2_1_MXILINX_Fial_Combine.8> is correct for synthesis.
+ 
+Analyzing module <M2_1E_MXILINX_Fial_Combine> in library <work>.
+Module <M2_1E_MXILINX_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <M16_1E_MXILINX_Fial_Combine.2> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.2> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.2>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.3> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.3> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.3>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.4> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.4> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.4>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.4>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.4>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.4>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.4>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.4>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.4>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.4>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.4>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.5> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.5> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.5>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.5>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.5>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.5>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.5>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.5>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.5>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.5>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.5>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.6> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.6> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.6>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.6>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.6>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.6>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.6>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.6>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.6>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.6>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.6>.
+Analyzing module <shifterhigh_MUSER_Fial_Combine> in library <work>.
+Module <shifterhigh_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_83" for instance <XLXI_1> in unit <shifterhigh_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_2_84" for instance <XLXI_2> in unit <shifterhigh_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_3_85" for instance <XLXI_3> in unit <shifterhigh_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_4_86" for instance <XLXI_4> in unit <shifterhigh_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_5_87" for instance <XLXI_5> in unit <shifterhigh_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_6_88" for instance <XLXI_6> in unit <shifterhigh_MUSER_Fial_Combine>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.7> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.7> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.7>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.7>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.7>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.7>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.7>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.7>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.7>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.7>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.7>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.8> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.8> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.8>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.8>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.8>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.8>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.8>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.8>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.8>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.8>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.8>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.9> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.9> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.9>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.9>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.9>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.9>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.9>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.9>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.9>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.9>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.9>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.10> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.10> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.10>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.10>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.10>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.10>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.10>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.10>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.10>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.10>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.10>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.11> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.11> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.11>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.11>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.11>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.11>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.11>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.11>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.11>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.11>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.11>.
+Analyzing module <M16_1E_MXILINX_Fial_Combine.12> in library <work>.
+Module <M16_1E_MXILINX_Fial_Combine.12> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_82" for instance <I_M01> in unit <M16_1E_MXILINX_Fial_Combine.12>.
+    Set user-defined property "HU_SET =  I_M23_81" for instance <I_M23> in unit <M16_1E_MXILINX_Fial_Combine.12>.
+    Set user-defined property "HU_SET =  I_M45_80" for instance <I_M45> in unit <M16_1E_MXILINX_Fial_Combine.12>.
+    Set user-defined property "HU_SET =  I_M67_79" for instance <I_M67> in unit <M16_1E_MXILINX_Fial_Combine.12>.
+    Set user-defined property "HU_SET =  I_M89_78" for instance <I_M89> in unit <M16_1E_MXILINX_Fial_Combine.12>.
+    Set user-defined property "HU_SET =  I_MAB_77" for instance <I_MAB> in unit <M16_1E_MXILINX_Fial_Combine.12>.
+    Set user-defined property "HU_SET =  I_MCD_76" for instance <I_MCD> in unit <M16_1E_MXILINX_Fial_Combine.12>.
+    Set user-defined property "HU_SET =  I_MEF_75" for instance <I_MEF> in unit <M16_1E_MXILINX_Fial_Combine.12>.
+    Set user-defined property "HU_SET =  I_O_74" for instance <I_O> in unit <M16_1E_MXILINX_Fial_Combine.12>.
+Analyzing module <Z_register_MUSER_Fial_Combine> in library <work>.
+Module <Z_register_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_72" for instance <XLXI_1> in unit <Z_register_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_2_73" for instance <XLXI_2> in unit <Z_register_MUSER_Fial_Combine>.
+Analyzing module <ADSU16_MXILINX_Fial_Combine.4> in library <work>.
+Module <ADSU16_MXILINX_Fial_Combine.4> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_16> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_17> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_18> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_19> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_20> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_21> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_22> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_23> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_55> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_58> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_62> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_63> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_64> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_107> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_110> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_111> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_248> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_249> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_250> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_251> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_252> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_253> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_254> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_255> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_272> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_275> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_279> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_283> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_287> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_291> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_295> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_299> in unit <ADSU16_MXILINX_Fial_Combine.4>.
+Analyzing module <FD16CE_MXILINX_Fial_Combine.3> in library <work>.
+Module <FD16CE_MXILINX_Fial_Combine.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16CE_MXILINX_Fial_Combine.3>.
+Analyzing module <LUTtable_MUSER_Fial_Combine> in library <work>.
+Module <LUTtable_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  020E" for instance <XLXI_4> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  040E" for instance <XLXI_5> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0109" for instance <XLXI_7> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  008E" for instance <XLXI_8> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  004E" for instance <XLXI_9> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  002D" for instance <XLXI_10> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  001E" for instance <XLXI_11> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0006" for instance <XLXI_12> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0003" for instance <XLXI_13> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0001" for instance <XLXI_14> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0000" for instance <XLXI_15> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0000" for instance <XLXI_16> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0000" for instance <XLXI_17> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0000" for instance <XLXI_18> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0000" for instance <XLXI_19> in unit <LUTtable_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0000" for instance <XLXI_20> in unit <LUTtable_MUSER_Fial_Combine>.
+Analyzing module <iteration_MUSER_Fial_Combine> in library <work>.
+Module <iteration_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_10_70" for instance <XLXI_10> in unit <iteration_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_11_71" for instance <XLXI_11> in unit <iteration_MUSER_Fial_Combine>.
+Analyzing module <CB4CE_MXILINX_Fial_Combine.3> in library <work>.
+Module <CB4CE_MXILINX_Fial_Combine.3> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_64" for instance <I_Q0> in unit <CB4CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q1_65" for instance <I_Q1> in unit <CB4CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q2_66" for instance <I_Q2> in unit <CB4CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q3_67" for instance <I_Q3> in unit <CB4CE_MXILINX_Fial_Combine.3>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.17> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.17> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.17>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.17>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.18> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.18> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.18>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.18>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.19> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.19> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.19>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.19>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.20> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.20> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.20>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.20>.
+Analyzing module <COMP4_MXILINX_Fial_Combine> in library <work>.
+Module <COMP4_MXILINX_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <output_enable_MUSER_Fial_Combine> in library <work>.
+Module <output_enable_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_68" for instance <XLXI_1> in unit <output_enable_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_2_69" for instance <XLXI_2> in unit <output_enable_MUSER_Fial_Combine>.
+Analyzing module <FD16CE_MXILINX_Fial_Combine.4> in library <work>.
+Module <FD16CE_MXILINX_Fial_Combine.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16CE_MXILINX_Fial_Combine.4>.
+Analyzing module <FD16CE_MXILINX_Fial_Combine.5> in library <work>.
+Module <FD16CE_MXILINX_Fial_Combine.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16CE_MXILINX_Fial_Combine.5>.
+Analyzing module <CB4CE_MXILINX_Fial_Combine.1> in library <work>.
+Module <CB4CE_MXILINX_Fial_Combine.1> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_64" for instance <I_Q0> in unit <CB4CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q1_65" for instance <I_Q1> in unit <CB4CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q2_66" for instance <I_Q2> in unit <CB4CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q3_67" for instance <I_Q3> in unit <CB4CE_MXILINX_Fial_Combine.1>.
+Analyzing module <qamtheta_MUSER_Fial_Combine> in library <work>.
+Module <qamtheta_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <addshiftr2_MUSER_Fial_Combine> in library <work>.
+Module <addshiftr2_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_2_59" for instance <XLXI_2> in unit <addshiftr2_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_4_60" for instance <XLXI_4> in unit <addshiftr2_MUSER_Fial_Combine>.
+Analyzing module <ADD16_MXILINX_Fial_Combine.5> in library <work>.
+Module <ADD16_MXILINX_Fial_Combine.5> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_Fial_Combine.5>.
+Analyzing module <ADSU16_MXILINX_Fial_Combine.5> in library <work>.
+Module <ADSU16_MXILINX_Fial_Combine.5> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_16> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_17> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_18> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_19> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_20> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_21> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_22> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_23> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_55> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_58> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_62> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_63> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_64> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_107> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_110> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_111> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_248> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_249> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_250> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_251> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_252> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_253> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_254> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_255> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_272> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_275> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_279> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_283> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_287> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_291> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_295> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_299> in unit <ADSU16_MXILINX_Fial_Combine.5>.
+Analyzing module <shiftr2_MUSER_Fial_Combine> in library <work>.
+Module <shiftr2_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <gnd16bit_MUSER_Fial_Combine> in library <work>.
+Module <gnd16bit_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <bit4s_MUSER_Fial_Combine> in library <work>.
+Module <bit4s_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_5> in unit <bit4s_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0" for instance <XLXI_6> in unit <bit4s_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0" for instance <XLXI_7> in unit <bit4s_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0" for instance <XLXI_8> in unit <bit4s_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0" for instance <XLXI_13> in unit <bit4s_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0" for instance <XLXI_14> in unit <bit4s_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0" for instance <XLXI_15> in unit <bit4s_MUSER_Fial_Combine>.
+    Set user-defined property "INIT =  0" for instance <XLXI_16> in unit <bit4s_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_10_63" for instance <XLXI_10> in unit <bit4s_MUSER_Fial_Combine>.
+Analyzing module <CB2CE_MXILINX_Fial_Combine> in library <work>.
+Module <CB2CE_MXILINX_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_61" for instance <I_Q0> in unit <CB2CE_MXILINX_Fial_Combine>.
+    Set user-defined property "HU_SET =  I_Q1_62" for instance <I_Q1> in unit <CB2CE_MXILINX_Fial_Combine>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.21> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.21> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.21>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.21>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.22> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.22> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.22>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.22>.
+Analyzing module <anglecounter_MUSER_Fial_Combine> in library <work>.
+Module <anglecounter_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_117_106" for instance <XLXI_117> in unit <anglecounter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_118_107" for instance <XLXI_118> in unit <anglecounter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_13_102" for instance <XLXI_13> in unit <anglecounter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_15_103" for instance <XLXI_15> in unit <anglecounter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_55_104" for instance <XLXI_55> in unit <anglecounter_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_59_105" for instance <XLXI_59> in unit <anglecounter_MUSER_Fial_Combine>.
+Analyzing module <Counter_12_MUSER_Fial_Combine> in library <work>.
+Module <Counter_12_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_100" for instance <XLXI_1> in unit <Counter_12_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_2_101" for instance <XLXI_2> in unit <Counter_12_MUSER_Fial_Combine>.
+Analyzing module <CB16CE_MXILINX_Fial_Combine.3> in library <work>.
+Module <CB16CE_MXILINX_Fial_Combine.3> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_42" for instance <I_Q0> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q1_41" for instance <I_Q1> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q10_51" for instance <I_Q10> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q11_52" for instance <I_Q11> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q12_53" for instance <I_Q12> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q13_54" for instance <I_Q13> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q14_55" for instance <I_Q14> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q15_56" for instance <I_Q15> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q2_44" for instance <I_Q2> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q3_43" for instance <I_Q3> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q4_48" for instance <I_Q4> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q5_47" for instance <I_Q5> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q6_46" for instance <I_Q6> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q7_45" for instance <I_Q7> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q8_49" for instance <I_Q8> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "HU_SET =  I_Q9_50" for instance <I_Q9> in unit <CB16CE_MXILINX_Fial_Combine.3>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.1>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.2>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.3>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.4>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.5> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.5>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.6> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.6> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.6>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.7> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.7> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.7>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.7>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.8> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.8> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.8>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.8>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.9> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.9> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.9>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.9>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.10> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.10> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.10>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.10>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.11> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.11> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.11>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.11>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.12> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.12> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.12>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.12>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.13> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.13> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.13>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.13>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.14> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.14> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.14>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.14>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.15> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.15> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.15>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.15>.
+Analyzing module <FTCE_MXILINX_Fial_Combine.16> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_Fial_Combine.16> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.16>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_Fial_Combine.16>.
+Analyzing module <NOR16_MXILINX_Fial_Combine> in library <work>.
+Module <NOR16_MXILINX_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_2> in unit <NOR16_MXILINX_Fial_Combine>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_29> in unit <NOR16_MXILINX_Fial_Combine>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_129> in unit <NOR16_MXILINX_Fial_Combine>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_138> in unit <NOR16_MXILINX_Fial_Combine>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_142> in unit <NOR16_MXILINX_Fial_Combine>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_147> in unit <NOR16_MXILINX_Fial_Combine>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_165> in unit <NOR16_MXILINX_Fial_Combine>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_170> in unit <NOR16_MXILINX_Fial_Combine>.
+Analyzing module <ADD16_MXILINX_Fial_Combine.1> in library <work>.
+Module <ADD16_MXILINX_Fial_Combine.1> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_Fial_Combine.1>.
+Analyzing module <ADD16_MXILINX_Fial_Combine.2> in library <work>.
+Module <ADD16_MXILINX_Fial_Combine.2> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_Fial_Combine.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_Fial_Combine.2>.
+Analyzing module <CB4CE_MXILINX_Fial_Combine.2> in library <work>.
+Module <CB4CE_MXILINX_Fial_Combine.2> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_64" for instance <I_Q0> in unit <CB4CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q1_65" for instance <I_Q1> in unit <CB4CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q2_66" for instance <I_Q2> in unit <CB4CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q3_67" for instance <I_Q3> in unit <CB4CE_MXILINX_Fial_Combine.2>.
+Analyzing module <ADD16_MXILINX_Fial_Combine.3> in library <work>.
+Module <ADD16_MXILINX_Fial_Combine.3> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_Fial_Combine.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_Fial_Combine.3>.
+Analyzing module <FD16RE_MXILINX_Fial_Combine.1> in library <work>.
+Module <FD16RE_MXILINX_Fial_Combine.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16RE_MXILINX_Fial_Combine.1>.
+Analyzing module <FD16RE_MXILINX_Fial_Combine.2> in library <work>.
+Module <FD16RE_MXILINX_Fial_Combine.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16RE_MXILINX_Fial_Combine.2>.
+Analyzing module <CB16CE_MXILINX_Fial_Combine.1> in library <work>.
+Module <CB16CE_MXILINX_Fial_Combine.1> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_42" for instance <I_Q0> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q1_41" for instance <I_Q1> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q10_51" for instance <I_Q10> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q11_52" for instance <I_Q11> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q12_53" for instance <I_Q12> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q13_54" for instance <I_Q13> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q14_55" for instance <I_Q14> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q15_56" for instance <I_Q15> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q2_44" for instance <I_Q2> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q3_43" for instance <I_Q3> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q4_48" for instance <I_Q4> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q5_47" for instance <I_Q5> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q6_46" for instance <I_Q6> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q7_45" for instance <I_Q7> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q8_49" for instance <I_Q8> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+    Set user-defined property "HU_SET =  I_Q9_50" for instance <I_Q9> in unit <CB16CE_MXILINX_Fial_Combine.1>.
+Analyzing module <DACout_MUSER_Fial_Combine> in library <work>.
+Module <DACout_MUSER_Fial_Combine> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_3_57" for instance <XLXI_3> in unit <DACout_MUSER_Fial_Combine>.
+    Set user-defined property "HU_SET =  XLXI_4_58" for instance <XLXI_4> in unit <DACout_MUSER_Fial_Combine>.
+Analyzing module <ADD16_MXILINX_Fial_Combine.4> in library <work>.
+Module <ADD16_MXILINX_Fial_Combine.4> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_Fial_Combine.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_Fial_Combine.4>.
+Analyzing module <ADSU16_MXILINX_Fial_Combine.1> in library <work>.
+Module <ADSU16_MXILINX_Fial_Combine.1> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_16> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_17> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_18> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_19> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_20> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_21> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_22> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_23> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_55> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_58> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_62> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_63> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_64> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_107> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_110> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_111> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_248> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_249> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_250> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_251> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_252> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_253> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_254> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_255> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_272> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_275> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_279> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_283> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_287> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_291> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_295> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_299> in unit <ADSU16_MXILINX_Fial_Combine.1>.
+Analyzing module <constant2048_MUSER_Fial_Combine> in library <work>.
+Module <constant2048_MUSER_Fial_Combine> is correct for synthesis.
+ 
+Analyzing module <CB16CE_MXILINX_Fial_Combine.2> in library <work>.
+Module <CB16CE_MXILINX_Fial_Combine.2> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_42" for instance <I_Q0> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q1_41" for instance <I_Q1> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q10_51" for instance <I_Q10> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q11_52" for instance <I_Q11> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q12_53" for instance <I_Q12> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q13_54" for instance <I_Q13> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q14_55" for instance <I_Q14> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q15_56" for instance <I_Q15> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q2_44" for instance <I_Q2> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q3_43" for instance <I_Q3> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q4_48" for instance <I_Q4> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q5_47" for instance <I_Q5> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q6_46" for instance <I_Q6> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q7_45" for instance <I_Q7> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q8_49" for instance <I_Q8> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+    Set user-defined property "HU_SET =  I_Q9_50" for instance <I_Q9> in unit <CB16CE_MXILINX_Fial_Combine.2>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Mux_2_16_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <Mux_2_16_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <FD16CE_MXILINX_Fial_Combine_1>.
+    Related source file is "Fial_Combine.vf".
+Unit <FD16CE_MXILINX_Fial_Combine_1> synthesized.
+
+
+Synthesizing Unit <ADSU16_MXILINX_Fial_Combine_2>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADSU16_MXILINX_Fial_Combine_2> synthesized.
+
+
+Synthesizing Unit <bit16buffermodified_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <bit16buffermodified_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <ADSU16_MXILINX_Fial_Combine_3>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADSU16_MXILINX_Fial_Combine_3> synthesized.
+
+
+Synthesizing Unit <FD16CE_MXILINX_Fial_Combine_2>.
+    Related source file is "Fial_Combine.vf".
+Unit <FD16CE_MXILINX_Fial_Combine_2> synthesized.
+
+
+Synthesizing Unit <x_initial_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <x_initial_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <bit16to12_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:647 - Input <buffinput<15:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <bit16to12_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <y_initial_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <y_initial_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_Fial_Combine_1>.
+    Related source file is "Fial_Combine.vf".
+Unit <M2_1_MXILINX_Fial_Combine_1> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_Fial_Combine_2>.
+    Related source file is "Fial_Combine.vf".
+Unit <M2_1_MXILINX_Fial_Combine_2> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_Fial_Combine_3>.
+    Related source file is "Fial_Combine.vf".
+Unit <M2_1_MXILINX_Fial_Combine_3> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_Fial_Combine_4>.
+    Related source file is "Fial_Combine.vf".
+Unit <M2_1_MXILINX_Fial_Combine_4> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_Fial_Combine_5>.
+    Related source file is "Fial_Combine.vf".
+Unit <M2_1_MXILINX_Fial_Combine_5> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_Fial_Combine_6>.
+    Related source file is "Fial_Combine.vf".
+Unit <M2_1_MXILINX_Fial_Combine_6> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_Fial_Combine_7>.
+    Related source file is "Fial_Combine.vf".
+Unit <M2_1_MXILINX_Fial_Combine_7> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_Fial_Combine_8>.
+    Related source file is "Fial_Combine.vf".
+Unit <M2_1_MXILINX_Fial_Combine_8> synthesized.
+
+
+Synthesizing Unit <M2_1E_MXILINX_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <M2_1E_MXILINX_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <ADSU16_MXILINX_Fial_Combine_4>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADSU16_MXILINX_Fial_Combine_4> synthesized.
+
+
+Synthesizing Unit <FD16CE_MXILINX_Fial_Combine_3>.
+    Related source file is "Fial_Combine.vf".
+Unit <FD16CE_MXILINX_Fial_Combine_3> synthesized.
+
+
+Synthesizing Unit <LUTtable_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <LUTtable_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <COMP4_MXILINX_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <COMP4_MXILINX_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_17>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_17> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_18>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_18> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_19>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_19> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_20>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_20> synthesized.
+
+
+Synthesizing Unit <FD16CE_MXILINX_Fial_Combine_4>.
+    Related source file is "Fial_Combine.vf".
+Unit <FD16CE_MXILINX_Fial_Combine_4> synthesized.
+
+
+Synthesizing Unit <FD16CE_MXILINX_Fial_Combine_5>.
+    Related source file is "Fial_Combine.vf".
+Unit <FD16CE_MXILINX_Fial_Combine_5> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_Fial_Combine_5>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_Fial_Combine_5> synthesized.
+
+
+Synthesizing Unit <ADSU16_MXILINX_Fial_Combine_5>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADSU16_MXILINX_Fial_Combine_5> synthesized.
+
+
+Synthesizing Unit <gnd16bit_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <gnd16bit_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_21>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_21> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_22>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_22> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_Fial_Combine_1>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_Fial_Combine_1> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_Fial_Combine_2>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_Fial_Combine_2> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_Fial_Combine_3>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_Fial_Combine_3> synthesized.
+
+
+Synthesizing Unit <FD16RE_MXILINX_Fial_Combine_1>.
+    Related source file is "Fial_Combine.vf".
+Unit <FD16RE_MXILINX_Fial_Combine_1> synthesized.
+
+
+Synthesizing Unit <FD16RE_MXILINX_Fial_Combine_2>.
+    Related source file is "Fial_Combine.vf".
+Unit <FD16RE_MXILINX_Fial_Combine_2> synthesized.
+
+
+Synthesizing Unit <NOR16_MXILINX_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <NOR16_MXILINX_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_1>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_1> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_2>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_3>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_4>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_4> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_5>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_5> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_6>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_6> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_7>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_7> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_8>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_8> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_9>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_9> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_10>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_10> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_11>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_11> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_12>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_12> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_13>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_13> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_14>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_14> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_15>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_15> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_Fial_Combine_16>.
+    Related source file is "Fial_Combine.vf".
+Unit <FTCE_MXILINX_Fial_Combine_16> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_Fial_Combine_4>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_Fial_Combine_4> synthesized.
+
+
+Synthesizing Unit <ADSU16_MXILINX_Fial_Combine_1>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADSU16_MXILINX_Fial_Combine_1> synthesized.
+
+
+Synthesizing Unit <constant2048_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <constant2048_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <CB16CE_MXILINX_Fial_Combine_1>.
+    Related source file is "Fial_Combine.vf".
+Unit <CB16CE_MXILINX_Fial_Combine_1> synthesized.
+
+
+Synthesizing Unit <DACout_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <DACout_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <CB16CE_MXILINX_Fial_Combine_2>.
+    Related source file is "Fial_Combine.vf".
+Unit <CB16CE_MXILINX_Fial_Combine_2> synthesized.
+
+
+Synthesizing Unit <Z_register_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <Z_register_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <output_enable_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <output_enable_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_Fial_Combine_1>.
+    Related source file is "Fial_Combine.vf".
+Unit <CB4CE_MXILINX_Fial_Combine_1> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_1>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_1> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_2>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_2> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_3>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_3> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_4>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_4> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_5>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_5> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_6>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_6> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_7>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_7> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_8>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_8> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_9>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_9> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_10>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_10> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_11>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_11> synthesized.
+
+
+Synthesizing Unit <M16_1E_MXILINX_Fial_Combine_12>.
+    Related source file is "Fial_Combine.vf".
+Unit <M16_1E_MXILINX_Fial_Combine_12> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_Fial_Combine_3>.
+    Related source file is "Fial_Combine.vf".
+Unit <CB4CE_MXILINX_Fial_Combine_3> synthesized.
+
+
+Synthesizing Unit <shiftr2_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:646 - Signal <inpsign<15>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <shiftr2_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <CB2CE_MXILINX_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <CB2CE_MXILINX_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_Fial_Combine_2>.
+    Related source file is "Fial_Combine.vf".
+Unit <CB4CE_MXILINX_Fial_Combine_2> synthesized.
+
+
+Synthesizing Unit <CB16CE_MXILINX_Fial_Combine_3>.
+    Related source file is "Fial_Combine.vf".
+Unit <CB16CE_MXILINX_Fial_Combine_3> synthesized.
+
+
+Synthesizing Unit <iteration_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <iteration_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <shifter_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <shifter_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <shifterhigh_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:647 - Input <shiftinp<5:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <shifterhigh_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <addshiftr2_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <addshiftr2_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <bit4s_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <bit4s_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <Counter_12_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <Counter_12_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <anglecounter_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <anglecounter_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <qamtheta_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <qamtheta_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <shifter_full_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <shifter_full_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <SineCosine_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <SineCosine_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <final_block_MUSER_Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+Unit <final_block_MUSER_Fial_Combine> synthesized.
+
+
+Synthesizing Unit <Fial_Combine>.
+    Related source file is "Fial_Combine.vf".
+WARNING:Xst:646 - Signal <ck<15:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ck<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <XLXN_30<14:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Fial_Combine> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 182
+ Flip-Flops                                            : 182
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Fial_Combine> ...
+
+Optimizing unit <Mux_2_16_MUSER_Fial_Combine> ...
+
+Optimizing unit <FD16CE_MXILINX_Fial_Combine_1> ...
+
+Optimizing unit <ADSU16_MXILINX_Fial_Combine_2> ...
+
+Optimizing unit <bit16buffermodified_MUSER_Fial_Combine> ...
+
+Optimizing unit <ADSU16_MXILINX_Fial_Combine_3> ...
+
+Optimizing unit <FD16CE_MXILINX_Fial_Combine_2> ...
+
+Optimizing unit <x_initial_MUSER_Fial_Combine> ...
+
+Optimizing unit <bit16to12_MUSER_Fial_Combine> ...
+
+Optimizing unit <y_initial_MUSER_Fial_Combine> ...
+
+Optimizing unit <M2_1_MXILINX_Fial_Combine_1> ...
+
+Optimizing unit <M2_1_MXILINX_Fial_Combine_2> ...
+
+Optimizing unit <M2_1_MXILINX_Fial_Combine_3> ...
+
+Optimizing unit <M2_1_MXILINX_Fial_Combine_4> ...
+
+Optimizing unit <M2_1_MXILINX_Fial_Combine_5> ...
+
+Optimizing unit <M2_1_MXILINX_Fial_Combine_6> ...
+
+Optimizing unit <M2_1_MXILINX_Fial_Combine_7> ...
+
+Optimizing unit <M2_1_MXILINX_Fial_Combine_8> ...
+
+Optimizing unit <M2_1E_MXILINX_Fial_Combine> ...
+
+Optimizing unit <ADSU16_MXILINX_Fial_Combine_4> ...
+
+Optimizing unit <FD16CE_MXILINX_Fial_Combine_3> ...
+
+Optimizing unit <LUTtable_MUSER_Fial_Combine> ...
+
+Optimizing unit <COMP4_MXILINX_Fial_Combine> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_17> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_18> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_19> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_20> ...
+
+Optimizing unit <FD16CE_MXILINX_Fial_Combine_4> ...
+
+Optimizing unit <FD16CE_MXILINX_Fial_Combine_5> ...
+
+Optimizing unit <ADD16_MXILINX_Fial_Combine_5> ...
+
+Optimizing unit <ADSU16_MXILINX_Fial_Combine_5> ...
+
+Optimizing unit <gnd16bit_MUSER_Fial_Combine> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_21> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_22> ...
+
+Optimizing unit <ADD16_MXILINX_Fial_Combine_1> ...
+
+Optimizing unit <ADD16_MXILINX_Fial_Combine_2> ...
+
+Optimizing unit <ADD16_MXILINX_Fial_Combine_3> ...
+
+Optimizing unit <FD16RE_MXILINX_Fial_Combine_1> ...
+
+Optimizing unit <FD16RE_MXILINX_Fial_Combine_2> ...
+
+Optimizing unit <NOR16_MXILINX_Fial_Combine> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_1> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_2> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_3> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_4> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_5> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_6> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_7> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_8> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_9> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_10> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_11> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_12> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_13> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_14> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_15> ...
+
+Optimizing unit <FTCE_MXILINX_Fial_Combine_16> ...
+
+Optimizing unit <ADD16_MXILINX_Fial_Combine_4> ...
+
+Optimizing unit <ADSU16_MXILINX_Fial_Combine_1> ...
+
+Optimizing unit <constant2048_MUSER_Fial_Combine> ...
+
+Optimizing unit <CB16CE_MXILINX_Fial_Combine_1> ...
+
+Optimizing unit <CB16CE_MXILINX_Fial_Combine_2> ...
+
+Optimizing unit <CB4CE_MXILINX_Fial_Combine_1> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_1> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_2> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_3> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_4> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_5> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_6> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_7> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_8> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_9> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_10> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_11> ...
+
+Optimizing unit <M16_1E_MXILINX_Fial_Combine_12> ...
+
+Optimizing unit <CB4CE_MXILINX_Fial_Combine_3> ...
+
+Optimizing unit <shiftr2_MUSER_Fial_Combine> ...
+
+Optimizing unit <CB2CE_MXILINX_Fial_Combine> ...
+
+Optimizing unit <CB4CE_MXILINX_Fial_Combine_2> ...
+
+Optimizing unit <CB16CE_MXILINX_Fial_Combine_3> ...
+
+Optimizing unit <bit4s_MUSER_Fial_Combine> ...
+
+Optimizing unit <anglecounter_MUSER_Fial_Combine> ...
+
+Optimizing unit <shifter_full_MUSER_Fial_Combine> ...
+
+Optimizing unit <SineCosine_MUSER_Fial_Combine> ...
+
+Optimizing unit <final_block_MUSER_Fial_Combine> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Fial_Combine, actual ratio is 11.
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I0> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I1> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I2> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I3> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I4> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I5> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I6> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I7> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I8> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I9> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I10> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I11> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I12> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I13> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_5/I14> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I0> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I1> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I2> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I3> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I4> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I5> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I6> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I7> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I8> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I9> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I10> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I11> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I12> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I13> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <XLXI_1/XLXI_1/XLXI_8/I14> may hinder timing optimization.
+   You may achieve better results by removing this property
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 182
+ Flip-Flops                                            : 182
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Fial_Combine.ngr
+Top Level Output File Name         : Fial_Combine
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 65
+
+Cell Usage :
+# BELS                             : 2367
+#      AND2                        : 258
+#      AND2B1                      : 192
+#      AND3                        : 39
+#      AND3B1                      : 24
+#      AND4                        : 64
+#      AND5                        : 9
+#      BUF                         : 395
+#      GND                         : 16
+#      INV                         : 116
+#      LUT1                        : 32
+#      LUT4                        : 16
+#      MUXCY                       : 95
+#      MUXCY_D                     : 14
+#      MUXCY_L                     : 199
+#      MUXF5_L                     : 96
+#      MUXF6                       : 48
+#      OR2                         : 216
+#      VCC                         : 9
+#      XNOR2                       : 4
+#      XOR2                        : 189
+#      XOR3                        : 112
+#      XORCY                       : 224
+# FlipFlops/Latches                : 182
+#      FD                          : 4
+#      FDC                         : 4
+#      FDCE                        : 142
+#      FDRE                        : 32
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 64
+#      IBUF                        : 1
+#      OBUF                        : 63
+# Logical                          : 8
+#      NOR2                        : 4
+#      NOR4                        : 4
+# Others                           : 228
+#      FMAP                        : 228
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                       91  out of   3584     2%  
+ Number of Slice Flip Flops:            182  out of   7168     2%  
+ Number of 4 input LUTs:                164  out of   7168     2%  
+ Number of IOs:                          65
+ Number of bonded IOBs:                  65  out of    141    46%  
+ Number of GCLKs:                         4  out of      8    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------+---------------------------------------+-------+
+Clock Signal                                                  | Clock buffer(FF name)                 | Load  |
+--------------------------------------------------------------+---------------------------------------+-------+
+XLXI_10/I_Q7/Q_DUMMY1                                         | BUFG                                  | 76    |
+inp_clk                                                       | BUFGP                                 | 16    |
+XLXI_2/XLXI_55/I_Q3/Q_DUMMY1                                  | BUFG                                  | 48    |
+XLXI_4/I_Q15/Q                                                | NONE(XLXI_1/XLXI_12/XLXI_2/XLXI_5)    | 6     |
+XLXI_1/XLXI_12/XLXI_2/XLXN_16(XLXI_1/XLXI_12/XLXI_2/XLXI_12:O)| NONE(*)(XLXI_1/XLXI_12/XLXI_2/XLXI_13)| 4     |
+XLXI_1/XLXN_111(XLXI_1/XLXI_4/XLXI_16:O)                      | BUFG(*)(XLXI_1/XLXI_5/XLXI_2/I_Q0)    | 32    |
+--------------------------------------------------------------+---------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+---------------------------------+-------+
+Control Signal                     | Buffer(FF name)                 | Load  |
+-----------------------------------+---------------------------------+-------+
+XLXN_42(XLXI_12:G)                 | NONE(XLXI_1/XLXI_1/XLXI_13/I_Q0)| 146   |
+-----------------------------------+---------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 17.934ns (Maximum Frequency: 55.759MHz)
+   Minimum input arrival time before clock: 1.825ns
+   Maximum output required time after clock: 21.742ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_10/I_Q7/Q_DUMMY1'
+  Clock period: 17.934ns (frequency: 55.759MHz)
+  Total number of paths / destination ports: 13198 / 124
+-------------------------------------------------------------------------
+Delay:               17.934ns (Levels of Logic = 32)
+  Source:            XLXI_1/XLXI_4/XLXI_10/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_1/XLXI_1/XLXI_4/I_Q15 (FF)
+  Source Clock:      XLXI_10/I_Q7/Q_DUMMY1 rising
+  Destination Clock: XLXI_10/I_Q7/Q_DUMMY1 rising
+
+  Data Path: XLXI_1/XLXI_4/XLXI_10/I_Q0/I_36_35 to XLXI_1/XLXI_1/XLXI_4/I_Q15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q           407   0.720   4.001  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_1/XLXI_4/XLXI_10'
+     begin scope: 'XLXI_1/XLXI_1/XLXI_36/XLXI_3/XLXI_1'
+     begin scope: 'I_MAB'
+     AND2B1:I0->O          1   0.551   0.801  I_36_7 (M0)
+     OR2:I1->O             1   0.551   0.000  I_36_8 (O)
+     end scope: 'I_MAB'
+     MUXF5_L:I1->LO        1   0.360   0.000  I_M8B (M8B)
+     MUXF6:I0->O           1   0.342   0.801  I_M8F (MBF)
+     begin scope: 'I_O'
+     AND3:I0->O            1   0.551   0.801  I_36_30 (M1)
+     OR2:I0->O             1   0.551   0.801  I_36_38 (O)
+     end scope: 'I_O'
+     end scope: 'XLXI_1/XLXI_1/XLXI_36/XLXI_3/XLXI_1'
+     BUF:I->O              1   0.551   0.801  XLXI_1/XLXI_1/XLXI_36/XLXI_5 (XLXI_1/XLXI_1/XLXN_61<0>)
+     BUF:I->O              1   0.551   0.801  XLXI_1/XLXI_1/XLXI_37/XLXI_16 (XLXI_1/XLXI_1/XLXN_1<0>)
+     begin scope: 'XLXI_1/XLXI_1/XLXI_8'
+     XOR3:I1->O            1   0.551   0.000  I_36_220 (I0)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_255 (C0)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_254 (C1)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_253 (C2)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_252 (C3)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_251 (C4)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_250 (C5)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_249 (C6)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_248 (C7)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_111 (C8)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_55 (C9)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_62 (C10)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_58 (C11)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_63 (C12)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_110 (C13)
+     MUXCY_D:CI->LO        1   0.303   0.000  I_36_107 (C14)
+     XORCY:CI->O           0   0.904   0.000  I_36_80 (S<15>)
+     end scope: 'XLXI_1/XLXI_1/XLXI_8'
+     MUXCY:DI->O           1   1.106   0.000  XLXI_1/XLXI_1/XLXI_14/XLXI_57 (XLXI_1/XLXI_1/XLXN_11<15>)
+     begin scope: 'XLXI_1/XLXI_1/XLXI_13'
+     FDCE:D                    0.203          I_Q15
+    ----------------------------------------
+    Total                     17.934ns (9.127ns logic, 8.807ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'inp_clk'
+  Clock period: 9.943ns (frequency: 100.576MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               9.943ns (Levels of Logic = 6)
+  Source:            XLXI_10/I_Q7/I_36_35 (FF)
+  Destination:       XLXI_10/I_Q13/I_36_35 (FF)
+  Source Clock:      inp_clk rising
+  Destination Clock: inp_clk rising
+
+  Data Path: XLXI_10/I_Q7/I_36_35 to XLXI_10/I_Q13/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.720   0.877  I_36_35 (Q_DUMMY1)
+     BUFG:I->O            74   0.401   2.094  Q_DUMMY_BUFG (Q)
+     end scope: 'I_Q7'
+     AND5:I0->O            5   0.551   0.921  I_36_14 (T8)
+     AND5:I4->O            5   0.551   0.921  I_36_29 (T12)
+     AND2:I1->O            1   0.551   0.801  I_36_23 (T13)
+     begin scope: 'I_Q13'
+     XOR2:I0->O            1   0.551   0.801  I_36_32 (TQ)
+     FDCE:D                    0.203          I_36_35
+    ----------------------------------------
+    Total                      9.943ns (3.528ns logic, 6.415ns route)
+                                       (35.5% logic, 64.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/XLXI_55/I_Q3/Q_DUMMY1'
+  Clock period: 9.046ns (frequency: 110.546MHz)
+  Total number of paths / destination ports: 1168 / 80
+-------------------------------------------------------------------------
+Delay:               9.046ns (Levels of Logic = 6)
+  Source:            XLXI_2/XLXI_10/XLXI_1/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_2/XLXI_10/XLXI_1/I_Q13/I_36_35 (FF)
+  Source Clock:      XLXI_2/XLXI_55/I_Q3/Q_DUMMY1 rising
+  Destination Clock: XLXI_2/XLXI_55/I_Q3/Q_DUMMY1 rising
+
+  Data Path: XLXI_2/XLXI_10/XLXI_1/I_Q0/I_36_35 to XLXI_2/XLXI_10/XLXI_1/I_Q13/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.720   1.003  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND4:I3->O            5   0.551   0.921  I_36_10 (T4)
+     AND5:I4->O            5   0.551   0.921  I_36_14 (T8)
+     AND5:I4->O            5   0.551   0.921  I_36_29 (T12)
+     AND2:I1->O            1   0.551   0.801  I_36_23 (T13)
+     begin scope: 'I_Q13'
+     XOR2:I0->O            1   0.551   0.801  I_36_32 (TQ)
+     FDCE:D                    0.203          I_36_35
+    ----------------------------------------
+    Total                      9.046ns (3.678ns logic, 5.368ns route)
+                                       (40.7% logic, 59.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_4/I_Q15/Q'
+  Clock period: 3.192ns (frequency: 313.283MHz)
+  Total number of paths / destination ports: 6 / 5
+-------------------------------------------------------------------------
+Delay:               3.192ns (Levels of Logic = 1)
+  Source:            XLXI_1/XLXI_12/XLXI_2/XLXI_10/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_1/XLXI_12/XLXI_2/XLXI_10/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_4/I_Q15/Q rising
+  Destination Clock: XLXI_4/I_Q15/Q rising
+
+  Data Path: XLXI_1/XLXI_12/XLXI_2/XLXI_10/I_Q0/I_36_35 to XLXI_1/XLXI_12/XLXI_2/XLXI_10/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.720   0.917  I_36_35 (Q)
+     end scope: 'I_Q0'
+     begin scope: 'I_Q1'
+     XOR2:I0->O            1   0.551   0.801  I_36_32 (TQ)
+     FDCE:D                    0.203          I_36_35
+    ----------------------------------------
+    Total                      3.192ns (1.474ns logic, 1.718ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_4/I_Q15/Q'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.825ns (Levels of Logic = 1)
+  Source:            inputsignal (PAD)
+  Destination:       XLXI_1/XLXI_12/XLXI_2/XLXI_5 (FF)
+  Destination Clock: XLXI_4/I_Q15/Q rising
+
+  Data Path: inputsignal to XLXI_1/XLXI_12/XLXI_2/XLXI_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  inputsignal_IBUF (inputsignal_IBUF)
+     FDC:D                     0.203          XLXI_1/XLXI_12/XLXI_2/XLXI_5
+    ----------------------------------------
+    Total                      1.825ns (1.024ns logic, 0.801ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_10/I_Q7/Q_DUMMY1'
+  Total number of paths / destination ports: 8 / 5
+-------------------------------------------------------------------------
+Offset:              10.365ns (Levels of Logic = 2)
+  Source:            XLXI_1/XLXI_4/XLXI_10/I_Q0/I_36_35 (FF)
+  Destination:       iter<0> (PAD)
+  Source Clock:      XLXI_10/I_Q7/Q_DUMMY1 rising
+
+  Data Path: XLXI_1/XLXI_4/XLXI_10/I_Q0/I_36_35 to iter<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q           407   0.720   4.001  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_1/XLXI_4/XLXI_10'
+     OBUF:I->O                 5.644          iter_0_OBUF (iter<0>)
+    ----------------------------------------
+    Total                     10.365ns (6.364ns logic, 4.001ns route)
+                                       (61.4% logic, 38.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'inp_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              11.208ns (Levels of Logic = 4)
+  Source:            XLXI_10/I_Q7/I_36_35 (FF)
+  Destination:       invclk (PAD)
+  Source Clock:      inp_clk rising
+
+  Data Path: XLXI_10/I_Q7/I_36_35 to invclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.720   0.877  I_36_35 (Q_DUMMY1)
+     BUFG:I->O            74   0.401   2.094  Q_DUMMY_BUFG (Q)
+     end scope: 'I_Q7'
+     end scope: 'XLXI_10'
+     INV:I->O              5   0.551   0.921  XLXI_1/XLXI_10 (invclk_OBUF)
+     OBUF:I->O                 5.644          invclk_OBUF (invclk)
+    ----------------------------------------
+    Total                     11.208ns (7.316ns logic, 3.892ns route)
+                                       (65.3% logic, 34.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_1/XLXN_111'
+  Total number of paths / destination ports: 48840 / 56
+-------------------------------------------------------------------------
+Offset:              21.742ns (Levels of Logic = 29)
+  Source:            XLXI_1/XLXI_5/XLXI_1/I_Q0 (FF)
+  Destination:       acos<15> (PAD)
+  Source Clock:      XLXI_1/XLXN_111 rising
+
+  Data Path: XLXI_1/XLXI_5/XLXI_1/I_Q0 to acos<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.720   0.801  I_Q0 (Q<0>)
+     end scope: 'XLXI_1/XLXI_5/XLXI_1'
+     BUF:I->O              3   0.551   0.907  XLXI_1/XLXI_5/XLXI_7/XLXI_16 (cosine_0_OBUF)
+     BUF:I->O              1   0.551   0.801  XLXI_1/XLXI_12/XLXI_1/XLXI_8/XLXI_1/XLXI_16 (XLXI_1/XLXI_12/XLXI_1/XLXI_8/inpsign<0>)
+     AND2:I1->O            1   0.551   0.801  XLXI_1/XLXI_12/XLXI_1/XLXI_8/XLXI_16 (XLXI_1/XLXI_12/XLXI_1/XLXN_6<1>)
+     begin scope: 'XLXI_1/XLXI_12/XLXI_1/XLXI_2'
+     XOR2:I0->O            1   0.551   0.000  I_36_355 (I1)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_254 (C1)
+     XORCY:CI->O           1   0.904   0.801  I_36_229 (S<2>)
+     end scope: 'XLXI_1/XLXI_12/XLXI_1/XLXI_2'
+     begin scope: 'XLXI_1/XLXI_12/XLXI_1/XLXI_4'
+     XOR3:I1->O            1   0.551   0.000  I_36_222 (I2)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_253 (C2)
+     XORCY:CI->O           2   0.904   0.877  I_36_228 (S<3>)
+     end scope: 'XLXI_1/XLXI_12/XLXI_1/XLXI_4'
+     begin scope: 'XLXI_7/XLXI_3'
+     XOR2:I1->O            1   0.551   0.000  I_36_357 (I3)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_252 (C3)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_251 (C4)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_250 (C5)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_249 (C6)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_248 (C7)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_111 (C8)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_55 (C9)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_62 (C10)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_58 (C11)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_63 (C12)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_110 (C13)
+     MUXCY_D:CI->LO        1   0.303   0.000  I_36_107 (C14)
+     XORCY:CI->O           0   0.904   0.000  I_36_80 (S<15>)
+     end scope: 'XLXI_7/XLXI_3'
+     MUXCY:DI->O           1   1.128   0.801  XLXI_7/XLXI_1/XLXI_57 (acos_15_OBUF)
+     OBUF:I->O                 5.644          acos_15_OBUF (acos<15>)
+    ----------------------------------------
+    Total                     21.742ns (15.953ns logic, 5.789ns route)
+                                       (73.4% logic, 26.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_1/XLXI_12/XLXI_2/XLXN_16'
+  Total number of paths / destination ports: 33312 / 32
+-------------------------------------------------------------------------
+Offset:              19.319ns (Levels of Logic = 26)
+  Source:            XLXI_1/XLXI_12/XLXI_2/XLXI_16 (FF)
+  Destination:       acos<15> (PAD)
+  Source Clock:      XLXI_1/XLXI_12/XLXI_2/XLXN_16 rising
+
+  Data Path: XLXI_1/XLXI_12/XLXI_2/XLXI_16 to acos<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              15   0.720   1.188  XLXI_1/XLXI_12/XLXI_2/XLXI_16 (XLXI_1/XLXI_12/bitsb_DUMMY<0>)
+     AND2:I0->O            1   0.551   0.801  XLXI_1/XLXI_12/XLXI_1/XLXI_8/XLXI_16 (XLXI_1/XLXI_12/XLXI_1/XLXN_6<1>)
+     begin scope: 'XLXI_1/XLXI_12/XLXI_1/XLXI_2'
+     XOR2:I0->O            1   0.551   0.000  I_36_355 (I1)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_254 (C1)
+     XORCY:CI->O           1   0.904   0.801  I_36_229 (S<2>)
+     end scope: 'XLXI_1/XLXI_12/XLXI_1/XLXI_2'
+     begin scope: 'XLXI_1/XLXI_12/XLXI_1/XLXI_4'
+     XOR3:I1->O            1   0.551   0.000  I_36_222 (I2)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_253 (C2)
+     XORCY:CI->O           2   0.904   0.877  I_36_228 (S<3>)
+     end scope: 'XLXI_1/XLXI_12/XLXI_1/XLXI_4'
+     begin scope: 'XLXI_7/XLXI_3'
+     XOR2:I1->O            1   0.551   0.000  I_36_357 (I3)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_252 (C3)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_251 (C4)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_250 (C5)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_249 (C6)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_248 (C7)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_111 (C8)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_55 (C9)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_62 (C10)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_58 (C11)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_63 (C12)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_110 (C13)
+     MUXCY_D:CI->LO        1   0.303   0.000  I_36_107 (C14)
+     XORCY:CI->O           0   0.904   0.000  I_36_80 (S<15>)
+     end scope: 'XLXI_7/XLXI_3'
+     MUXCY:DI->O           1   1.128   0.801  XLXI_7/XLXI_1/XLXI_57 (acos_15_OBUF)
+     OBUF:I->O                 5.644          acos_15_OBUF (acos<15>)
+    ----------------------------------------
+    Total                     19.319ns (14.851ns logic, 4.468ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 38.00 secs
+Total CPU time to Xst completion: 37.97 secs
+ 
+--> 
+
+Total memory usage is 421248 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   46 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

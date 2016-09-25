@@ -1,0 +1,665 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: qamtheta.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "qamtheta.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "qamtheta"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : qamtheta
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "bit16buffermodified.vf" in library work
+Compiling verilog file "shiftr2.vf" in library work
+Module <bit16buffermodified> compiled
+Module <bit16buffermodified_MUSER_shiftr2> compiled
+Compiling verilog file "gnd16bit.vf" in library work
+Module <shiftr2> compiled
+Compiling verilog file "bit4s.vf" in library work
+Module <gnd16bit> compiled
+Module <FTCE_MXILINX_bit4s> compiled
+Module <CB2CE_MXILINX_bit4s> compiled
+Compiling verilog file "addshiftr2.vf" in library work
+Module <bit4s> compiled
+Module <gnd16bit_MUSER_addshiftr2> compiled
+Module <bit16buffermodified_MUSER_addshiftr2> compiled
+Module <shiftr2_MUSER_addshiftr2> compiled
+Module <ADSU16_MXILINX_addshiftr2> compiled
+Module <ADD16_MXILINX_addshiftr2> compiled
+Compiling verilog file "qamtheta.vf" in library work
+Module <addshiftr2> compiled
+Module <gnd16bit_MUSER_qamtheta> compiled
+Module <bit16buffermodified_MUSER_qamtheta> compiled
+Module <shiftr2_MUSER_qamtheta> compiled
+Module <ADSU16_MXILINX_qamtheta> compiled
+Module <ADD16_MXILINX_qamtheta> compiled
+Module <addshiftr2_MUSER_qamtheta> compiled
+Module <FTCE_MXILINX_qamtheta> compiled
+Module <CB2CE_MXILINX_qamtheta> compiled
+Module <bit4s_MUSER_qamtheta> compiled
+Module <qamtheta> compiled
+No errors in compilation
+Analysis of file <"qamtheta.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <qamtheta> in library <work>.
+
+Analyzing hierarchy for module <addshiftr2_MUSER_qamtheta> in library <work>.
+
+Analyzing hierarchy for module <bit4s_MUSER_qamtheta> in library <work>.
+
+Analyzing hierarchy for module <bit16buffermodified_MUSER_qamtheta> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_qamtheta> in library <work>.
+
+Analyzing hierarchy for module <ADSU16_MXILINX_qamtheta> in library <work>.
+
+Analyzing hierarchy for module <shiftr2_MUSER_qamtheta> in library <work>.
+
+Analyzing hierarchy for module <gnd16bit_MUSER_qamtheta> in library <work>.
+
+Analyzing hierarchy for module <CB2CE_MXILINX_qamtheta> in library <work>.
+
+Analyzing hierarchy for module <bit16buffermodified_MUSER_qamtheta> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_qamtheta> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_qamtheta> in library <work> with parameters.
+	INIT = "0"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <qamtheta>.
+Module <qamtheta> is correct for synthesis.
+ 
+Analyzing module <addshiftr2_MUSER_qamtheta> in library <work>.
+Module <addshiftr2_MUSER_qamtheta> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_2_7" for instance <XLXI_2> in unit <addshiftr2_MUSER_qamtheta>.
+    Set user-defined property "HU_SET =  XLXI_4_8" for instance <XLXI_4> in unit <addshiftr2_MUSER_qamtheta>.
+Analyzing module <bit16buffermodified_MUSER_qamtheta> in library <work>.
+Module <bit16buffermodified_MUSER_qamtheta> is correct for synthesis.
+ 
+Analyzing module <ADD16_MXILINX_qamtheta> in library <work>.
+Module <ADD16_MXILINX_qamtheta> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_qamtheta>.
+Analyzing module <ADSU16_MXILINX_qamtheta> in library <work>.
+Module <ADSU16_MXILINX_qamtheta> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_16> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_17> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_18> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_19> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_20> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_21> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_22> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_23> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_55> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_58> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y5" for instance <I_36_62> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_63> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_64> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y7" for instance <I_36_107> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y6" for instance <I_36_110> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y4" for instance <I_36_111> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_248> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_249> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_250> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_251> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_252> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_253> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_254> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_255> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_272> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_275> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_279> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_283> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_287> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y2" for instance <I_36_291> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_295> in unit <ADSU16_MXILINX_qamtheta>.
+    Set user-defined property "RLOC =  X1Y3" for instance <I_36_299> in unit <ADSU16_MXILINX_qamtheta>.
+Analyzing module <shiftr2_MUSER_qamtheta> in library <work>.
+Module <shiftr2_MUSER_qamtheta> is correct for synthesis.
+ 
+Analyzing module <gnd16bit_MUSER_qamtheta> in library <work>.
+Module <gnd16bit_MUSER_qamtheta> is correct for synthesis.
+ 
+Analyzing module <bit4s_MUSER_qamtheta> in library <work>.
+Module <bit4s_MUSER_qamtheta> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_5> in unit <bit4s_MUSER_qamtheta>.
+    Set user-defined property "INIT =  0" for instance <XLXI_6> in unit <bit4s_MUSER_qamtheta>.
+    Set user-defined property "INIT =  0" for instance <XLXI_7> in unit <bit4s_MUSER_qamtheta>.
+    Set user-defined property "INIT =  0" for instance <XLXI_8> in unit <bit4s_MUSER_qamtheta>.
+    Set user-defined property "INIT =  0" for instance <XLXI_13> in unit <bit4s_MUSER_qamtheta>.
+    Set user-defined property "INIT =  0" for instance <XLXI_14> in unit <bit4s_MUSER_qamtheta>.
+    Set user-defined property "INIT =  0" for instance <XLXI_15> in unit <bit4s_MUSER_qamtheta>.
+    Set user-defined property "INIT =  0" for instance <XLXI_16> in unit <bit4s_MUSER_qamtheta>.
+    Set user-defined property "HU_SET =  XLXI_10_11" for instance <XLXI_10> in unit <bit4s_MUSER_qamtheta>.
+Analyzing module <CB2CE_MXILINX_qamtheta> in library <work>.
+Module <CB2CE_MXILINX_qamtheta> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_9" for instance <I_Q0> in unit <CB2CE_MXILINX_qamtheta>.
+    Set user-defined property "HU_SET =  I_Q1_10" for instance <I_Q1> in unit <CB2CE_MXILINX_qamtheta>.
+Analyzing module <FTCE_MXILINX_qamtheta.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_qamtheta.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_qamtheta.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_qamtheta.1>.
+Analyzing module <FTCE_MXILINX_qamtheta.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_qamtheta.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_qamtheta.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_qamtheta.2>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <bit16buffermodified_MUSER_qamtheta>.
+    Related source file is "qamtheta.vf".
+Unit <bit16buffermodified_MUSER_qamtheta> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_qamtheta>.
+    Related source file is "qamtheta.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_qamtheta> synthesized.
+
+
+Synthesizing Unit <ADSU16_MXILINX_qamtheta>.
+    Related source file is "qamtheta.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADSU16_MXILINX_qamtheta> synthesized.
+
+
+Synthesizing Unit <gnd16bit_MUSER_qamtheta>.
+    Related source file is "qamtheta.vf".
+Unit <gnd16bit_MUSER_qamtheta> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_qamtheta_1>.
+    Related source file is "qamtheta.vf".
+Unit <FTCE_MXILINX_qamtheta_1> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_qamtheta_2>.
+    Related source file is "qamtheta.vf".
+Unit <FTCE_MXILINX_qamtheta_2> synthesized.
+
+
+Synthesizing Unit <shiftr2_MUSER_qamtheta>.
+    Related source file is "qamtheta.vf".
+WARNING:Xst:646 - Signal <inpsign<15>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <shiftr2_MUSER_qamtheta> synthesized.
+
+
+Synthesizing Unit <CB2CE_MXILINX_qamtheta>.
+    Related source file is "qamtheta.vf".
+Unit <CB2CE_MXILINX_qamtheta> synthesized.
+
+
+Synthesizing Unit <addshiftr2_MUSER_qamtheta>.
+    Related source file is "qamtheta.vf".
+Unit <addshiftr2_MUSER_qamtheta> synthesized.
+
+
+Synthesizing Unit <bit4s_MUSER_qamtheta>.
+    Related source file is "qamtheta.vf".
+Unit <bit4s_MUSER_qamtheta> synthesized.
+
+
+Synthesizing Unit <qamtheta>.
+    Related source file is "qamtheta.vf".
+Unit <qamtheta> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <qamtheta> ...
+
+Optimizing unit <bit16buffermodified_MUSER_qamtheta> ...
+
+Optimizing unit <ADD16_MXILINX_qamtheta> ...
+
+Optimizing unit <ADSU16_MXILINX_qamtheta> ...
+
+Optimizing unit <gnd16bit_MUSER_qamtheta> ...
+
+Optimizing unit <FTCE_MXILINX_qamtheta_1> ...
+
+Optimizing unit <FTCE_MXILINX_qamtheta_2> ...
+
+Optimizing unit <shiftr2_MUSER_qamtheta> ...
+
+Optimizing unit <CB2CE_MXILINX_qamtheta> ...
+
+Optimizing unit <bit4s_MUSER_qamtheta> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block qamtheta, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : qamtheta.ngr
+Top Level Output File Name         : qamtheta
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 58
+
+Cell Usage :
+# BELS                             : 368
+#      AND2                        : 33
+#      BUF                         : 96
+#      GND                         : 5
+#      INV                         : 34
+#      MUXCY                       : 4
+#      MUXCY_D                     : 4
+#      MUXCY_L                     : 56
+#      VCC                         : 2
+#      XOR2                        : 38
+#      XOR3                        : 32
+#      XORCY                       : 64
+# FlipFlops/Latches                : 10
+#      FD                          : 4
+#      FDC                         : 4
+#      FDCE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 57
+#      IBUF                        : 25
+#      OBUF                        : 32
+# Others                           : 64
+#      FMAP                        : 64
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                       17  out of   3584     0%  
+ Number of Slice Flip Flops:             10  out of   7168     0%  
+ Number of 4 input LUTs:                 34  out of   7168     0%  
+ Number of IOs:                          58
+ Number of bonded IOBs:                  58  out of    141    41%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+cll_16                             | BUFGP                  | 6     |
+XLXI_2/XLXN_16(XLXI_2/XLXI_12:O)   | NONE(*)(XLXI_2/XLXI_16)| 4     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+----------------------------------+-------+
+Control Signal                     | Buffer(FF name)                  | Load  |
+-----------------------------------+----------------------------------+-------+
+XLXI_1/XLXN_12(XLXI_1/XLXI_10:G)   | NONE(XLXI_2/XLXI_10/I_Q0/I_36_35)| 6     |
+-----------------------------------+----------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 3.192ns (Maximum Frequency: 313.283MHz)
+   Minimum input arrival time before clock: 1.825ns
+   Maximum output required time after clock: 15.423ns
+   Maximum combinational path delay: 16.565ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cll_16'
+  Clock period: 3.192ns (frequency: 313.283MHz)
+  Total number of paths / destination ports: 6 / 5
+-------------------------------------------------------------------------
+Delay:               3.192ns (Levels of Logic = 1)
+  Source:            XLXI_2/XLXI_10/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_2/XLXI_10/I_Q0/I_36_35 (FF)
+  Source Clock:      cll_16 rising
+  Destination Clock: cll_16 rising
+
+  Data Path: XLXI_2/XLXI_10/I_Q0/I_36_35 to XLXI_2/XLXI_10/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.720   0.917  I_36_35 (Q)
+     end scope: 'I_Q0'
+     begin scope: 'I_Q1'
+     XOR2:I0->O            1   0.551   0.801  I_36_32 (TQ)
+     FDCE:D                    0.203          I_36_35
+    ----------------------------------------
+    Total                      3.192ns (1.474ns logic, 1.718ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cll_16'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.825ns (Levels of Logic = 1)
+  Source:            inputsignal (PAD)
+  Destination:       XLXI_2/XLXI_5 (FF)
+  Destination Clock: cll_16 rising
+
+  Data Path: inputsignal to XLXI_2/XLXI_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  inputsignal_IBUF (inputsignal_IBUF)
+     FDC:D                     0.203          XLXI_2/XLXI_5
+    ----------------------------------------
+    Total                      1.825ns (1.024ns logic, 0.801ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXN_16'
+  Total number of paths / destination ports: 2784 / 32
+-------------------------------------------------------------------------
+Offset:              15.423ns (Levels of Logic = 22)
+  Source:            XLXI_2/XLXI_16 (FF)
+  Destination:       acos<15> (PAD)
+  Source Clock:      XLXI_2/XLXN_16 rising
+
+  Data Path: XLXI_2/XLXI_16 to acos<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              15   0.720   1.188  XLXI_2/XLXI_16 (XLXN_1)
+     AND2:I0->O            1   0.551   0.801  XLXI_1/XLXI_8/XLXI_16 (XLXI_1/XLXN_6<1>)
+     begin scope: 'XLXI_1/XLXI_2'
+     XOR2:I0->O            1   0.551   0.000  I_36_355 (I1)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_254 (C1)
+     XORCY:CI->O           1   0.904   0.801  I_36_229 (S<2>)
+     end scope: 'XLXI_1/XLXI_2'
+     begin scope: 'XLXI_1/XLXI_4'
+     XOR3:I1->O            1   0.551   0.000  I_36_222 (I2)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_253 (C2)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_252 (C3)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_251 (C4)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_250 (C5)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_249 (C6)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_248 (C7)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_111 (C8)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_55 (C9)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_62 (C10)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_58 (C11)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_63 (C12)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_110 (C13)
+     MUXCY_D:CI->LO        1   0.303   0.000  I_36_107 (C14)
+     XORCY:CI->O           1   0.904   0.801  I_36_80 (S<15>)
+     end scope: 'XLXI_1/XLXI_4'
+     OBUF:I->O                 5.644          acos_15_OBUF (acos<15>)
+    ----------------------------------------
+    Total                     15.423ns (11.832ns logic, 3.591ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4112 / 32
+-------------------------------------------------------------------------
+Delay:               16.565ns (Levels of Logic = 24)
+  Source:            cos<0> (PAD)
+  Destination:       acos<15> (PAD)
+
+  Data Path: cos<0> to acos<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.821   0.877  cos_0_IBUF (cos_0_IBUF)
+     BUF:I->O              1   0.551   0.801  XLXI_1/XLXI_8/XLXI_1/XLXI_16 (XLXI_1/XLXI_8/inpsign<0>)
+     AND2:I1->O            1   0.551   0.801  XLXI_1/XLXI_8/XLXI_16 (XLXI_1/XLXN_6<1>)
+     begin scope: 'XLXI_1/XLXI_2'
+     XOR2:I0->O            1   0.551   0.000  I_36_355 (I1)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_254 (C1)
+     XORCY:CI->O           1   0.904   0.801  I_36_229 (S<2>)
+     end scope: 'XLXI_1/XLXI_2'
+     begin scope: 'XLXI_1/XLXI_4'
+     XOR3:I1->O            1   0.551   0.000  I_36_222 (I2)
+     MUXCY_L:S->LO         1   0.500   0.000  I_36_253 (C2)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_252 (C3)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_251 (C4)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_250 (C5)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_249 (C6)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_248 (C7)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_111 (C8)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_55 (C9)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_62 (C10)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_58 (C11)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_63 (C12)
+     MUXCY_L:CI->LO        1   0.064   0.000  I_36_110 (C13)
+     MUXCY_D:CI->LO        1   0.303   0.000  I_36_107 (C14)
+     XORCY:CI->O           1   0.904   0.801  I_36_80 (S<15>)
+     end scope: 'XLXI_1/XLXI_4'
+     OBUF:I->O                 5.644          acos_15_OBUF (acos<15>)
+    ----------------------------------------
+    Total                     16.565ns (12.484ns logic, 4.081ns route)
+                                       (75.4% logic, 24.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.23 secs
+ 
+--> 
+
+Total memory usage is 238548 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

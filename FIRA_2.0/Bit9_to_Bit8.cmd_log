@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym Bit9_to_Bit8 E:/FPGA_Xilinx/Buffers_for_bit_conversion/Bit9_to_Bit8.sch E:/FPGA_Xilinx/FIRA_2.0/Bit9_to_Bit8.sym 

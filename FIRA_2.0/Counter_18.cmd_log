@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym Counter_18 E:/FPGA_Xilinx/ETC_WITH_LEDs/Counter_18.sch E:/FPGA_Xilinx/FIRA_2.0/Counter_18.sym 

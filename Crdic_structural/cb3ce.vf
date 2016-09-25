@@ -1,0 +1,119 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : cb3ce.vf
+// /___/   /\     Timestamp : 04/17/2016 23:26:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/cb3ce.vf" -w "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/cb3ce.sch"
+//Design Name: cb3ce
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_cb3ce(C, 
+                          CE, 
+                          CLR, 
+                          T, 
+                          Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module cb3ce(C, 
+             CE, 
+             CLR, 
+             CEO, 
+             Q, 
+             Q4, 
+             TZ);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output [2:0] Q;
+   output Q4;
+   output TZ;
+   
+   wire T2;
+   wire XLXN_1;
+   wire XLXN_21;
+   wire TZ_DUMMY;
+   wire Q4_DUMMY;
+   wire [2:0] Q_DUMMY;
+   
+   assign Q[2:0] = Q_DUMMY[2:0];
+   assign Q4 = Q4_DUMMY;
+   assign TZ = TZ_DUMMY;
+   (* HU_SET = "I_Q0_0" *) 
+   FTCE_MXILINX_cb3ce #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(XLXN_1), 
+                            .Q(Q_DUMMY[0]));
+   (* HU_SET = "I_Q1_1" *) 
+   FTCE_MXILINX_cb3ce #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(Q_DUMMY[0]), 
+                            .Q(Q_DUMMY[1]));
+   (* HU_SET = "I_Q2_2" *) 
+   FTCE_MXILINX_cb3ce #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(T2), 
+                            .Q(Q_DUMMY[2]));
+   AND2  I_36_33 (.I0(Q_DUMMY[1]), 
+                 .I1(Q_DUMMY[0]), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TZ_DUMMY), 
+                 .O(CEO));
+   AND3  XLXI_1 (.I0(Q_DUMMY[0]), 
+                .I1(Q_DUMMY[1]), 
+                .I2(Q_DUMMY[2]), 
+                .O(XLXN_21));
+   (* HU_SET = "XLXI_2_3" *) 
+   FTCE_MXILINX_cb3ce #( .INIT(1'b0) ) XLXI_2 (.C(C), 
+                              .CE(CE), 
+                              .CLR(CLR), 
+                              .T(XLXN_21), 
+                              .Q(Q4_DUMMY));
+   NOR4  XLXI_5 (.I0(Q4_DUMMY), 
+                .I1(Q_DUMMY[0]), 
+                .I2(Q_DUMMY[1]), 
+                .I3(Q_DUMMY[2]), 
+                .O(TZ_DUMMY));
+endmodule

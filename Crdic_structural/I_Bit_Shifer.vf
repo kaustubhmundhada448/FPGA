@@ -1,0 +1,188 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : I_Bit_Shifer.vf
+// /___/   /\     Timestamp : 04/17/2016 23:32:06
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/I_Bit_Shifer.vf" -w "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/I_Bit_Shifer.sch"
+//Design Name: I_Bit_Shifer
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Mux_2_8_MUSER_I_Bit_Shifer(Inp0, 
+                                  Inp1, 
+                                  Sel, 
+                                  Outp);
+
+    input [7:0] Inp0;
+    input [7:0] Inp1;
+    input Sel;
+   output [7:0] Outp;
+   
+   
+   MUXCY  XLXI_18 (.CI(Inp1[1]), 
+                  .DI(Inp0[1]), 
+                  .S(Sel), 
+                  .O(Outp[1]));
+   MUXCY  XLXI_19 (.CI(Inp1[0]), 
+                  .DI(Inp0[0]), 
+                  .S(Sel), 
+                  .O(Outp[0]));
+   MUXCY  XLXI_20 (.CI(Inp1[2]), 
+                  .DI(Inp0[2]), 
+                  .S(Sel), 
+                  .O(Outp[2]));
+   MUXCY  XLXI_21 (.CI(Inp1[3]), 
+                  .DI(Inp0[3]), 
+                  .S(Sel), 
+                  .O(Outp[3]));
+   MUXCY  XLXI_24 (.CI(Inp1[4]), 
+                  .DI(Inp0[4]), 
+                  .S(Sel), 
+                  .O(Outp[4]));
+   MUXCY  XLXI_25 (.CI(Inp1[5]), 
+                  .DI(Inp0[5]), 
+                  .S(Sel), 
+                  .O(Outp[5]));
+   MUXCY  XLXI_26 (.CI(Inp1[6]), 
+                  .DI(Inp0[6]), 
+                  .S(Sel), 
+                  .O(Outp[6]));
+   MUXCY  XLXI_27 (.CI(Inp1[7]), 
+                  .DI(Inp0[7]), 
+                  .S(Sel), 
+                  .O(Outp[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module RShift4_8bit_MUSER_I_Bit_Shifer(Inp, 
+                                       Shift_1, 
+                                       Otp_Sh);
+
+    input [7:0] Inp;
+    input Shift_1;
+   output [7:0] Otp_Sh;
+   
+   wire [7:0] Shift1;
+   
+   BUF  XLXI_1 (.I(Inp[7]), 
+               .O(Shift1[7]));
+   BUF  XLXI_2 (.I(Inp[7]), 
+               .O(Shift1[6]));
+   BUF  XLXI_3 (.I(Inp[7]), 
+               .O(Shift1[5]));
+   BUF  XLXI_4 (.I(Inp[7]), 
+               .O(Shift1[4]));
+   BUF  XLXI_5 (.I(Inp[7]), 
+               .O(Shift1[3]));
+   BUF  XLXI_6 (.I(Inp[6]), 
+               .O(Shift1[2]));
+   BUF  XLXI_7 (.I(Inp[5]), 
+               .O(Shift1[1]));
+   Mux_2_8_MUSER_I_Bit_Shifer  XLXI_8 (.Inp0(Inp[7:0]), 
+                                      .Inp1(Shift1[7:0]), 
+                                      .Sel(Shift_1), 
+                                      .Outp(Otp_Sh[7:0]));
+   BUF  XLXI_10 (.I(Inp[4]), 
+                .O(Shift1[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module One_Bit_shifter_8_MUSER_I_Bit_Shifer(Inp, 
+                                            Shift_1, 
+                                            Otp_Sh);
+
+    input [7:0] Inp;
+    input Shift_1;
+   output [7:0] Otp_Sh;
+   
+   wire [7:0] Shift1;
+   
+   BUF  XLXI_2 (.I(Inp[7]), 
+               .O(Shift1[7]));
+   BUF  XLXI_3 (.I(Inp[7]), 
+               .O(Shift1[6]));
+   BUF  XLXI_4 (.I(Inp[6]), 
+               .O(Shift1[5]));
+   BUF  XLXI_5 (.I(Inp[5]), 
+               .O(Shift1[4]));
+   BUF  XLXI_6 (.I(Inp[4]), 
+               .O(Shift1[3]));
+   BUF  XLXI_7 (.I(Inp[3]), 
+               .O(Shift1[2]));
+   BUF  XLXI_8 (.I(Inp[2]), 
+               .O(Shift1[1]));
+   Mux_2_8_MUSER_I_Bit_Shifer  XLXI_9 (.Inp0(Inp[7:0]), 
+                                      .Inp1(Shift1[7:0]), 
+                                      .Sel(Shift_1), 
+                                      .Outp(Otp_Sh[7:0]));
+   BUF  XLXI_10 (.I(Inp[1]), 
+                .O(Shift1[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Bit_RShift2_8bit_MUSER_I_Bit_Shifer(Inp, 
+                                           Shift_1, 
+                                           Otp_Sh);
+
+    input [7:0] Inp;
+    input Shift_1;
+   output [7:0] Otp_Sh;
+   
+   wire [7:0] Shift1;
+   
+   BUF  XLXI_1 (.I(Inp[7]), 
+               .O(Shift1[7]));
+   BUF  XLXI_2 (.I(Inp[7]), 
+               .O(Shift1[6]));
+   BUF  XLXI_3 (.I(Inp[7]), 
+               .O(Shift1[5]));
+   BUF  XLXI_4 (.I(Inp[6]), 
+               .O(Shift1[4]));
+   BUF  XLXI_5 (.I(Inp[5]), 
+               .O(Shift1[3]));
+   BUF  XLXI_6 (.I(Inp[4]), 
+               .O(Shift1[2]));
+   BUF  XLXI_7 (.I(Inp[3]), 
+               .O(Shift1[1]));
+   Mux_2_8_MUSER_I_Bit_Shifer  XLXI_8 (.Inp0(Inp[7:0]), 
+                                      .Inp1(Shift1[7:0]), 
+                                      .Sel(Shift_1), 
+                                      .Outp(Otp_Sh[7:0]));
+   BUF  XLXI_10 (.I(Inp[2]), 
+                .O(Shift1[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module I_Bit_Shifer(I, 
+                    Inp, 
+                    OTP_S);
+
+    input [2:0] I;
+    input [7:0] Inp;
+   output [7:0] OTP_S;
+   
+   wire [7:0] XLXN_8;
+   wire [7:0] XLXN_9;
+   
+   Bit_RShift2_8bit_MUSER_I_Bit_Shifer  XLXI_1 (.Inp(XLXN_8[7:0]), 
+                                               .Shift_1(I[1]), 
+                                               .Otp_Sh(XLXN_9[7:0]));
+   One_Bit_shifter_8_MUSER_I_Bit_Shifer  XLXI_2 (.Inp(Inp[7:0]), 
+                                                .Shift_1(I[0]), 
+                                                .Otp_Sh(XLXN_8[7:0]));
+   RShift4_8bit_MUSER_I_Bit_Shifer  XLXI_3 (.Inp(XLXN_9[7:0]), 
+                                           .Shift_1(I[2]), 
+                                           .Otp_Sh(OTP_S[7:0]));
+endmodule

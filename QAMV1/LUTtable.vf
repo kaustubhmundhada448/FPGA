@@ -1,0 +1,110 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LUTtable.vf
+// /___/   /\     Timestamp : 11/26/2015 20:41:37
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog G:/FPGA/BTP/QAMV1/LUTtable.vf -w G:/FPGA/BTP/QAMV1/LUTtable.sch
+//Design Name: LUTtable
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LUTtable(incr, 
+                LUToutput);
+
+    input [3:0] incr;
+   output [15:0] LUToutput;
+   
+   
+   LUT4 #( .INIT(16'h020E) ) XLXI_4 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[1]));
+   LUT4 #( .INIT(16'h040E) ) XLXI_5 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[0]));
+   LUT4 #( .INIT(16'h0109) ) XLXI_7 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[2]));
+   LUT4 #( .INIT(16'h008E) ) XLXI_8 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[3]));
+   LUT4 #( .INIT(16'h004E) ) XLXI_9 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[4]));
+   LUT4 #( .INIT(16'h002D) ) XLXI_10 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[5]));
+   LUT4 #( .INIT(16'h001E) ) XLXI_11 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[6]));
+   LUT4 #( .INIT(16'h0006) ) XLXI_12 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[7]));
+   LUT4 #( .INIT(16'h0003) ) XLXI_13 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[8]));
+   LUT4 #( .INIT(16'h0001) ) XLXI_14 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[9]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_15 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[10]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_16 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[11]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_17 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[12]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_18 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[13]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_19 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[14]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_20 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[15]));
+endmodule

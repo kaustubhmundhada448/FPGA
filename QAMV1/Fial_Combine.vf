@@ -1,0 +1,3392 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Fial_Combine.vf
+// /___/   /\     Timestamp : 09/26/2016 02:26:28
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog E:/FPGA_Xilinx/QAMV1/QAMV1/Fial_Combine.vf -w E:/FPGA_Xilinx/QAMV1/QAMV1/Fial_Combine.sch
+//Design Name: Fial_Combine
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_Fial_Combine(C, 
+                                 CE, 
+                                 CLR, 
+                                 T, 
+                                 Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB16CE_MXILINX_Fial_Combine(C, 
+                                   CE, 
+                                   CLR, 
+                                   CEO, 
+                                   Q, 
+                                   TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output [15:0] Q;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire T4;
+   wire T5;
+   wire T6;
+   wire T7;
+   wire T8;
+   wire T9;
+   wire T10;
+   wire T11;
+   wire T12;
+   wire T13;
+   wire T14;
+   wire T15;
+   wire XLXN_1;
+   wire [15:0] Q_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q[15:0] = Q_DUMMY[15:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_42" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(XLXN_1), 
+                                   .Q(Q_DUMMY[0]));
+   (* HU_SET = "I_Q1_41" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(Q_DUMMY[0]), 
+                                   .Q(Q_DUMMY[1]));
+   (* HU_SET = "I_Q2_44" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T2), 
+                                   .Q(Q_DUMMY[2]));
+   (* HU_SET = "I_Q3_43" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T3), 
+                                   .Q(Q_DUMMY[3]));
+   (* HU_SET = "I_Q4_48" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q4 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T4), 
+                                   .Q(Q_DUMMY[4]));
+   (* HU_SET = "I_Q5_47" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q5 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T5), 
+                                   .Q(Q_DUMMY[5]));
+   (* HU_SET = "I_Q6_46" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q6 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T6), 
+                                   .Q(Q_DUMMY[6]));
+   (* HU_SET = "I_Q7_45" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q7 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T7), 
+                                   .Q(Q_DUMMY[7]));
+   (* HU_SET = "I_Q8_49" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q8 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T8), 
+                                   .Q(Q_DUMMY[8]));
+   (* HU_SET = "I_Q9_50" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q9 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T9), 
+                                   .Q(Q_DUMMY[9]));
+   (* HU_SET = "I_Q10_51" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q10 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T10), 
+                                    .Q(Q_DUMMY[10]));
+   (* HU_SET = "I_Q11_52" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q11 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T11), 
+                                    .Q(Q_DUMMY[11]));
+   (* HU_SET = "I_Q12_53" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q12 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T12), 
+                                    .Q(Q_DUMMY[12]));
+   (* HU_SET = "I_Q13_54" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q13 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T13), 
+                                    .Q(Q_DUMMY[13]));
+   (* HU_SET = "I_Q14_55" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q14 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T14), 
+                                    .Q(Q_DUMMY[14]));
+   (* HU_SET = "I_Q15_56" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q15 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T15), 
+                                    .Q(Q_DUMMY[15]));
+   AND3  I_36_3 (.I0(Q_DUMMY[2]), 
+                .I1(Q_DUMMY[1]), 
+                .I2(Q_DUMMY[0]), 
+                .O(T3));
+   AND2  I_36_4 (.I0(Q_DUMMY[1]), 
+                .I1(Q_DUMMY[0]), 
+                .O(T2));
+   VCC  I_36_9 (.P(XLXN_1));
+   AND4  I_36_10 (.I0(Q_DUMMY[3]), 
+                 .I1(Q_DUMMY[2]), 
+                 .I2(Q_DUMMY[1]), 
+                 .I3(Q_DUMMY[0]), 
+                 .O(T4));
+   AND5  I_36_14 (.I0(Q_DUMMY[7]), 
+                 .I1(Q_DUMMY[6]), 
+                 .I2(Q_DUMMY[5]), 
+                 .I3(Q_DUMMY[4]), 
+                 .I4(T4), 
+                 .O(T8));
+   AND2  I_36_15 (.I0(Q_DUMMY[4]), 
+                 .I1(T4), 
+                 .O(T5));
+   AND3  I_36_19 (.I0(Q_DUMMY[5]), 
+                 .I1(Q_DUMMY[4]), 
+                 .I2(T4), 
+                 .O(T6));
+   AND4  I_36_21 (.I0(Q_DUMMY[6]), 
+                 .I1(Q_DUMMY[5]), 
+                 .I2(Q_DUMMY[4]), 
+                 .I3(T4), 
+                 .O(T7));
+   AND5  I_36_22 (.I0(Q_DUMMY[15]), 
+                 .I1(Q_DUMMY[14]), 
+                 .I2(Q_DUMMY[13]), 
+                 .I3(Q_DUMMY[12]), 
+                 .I4(T12), 
+                 .O(TC_DUMMY));
+   AND2  I_36_23 (.I0(Q_DUMMY[12]), 
+                 .I1(T12), 
+                 .O(T13));
+   AND3  I_36_24 (.I0(Q_DUMMY[13]), 
+                 .I1(Q_DUMMY[12]), 
+                 .I2(T12), 
+                 .O(T14));
+   AND4  I_36_25 (.I0(Q_DUMMY[14]), 
+                 .I1(Q_DUMMY[13]), 
+                 .I2(Q_DUMMY[12]), 
+                 .I3(T12), 
+                 .O(T15));
+   AND4  I_36_26 (.I0(Q_DUMMY[10]), 
+                 .I1(Q_DUMMY[9]), 
+                 .I2(Q_DUMMY[8]), 
+                 .I3(T8), 
+                 .O(T11));
+   AND3  I_36_27 (.I0(Q_DUMMY[9]), 
+                 .I1(Q_DUMMY[8]), 
+                 .I2(T8), 
+                 .O(T10));
+   AND2  I_36_28 (.I0(Q_DUMMY[8]), 
+                 .I1(T8), 
+                 .O(T9));
+   AND5  I_36_29 (.I0(Q_DUMMY[11]), 
+                 .I1(Q_DUMMY[10]), 
+                 .I2(Q_DUMMY[9]), 
+                 .I3(Q_DUMMY[8]), 
+                 .I4(T8), 
+                 .O(T12));
+   AND2  I_36_54 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module constant2048_MUSER_Fial_Combine(x_constant);
+
+   output [15:0] x_constant;
+   
+   wire XLXN_36;
+   wire XLXN_48;
+   wire XLXN_53;
+   wire XLXN_67;
+   wire XLXN_68;
+   
+   GND  XLXI_1 (.G(XLXN_67));
+   BUF  XLXI_2 (.I(XLXN_36), 
+               .O(x_constant[0]));
+   BUF  XLXI_3 (.I(XLXN_36), 
+               .O(x_constant[1]));
+   BUF  XLXI_4 (.I(XLXN_36), 
+               .O(x_constant[2]));
+   GND  XLXI_5 (.G(XLXN_36));
+   BUF  XLXI_6 (.I(XLXN_36), 
+               .O(x_constant[3]));
+   GND  XLXI_7 (.G(XLXN_48));
+   BUF  XLXI_8 (.I(XLXN_48), 
+               .O(x_constant[4]));
+   GND  XLXI_11 (.G(XLXN_53));
+   BUF  XLXI_24 (.I(XLXN_48), 
+                .O(x_constant[5]));
+   BUF  XLXI_25 (.I(XLXN_48), 
+                .O(x_constant[6]));
+   BUF  XLXI_26 (.I(XLXN_53), 
+                .O(x_constant[7]));
+   BUF  XLXI_27 (.I(XLXN_53), 
+                .O(x_constant[8]));
+   BUF  XLXI_28 (.I(XLXN_53), 
+                .O(x_constant[9]));
+   BUF  XLXI_29 (.I(XLXN_67), 
+                .O(x_constant[10]));
+   BUF  XLXI_30 (.I(XLXN_68), 
+                .O(x_constant[11]));
+   BUF  XLXI_31 (.I(XLXN_67), 
+                .O(x_constant[12]));
+   BUF  XLXI_32 (.I(XLXN_67), 
+                .O(x_constant[13]));
+   BUF  XLXI_33 (.I(XLXN_67), 
+                .O(x_constant[14]));
+   BUF  XLXI_34 (.I(XLXN_67), 
+                .O(x_constant[15]));
+   VCC  XLXI_35 (.P(XLXN_68));
+endmodule
+`timescale 1ns / 1ps
+
+module gnd16bit_MUSER_Fial_Combine(x_constant);
+
+   output [15:0] x_constant;
+   
+   wire XLXN_36;
+   wire XLXN_48;
+   wire XLXN_53;
+   wire XLXN_67;
+   
+   GND  XLXI_1 (.G(XLXN_67));
+   BUF  XLXI_2 (.I(XLXN_36), 
+               .O(x_constant[0]));
+   BUF  XLXI_3 (.I(XLXN_36), 
+               .O(x_constant[1]));
+   BUF  XLXI_4 (.I(XLXN_36), 
+               .O(x_constant[2]));
+   GND  XLXI_5 (.G(XLXN_36));
+   BUF  XLXI_7 (.I(XLXN_36), 
+               .O(x_constant[3]));
+   GND  XLXI_8 (.G(XLXN_48));
+   BUF  XLXI_9 (.I(XLXN_48), 
+               .O(x_constant[4]));
+   GND  XLXI_11 (.G(XLXN_53));
+   BUF  XLXI_24 (.I(XLXN_48), 
+                .O(x_constant[5]));
+   BUF  XLXI_25 (.I(XLXN_48), 
+                .O(x_constant[6]));
+   BUF  XLXI_26 (.I(XLXN_53), 
+                .O(x_constant[7]));
+   BUF  XLXI_27 (.I(XLXN_53), 
+                .O(x_constant[8]));
+   BUF  XLXI_28 (.I(XLXN_53), 
+                .O(x_constant[9]));
+   BUF  XLXI_29 (.I(XLXN_67), 
+                .O(x_constant[10]));
+   BUF  XLXI_30 (.I(XLXN_67), 
+                .O(x_constant[11]));
+   BUF  XLXI_31 (.I(XLXN_67), 
+                .O(x_constant[12]));
+   BUF  XLXI_32 (.I(XLXN_67), 
+                .O(x_constant[13]));
+   BUF  XLXI_33 (.I(XLXN_67), 
+                .O(x_constant[14]));
+   BUF  XLXI_34 (.I(XLXN_67), 
+                .O(x_constant[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module ADSU16_MXILINX_Fial_Combine(A, 
+                                   ADD, 
+                                   B, 
+                                   CI, 
+                                   CO, 
+                                   OFL, 
+                                   S);
+
+    input [15:0] A;
+    input ADD;
+    input [15:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [15:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C7;
+   wire C8;
+   wire C9;
+   wire C10;
+   wire C11;
+   wire C12;
+   wire C13;
+   wire C14;
+   wire C14O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I7;
+   wire I8;
+   wire I9;
+   wire I10;
+   wire I11;
+   wire I12;
+   wire I13;
+   wire I14;
+   wire I15;
+   wire SUB0;
+   wire SUB1;
+   wire SUB2;
+   wire SUB3;
+   wire SUB4;
+   wire SUB5;
+   wire SUB6;
+   wire SUB7;
+   wire SUB8;
+   wire SUB9;
+   wire SUB10;
+   wire SUB11;
+   wire SUB12;
+   wire SUB13;
+   wire SUB14;
+   wire SUB15;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X1Y4" *) 
+   FMAP  I_36_16 (.I1(A[8]), 
+                 .I2(B[8]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I8));
+   (* RLOC = "X1Y4" *) 
+   FMAP  I_36_17 (.I1(A[9]), 
+                 .I2(B[9]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I9));
+   (* RLOC = "X1Y5" *) 
+   FMAP  I_36_18 (.I1(A[10]), 
+                 .I2(B[10]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I10));
+   (* RLOC = "X1Y5" *) 
+   FMAP  I_36_19 (.I1(A[11]), 
+                 .I2(B[11]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I11));
+   (* RLOC = "X1Y6" *) 
+   FMAP  I_36_20 (.I1(A[12]), 
+                 .I2(B[12]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I12));
+   (* RLOC = "X1Y6" *) 
+   FMAP  I_36_21 (.I1(A[13]), 
+                 .I2(B[13]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I13));
+   (* RLOC = "X1Y7" *) 
+   FMAP  I_36_22 (.I1(A[14]), 
+                 .I2(B[14]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I14));
+   (* RLOC = "X1Y7" *) 
+   FMAP  I_36_23 (.I1(A[15]), 
+                 .I2(B[15]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I15));
+   XOR3  I_36_50 (.I0(A[8]), 
+                 .I1(B[8]), 
+                 .I2(SUB8), 
+                 .O(I8));
+   (* RLOC = "X1Y4" *) 
+   MUXCY_L  I_36_55 (.CI(C8), 
+                    .DI(A[9]), 
+                    .S(I9), 
+                    .LO(C9));
+   XOR3  I_36_56 (.I0(A[10]), 
+                 .I1(B[10]), 
+                 .I2(SUB10), 
+                 .O(I10));
+   XOR3  I_36_57 (.I0(A[11]), 
+                 .I1(B[11]), 
+                 .I2(SUB11), 
+                 .O(I11));
+   (* RLOC = "X1Y5" *) 
+   MUXCY_L  I_36_58 (.CI(C10), 
+                    .DI(A[11]), 
+                    .S(I11), 
+                    .LO(C11));
+   XOR3  I_36_59 (.I0(A[14]), 
+                 .I1(B[14]), 
+                 .I2(SUB14), 
+                 .O(I14));
+   XOR3  I_36_60 (.I0(A[12]), 
+                 .I1(B[12]), 
+                 .I2(SUB12), 
+                 .O(I12));
+   (* RLOC = "X1Y5" *) 
+   MUXCY_L  I_36_62 (.CI(C9), 
+                    .DI(A[10]), 
+                    .S(I10), 
+                    .LO(C10));
+   (* RLOC = "X1Y6" *) 
+   MUXCY_L  I_36_63 (.CI(C11), 
+                    .DI(A[12]), 
+                    .S(I12), 
+                    .LO(C12));
+   (* RLOC = "X1Y7" *) 
+   MUXCY  I_36_64 (.CI(C14), 
+                  .DI(A[15]), 
+                  .S(I15), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(C7), 
+                  .LI(I8), 
+                  .O(S[8]));
+   XORCY  I_36_74 (.CI(C8), 
+                  .LI(I9), 
+                  .O(S[9]));
+   XORCY  I_36_75 (.CI(C10), 
+                  .LI(I11), 
+                  .O(S[11]));
+   XORCY  I_36_76 (.CI(C9), 
+                  .LI(I10), 
+                  .O(S[10]));
+   XORCY  I_36_77 (.CI(C12), 
+                  .LI(I13), 
+                  .O(S[13]));
+   XORCY  I_36_78 (.CI(C11), 
+                  .LI(I12), 
+                  .O(S[12]));
+   XOR3  I_36_79 (.I0(A[15]), 
+                 .I1(B[15]), 
+                 .I2(SUB15), 
+                 .O(I15));
+   XORCY  I_36_80 (.CI(C14), 
+                  .LI(I15), 
+                  .O(S[15]));
+   XORCY  I_36_81 (.CI(C13), 
+                  .LI(I14), 
+                  .O(S[14]));
+   XOR3  I_36_100 (.I0(A[9]), 
+                  .I1(B[9]), 
+                  .I2(SUB9), 
+                  .O(I9));
+   (* RLOC = "X1Y7" *) 
+   MUXCY_D  I_36_107 (.CI(C13), 
+                     .DI(A[14]), 
+                     .S(I14), 
+                     .LO(C14), 
+                     .O(C14O));
+   XOR3  I_36_109 (.I0(A[13]), 
+                  .I1(B[13]), 
+                  .I2(SUB13), 
+                  .O(I13));
+   (* RLOC = "X1Y6" *) 
+   MUXCY_L  I_36_110 (.CI(C12), 
+                     .DI(A[13]), 
+                     .S(I13), 
+                     .LO(C13));
+   (* RLOC = "X1Y4" *) 
+   MUXCY_L  I_36_111 (.CI(C7), 
+                     .DI(A[8]), 
+                     .S(I8), 
+                     .LO(C8));
+   XOR3  I_36_220 (.I0(A[0]), 
+                  .I1(B[0]), 
+                  .I2(SUB0), 
+                  .O(I0));
+   XOR3  I_36_222 (.I0(A[2]), 
+                  .I1(B[2]), 
+                  .I2(SUB2), 
+                  .O(I2));
+   XOR3  I_36_223 (.I0(A[3]), 
+                  .I1(B[3]), 
+                  .I2(SUB3), 
+                  .O(I3));
+   XOR3  I_36_224 (.I0(A[6]), 
+                  .I1(B[6]), 
+                  .I2(SUB6), 
+                  .O(I6));
+   XOR3  I_36_225 (.I0(A[4]), 
+                  .I1(B[4]), 
+                  .I2(SUB4), 
+                  .O(I4));
+   XORCY  I_36_226 (.CI(CI), 
+                   .LI(I0), 
+                   .O(S[0]));
+   XORCY  I_36_227 (.CI(C0), 
+                   .LI(I1), 
+                   .O(S[1]));
+   XORCY  I_36_228 (.CI(C2), 
+                   .LI(I3), 
+                   .O(S[3]));
+   XORCY  I_36_229 (.CI(C1), 
+                   .LI(I2), 
+                   .O(S[2]));
+   XORCY  I_36_230 (.CI(C4), 
+                   .LI(I5), 
+                   .O(S[5]));
+   XORCY  I_36_231 (.CI(C3), 
+                   .LI(I4), 
+                   .O(S[4]));
+   XOR3  I_36_232 (.I0(A[7]), 
+                  .I1(B[7]), 
+                  .I2(SUB7), 
+                  .O(I7));
+   XORCY  I_36_233 (.CI(C6), 
+                   .LI(I7), 
+                   .O(S[7]));
+   XORCY  I_36_234 (.CI(C5), 
+                   .LI(I6), 
+                   .O(S[6]));
+   XOR3  I_36_243 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .I2(SUB1), 
+                  .O(I1));
+   XOR3  I_36_245 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .I2(SUB5), 
+                  .O(I5));
+   (* RLOC = "X1Y3" *) 
+   MUXCY_L  I_36_248 (.CI(C6), 
+                     .DI(A[7]), 
+                     .S(I7), 
+                     .LO(C7));
+   (* RLOC = "X1Y3" *) 
+   MUXCY_L  I_36_249 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6));
+   (* RLOC = "X1Y2" *) 
+   MUXCY_L  I_36_250 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X1Y2" *) 
+   MUXCY_L  I_36_251 (.CI(C3), 
+                     .DI(A[4]), 
+                     .S(I4), 
+                     .LO(C4));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_252 (.CI(C2), 
+                     .DI(A[3]), 
+                     .S(I3), 
+                     .LO(C3));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_253 (.CI(C1), 
+                     .DI(A[2]), 
+                     .S(I2), 
+                     .LO(C2));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_254 (.CI(C0), 
+                     .DI(A[1]), 
+                     .S(I1), 
+                     .LO(C1));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_255 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_272 (.I1(A[1]), 
+                  .I2(B[1]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_275 (.I1(A[0]), 
+                  .I2(B[0]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_279 (.I1(A[2]), 
+                  .I2(B[2]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_283 (.I1(A[3]), 
+                  .I2(B[3]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I3));
+   (* RLOC = "X1Y2" *) 
+   FMAP  I_36_287 (.I1(A[4]), 
+                  .I2(B[4]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I4));
+   (* RLOC = "X1Y2" *) 
+   FMAP  I_36_291 (.I1(A[5]), 
+                  .I2(B[5]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I5));
+   (* RLOC = "X1Y3" *) 
+   FMAP  I_36_295 (.I1(A[6]), 
+                  .I2(B[6]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I6));
+   (* RLOC = "X1Y3" *) 
+   FMAP  I_36_299 (.I1(A[7]), 
+                  .I2(B[7]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I7));
+   XOR2  I_36_353 (.I0(C14O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+   INV  I_36_355 (.I(ADD), 
+                 .O(SUB0));
+   INV  I_36_356 (.I(ADD), 
+                 .O(SUB1));
+   INV  I_36_357 (.I(ADD), 
+                 .O(SUB2));
+   INV  I_36_358 (.I(ADD), 
+                 .O(SUB3));
+   INV  I_36_359 (.I(ADD), 
+                 .O(SUB4));
+   INV  I_36_360 (.I(ADD), 
+                 .O(SUB5));
+   INV  I_36_361 (.I(ADD), 
+                 .O(SUB6));
+   INV  I_36_362 (.I(ADD), 
+                 .O(SUB7));
+   INV  I_36_363 (.I(ADD), 
+                 .O(SUB8));
+   INV  I_36_364 (.I(ADD), 
+                 .O(SUB9));
+   INV  I_36_365 (.I(ADD), 
+                 .O(SUB10));
+   INV  I_36_366 (.I(ADD), 
+                 .O(SUB11));
+   INV  I_36_367 (.I(ADD), 
+                 .O(SUB12));
+   INV  I_36_368 (.I(ADD), 
+                 .O(SUB13));
+   INV  I_36_369 (.I(ADD), 
+                 .O(SUB14));
+   INV  I_36_370 (.I(ADD), 
+                 .O(SUB15));
+endmodule
+`timescale 1ns / 1ps
+
+module ADD16_MXILINX_Fial_Combine(A, 
+                                  B, 
+                                  CI, 
+                                  CO, 
+                                  OFL, 
+                                  S);
+
+    input [15:0] A;
+    input [15:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [15:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C7;
+   wire C8;
+   wire C9;
+   wire C10;
+   wire C11;
+   wire C12;
+   wire C13;
+   wire C14;
+   wire C14O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I7;
+   wire I8;
+   wire I9;
+   wire I10;
+   wire I11;
+   wire I12;
+   wire I13;
+   wire I14;
+   wire I15;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X0Y4" *) 
+   FMAP  I_36_16 (.I1(A[8]), 
+                 .I2(B[8]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I8));
+   (* RLOC = "X0Y4" *) 
+   FMAP  I_36_17 (.I1(A[9]), 
+                 .I2(B[9]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I9));
+   (* RLOC = "X0Y5" *) 
+   FMAP  I_36_18 (.I1(A[10]), 
+                 .I2(B[10]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I10));
+   (* RLOC = "X0Y5" *) 
+   FMAP  I_36_19 (.I1(A[11]), 
+                 .I2(B[11]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I11));
+   (* RLOC = "X0Y6" *) 
+   FMAP  I_36_20 (.I1(A[12]), 
+                 .I2(B[12]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I12));
+   (* RLOC = "X0Y6" *) 
+   FMAP  I_36_21 (.I1(A[13]), 
+                 .I2(B[13]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I13));
+   (* RLOC = "X0Y7" *) 
+   FMAP  I_36_22 (.I1(A[14]), 
+                 .I2(B[14]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I14));
+   (* RLOC = "X0Y7" *) 
+   FMAP  I_36_23 (.I1(A[15]), 
+                 .I2(B[15]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I15));
+   (* RLOC = "X0Y4" *) 
+   MUXCY_L  I_36_55 (.CI(C8), 
+                    .DI(A[9]), 
+                    .S(I9), 
+                    .LO(C9));
+   (* RLOC = "X0Y5" *) 
+   MUXCY_L  I_36_58 (.CI(C10), 
+                    .DI(A[11]), 
+                    .S(I11), 
+                    .LO(C11));
+   (* RLOC = "X0Y5" *) 
+   MUXCY_L  I_36_62 (.CI(C9), 
+                    .DI(A[10]), 
+                    .S(I10), 
+                    .LO(C10));
+   (* RLOC = "X0Y6" *) 
+   MUXCY_L  I_36_63 (.CI(C11), 
+                    .DI(A[12]), 
+                    .S(I12), 
+                    .LO(C12));
+   (* RLOC = "X0Y7" *) 
+   MUXCY  I_36_64 (.CI(C14), 
+                  .DI(A[15]), 
+                  .S(I15), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(C7), 
+                  .LI(I8), 
+                  .O(S[8]));
+   XORCY  I_36_74 (.CI(C8), 
+                  .LI(I9), 
+                  .O(S[9]));
+   XORCY  I_36_75 (.CI(C10), 
+                  .LI(I11), 
+                  .O(S[11]));
+   XORCY  I_36_76 (.CI(C9), 
+                  .LI(I10), 
+                  .O(S[10]));
+   XORCY  I_36_77 (.CI(C12), 
+                  .LI(I13), 
+                  .O(S[13]));
+   XORCY  I_36_78 (.CI(C11), 
+                  .LI(I12), 
+                  .O(S[12]));
+   XORCY  I_36_80 (.CI(C14), 
+                  .LI(I15), 
+                  .O(S[15]));
+   XORCY  I_36_81 (.CI(C13), 
+                  .LI(I14), 
+                  .O(S[14]));
+   (* RLOC = "X0Y7" *) 
+   MUXCY_D  I_36_107 (.CI(C13), 
+                     .DI(A[14]), 
+                     .S(I14), 
+                     .LO(C14), 
+                     .O(C14O));
+   (* RLOC = "X0Y6" *) 
+   MUXCY_L  I_36_110 (.CI(C12), 
+                     .DI(A[13]), 
+                     .S(I13), 
+                     .LO(C13));
+   (* RLOC = "X0Y4" *) 
+   MUXCY_L  I_36_111 (.CI(C7), 
+                     .DI(A[8]), 
+                     .S(I8), 
+                     .LO(C8));
+   XORCY  I_36_226 (.CI(CI), 
+                   .LI(I0), 
+                   .O(S[0]));
+   XORCY  I_36_227 (.CI(C0), 
+                   .LI(I1), 
+                   .O(S[1]));
+   XORCY  I_36_228 (.CI(C2), 
+                   .LI(I3), 
+                   .O(S[3]));
+   XORCY  I_36_229 (.CI(C1), 
+                   .LI(I2), 
+                   .O(S[2]));
+   XORCY  I_36_230 (.CI(C4), 
+                   .LI(I5), 
+                   .O(S[5]));
+   XORCY  I_36_231 (.CI(C3), 
+                   .LI(I4), 
+                   .O(S[4]));
+   XORCY  I_36_233 (.CI(C6), 
+                   .LI(I7), 
+                   .O(S[7]));
+   XORCY  I_36_234 (.CI(C5), 
+                   .LI(I6), 
+                   .O(S[6]));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_L  I_36_248 (.CI(C6), 
+                     .DI(A[7]), 
+                     .S(I7), 
+                     .LO(C7));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_L  I_36_249 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_250 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_251 (.CI(C3), 
+                     .DI(A[4]), 
+                     .S(I4), 
+                     .LO(C4));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_252 (.CI(C2), 
+                     .DI(A[3]), 
+                     .S(I3), 
+                     .LO(C3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_253 (.CI(C1), 
+                     .DI(A[2]), 
+                     .S(I2), 
+                     .LO(C2));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_254 (.CI(C0), 
+                     .DI(A[1]), 
+                     .S(I1), 
+                     .LO(C1));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_255 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_272 (.I1(A[1]), 
+                  .I2(B[1]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_275 (.I1(A[0]), 
+                  .I2(B[0]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_279 (.I1(A[2]), 
+                  .I2(B[2]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_283 (.I1(A[3]), 
+                  .I2(B[3]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I3));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_287 (.I1(A[4]), 
+                  .I2(B[4]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I4));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_291 (.I1(A[5]), 
+                  .I2(B[5]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I5));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_295 (.I1(A[6]), 
+                  .I2(B[6]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I6));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_299 (.I1(A[7]), 
+                  .I2(B[7]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I7));
+   XOR2  I_36_354 (.I0(A[0]), 
+                  .I1(B[0]), 
+                  .O(I0));
+   XOR2  I_36_355 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .O(I1));
+   XOR2  I_36_356 (.I0(A[2]), 
+                  .I1(B[2]), 
+                  .O(I2));
+   XOR2  I_36_357 (.I0(A[3]), 
+                  .I1(B[3]), 
+                  .O(I3));
+   XOR2  I_36_358 (.I0(A[4]), 
+                  .I1(B[4]), 
+                  .O(I4));
+   XOR2  I_36_359 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .O(I5));
+   XOR2  I_36_360 (.I0(A[6]), 
+                  .I1(B[6]), 
+                  .O(I6));
+   XOR2  I_36_361 (.I0(A[7]), 
+                  .I1(B[7]), 
+                  .O(I7));
+   XOR2  I_36_362 (.I0(A[8]), 
+                  .I1(B[8]), 
+                  .O(I8));
+   XOR2  I_36_363 (.I0(A[9]), 
+                  .I1(B[9]), 
+                  .O(I9));
+   XOR2  I_36_364 (.I0(A[10]), 
+                  .I1(B[10]), 
+                  .O(I10));
+   XOR2  I_36_365 (.I0(A[11]), 
+                  .I1(B[11]), 
+                  .O(I11));
+   XOR2  I_36_366 (.I0(A[12]), 
+                  .I1(B[12]), 
+                  .O(I12));
+   XOR2  I_36_367 (.I0(A[13]), 
+                  .I1(B[13]), 
+                  .O(I13));
+   XOR2  I_36_368 (.I0(A[14]), 
+                  .I1(B[14]), 
+                  .O(I14));
+   XOR2  I_36_369 (.I0(A[15]), 
+                  .I1(B[15]), 
+                  .O(I15));
+   XOR2  I_36_375 (.I0(C14O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module Mux_2_16_MUSER_Fial_Combine(Inp0, 
+                                   Inp1, 
+                                   S_0, 
+                                   Output);
+
+    input [15:0] Inp0;
+    input [15:0] Inp1;
+    input S_0;
+   output [15:0] Output;
+   
+   
+   MUXCY  XLXI_1 (.CI(Inp1[3]), 
+                 .DI(Inp0[3]), 
+                 .S(S_0), 
+                 .O(Output[3]));
+   MUXCY  XLXI_9 (.CI(Inp1[0]), 
+                 .DI(Inp0[0]), 
+                 .S(S_0), 
+                 .O(Output[0]));
+   MUXCY  XLXI_18 (.CI(Inp1[1]), 
+                  .DI(Inp0[1]), 
+                  .S(S_0), 
+                  .O(Output[1]));
+   MUXCY  XLXI_24 (.CI(Inp1[4]), 
+                  .DI(Inp0[4]), 
+                  .S(S_0), 
+                  .O(Output[4]));
+   MUXCY  XLXI_25 (.CI(Inp1[5]), 
+                  .DI(Inp0[5]), 
+                  .S(S_0), 
+                  .O(Output[5]));
+   MUXCY  XLXI_26 (.CI(Inp1[6]), 
+                  .DI(Inp0[6]), 
+                  .S(S_0), 
+                  .O(Output[6]));
+   MUXCY  XLXI_27 (.CI(Inp1[7]), 
+                  .DI(Inp0[7]), 
+                  .S(S_0), 
+                  .O(Output[7]));
+   MUXCY  XLXI_28 (.CI(Inp1[8]), 
+                  .DI(Inp0[8]), 
+                  .S(S_0), 
+                  .O(Output[8]));
+   MUXCY  XLXI_31 (.CI(Inp1[9]), 
+                  .DI(Inp0[9]), 
+                  .S(S_0), 
+                  .O(Output[9]));
+   MUXCY  XLXI_35 (.CI(Inp1[10]), 
+                  .DI(Inp0[10]), 
+                  .S(S_0), 
+                  .O(Output[10]));
+   MUXCY  XLXI_37 (.CI(Inp1[11]), 
+                  .DI(Inp0[11]), 
+                  .S(S_0), 
+                  .O(Output[11]));
+   MUXCY  XLXI_47 (.CI(Inp1[12]), 
+                  .DI(Inp0[12]), 
+                  .S(S_0), 
+                  .O(Output[12]));
+   MUXCY  XLXI_48 (.CI(Inp1[13]), 
+                  .DI(Inp0[13]), 
+                  .S(S_0), 
+                  .O(Output[13]));
+   MUXCY  XLXI_49 (.CI(Inp1[14]), 
+                  .DI(Inp0[14]), 
+                  .S(S_0), 
+                  .O(Output[14]));
+   MUXCY  XLXI_53 (.CI(Inp1[2]), 
+                  .DI(Inp0[2]), 
+                  .S(S_0), 
+                  .O(Output[2]));
+   MUXCY  XLXI_57 (.CI(Inp1[15]), 
+                  .DI(Inp0[15]), 
+                  .S(S_0), 
+                  .O(Output[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module DACout_MUSER_Fial_Combine(inpsig, 
+                                 DACout);
+
+    input [15:0] inpsig;
+   output [15:0] DACout;
+   
+   wire [15:0] XLXN_2;
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire [15:0] XLXN_10;
+   wire XLXN_31;
+   
+   Mux_2_16_MUSER_Fial_Combine  XLXI_1 (.Inp0(XLXN_3[15:0]), 
+                                       .Inp1(XLXN_2[15:0]), 
+                                       .S_0(inpsig[15]), 
+                                       .Output(DACout[15:0]));
+   (* HU_SET = "XLXI_3_57" *) 
+   ADD16_MXILINX_Fial_Combine  XLXI_3 (.A(XLXN_10[15:0]), 
+                                      .B(inpsig[15:0]), 
+                                      .CI(XLXN_9), 
+                                      .CO(), 
+                                      .OFL(), 
+                                      .S(XLXN_3[15:0]));
+   (* HU_SET = "XLXI_4_58" *) 
+   ADSU16_MXILINX_Fial_Combine  XLXI_4 (.A(XLXN_7[15:0]), 
+                                       .ADD(XLXN_31), 
+                                       .B(inpsig[15:0]), 
+                                       .CI(XLXN_8), 
+                                       .CO(), 
+                                       .OFL(), 
+                                       .S(XLXN_2[15:0]));
+   gnd16bit_MUSER_Fial_Combine  XLXI_5 (.x_constant(XLXN_7[15:0]));
+   GND  XLXI_6 (.G(XLXN_9));
+   VCC  XLXI_7 (.P(XLXN_8));
+   constant2048_MUSER_Fial_Combine  XLXI_8 (.x_constant(XLXN_10[15:0]));
+   GND  XLXI_9 (.G(XLXN_31));
+endmodule
+`timescale 1ns / 1ps
+
+module bit16buffermodified_MUSER_Fial_Combine(buffinput, 
+                                              buffoutput);
+
+    input [11:0] buffinput;
+   output [15:0] buffoutput;
+   
+   
+   BUF  XLXI_1 (.I(buffinput[11]), 
+               .O(buffoutput[15]));
+   BUF  XLXI_2 (.I(buffinput[11]), 
+               .O(buffoutput[14]));
+   BUF  XLXI_3 (.I(buffinput[11]), 
+               .O(buffoutput[13]));
+   BUF  XLXI_4 (.I(buffinput[11]), 
+               .O(buffoutput[12]));
+   BUF  XLXI_5 (.I(buffinput[11]), 
+               .O(buffoutput[11]));
+   BUF  XLXI_6 (.I(buffinput[10]), 
+               .O(buffoutput[10]));
+   BUF  XLXI_7 (.I(buffinput[9]), 
+               .O(buffoutput[9]));
+   BUF  XLXI_8 (.I(buffinput[8]), 
+               .O(buffoutput[8]));
+   BUF  XLXI_9 (.I(buffinput[7]), 
+               .O(buffoutput[7]));
+   BUF  XLXI_10 (.I(buffinput[6]), 
+                .O(buffoutput[6]));
+   BUF  XLXI_11 (.I(buffinput[5]), 
+                .O(buffoutput[5]));
+   BUF  XLXI_12 (.I(buffinput[4]), 
+                .O(buffoutput[4]));
+   BUF  XLXI_13 (.I(buffinput[3]), 
+                .O(buffoutput[3]));
+   BUF  XLXI_14 (.I(buffinput[2]), 
+                .O(buffoutput[2]));
+   BUF  XLXI_15 (.I(buffinput[1]), 
+                .O(buffoutput[1]));
+   BUF  XLXI_16 (.I(buffinput[0]), 
+                .O(buffoutput[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module shiftr2_MUSER_Fial_Combine(insignal, 
+                                  shiftdecide, 
+                                  signalout);
+
+    input [11:0] insignal;
+    input shiftdecide;
+   output [15:0] signalout;
+   
+   wire [15:0] inpsign;
+   
+   bit16buffermodified_MUSER_Fial_Combine  XLXI_1 (.buffinput(insignal[11:0]), 
+                                                  .buffoutput(inpsign[15:0]));
+   AND2  XLXI_2 (.I0(shiftdecide), 
+                .I1(inpsign[1]), 
+                .O(signalout[2]));
+   AND2  XLXI_3 (.I0(shiftdecide), 
+                .I1(inpsign[2]), 
+                .O(signalout[3]));
+   AND2  XLXI_4 (.I0(shiftdecide), 
+                .I1(inpsign[3]), 
+                .O(signalout[4]));
+   AND2  XLXI_5 (.I0(shiftdecide), 
+                .I1(inpsign[4]), 
+                .O(signalout[5]));
+   AND2  XLXI_6 (.I0(shiftdecide), 
+                .I1(inpsign[5]), 
+                .O(signalout[6]));
+   AND2  XLXI_7 (.I0(shiftdecide), 
+                .I1(inpsign[6]), 
+                .O(signalout[7]));
+   AND2  XLXI_8 (.I0(shiftdecide), 
+                .I1(inpsign[7]), 
+                .O(signalout[8]));
+   AND2  XLXI_9 (.I0(shiftdecide), 
+                .I1(inpsign[8]), 
+                .O(signalout[9]));
+   AND2  XLXI_10 (.I0(shiftdecide), 
+                 .I1(inpsign[9]), 
+                 .O(signalout[10]));
+   AND2  XLXI_11 (.I0(shiftdecide), 
+                 .I1(inpsign[10]), 
+                 .O(signalout[11]));
+   AND2  XLXI_12 (.I0(shiftdecide), 
+                 .I1(inpsign[11]), 
+                 .O(signalout[12]));
+   AND2  XLXI_13 (.I0(shiftdecide), 
+                 .I1(inpsign[12]), 
+                 .O(signalout[13]));
+   AND2  XLXI_14 (.I0(shiftdecide), 
+                 .I1(inpsign[13]), 
+                 .O(signalout[14]));
+   AND2  XLXI_15 (.I0(shiftdecide), 
+                 .I1(inpsign[14]), 
+                 .O(signalout[15]));
+   AND2  XLXI_16 (.I0(shiftdecide), 
+                 .I1(inpsign[0]), 
+                 .O(signalout[1]));
+   GND  XLXI_18 (.G(signalout[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module addshiftr2_MUSER_Fial_Combine(bit0, 
+                                     bit1, 
+                                     InS, 
+                                     outputqam);
+
+    input bit0;
+    input bit1;
+    input [11:0] InS;
+   output [15:0] outputqam;
+   
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_4;
+   wire [15:0] XLXN_6;
+   wire [15:0] XLXN_8;
+   wire XLXN_10;
+   wire XLXN_12;
+   
+   bit16buffermodified_MUSER_Fial_Combine  XLXI_1 (.buffinput(InS[11:0]), 
+                                                  .buffoutput(XLXN_3[15:0]));
+   (* HU_SET = "XLXI_2_59" *) 
+   ADD16_MXILINX_Fial_Combine  XLXI_2 (.A(XLXN_6[15:0]), 
+                                      .B(XLXN_3[15:0]), 
+                                      .CI(XLXN_12), 
+                                      .CO(), 
+                                      .OFL(), 
+                                      .S(XLXN_4[15:0]));
+   (* HU_SET = "XLXI_4_60" *) 
+   ADSU16_MXILINX_Fial_Combine  XLXI_4 (.A(XLXN_8[15:0]), 
+                                       .ADD(bit1), 
+                                       .B(XLXN_4[15:0]), 
+                                       .CI(XLXN_10), 
+                                       .CO(), 
+                                       .OFL(), 
+                                       .S(outputqam[15:0]));
+   INV  XLXI_7 (.I(bit1), 
+               .O(XLXN_10));
+   shiftr2_MUSER_Fial_Combine  XLXI_8 (.insignal(InS[11:0]), 
+                                      .shiftdecide(bit0), 
+                                      .signalout(XLXN_6[15:0]));
+   gnd16bit_MUSER_Fial_Combine  XLXI_9 (.x_constant(XLXN_8[15:0]));
+   GND  XLXI_10 (.G(XLXN_12));
+endmodule
+`timescale 1ns / 1ps
+
+module CB2CE_MXILINX_Fial_Combine(C, 
+                                  CE, 
+                                  CLR, 
+                                  CEO, 
+                                  Q0, 
+                                  Q1, 
+                                  TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output TC;
+   
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_61" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(XLXN_1), 
+                                   .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_62" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(Q0_DUMMY), 
+                                   .Q(Q1_DUMMY));
+   AND2  I_36_37 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   VCC  I_36_47 (.P(XLXN_1));
+   AND2  I_36_52 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module bit4s_MUSER_Fial_Combine(clk_16, 
+                                inputsig, 
+                                a0, 
+                                a1, 
+                                b0, 
+                                b1);
+
+    input clk_16;
+    input inputsig;
+   output a0;
+   output a1;
+   output b0;
+   output b1;
+   
+   wire q1;
+   wire q2;
+   wire q3;
+   wire q4;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   FDC #( .INIT(1'b0) ) XLXI_5 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(inputsig), 
+               .Q(q1));
+   FDC #( .INIT(1'b0) ) XLXI_6 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(q1), 
+               .Q(q2));
+   FDC #( .INIT(1'b0) ) XLXI_7 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(q2), 
+               .Q(q3));
+   FDC #( .INIT(1'b0) ) XLXI_8 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(q3), 
+               .Q(q4));
+   GND  XLXI_9 (.G(XLXN_11));
+   (* HU_SET = "XLXI_10_63" *) 
+   CB2CE_MXILINX_Fial_Combine  XLXI_10 (.C(clk_16), 
+                                       .CE(XLXN_12), 
+                                       .CLR(XLXN_11), 
+                                       .CEO(), 
+                                       .Q0(XLXN_13), 
+                                       .Q1(XLXN_15), 
+                                       .TC());
+   VCC  XLXI_11 (.P(XLXN_12));
+   AND2  XLXI_12 (.I0(XLXN_15), 
+                 .I1(XLXN_13), 
+                 .O(XLXN_16));
+   FD #( .INIT(1'b0) ) XLXI_13 (.C(XLXN_16), 
+               .D(q1), 
+               .Q(a1));
+   FD #( .INIT(1'b0) ) XLXI_14 (.C(XLXN_16), 
+               .D(q2), 
+               .Q(a0));
+   FD #( .INIT(1'b0) ) XLXI_15 (.C(XLXN_16), 
+               .D(q3), 
+               .Q(b1));
+   FD #( .INIT(1'b0) ) XLXI_16 (.C(XLXN_16), 
+               .D(q4), 
+               .Q(b0));
+endmodule
+`timescale 1ns / 1ps
+
+module qamtheta_MUSER_Fial_Combine(clk_16, 
+                                   cos, 
+                                   inputsignal, 
+                                   sin, 
+                                   acos, 
+                                   bitsa, 
+                                   bitsb, 
+                                   bsin);
+
+    input clk_16;
+    input [11:0] cos;
+    input inputsignal;
+    input [11:0] sin;
+   output [15:0] acos;
+   output [1:0] bitsa;
+   output [1:0] bitsb;
+   output [15:0] bsin;
+   
+   wire [1:0] bitsa_DUMMY;
+   wire [1:0] bitsb_DUMMY;
+   
+   assign bitsa[1:0] = bitsa_DUMMY[1:0];
+   assign bitsb[1:0] = bitsb_DUMMY[1:0];
+   addshiftr2_MUSER_Fial_Combine  XLXI_1 (.bit0(bitsb_DUMMY[0]), 
+                                         .bit1(bitsb_DUMMY[1]), 
+                                         .InS(cos[11:0]), 
+                                         .outputqam(acos[15:0]));
+   bit4s_MUSER_Fial_Combine  XLXI_2 (.clk_16(clk_16), 
+                                    .inputsig(inputsignal), 
+                                    .a0(bitsa_DUMMY[0]), 
+                                    .a1(bitsa_DUMMY[1]), 
+                                    .b0(bitsb_DUMMY[0]), 
+                                    .b1(bitsb_DUMMY[1]));
+   addshiftr2_MUSER_Fial_Combine  XLXI_3 (.bit0(bitsa_DUMMY[0]), 
+                                         .bit1(bitsa_DUMMY[1]), 
+                                         .InS(sin[11:0]), 
+                                         .outputqam(bsin[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CE_MXILINX_Fial_Combine(C, 
+                                  CE, 
+                                  CLR, 
+                                  CEO, 
+                                  Q0, 
+                                  Q1, 
+                                  Q2, 
+                                  Q3, 
+                                  TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_64" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(XLXN_1), 
+                                   .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_65" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(Q0_DUMMY), 
+                                   .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_66" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T2), 
+                                   .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_67" *) 
+   FTCE_MXILINX_Fial_Combine #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T3), 
+                                   .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module bit16to12_MUSER_Fial_Combine(buffinput, 
+                                    buffoutput);
+
+    input [15:0] buffinput;
+   output [11:0] buffoutput;
+   
+   
+   BUF  XLXI_5 (.I(buffinput[11]), 
+               .O(buffoutput[11]));
+   BUF  XLXI_6 (.I(buffinput[10]), 
+               .O(buffoutput[10]));
+   BUF  XLXI_7 (.I(buffinput[9]), 
+               .O(buffoutput[9]));
+   BUF  XLXI_8 (.I(buffinput[8]), 
+               .O(buffoutput[8]));
+   BUF  XLXI_9 (.I(buffinput[7]), 
+               .O(buffoutput[7]));
+   BUF  XLXI_10 (.I(buffinput[6]), 
+                .O(buffoutput[6]));
+   BUF  XLXI_11 (.I(buffinput[5]), 
+                .O(buffoutput[5]));
+   BUF  XLXI_12 (.I(buffinput[4]), 
+                .O(buffoutput[4]));
+   BUF  XLXI_13 (.I(buffinput[3]), 
+                .O(buffoutput[3]));
+   BUF  XLXI_14 (.I(buffinput[2]), 
+                .O(buffoutput[2]));
+   BUF  XLXI_15 (.I(buffinput[1]), 
+                .O(buffoutput[1]));
+   BUF  XLXI_16 (.I(buffinput[0]), 
+                .O(buffoutput[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module FD16CE_MXILINX_Fial_Combine(C, 
+                                   CE, 
+                                   CLR, 
+                                   D, 
+                                   Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [15:0] D;
+   output [15:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+   FDCE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[8]), 
+              .Q(Q[8]));
+   FDCE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[9]), 
+              .Q(Q[9]));
+   FDCE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[10]), 
+               .Q(Q[10]));
+   FDCE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[11]), 
+               .Q(Q[11]));
+   FDCE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[12]), 
+               .Q(Q[12]));
+   FDCE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[13]), 
+               .Q(Q[13]));
+   FDCE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[14]), 
+               .Q(Q[14]));
+   FDCE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[15]), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module output_enable_MUSER_Fial_Combine(enable, 
+                                        IndataC, 
+                                        IndataS, 
+                                        OutdataC, 
+                                        OutdataS);
+
+    input enable;
+    input [11:0] IndataC;
+    input [11:0] IndataS;
+   output [11:0] OutdataC;
+   output [11:0] OutdataS;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire [15:0] XLXN_8;
+   wire [15:0] XLXN_9;
+   wire [15:0] XLXN_10;
+   wire [15:0] XLXN_11;
+   wire XLXN_14;
+   wire XLXN_15;
+   
+   (* HU_SET = "XLXI_1_68" *) 
+   FD16CE_MXILINX_Fial_Combine  XLXI_1 (.C(enable), 
+                                       .CE(XLXN_14), 
+                                       .CLR(XLXN_3), 
+                                       .D(XLXN_8[15:0]), 
+                                       .Q(XLXN_10[15:0]));
+   (* HU_SET = "XLXI_2_69" *) 
+   FD16CE_MXILINX_Fial_Combine  XLXI_2 (.C(enable), 
+                                       .CE(XLXN_15), 
+                                       .CLR(XLXN_2), 
+                                       .D(XLXN_9[15:0]), 
+                                       .Q(XLXN_11[15:0]));
+   GND  XLXI_3 (.G(XLXN_3));
+   GND  XLXI_4 (.G(XLXN_2));
+   bit16buffermodified_MUSER_Fial_Combine  XLXI_5 (.buffinput(IndataC[11:0]), 
+                                                  .buffoutput(XLXN_8[15:0]));
+   bit16buffermodified_MUSER_Fial_Combine  XLXI_6 (.buffinput(IndataS[11:0]), 
+                                                  .buffoutput(XLXN_9[15:0]));
+   bit16to12_MUSER_Fial_Combine  XLXI_7 (.buffinput(XLXN_10[15:0]), 
+                                        .buffoutput(OutdataC[11:0]));
+   bit16to12_MUSER_Fial_Combine  XLXI_8 (.buffinput(XLXN_11[15:0]), 
+                                        .buffoutput(OutdataS[11:0]));
+   VCC  XLXI_9 (.P(XLXN_14));
+   VCC  XLXI_10 (.P(XLXN_15));
+endmodule
+`timescale 1ns / 1ps
+
+module COMP4_MXILINX_Fial_Combine(A0, 
+                                  A1, 
+                                  A2, 
+                                  A3, 
+                                  B0, 
+                                  B1, 
+                                  B2, 
+                                  B3, 
+                                  EQ);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+   output EQ;
+   
+   wire AB0;
+   wire AB1;
+   wire AB2;
+   wire AB3;
+   
+   AND4  I_36_32 (.I0(AB3), 
+                 .I1(AB2), 
+                 .I2(AB1), 
+                 .I3(AB0), 
+                 .O(EQ));
+   XNOR2  I_36_33 (.I0(B2), 
+                  .I1(A2), 
+                  .O(AB2));
+   XNOR2  I_36_34 (.I0(B3), 
+                  .I1(A3), 
+                  .O(AB3));
+   XNOR2  I_36_42 (.I0(B1), 
+                  .I1(A1), 
+                  .O(AB1));
+   XNOR2  I_36_43 (.I0(B0), 
+                  .I1(A0), 
+                  .O(AB0));
+endmodule
+`timescale 1ns / 1ps
+
+module iteration_MUSER_Fial_Combine(clk, 
+                                    clk_enable_bar_inp, 
+                                    clk_en_bar_out, 
+                                    counter12);
+
+    input clk;
+    input clk_enable_bar_inp;
+   output clk_en_bar_out;
+   output [3:0] counter12;
+   
+   wire XLXN_35;
+   wire XLXN_42;
+   wire XLXN_51;
+   wire XLXN_52;
+   wire XLXN_53;
+   wire XLXN_55;
+   wire [3:0] counter12_DUMMY;
+   
+   assign counter12[3:0] = counter12_DUMMY[3:0];
+   (* HU_SET = "XLXI_10_70" *) 
+   CB4CE_MXILINX_Fial_Combine  XLXI_10 (.C(clk), 
+                                       .CE(XLXN_51), 
+                                       .CLR(XLXN_55), 
+                                       .CEO(), 
+                                       .Q0(counter12_DUMMY[0]), 
+                                       .Q1(counter12_DUMMY[1]), 
+                                       .Q2(counter12_DUMMY[2]), 
+                                       .Q3(counter12_DUMMY[3]), 
+                                       .TC());
+   (* HU_SET = "XLXI_11_71" *) 
+   COMP4_MXILINX_Fial_Combine  XLXI_11 (.A0(counter12_DUMMY[0]), 
+                                       .A1(counter12_DUMMY[1]), 
+                                       .A2(counter12_DUMMY[2]), 
+                                       .A3(counter12_DUMMY[3]), 
+                                       .B0(XLXN_42), 
+                                       .B1(XLXN_55), 
+                                       .B2(XLXN_42), 
+                                       .B3(XLXN_42), 
+                                       .EQ(XLXN_35));
+   VCC  XLXI_12 (.P(XLXN_42));
+   GND  XLXI_13 (.G(XLXN_55));
+   NOR2  XLXI_14 (.I0(clk_enable_bar_inp), 
+                 .I1(XLXN_52), 
+                 .O(XLXN_51));
+   GND  XLXI_15 (.G(XLXN_52));
+   NOR2  XLXI_16 (.I0(XLXN_53), 
+                 .I1(XLXN_35), 
+                 .O(clk_en_bar_out));
+   GND  XLXI_17 (.G(XLXN_53));
+endmodule
+`timescale 1ns / 1ps
+
+module LUTtable_MUSER_Fial_Combine(incr, 
+                                   LUToutput);
+
+    input [3:0] incr;
+   output [15:0] LUToutput;
+   
+   
+   LUT4 #( .INIT(16'h020E) ) XLXI_4 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[1]));
+   LUT4 #( .INIT(16'h040E) ) XLXI_5 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[0]));
+   LUT4 #( .INIT(16'h0109) ) XLXI_7 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[2]));
+   LUT4 #( .INIT(16'h008E) ) XLXI_8 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[3]));
+   LUT4 #( .INIT(16'h004E) ) XLXI_9 (.I0(incr[0]), 
+                .I1(incr[1]), 
+                .I2(incr[2]), 
+                .I3(incr[3]), 
+                .O(LUToutput[4]));
+   LUT4 #( .INIT(16'h002D) ) XLXI_10 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[5]));
+   LUT4 #( .INIT(16'h001E) ) XLXI_11 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[6]));
+   LUT4 #( .INIT(16'h0006) ) XLXI_12 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[7]));
+   LUT4 #( .INIT(16'h0003) ) XLXI_13 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[8]));
+   LUT4 #( .INIT(16'h0001) ) XLXI_14 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[9]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_15 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[10]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_16 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[11]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_17 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[12]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_18 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[13]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_19 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[14]));
+   LUT4 #( .INIT(16'h0000) ) XLXI_20 (.I0(incr[0]), 
+                 .I1(incr[1]), 
+                 .I2(incr[2]), 
+                 .I3(incr[3]), 
+                 .O(LUToutput[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module Z_register_MUSER_Fial_Combine(angle, 
+                                     clk, 
+                                     clk_enable, 
+                                     incr, 
+                                     initialize, 
+                                     signbit);
+
+    input [11:0] angle;
+    input clk;
+    input clk_enable;
+    input [3:0] incr;
+    input initialize;
+   output signbit;
+   
+   wire [15:0] q;
+   wire XLXN_14;
+   wire [15:0] XLXN_70;
+   wire [15:0] XLXN_111;
+   wire [15:0] XLXN_128;
+   wire [15:0] XLXN_130;
+   wire XLXN_133;
+   wire XLXN_135;
+   
+   (* HU_SET = "XLXI_1_72" *) 
+   ADSU16_MXILINX_Fial_Combine  XLXI_1 (.A(q[15:0]), 
+                                       .ADD(q[15]), 
+                                       .B(XLXN_111[15:0]), 
+                                       .CI(XLXN_133), 
+                                       .CO(), 
+                                       .OFL(), 
+                                       .S(XLXN_130[15:0]));
+   (* HU_SET = "XLXI_2_73" *) 
+   FD16CE_MXILINX_Fial_Combine  XLXI_2 (.C(clk), 
+                                       .CE(clk_enable), 
+                                       .CLR(XLXN_14), 
+                                       .D(XLXN_70[15:0]), 
+                                       .Q(q[15:0]));
+   GND  XLXI_3 (.G(XLXN_14));
+   Mux_2_16_MUSER_Fial_Combine  XLXI_15 (.Inp0(XLXN_130[15:0]), 
+                                        .Inp1(XLXN_128[15:0]), 
+                                        .S_0(initialize), 
+                                        .Output(XLXN_70[15:0]));
+   bit16buffermodified_MUSER_Fial_Combine  XLXI_26 (.buffinput(angle[11:0]), 
+                                                   .buffoutput(XLXN_128[15:0]));
+   LUTtable_MUSER_Fial_Combine  XLXI_27 (.incr(incr[3:0]), 
+                                        .LUToutput(XLXN_111[15:0]));
+   BUF  XLXI_32 (.I(q[15]), 
+                .O(signbit));
+   NOR2  XLXI_33 (.I0(q[15]), 
+                 .I1(XLXN_135), 
+                 .O(XLXN_133));
+   GND  XLXI_34 (.G(XLXN_135));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_Fial_Combine(D0, 
+                                 D1, 
+                                 S0, 
+                                 O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1E_MXILINX_Fial_Combine(D0, 
+                                  D1, 
+                                  E, 
+                                  S0, 
+                                  O);
+
+    input D0;
+    input D1;
+    input E;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND3  I_36_30 (.I0(D1), 
+                 .I1(E), 
+                 .I2(S0), 
+                 .O(M1));
+   AND3B1  I_36_31 (.I0(S0), 
+                   .I1(E), 
+                   .I2(D0), 
+                   .O(M0));
+   OR2  I_36_38 (.I0(M1), 
+                .I1(M0), 
+                .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module M16_1E_MXILINX_Fial_Combine(D0, 
+                                   D1, 
+                                   D2, 
+                                   D3, 
+                                   D4, 
+                                   D5, 
+                                   D6, 
+                                   D7, 
+                                   D8, 
+                                   D9, 
+                                   D10, 
+                                   D11, 
+                                   D12, 
+                                   D13, 
+                                   D14, 
+                                   D15, 
+                                   E, 
+                                   S0, 
+                                   S1, 
+                                   S2, 
+                                   S3, 
+                                   O);
+
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+    input D4;
+    input D5;
+    input D6;
+    input D7;
+    input D8;
+    input D9;
+    input D10;
+    input D11;
+    input D12;
+    input D13;
+    input D14;
+    input D15;
+    input E;
+    input S0;
+    input S1;
+    input S2;
+    input S3;
+   output O;
+   
+   wire MAB;
+   wire MBF;
+   wire MCD;
+   wire MCF;
+   wire MEF;
+   wire MO7;
+   wire M8B;
+   wire M01;
+   wire M03;
+   wire M23;
+   wire M45;
+   wire M47;
+   wire M67;
+   wire M89;
+   
+   (* HU_SET = "I_MAB_77" *) 
+   M2_1_MXILINX_Fial_Combine  I_MAB (.D0(D10), 
+                                    .D1(D11), 
+                                    .S0(S0), 
+                                    .O(MAB));
+   (* HU_SET = "I_MCD_76" *) 
+   M2_1_MXILINX_Fial_Combine  I_MCD (.D0(D12), 
+                                    .D1(D13), 
+                                    .S0(S0), 
+                                    .O(MCD));
+   MUXF5_L  I_MCF (.I0(MCD), 
+                  .I1(MEF), 
+                  .S(S1), 
+                  .LO(MCF));
+   (* HU_SET = "I_MEF_75" *) 
+   M2_1_MXILINX_Fial_Combine  I_MEF (.D0(D14), 
+                                    .D1(D15), 
+                                    .S0(S0), 
+                                    .O(MEF));
+   MUXF5_L  I_M8B (.I0(M89), 
+                  .I1(MAB), 
+                  .S(S1), 
+                  .LO(M8B));
+   MUXF6  I_M8F (.I0(M8B), 
+                .I1(MCF), 
+                .S(S2), 
+                .O(MBF));
+   (* HU_SET = "I_M01_82" *) 
+   M2_1_MXILINX_Fial_Combine  I_M01 (.D0(D0), 
+                                    .D1(D1), 
+                                    .S0(S0), 
+                                    .O(M01));
+   MUXF5_L  I_M03 (.I0(M01), 
+                  .I1(M23), 
+                  .S(S1), 
+                  .LO(M03));
+   MUXF6  I_M07 (.I0(M03), 
+                .I1(M47), 
+                .S(S2), 
+                .O(MO7));
+   (* HU_SET = "I_M23_81" *) 
+   M2_1_MXILINX_Fial_Combine  I_M23 (.D0(D2), 
+                                    .D1(D3), 
+                                    .S0(S0), 
+                                    .O(M23));
+   (* HU_SET = "I_M45_80" *) 
+   M2_1_MXILINX_Fial_Combine  I_M45 (.D0(D4), 
+                                    .D1(D5), 
+                                    .S0(S0), 
+                                    .O(M45));
+   MUXF5_L  I_M47 (.I0(M45), 
+                  .I1(M67), 
+                  .S(S1), 
+                  .LO(M47));
+   (* HU_SET = "I_M67_79" *) 
+   M2_1_MXILINX_Fial_Combine  I_M67 (.D0(D6), 
+                                    .D1(D7), 
+                                    .S0(S0), 
+                                    .O(M67));
+   (* HU_SET = "I_M89_78" *) 
+   M2_1_MXILINX_Fial_Combine  I_M89 (.D0(D8), 
+                                    .D1(D9), 
+                                    .S0(S0), 
+                                    .O(M89));
+   (* HU_SET = "I_O_74" *) 
+   M2_1E_MXILINX_Fial_Combine  I_O (.D0(MO7), 
+                                   .D1(MBF), 
+                                   .E(E), 
+                                   .S0(S3), 
+                                   .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module shifterhigh_MUSER_Fial_Combine(count, 
+                                      shiftinp, 
+                                      shiftout);
+
+    input [3:0] count;
+    input [11:0] shiftinp;
+   output [5:0] shiftout;
+   
+   wire XLXN_149;
+   wire XLXN_150;
+   wire XLXN_151;
+   wire XLXN_153;
+   wire XLXN_154;
+   wire XLXN_155;
+   
+   (* HU_SET = "XLXI_1_83" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_1 (.D0(shiftinp[6]), 
+                                       .D1(shiftinp[7]), 
+                                       .D2(shiftinp[8]), 
+                                       .D3(shiftinp[9]), 
+                                       .D4(shiftinp[10]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_155), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[0]));
+   (* HU_SET = "XLXI_2_84" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_2 (.D0(shiftinp[7]), 
+                                       .D1(shiftinp[8]), 
+                                       .D2(shiftinp[9]), 
+                                       .D3(shiftinp[10]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_149), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[1]));
+   (* HU_SET = "XLXI_3_85" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_3 (.D0(shiftinp[8]), 
+                                       .D1(shiftinp[9]), 
+                                       .D2(shiftinp[10]), 
+                                       .D3(shiftinp[11]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_150), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[2]));
+   (* HU_SET = "XLXI_4_86" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_4 (.D0(shiftinp[9]), 
+                                       .D1(shiftinp[10]), 
+                                       .D2(shiftinp[11]), 
+                                       .D3(shiftinp[11]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_151), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[3]));
+   (* HU_SET = "XLXI_5_87" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_5 (.D0(shiftinp[10]), 
+                                       .D1(shiftinp[11]), 
+                                       .D2(shiftinp[11]), 
+                                       .D3(shiftinp[11]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_153), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[4]));
+   (* HU_SET = "XLXI_6_88" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_6 (.D0(shiftinp[11]), 
+                                       .D1(shiftinp[11]), 
+                                       .D2(shiftinp[11]), 
+                                       .D3(shiftinp[11]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_154), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[5]));
+   VCC  XLXI_7 (.P(XLXN_149));
+   VCC  XLXI_8 (.P(XLXN_150));
+   VCC  XLXI_9 (.P(XLXN_151));
+   VCC  XLXI_10 (.P(XLXN_153));
+   VCC  XLXI_11 (.P(XLXN_154));
+   VCC  XLXI_12 (.P(XLXN_155));
+endmodule
+`timescale 1ns / 1ps
+
+module shifter_MUSER_Fial_Combine(count, 
+                                  shiftinp, 
+                                  shiftout);
+
+    input [3:0] count;
+    input [11:0] shiftinp;
+   output [5:0] shiftout;
+   
+   wire XLXN_164;
+   wire XLXN_165;
+   wire XLXN_166;
+   wire XLXN_167;
+   wire XLXN_168;
+   wire XLXN_169;
+   
+   (* HU_SET = "XLXI_1_89" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_1 (.D0(shiftinp[0]), 
+                                       .D1(shiftinp[1]), 
+                                       .D2(shiftinp[2]), 
+                                       .D3(shiftinp[3]), 
+                                       .D4(shiftinp[4]), 
+                                       .D5(shiftinp[5]), 
+                                       .D6(shiftinp[6]), 
+                                       .D7(shiftinp[7]), 
+                                       .D8(shiftinp[8]), 
+                                       .D9(shiftinp[9]), 
+                                       .D10(shiftinp[10]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_169), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[0]));
+   (* HU_SET = "XLXI_2_90" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_2 (.D0(shiftinp[2]), 
+                                       .D1(shiftinp[3]), 
+                                       .D2(shiftinp[4]), 
+                                       .D3(shiftinp[5]), 
+                                       .D4(shiftinp[6]), 
+                                       .D5(shiftinp[7]), 
+                                       .D6(shiftinp[8]), 
+                                       .D7(shiftinp[9]), 
+                                       .D8(shiftinp[10]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_165), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[2]));
+   (* HU_SET = "XLXI_3_91" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_3 (.D0(shiftinp[1]), 
+                                       .D1(shiftinp[2]), 
+                                       .D2(shiftinp[3]), 
+                                       .D3(shiftinp[4]), 
+                                       .D4(shiftinp[5]), 
+                                       .D5(shiftinp[6]), 
+                                       .D6(shiftinp[7]), 
+                                       .D7(shiftinp[8]), 
+                                       .D8(shiftinp[9]), 
+                                       .D9(shiftinp[10]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_164), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[1]));
+   (* HU_SET = "XLXI_4_92" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_4 (.D0(shiftinp[3]), 
+                                       .D1(shiftinp[4]), 
+                                       .D2(shiftinp[5]), 
+                                       .D3(shiftinp[6]), 
+                                       .D4(shiftinp[7]), 
+                                       .D5(shiftinp[8]), 
+                                       .D6(shiftinp[9]), 
+                                       .D7(shiftinp[10]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_166), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[3]));
+   (* HU_SET = "XLXI_5_93" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_5 (.D0(shiftinp[4]), 
+                                       .D1(shiftinp[5]), 
+                                       .D2(shiftinp[6]), 
+                                       .D3(shiftinp[7]), 
+                                       .D4(shiftinp[8]), 
+                                       .D5(shiftinp[9]), 
+                                       .D6(shiftinp[10]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_167), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[4]));
+   (* HU_SET = "XLXI_6_94" *) 
+   M16_1E_MXILINX_Fial_Combine  XLXI_6 (.D0(shiftinp[5]), 
+                                       .D1(shiftinp[6]), 
+                                       .D2(shiftinp[7]), 
+                                       .D3(shiftinp[8]), 
+                                       .D4(shiftinp[9]), 
+                                       .D5(shiftinp[10]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_168), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[5]));
+   VCC  XLXI_8 (.P(XLXN_164));
+   VCC  XLXI_9 (.P(XLXN_165));
+   VCC  XLXI_10 (.P(XLXN_166));
+   VCC  XLXI_11 (.P(XLXN_167));
+   VCC  XLXI_12 (.P(XLXN_168));
+   VCC  XLXI_13 (.P(XLXN_169));
+endmodule
+`timescale 1ns / 1ps
+
+module shifter_full_MUSER_Fial_Combine(counter, 
+                                       input_shift, 
+                                       output_shift);
+
+    input [3:0] counter;
+    input [11:0] input_shift;
+   output [11:0] output_shift;
+   
+   wire [5:0] highbit;
+   wire [5:0] lowbit;
+   
+   shifter_MUSER_Fial_Combine  XLXI_3 (.count(counter[3:0]), 
+                                      .shiftinp(input_shift[11:0]), 
+                                      .shiftout(lowbit[5:0]));
+   BUF  XLXI_5 (.I(lowbit[0]), 
+               .O(output_shift[0]));
+   BUF  XLXI_6 (.I(lowbit[1]), 
+               .O(output_shift[1]));
+   BUF  XLXI_7 (.I(lowbit[2]), 
+               .O(output_shift[2]));
+   BUF  XLXI_8 (.I(lowbit[3]), 
+               .O(output_shift[3]));
+   BUF  XLXI_9 (.I(lowbit[4]), 
+               .O(output_shift[4]));
+   BUF  XLXI_10 (.I(lowbit[5]), 
+                .O(output_shift[5]));
+   shifterhigh_MUSER_Fial_Combine  XLXI_18 (.count(counter[3:0]), 
+                                           .shiftinp(input_shift[11:0]), 
+                                           .shiftout(highbit[5:0]));
+   BUF  XLXI_19 (.I(highbit[0]), 
+                .O(output_shift[6]));
+   BUF  XLXI_20 (.I(highbit[1]), 
+                .O(output_shift[7]));
+   BUF  XLXI_21 (.I(highbit[2]), 
+                .O(output_shift[8]));
+   BUF  XLXI_22 (.I(highbit[3]), 
+                .O(output_shift[9]));
+   BUF  XLXI_23 (.I(highbit[4]), 
+                .O(output_shift[10]));
+   BUF  XLXI_24 (.I(highbit[5]), 
+                .O(output_shift[11]));
+endmodule
+`timescale 1ns / 1ps
+
+module y_initial_MUSER_Fial_Combine(x_constant);
+
+   output [15:0] x_constant;
+   
+   wire XLXN_35;
+   wire XLXN_48;
+   wire XLXN_67;
+   wire XLXN_68;
+   
+   GND  XLXI_1 (.G(XLXN_67));
+   BUF  XLXI_2 (.I(XLXN_35), 
+               .O(x_constant[0]));
+   BUF  XLXI_3 (.I(XLXN_35), 
+               .O(x_constant[1]));
+   BUF  XLXI_4 (.I(XLXN_35), 
+               .O(x_constant[2]));
+   GND  XLXI_5 (.G(XLXN_35));
+   BUF  XLXI_7 (.I(XLXN_35), 
+               .O(x_constant[3]));
+   GND  XLXI_8 (.G(XLXN_48));
+   BUF  XLXI_9 (.I(XLXN_48), 
+               .O(x_constant[4]));
+   GND  XLXI_11 (.G(XLXN_68));
+   BUF  XLXI_24 (.I(XLXN_68), 
+                .O(x_constant[5]));
+   BUF  XLXI_25 (.I(XLXN_68), 
+                .O(x_constant[6]));
+   BUF  XLXI_26 (.I(XLXN_68), 
+                .O(x_constant[7]));
+   BUF  XLXI_27 (.I(XLXN_68), 
+                .O(x_constant[8]));
+   BUF  XLXI_28 (.I(XLXN_68), 
+                .O(x_constant[9]));
+   BUF  XLXI_29 (.I(XLXN_67), 
+                .O(x_constant[10]));
+   BUF  XLXI_30 (.I(XLXN_67), 
+                .O(x_constant[11]));
+   BUF  XLXI_31 (.I(XLXN_67), 
+                .O(x_constant[12]));
+   BUF  XLXI_32 (.I(XLXN_67), 
+                .O(x_constant[13]));
+   BUF  XLXI_33 (.I(XLXN_67), 
+                .O(x_constant[14]));
+   BUF  XLXI_34 (.I(XLXN_67), 
+                .O(x_constant[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module x_initial_MUSER_Fial_Combine(x_constant);
+
+   output [15:0] x_constant;
+   
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_48;
+   wire XLXN_50;
+   wire XLXN_53;
+   wire XLXN_67;
+   wire XLXN_68;
+   
+   GND  XLXI_1 (.G(XLXN_67));
+   BUF  XLXI_2 (.I(XLXN_35), 
+               .O(x_constant[0]));
+   BUF  XLXI_3 (.I(XLXN_36), 
+               .O(x_constant[1]));
+   BUF  XLXI_4 (.I(XLXN_36), 
+               .O(x_constant[2]));
+   GND  XLXI_5 (.G(XLXN_35));
+   VCC  XLXI_6 (.P(XLXN_36));
+   BUF  XLXI_7 (.I(XLXN_36), 
+               .O(x_constant[3]));
+   GND  XLXI_8 (.G(XLXN_48));
+   BUF  XLXI_9 (.I(XLXN_48), 
+               .O(x_constant[4]));
+   VCC  XLXI_10 (.P(XLXN_50));
+   GND  XLXI_11 (.G(XLXN_53));
+   VCC  XLXI_16 (.P(XLXN_68));
+   BUF  XLXI_24 (.I(XLXN_50), 
+                .O(x_constant[5]));
+   BUF  XLXI_25 (.I(XLXN_50), 
+                .O(x_constant[6]));
+   BUF  XLXI_26 (.I(XLXN_53), 
+                .O(x_constant[7]));
+   BUF  XLXI_27 (.I(XLXN_53), 
+                .O(x_constant[8]));
+   BUF  XLXI_28 (.I(XLXN_68), 
+                .O(x_constant[9]));
+   BUF  XLXI_29 (.I(XLXN_67), 
+                .O(x_constant[10]));
+   BUF  XLXI_30 (.I(XLXN_67), 
+                .O(x_constant[11]));
+   BUF  XLXI_31 (.I(XLXN_67), 
+                .O(x_constant[12]));
+   BUF  XLXI_32 (.I(XLXN_67), 
+                .O(x_constant[13]));
+   BUF  XLXI_33 (.I(XLXN_67), 
+                .O(x_constant[14]));
+   BUF  XLXI_34 (.I(XLXN_67), 
+                .O(x_constant[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module SineCosine_MUSER_Fial_Combine(clk, 
+                                     clk_enable, 
+                                     incr, 
+                                     initialize, 
+                                     sign, 
+                                     cosine, 
+                                     sine);
+
+    input clk;
+    input clk_enable;
+    input [3:0] incr;
+    input initialize;
+    input sign;
+   output [11:0] cosine;
+   output [11:0] sine;
+   
+   wire [15:0] add_su;
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_5;
+   wire [11:0] XLXN_6;
+   wire [15:0] XLXN_11;
+   wire [15:0] XLXN_14;
+   wire XLXN_31;
+   wire XLXN_40;
+   wire XLXN_41;
+   wire [15:0] XLXN_53;
+   wire [15:0] XLXN_56;
+   wire [15:0] XLXN_57;
+   wire [15:0] XLXN_60;
+   wire [11:0] XLXN_61;
+   wire XLXN_62;
+   wire [11:0] sine_DUMMY;
+   wire [11:0] cosine_DUMMY;
+   
+   assign cosine[11:0] = cosine_DUMMY[11:0];
+   assign sine[11:0] = sine_DUMMY[11:0];
+   Mux_2_16_MUSER_Fial_Combine  XLXI_1 (.Inp0(add_su[15:0]), 
+                                       .Inp1(XLXN_53[15:0]), 
+                                       .S_0(initialize), 
+                                       .Output(XLXN_14[15:0]));
+   (* HU_SET = "XLXI_4_95" *) 
+   FD16CE_MXILINX_Fial_Combine  XLXI_4 (.C(clk), 
+                                       .CE(clk_enable), 
+                                       .CLR(XLXN_40), 
+                                       .D(XLXN_14[15:0]), 
+                                       .Q(XLXN_56[15:0]));
+   (* HU_SET = "XLXI_5_96" *) 
+   ADSU16_MXILINX_Fial_Combine  XLXI_5 (.A(XLXN_56[15:0]), 
+                                       .ADD(sign), 
+                                       .B(XLXN_3[15:0]), 
+                                       .CI(XLXN_62), 
+                                       .CO(), 
+                                       .OFL(), 
+                                       .S(add_su[15:0]));
+   bit16buffermodified_MUSER_Fial_Combine  XLXI_7 (.buffinput(XLXN_6[11:0]), 
+                                                  .buffoutput(XLXN_3[15:0]));
+   (* HU_SET = "XLXI_8_97" *) 
+   ADSU16_MXILINX_Fial_Combine  XLXI_8 (.A(XLXN_57[15:0]), 
+                                       .ADD(XLXN_62), 
+                                       .B(XLXN_1[15:0]), 
+                                       .CI(sign), 
+                                       .CO(), 
+                                       .OFL(), 
+                                       .S(XLXN_5[15:0]));
+   NOR2  XLXI_10 (.I0(XLXN_31), 
+                 .I1(sign), 
+                 .O(XLXN_62));
+   (* HU_SET = "XLXI_13_98" *) 
+   FD16CE_MXILINX_Fial_Combine  XLXI_13 (.C(clk), 
+                                        .CE(clk_enable), 
+                                        .CLR(XLXN_41), 
+                                        .D(XLXN_11[15:0]), 
+                                        .Q(XLXN_57[15:0]));
+   Mux_2_16_MUSER_Fial_Combine  XLXI_14 (.Inp0(XLXN_5[15:0]), 
+                                        .Inp1(XLXN_60[15:0]), 
+                                        .S_0(initialize), 
+                                        .Output(XLXN_11[15:0]));
+   GND  XLXI_15 (.G(XLXN_41));
+   GND  XLXI_16 (.G(XLXN_40));
+   x_initial_MUSER_Fial_Combine  XLXI_28 (.x_constant(XLXN_53[15:0]));
+   bit16to12_MUSER_Fial_Combine  XLXI_30 (.buffinput(XLXN_57[15:0]), 
+                                         .buffoutput(cosine_DUMMY[11:0]));
+   bit16to12_MUSER_Fial_Combine  XLXI_31 (.buffinput(XLXN_56[15:0]), 
+                                         .buffoutput(sine_DUMMY[11:0]));
+   y_initial_MUSER_Fial_Combine  XLXI_32 (.x_constant(XLXN_60[15:0]));
+   shifter_full_MUSER_Fial_Combine  XLXI_35 (.counter(incr[3:0]), 
+                                            .input_shift(cosine_DUMMY[11:0]), 
+                                            .output_shift(XLXN_6[11:0]));
+   shifter_full_MUSER_Fial_Combine  XLXI_36 (.counter(incr[3:0]), 
+                                            .input_shift(sine_DUMMY[11:0]), 
+                                            .output_shift(XLXN_61[11:0]));
+   bit16buffermodified_MUSER_Fial_Combine  XLXI_37 (.buffinput(XLXN_61[11:0]), 
+                                                   .buffoutput(XLXN_1[15:0]));
+   GND  XLXI_38 (.G(XLXN_31));
+endmodule
+`timescale 1ns / 1ps
+
+module final_block_MUSER_Fial_Combine(clk_n, 
+                                      inputangle, 
+                                      inputsignal, 
+                                      inp_clk, 
+                                      acos, 
+                                      bsin, 
+                                      cosine, 
+                                      initialize, 
+                                      invclk, 
+                                      iter, 
+                                      sine);
+
+    input clk_n;
+    input [11:0] inputangle;
+    input inputsignal;
+    input inp_clk;
+   output [15:0] acos;
+   output [15:0] bsin;
+   output [11:0] cosine;
+   output initialize;
+   output invclk;
+   output [3:0] iter;
+   output [11:0] sine;
+   
+   wire XLXN_4;
+   wire XLXN_11;
+   wire [11:0] XLXN_15;
+   wire [11:0] XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_25;
+   wire [11:0] sine_DUMMY;
+   wire [11:0] cosine_DUMMY;
+   wire initialize_DUMMY;
+   wire [3:0] iter_DUMMY;
+   wire invclk_DUMMY;
+   
+   assign cosine[11:0] = cosine_DUMMY[11:0];
+   assign initialize = initialize_DUMMY;
+   assign invclk = invclk_DUMMY;
+   assign iter[3:0] = iter_DUMMY[3:0];
+   assign sine[11:0] = sine_DUMMY[11:0];
+   SineCosine_MUSER_Fial_Combine  XLXI_1 (.clk(inp_clk), 
+                                         .clk_enable(XLXN_11), 
+                                         .incr(iter_DUMMY[3:0]), 
+                                         .initialize(initialize_DUMMY), 
+                                         .sign(XLXN_4), 
+                                         .cosine(XLXN_16[11:0]), 
+                                         .sine(XLXN_15[11:0]));
+   Z_register_MUSER_Fial_Combine  XLXI_2 (.angle(inputangle[11:0]), 
+                                         .clk(inp_clk), 
+                                         .clk_enable(XLXN_11), 
+                                         .incr(iter_DUMMY[3:0]), 
+                                         .initialize(initialize_DUMMY), 
+                                         .signbit(XLXN_4));
+   iteration_MUSER_Fial_Combine  XLXI_4 (.clk(inp_clk), 
+                                        .clk_enable_bar_inp(XLXN_25), 
+                                        .clk_en_bar_out(XLXN_11), 
+                                        .counter12(iter_DUMMY[3:0]));
+   output_enable_MUSER_Fial_Combine  XLXI_5 (.enable(XLXN_11), 
+                                            .IndataC(XLXN_15[11:0]), 
+                                            .IndataS(XLXN_16[11:0]), 
+                                            .OutdataC(cosine_DUMMY[11:0]), 
+                                            .OutdataS(sine_DUMMY[11:0]));
+   (* HU_SET = "XLXI_6_99" *) 
+   CB4CE_MXILINX_Fial_Combine  XLXI_6 (.C(invclk_DUMMY), 
+                                      .CE(XLXN_22), 
+                                      .CLR(XLXN_21), 
+                                      .CEO(), 
+                                      .Q0(XLXN_17), 
+                                      .Q1(XLXN_18), 
+                                      .Q2(XLXN_19), 
+                                      .Q3(XLXN_20), 
+                                      .TC());
+   AND4  XLXI_7 (.I0(XLXN_20), 
+                .I1(XLXN_19), 
+                .I2(XLXN_18), 
+                .I3(XLXN_17), 
+                .O(initialize_DUMMY));
+   GND  XLXI_8 (.G(XLXN_21));
+   VCC  XLXI_9 (.P(XLXN_22));
+   INV  XLXI_10 (.I(inp_clk), 
+                .O(invclk_DUMMY));
+   GND  XLXI_11 (.G(XLXN_25));
+   qamtheta_MUSER_Fial_Combine  XLXI_12 (.clk_16(clk_n), 
+                                        .cos(cosine_DUMMY[11:0]), 
+                                        .inputsignal(inputsignal), 
+                                        .sin(sine_DUMMY[11:0]), 
+                                        .acos(acos[15:0]), 
+                                        .bitsa(), 
+                                        .bitsb(), 
+                                        .bsin(bsin[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module FD16RE_MXILINX_Fial_Combine(C, 
+                                   CE, 
+                                   D, 
+                                   R, 
+                                   Q);
+
+    input C;
+    input CE;
+    input [15:0] D;
+    input R;
+   output [15:0] Q;
+   
+   
+   FDRE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .D(D[0]), 
+              .R(R), 
+              .Q(Q[0]));
+   FDRE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .D(D[1]), 
+              .R(R), 
+              .Q(Q[1]));
+   FDRE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .D(D[2]), 
+              .R(R), 
+              .Q(Q[2]));
+   FDRE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .D(D[3]), 
+              .R(R), 
+              .Q(Q[3]));
+   FDRE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .D(D[4]), 
+              .R(R), 
+              .Q(Q[4]));
+   FDRE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .D(D[5]), 
+              .R(R), 
+              .Q(Q[5]));
+   FDRE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .D(D[6]), 
+              .R(R), 
+              .Q(Q[6]));
+   FDRE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .D(D[7]), 
+              .R(R), 
+              .Q(Q[7]));
+   FDRE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .D(D[8]), 
+              .R(R), 
+              .Q(Q[8]));
+   FDRE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .D(D[9]), 
+              .R(R), 
+              .Q(Q[9]));
+   FDRE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .D(D[10]), 
+               .R(R), 
+               .Q(Q[10]));
+   FDRE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .D(D[11]), 
+               .R(R), 
+               .Q(Q[11]));
+   FDRE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .D(D[12]), 
+               .R(R), 
+               .Q(Q[12]));
+   FDRE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .D(D[13]), 
+               .R(R), 
+               .Q(Q[13]));
+   FDRE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .D(D[14]), 
+               .R(R), 
+               .Q(Q[14]));
+   FDRE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .D(D[15]), 
+               .R(R), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module NOR16_MXILINX_Fial_Combine(I0, 
+                                  I1, 
+                                  I2, 
+                                  I3, 
+                                  I4, 
+                                  I5, 
+                                  I6, 
+                                  I7, 
+                                  I8, 
+                                  I9, 
+                                  I10, 
+                                  I11, 
+                                  I12, 
+                                  I13, 
+                                  I14, 
+                                  I15, 
+                                  O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+    input I8;
+    input I9;
+    input I10;
+    input I11;
+    input I12;
+    input I13;
+    input I14;
+    input I15;
+   output O;
+   
+   wire CIN;
+   wire C0;
+   wire C1;
+   wire C2;
+   wire S0;
+   wire S1;
+   wire S2;
+   wire S3;
+   wire XLXN_46;
+   
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_2 (.CI(CIN), 
+                   .DI(XLXN_46), 
+                   .S(S0), 
+                   .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_29 (.I1(I0), 
+                 .I2(I1), 
+                 .I3(I2), 
+                 .I4(I3), 
+                 .O(S0));
+   VCC  I_36_107 (.P(CIN));
+   GND  I_36_109 (.G(XLXN_46));
+   NOR4  I_36_110 (.I0(I0), 
+                  .I1(I1), 
+                  .I2(I2), 
+                  .I3(I3), 
+                  .O(S0));
+   NOR4  I_36_127 (.I0(I4), 
+                  .I1(I5), 
+                  .I2(I6), 
+                  .I3(I7), 
+                  .O(S1));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_129 (.CI(C0), 
+                     .DI(XLXN_46), 
+                     .S(S1), 
+                     .LO(C1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_138 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_142 (.I1(I8), 
+                  .I2(I9), 
+                  .I3(I10), 
+                  .I4(I11), 
+                  .O(S2));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_147 (.CI(C1), 
+                     .DI(XLXN_46), 
+                     .S(S2), 
+                     .LO(C2));
+   NOR4  I_36_151 (.I0(I8), 
+                  .I1(I9), 
+                  .I2(I10), 
+                  .I3(I11), 
+                  .O(S2));
+   NOR4  I_36_161 (.I0(I12), 
+                  .I1(I13), 
+                  .I2(I14), 
+                  .I3(I15), 
+                  .O(S3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY  I_36_165 (.CI(C2), 
+                   .DI(XLXN_46), 
+                   .S(S3), 
+                   .O(O));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_170 (.I1(I12), 
+                  .I2(I13), 
+                  .I3(I14), 
+                  .I4(I15), 
+                  .O(S3));
+endmodule
+`timescale 1ns / 1ps
+
+module Counter_12_MUSER_Fial_Combine(CLK, 
+                                     CLR, 
+                                     C10, 
+                                     C11, 
+                                     XLXN_2);
+
+    input CLK;
+   output CLR;
+   output C10;
+   output C11;
+   output [15:0] XLXN_2;
+   
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_39;
+   wire XLXN_40;
+   wire XLXN_43;
+   wire [15:0] XLXN_2_DUMMY;
+   
+   assign XLXN_2[15:0] = XLXN_2_DUMMY[15:0];
+   (* HU_SET = "XLXI_1_100" *) 
+   CB16CE_MXILINX_Fial_Combine  XLXI_1 (.C(CLK), 
+                                       .CE(XLXN_39), 
+                                       .CLR(XLXN_40), 
+                                       .CEO(), 
+                                       .Q(XLXN_2_DUMMY[15:0]), 
+                                       .TC());
+   (* HU_SET = "XLXI_2_101" *) 
+   NOR16_MXILINX_Fial_Combine  XLXI_2 (.I0(XLXN_23), 
+                                      .I1(XLXN_24), 
+                                      .I2(XLXN_25), 
+                                      .I3(XLXN_26), 
+                                      .I4(XLXN_43), 
+                                      .I5(XLXN_2_DUMMY[10]), 
+                                      .I6(XLXN_2_DUMMY[9]), 
+                                      .I7(XLXN_2_DUMMY[8]), 
+                                      .I8(XLXN_2_DUMMY[7]), 
+                                      .I9(XLXN_2_DUMMY[6]), 
+                                      .I10(XLXN_2_DUMMY[5]), 
+                                      .I11(XLXN_2_DUMMY[4]), 
+                                      .I12(XLXN_2_DUMMY[3]), 
+                                      .I13(XLXN_2_DUMMY[2]), 
+                                      .I14(XLXN_2_DUMMY[1]), 
+                                      .I15(XLXN_2_DUMMY[0]), 
+                                      .O(CLR));
+   GND  XLXI_3 (.G(XLXN_23));
+   GND  XLXI_4 (.G(XLXN_24));
+   GND  XLXI_5 (.G(XLXN_25));
+   GND  XLXI_6 (.G(XLXN_26));
+   BUF  XLXI_7 (.I(XLXN_2_DUMMY[11]), 
+               .O(C11));
+   BUF  XLXI_9 (.I(XLXN_2_DUMMY[10]), 
+               .O(C10));
+   VCC  XLXI_10 (.P(XLXN_39));
+   GND  XLXI_11 (.G(XLXN_40));
+   INV  XLXI_12 (.I(XLXN_2_DUMMY[11]), 
+                .O(XLXN_43));
+endmodule
+`timescale 1ns / 1ps
+
+module anglecounter_MUSER_Fial_Combine(CLK_16, 
+                                       countclk, 
+                                       OUTF, 
+                                       Quad_Change);
+
+    input CLK_16;
+   output [15:0] countclk;
+   output [11:0] OUTF;
+   output Quad_Change;
+   
+   wire [15:0] OTP;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire [15:0] XLXN_37;
+   wire [15:0] XLXN_39;
+   wire [15:0] XLXN_40;
+   wire [15:0] XLXN_42;
+   wire [15:0] XLXN_43;
+   wire XLXN_44;
+   wire XLXN_45;
+   wire [15:0] XLXN_47;
+   wire [15:0] XLXN_68;
+   wire [15:0] XLXN_69;
+   wire XLXN_90;
+   wire XLXN_94;
+   wire XLXN_96;
+   wire XLXN_98;
+   wire XLXN_100;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_103;
+   wire XLXN_104;
+   wire XLXN_108;
+   wire XLXN_109;
+   wire XLXN_110;
+   wire XLXN_112;
+   
+   Counter_12_MUSER_Fial_Combine  XLXI_10 (.CLK(XLXN_36), 
+                                          .CLR(XLXN_112), 
+                                          .C10(XLXN_34), 
+                                          .C11(XLXN_35), 
+                                          .XLXN_2(countclk[15:0]));
+   XOR2  XLXI_11 (.I0(XLXN_34), 
+                 .I1(XLXN_35), 
+                 .O(Quad_Change));
+   (* HU_SET = "XLXI_13_102" *) 
+   ADD16_MXILINX_Fial_Combine  XLXI_13 (.A(XLXN_40[15:0]), 
+                                       .B(XLXN_39[15:0]), 
+                                       .CI(XLXN_45), 
+                                       .CO(XLXN_44), 
+                                       .OFL(), 
+                                       .S(XLXN_37[15:0]));
+   (* HU_SET = "XLXI_15_103" *) 
+   ADD16_MXILINX_Fial_Combine  XLXI_15 (.A(XLXN_43[15:0]), 
+                                       .B(XLXN_47[15:0]), 
+                                       .CI(XLXN_44), 
+                                       .CO(), 
+                                       .OFL(), 
+                                       .S(XLXN_42[15:0]));
+   GND  XLXI_17 (.G(XLXN_45));
+   gnd16bit_MUSER_Fial_Combine  XLXI_24 (.x_constant(XLXN_47[15:0]));
+   GND  XLXI_26 (.G(XLXN_40[2]));
+   GND  XLXI_27 (.G(XLXN_40[3]));
+   GND  XLXI_28 (.G(XLXN_40[5]));
+   GND  XLXI_29 (.G(XLXN_40[6]));
+   GND  XLXI_30 (.G(XLXN_40[9]));
+   GND  XLXI_31 (.G(XLXN_40[10]));
+   GND  XLXI_32 (.G(XLXN_40[11]));
+   GND  XLXI_33 (.G(XLXN_40[12]));
+   GND  XLXI_34 (.G(XLXN_40[13]));
+   GND  XLXI_35 (.G(XLXN_40[14]));
+   GND  XLXI_36 (.G(XLXN_40[15]));
+   VCC  XLXI_37 (.P(XLXN_40[8]));
+   VCC  XLXI_38 (.P(XLXN_40[1]));
+   VCC  XLXI_39 (.P(XLXN_40[4]));
+   BUF  XLXI_43 (.I(XLXN_39[8]), 
+                .O(OTP[0]));
+   BUF  XLXI_44 (.I(XLXN_39[9]), 
+                .O(OTP[1]));
+   BUF  XLXI_45 (.I(XLXN_39[10]), 
+                .O(OTP[2]));
+   BUF  XLXI_46 (.I(XLXN_39[11]), 
+                .O(OTP[3]));
+   BUF  XLXI_47 (.I(XLXN_39[12]), 
+                .O(OTP[4]));
+   BUF  XLXI_48 (.I(XLXN_39[13]), 
+                .O(OTP[5]));
+   BUF  XLXI_49 (.I(XLXN_39[14]), 
+                .O(OTP[6]));
+   BUF  XLXI_50 (.I(XLXN_39[15]), 
+                .O(OTP[7]));
+   BUF  XLXI_51 (.I(XLXN_43[0]), 
+                .O(OTP[8]));
+   BUF  XLXI_52 (.I(XLXN_43[1]), 
+                .O(OTP[9]));
+   BUF  XLXI_53 (.I(XLXN_43[2]), 
+                .O(OTP[10]));
+   BUF  XLXI_54 (.I(XLXN_43[3]), 
+                .O(OTP[11]));
+   (* HU_SET = "XLXI_55_104" *) 
+   CB4CE_MXILINX_Fial_Combine  XLXI_55 (.C(CLK_16), 
+                                       .CE(XLXN_101), 
+                                       .CLR(XLXN_104), 
+                                       .CEO(), 
+                                       .Q0(), 
+                                       .Q1(), 
+                                       .Q2(), 
+                                       .Q3(XLXN_36), 
+                                       .TC());
+   (* HU_SET = "XLXI_59_105" *) 
+   ADD16_MXILINX_Fial_Combine  XLXI_59 (.A(XLXN_68[15:0]), 
+                                       .B(OTP[15:0]), 
+                                       .CI(XLXN_100), 
+                                       .CO(), 
+                                       .OFL(), 
+                                       .S(XLXN_69[15:0]));
+   bit16to12_MUSER_Fial_Combine  XLXI_60 (.buffinput(XLXN_69[15:0]), 
+                                         .buffoutput(OUTF[11:0]));
+   AND2  XLXI_61 (.I0(XLXN_90), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[0]));
+   AND2  XLXI_62 (.I0(XLXN_90), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[1]));
+   AND2  XLXI_63 (.I0(XLXN_90), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[2]));
+   AND2  XLXI_64 (.I0(XLXN_90), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[3]));
+   AND2  XLXI_65 (.I0(XLXN_98), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[4]));
+   AND2  XLXI_66 (.I0(XLXN_108), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[5]));
+   AND2  XLXI_67 (.I0(XLXN_110), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[6]));
+   AND2  XLXI_68 (.I0(XLXN_109), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[7]));
+   AND2  XLXI_69 (.I0(XLXN_94), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[8]));
+   AND2  XLXI_70 (.I0(XLXN_94), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[9]));
+   AND2  XLXI_71 (.I0(XLXN_96), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[10]));
+   AND2  XLXI_72 (.I0(XLXN_96), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[11]));
+   GND  XLXI_81 (.G(XLXN_98));
+   GND  XLXI_82 (.G(XLXN_109));
+   GND  XLXI_84 (.G(XLXN_96));
+   VCC  XLXI_85 (.P(XLXN_94));
+   VCC  XLXI_87 (.P(XLXN_108));
+   VCC  XLXI_89 (.P(XLXN_90));
+   GND  XLXI_90 (.G(XLXN_100));
+   VCC  XLXI_91 (.P(XLXN_101));
+   VCC  XLXI_92 (.P(XLXN_102));
+   VCC  XLXI_93 (.P(XLXN_103));
+   VCC  XLXI_94 (.P(XLXN_40[7]));
+   GND  XLXI_95 (.G(XLXN_40[0]));
+   GND  XLXI_96 (.G(XLXN_104));
+   VCC  XLXI_101 (.P(XLXN_110));
+   BUF  XLXI_105 (.I(XLXN_68[8]), 
+                 .O(XLXN_68[12]));
+   BUF  XLXI_106 (.I(XLXN_68[8]), 
+                 .O(XLXN_68[13]));
+   BUF  XLXI_107 (.I(XLXN_68[8]), 
+                 .O(XLXN_68[14]));
+   BUF  XLXI_108 (.I(XLXN_68[8]), 
+                 .O(XLXN_68[15]));
+   BUF  XLXI_109 (.I(XLXN_43[4]), 
+                 .O(OTP[12]));
+   BUF  XLXI_110 (.I(XLXN_43[5]), 
+                 .O(OTP[13]));
+   BUF  XLXI_111 (.I(XLXN_43[6]), 
+                 .O(OTP[14]));
+   BUF  XLXI_112 (.I(XLXN_43[7]), 
+                 .O(OTP[15]));
+   (* HU_SET = "XLXI_117_106" *) 
+   FD16RE_MXILINX_Fial_Combine  XLXI_117 (.C(XLXN_36), 
+                                         .CE(XLXN_103), 
+                                         .D(XLXN_37[15:0]), 
+                                         .R(XLXN_112), 
+                                         .Q(XLXN_39[15:0]));
+   (* HU_SET = "XLXI_118_107" *) 
+   FD16RE_MXILINX_Fial_Combine  XLXI_118 (.C(XLXN_36), 
+                                         .CE(XLXN_102), 
+                                         .D(XLXN_42[15:0]), 
+                                         .R(XLXN_112), 
+                                         .Q(XLXN_43[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Fial_Combine(inputsignal, 
+                    inp_clk, 
+                    acos, 
+                    bsin, 
+                    cosine, 
+                    en, 
+                    initialize, 
+                    invclk, 
+                    iter, 
+                    sine);
+
+    input inputsignal;
+    input inp_clk;
+   output [15:0] acos;
+   output [15:0] bsin;
+   output [11:0] cosine;
+   output en;
+   output initialize;
+   output invclk;
+   output [3:0] iter;
+   output [11:0] sine;
+   
+   wire [15:0] ck;
+   wire [11:0] XLXN_22;
+   wire [15:0] XLXN_30;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire [15:0] XLXN_33;
+   wire [15:0] XLXN_34;
+   wire XLXN_42;
+   wire XLXN_43;
+   
+   final_block_MUSER_Fial_Combine  XLXI_1 (.clk_n(XLXN_30[15]), 
+                                          .inputangle(XLXN_22[11:0]), 
+                                          .inputsignal(inputsignal), 
+                                          .inp_clk(ck[7]), 
+                                          .acos(XLXN_34[15:0]), 
+                                          .bsin(XLXN_33[15:0]), 
+                                          .cosine(cosine[11:0]), 
+                                          .initialize(initialize), 
+                                          .invclk(invclk), 
+                                          .iter(iter[3:0]), 
+                                          .sine(sine[11:0]));
+   anglecounter_MUSER_Fial_Combine  XLXI_2 (.CLK_16(ck[7]), 
+                                           .OUTF(XLXN_22[11:0]), 
+                                           .Quad_Change());
+   (* HU_SET = "XLXI_4_108" *) 
+   CB16CE_MXILINX_Fial_Combine  XLXI_4 (.C(ck[7]), 
+                                       .CE(XLXN_31), 
+                                       .CLR(XLXN_32), 
+                                       .CEO(), 
+                                       .Q(XLXN_30[15:0]), 
+                                       .TC());
+   VCC  XLXI_5 (.P(XLXN_31));
+   GND  XLXI_6 (.G(XLXN_32));
+   DACout_MUSER_Fial_Combine  XLXI_7 (.inpsig(XLXN_34[15:0]), 
+                                     .DACout(acos[15:0]));
+   DACout_MUSER_Fial_Combine  XLXI_8 (.inpsig(XLXN_33[15:0]), 
+                                     .DACout(bsin[15:0]));
+   VCC  XLXI_9 (.P(en));
+   (* HU_SET = "XLXI_10_109" *) 
+   CB16CE_MXILINX_Fial_Combine  XLXI_10 (.C(inp_clk), 
+                                        .CE(XLXN_43), 
+                                        .CLR(XLXN_42), 
+                                        .CEO(), 
+                                        .Q(ck[15:0]), 
+                                        .TC());
+   VCC  XLXI_11 (.P(XLXN_43));
+   GND  XLXI_12 (.G(XLXN_42));
+endmodule

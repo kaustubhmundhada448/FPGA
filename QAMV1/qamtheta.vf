@@ -1,0 +1,1123 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : qamtheta.vf
+// /___/   /\     Timestamp : 11/27/2015 23:23:56
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog G:/FPGA/BTP/QAMV1/qamtheta.vf -w G:/FPGA/BTP/QAMV1/qamtheta.sch
+//Design Name: qamtheta
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module gnd16bit_MUSER_qamtheta(x_constant);
+
+   output [15:0] x_constant;
+   
+   wire XLXN_36;
+   wire XLXN_48;
+   wire XLXN_53;
+   wire XLXN_67;
+   
+   GND  XLXI_1 (.G(XLXN_67));
+   BUF  XLXI_2 (.I(XLXN_36), 
+               .O(x_constant[0]));
+   BUF  XLXI_3 (.I(XLXN_36), 
+               .O(x_constant[1]));
+   BUF  XLXI_4 (.I(XLXN_36), 
+               .O(x_constant[2]));
+   GND  XLXI_5 (.G(XLXN_36));
+   BUF  XLXI_7 (.I(XLXN_36), 
+               .O(x_constant[3]));
+   GND  XLXI_8 (.G(XLXN_48));
+   BUF  XLXI_9 (.I(XLXN_48), 
+               .O(x_constant[4]));
+   GND  XLXI_11 (.G(XLXN_53));
+   BUF  XLXI_24 (.I(XLXN_48), 
+                .O(x_constant[5]));
+   BUF  XLXI_25 (.I(XLXN_48), 
+                .O(x_constant[6]));
+   BUF  XLXI_26 (.I(XLXN_53), 
+                .O(x_constant[7]));
+   BUF  XLXI_27 (.I(XLXN_53), 
+                .O(x_constant[8]));
+   BUF  XLXI_28 (.I(XLXN_53), 
+                .O(x_constant[9]));
+   BUF  XLXI_29 (.I(XLXN_67), 
+                .O(x_constant[10]));
+   BUF  XLXI_30 (.I(XLXN_67), 
+                .O(x_constant[11]));
+   BUF  XLXI_31 (.I(XLXN_67), 
+                .O(x_constant[12]));
+   BUF  XLXI_32 (.I(XLXN_67), 
+                .O(x_constant[13]));
+   BUF  XLXI_33 (.I(XLXN_67), 
+                .O(x_constant[14]));
+   BUF  XLXI_34 (.I(XLXN_67), 
+                .O(x_constant[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module bit16buffermodified_MUSER_qamtheta(buffinput, 
+                                          buffoutput);
+
+    input [11:0] buffinput;
+   output [15:0] buffoutput;
+   
+   
+   BUF  XLXI_1 (.I(buffinput[11]), 
+               .O(buffoutput[15]));
+   BUF  XLXI_2 (.I(buffinput[11]), 
+               .O(buffoutput[14]));
+   BUF  XLXI_3 (.I(buffinput[11]), 
+               .O(buffoutput[13]));
+   BUF  XLXI_4 (.I(buffinput[11]), 
+               .O(buffoutput[12]));
+   BUF  XLXI_5 (.I(buffinput[11]), 
+               .O(buffoutput[11]));
+   BUF  XLXI_6 (.I(buffinput[10]), 
+               .O(buffoutput[10]));
+   BUF  XLXI_7 (.I(buffinput[9]), 
+               .O(buffoutput[9]));
+   BUF  XLXI_8 (.I(buffinput[8]), 
+               .O(buffoutput[8]));
+   BUF  XLXI_9 (.I(buffinput[7]), 
+               .O(buffoutput[7]));
+   BUF  XLXI_10 (.I(buffinput[6]), 
+                .O(buffoutput[6]));
+   BUF  XLXI_11 (.I(buffinput[5]), 
+                .O(buffoutput[5]));
+   BUF  XLXI_12 (.I(buffinput[4]), 
+                .O(buffoutput[4]));
+   BUF  XLXI_13 (.I(buffinput[3]), 
+                .O(buffoutput[3]));
+   BUF  XLXI_14 (.I(buffinput[2]), 
+                .O(buffoutput[2]));
+   BUF  XLXI_15 (.I(buffinput[1]), 
+                .O(buffoutput[1]));
+   BUF  XLXI_16 (.I(buffinput[0]), 
+                .O(buffoutput[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module shiftr2_MUSER_qamtheta(insignal, 
+                              shiftdecide, 
+                              signalout);
+
+    input [11:0] insignal;
+    input shiftdecide;
+   output [15:0] signalout;
+   
+   wire [15:0] inpsign;
+   
+   bit16buffermodified_MUSER_qamtheta  XLXI_1 (.buffinput(insignal[11:0]), 
+                                              .buffoutput(inpsign[15:0]));
+   AND2  XLXI_2 (.I0(shiftdecide), 
+                .I1(inpsign[1]), 
+                .O(signalout[2]));
+   AND2  XLXI_3 (.I0(shiftdecide), 
+                .I1(inpsign[2]), 
+                .O(signalout[3]));
+   AND2  XLXI_4 (.I0(shiftdecide), 
+                .I1(inpsign[3]), 
+                .O(signalout[4]));
+   AND2  XLXI_5 (.I0(shiftdecide), 
+                .I1(inpsign[4]), 
+                .O(signalout[5]));
+   AND2  XLXI_6 (.I0(shiftdecide), 
+                .I1(inpsign[5]), 
+                .O(signalout[6]));
+   AND2  XLXI_7 (.I0(shiftdecide), 
+                .I1(inpsign[6]), 
+                .O(signalout[7]));
+   AND2  XLXI_8 (.I0(shiftdecide), 
+                .I1(inpsign[7]), 
+                .O(signalout[8]));
+   AND2  XLXI_9 (.I0(shiftdecide), 
+                .I1(inpsign[8]), 
+                .O(signalout[9]));
+   AND2  XLXI_10 (.I0(shiftdecide), 
+                 .I1(inpsign[9]), 
+                 .O(signalout[10]));
+   AND2  XLXI_11 (.I0(shiftdecide), 
+                 .I1(inpsign[10]), 
+                 .O(signalout[11]));
+   AND2  XLXI_12 (.I0(shiftdecide), 
+                 .I1(inpsign[11]), 
+                 .O(signalout[12]));
+   AND2  XLXI_13 (.I0(shiftdecide), 
+                 .I1(inpsign[12]), 
+                 .O(signalout[13]));
+   AND2  XLXI_14 (.I0(shiftdecide), 
+                 .I1(inpsign[13]), 
+                 .O(signalout[14]));
+   AND2  XLXI_15 (.I0(shiftdecide), 
+                 .I1(inpsign[14]), 
+                 .O(signalout[15]));
+   AND2  XLXI_16 (.I0(shiftdecide), 
+                 .I1(inpsign[0]), 
+                 .O(signalout[1]));
+   GND  XLXI_18 (.G(signalout[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module ADSU16_MXILINX_qamtheta(A, 
+                               ADD, 
+                               B, 
+                               CI, 
+                               CO, 
+                               OFL, 
+                               S);
+
+    input [15:0] A;
+    input ADD;
+    input [15:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [15:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C7;
+   wire C8;
+   wire C9;
+   wire C10;
+   wire C11;
+   wire C12;
+   wire C13;
+   wire C14;
+   wire C14O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I7;
+   wire I8;
+   wire I9;
+   wire I10;
+   wire I11;
+   wire I12;
+   wire I13;
+   wire I14;
+   wire I15;
+   wire SUB0;
+   wire SUB1;
+   wire SUB2;
+   wire SUB3;
+   wire SUB4;
+   wire SUB5;
+   wire SUB6;
+   wire SUB7;
+   wire SUB8;
+   wire SUB9;
+   wire SUB10;
+   wire SUB11;
+   wire SUB12;
+   wire SUB13;
+   wire SUB14;
+   wire SUB15;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X1Y4" *) 
+   FMAP  I_36_16 (.I1(A[8]), 
+                 .I2(B[8]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I8));
+   (* RLOC = "X1Y4" *) 
+   FMAP  I_36_17 (.I1(A[9]), 
+                 .I2(B[9]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I9));
+   (* RLOC = "X1Y5" *) 
+   FMAP  I_36_18 (.I1(A[10]), 
+                 .I2(B[10]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I10));
+   (* RLOC = "X1Y5" *) 
+   FMAP  I_36_19 (.I1(A[11]), 
+                 .I2(B[11]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I11));
+   (* RLOC = "X1Y6" *) 
+   FMAP  I_36_20 (.I1(A[12]), 
+                 .I2(B[12]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I12));
+   (* RLOC = "X1Y6" *) 
+   FMAP  I_36_21 (.I1(A[13]), 
+                 .I2(B[13]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I13));
+   (* RLOC = "X1Y7" *) 
+   FMAP  I_36_22 (.I1(A[14]), 
+                 .I2(B[14]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I14));
+   (* RLOC = "X1Y7" *) 
+   FMAP  I_36_23 (.I1(A[15]), 
+                 .I2(B[15]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I15));
+   XOR3  I_36_50 (.I0(A[8]), 
+                 .I1(B[8]), 
+                 .I2(SUB8), 
+                 .O(I8));
+   (* RLOC = "X1Y4" *) 
+   MUXCY_L  I_36_55 (.CI(C8), 
+                    .DI(A[9]), 
+                    .S(I9), 
+                    .LO(C9));
+   XOR3  I_36_56 (.I0(A[10]), 
+                 .I1(B[10]), 
+                 .I2(SUB10), 
+                 .O(I10));
+   XOR3  I_36_57 (.I0(A[11]), 
+                 .I1(B[11]), 
+                 .I2(SUB11), 
+                 .O(I11));
+   (* RLOC = "X1Y5" *) 
+   MUXCY_L  I_36_58 (.CI(C10), 
+                    .DI(A[11]), 
+                    .S(I11), 
+                    .LO(C11));
+   XOR3  I_36_59 (.I0(A[14]), 
+                 .I1(B[14]), 
+                 .I2(SUB14), 
+                 .O(I14));
+   XOR3  I_36_60 (.I0(A[12]), 
+                 .I1(B[12]), 
+                 .I2(SUB12), 
+                 .O(I12));
+   (* RLOC = "X1Y5" *) 
+   MUXCY_L  I_36_62 (.CI(C9), 
+                    .DI(A[10]), 
+                    .S(I10), 
+                    .LO(C10));
+   (* RLOC = "X1Y6" *) 
+   MUXCY_L  I_36_63 (.CI(C11), 
+                    .DI(A[12]), 
+                    .S(I12), 
+                    .LO(C12));
+   (* RLOC = "X1Y7" *) 
+   MUXCY  I_36_64 (.CI(C14), 
+                  .DI(A[15]), 
+                  .S(I15), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(C7), 
+                  .LI(I8), 
+                  .O(S[8]));
+   XORCY  I_36_74 (.CI(C8), 
+                  .LI(I9), 
+                  .O(S[9]));
+   XORCY  I_36_75 (.CI(C10), 
+                  .LI(I11), 
+                  .O(S[11]));
+   XORCY  I_36_76 (.CI(C9), 
+                  .LI(I10), 
+                  .O(S[10]));
+   XORCY  I_36_77 (.CI(C12), 
+                  .LI(I13), 
+                  .O(S[13]));
+   XORCY  I_36_78 (.CI(C11), 
+                  .LI(I12), 
+                  .O(S[12]));
+   XOR3  I_36_79 (.I0(A[15]), 
+                 .I1(B[15]), 
+                 .I2(SUB15), 
+                 .O(I15));
+   XORCY  I_36_80 (.CI(C14), 
+                  .LI(I15), 
+                  .O(S[15]));
+   XORCY  I_36_81 (.CI(C13), 
+                  .LI(I14), 
+                  .O(S[14]));
+   XOR3  I_36_100 (.I0(A[9]), 
+                  .I1(B[9]), 
+                  .I2(SUB9), 
+                  .O(I9));
+   (* RLOC = "X1Y7" *) 
+   MUXCY_D  I_36_107 (.CI(C13), 
+                     .DI(A[14]), 
+                     .S(I14), 
+                     .LO(C14), 
+                     .O(C14O));
+   XOR3  I_36_109 (.I0(A[13]), 
+                  .I1(B[13]), 
+                  .I2(SUB13), 
+                  .O(I13));
+   (* RLOC = "X1Y6" *) 
+   MUXCY_L  I_36_110 (.CI(C12), 
+                     .DI(A[13]), 
+                     .S(I13), 
+                     .LO(C13));
+   (* RLOC = "X1Y4" *) 
+   MUXCY_L  I_36_111 (.CI(C7), 
+                     .DI(A[8]), 
+                     .S(I8), 
+                     .LO(C8));
+   XOR3  I_36_220 (.I0(A[0]), 
+                  .I1(B[0]), 
+                  .I2(SUB0), 
+                  .O(I0));
+   XOR3  I_36_222 (.I0(A[2]), 
+                  .I1(B[2]), 
+                  .I2(SUB2), 
+                  .O(I2));
+   XOR3  I_36_223 (.I0(A[3]), 
+                  .I1(B[3]), 
+                  .I2(SUB3), 
+                  .O(I3));
+   XOR3  I_36_224 (.I0(A[6]), 
+                  .I1(B[6]), 
+                  .I2(SUB6), 
+                  .O(I6));
+   XOR3  I_36_225 (.I0(A[4]), 
+                  .I1(B[4]), 
+                  .I2(SUB4), 
+                  .O(I4));
+   XORCY  I_36_226 (.CI(CI), 
+                   .LI(I0), 
+                   .O(S[0]));
+   XORCY  I_36_227 (.CI(C0), 
+                   .LI(I1), 
+                   .O(S[1]));
+   XORCY  I_36_228 (.CI(C2), 
+                   .LI(I3), 
+                   .O(S[3]));
+   XORCY  I_36_229 (.CI(C1), 
+                   .LI(I2), 
+                   .O(S[2]));
+   XORCY  I_36_230 (.CI(C4), 
+                   .LI(I5), 
+                   .O(S[5]));
+   XORCY  I_36_231 (.CI(C3), 
+                   .LI(I4), 
+                   .O(S[4]));
+   XOR3  I_36_232 (.I0(A[7]), 
+                  .I1(B[7]), 
+                  .I2(SUB7), 
+                  .O(I7));
+   XORCY  I_36_233 (.CI(C6), 
+                   .LI(I7), 
+                   .O(S[7]));
+   XORCY  I_36_234 (.CI(C5), 
+                   .LI(I6), 
+                   .O(S[6]));
+   XOR3  I_36_243 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .I2(SUB1), 
+                  .O(I1));
+   XOR3  I_36_245 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .I2(SUB5), 
+                  .O(I5));
+   (* RLOC = "X1Y3" *) 
+   MUXCY_L  I_36_248 (.CI(C6), 
+                     .DI(A[7]), 
+                     .S(I7), 
+                     .LO(C7));
+   (* RLOC = "X1Y3" *) 
+   MUXCY_L  I_36_249 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6));
+   (* RLOC = "X1Y2" *) 
+   MUXCY_L  I_36_250 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X1Y2" *) 
+   MUXCY_L  I_36_251 (.CI(C3), 
+                     .DI(A[4]), 
+                     .S(I4), 
+                     .LO(C4));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_252 (.CI(C2), 
+                     .DI(A[3]), 
+                     .S(I3), 
+                     .LO(C3));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_253 (.CI(C1), 
+                     .DI(A[2]), 
+                     .S(I2), 
+                     .LO(C2));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_254 (.CI(C0), 
+                     .DI(A[1]), 
+                     .S(I1), 
+                     .LO(C1));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_255 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_272 (.I1(A[1]), 
+                  .I2(B[1]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_275 (.I1(A[0]), 
+                  .I2(B[0]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_279 (.I1(A[2]), 
+                  .I2(B[2]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_283 (.I1(A[3]), 
+                  .I2(B[3]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I3));
+   (* RLOC = "X1Y2" *) 
+   FMAP  I_36_287 (.I1(A[4]), 
+                  .I2(B[4]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I4));
+   (* RLOC = "X1Y2" *) 
+   FMAP  I_36_291 (.I1(A[5]), 
+                  .I2(B[5]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I5));
+   (* RLOC = "X1Y3" *) 
+   FMAP  I_36_295 (.I1(A[6]), 
+                  .I2(B[6]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I6));
+   (* RLOC = "X1Y3" *) 
+   FMAP  I_36_299 (.I1(A[7]), 
+                  .I2(B[7]), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I7));
+   XOR2  I_36_353 (.I0(C14O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+   INV  I_36_355 (.I(ADD), 
+                 .O(SUB0));
+   INV  I_36_356 (.I(ADD), 
+                 .O(SUB1));
+   INV  I_36_357 (.I(ADD), 
+                 .O(SUB2));
+   INV  I_36_358 (.I(ADD), 
+                 .O(SUB3));
+   INV  I_36_359 (.I(ADD), 
+                 .O(SUB4));
+   INV  I_36_360 (.I(ADD), 
+                 .O(SUB5));
+   INV  I_36_361 (.I(ADD), 
+                 .O(SUB6));
+   INV  I_36_362 (.I(ADD), 
+                 .O(SUB7));
+   INV  I_36_363 (.I(ADD), 
+                 .O(SUB8));
+   INV  I_36_364 (.I(ADD), 
+                 .O(SUB9));
+   INV  I_36_365 (.I(ADD), 
+                 .O(SUB10));
+   INV  I_36_366 (.I(ADD), 
+                 .O(SUB11));
+   INV  I_36_367 (.I(ADD), 
+                 .O(SUB12));
+   INV  I_36_368 (.I(ADD), 
+                 .O(SUB13));
+   INV  I_36_369 (.I(ADD), 
+                 .O(SUB14));
+   INV  I_36_370 (.I(ADD), 
+                 .O(SUB15));
+endmodule
+`timescale 1ns / 1ps
+
+module ADD16_MXILINX_qamtheta(A, 
+                              B, 
+                              CI, 
+                              CO, 
+                              OFL, 
+                              S);
+
+    input [15:0] A;
+    input [15:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [15:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C7;
+   wire C8;
+   wire C9;
+   wire C10;
+   wire C11;
+   wire C12;
+   wire C13;
+   wire C14;
+   wire C14O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I7;
+   wire I8;
+   wire I9;
+   wire I10;
+   wire I11;
+   wire I12;
+   wire I13;
+   wire I14;
+   wire I15;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X0Y4" *) 
+   FMAP  I_36_16 (.I1(A[8]), 
+                 .I2(B[8]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I8));
+   (* RLOC = "X0Y4" *) 
+   FMAP  I_36_17 (.I1(A[9]), 
+                 .I2(B[9]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I9));
+   (* RLOC = "X0Y5" *) 
+   FMAP  I_36_18 (.I1(A[10]), 
+                 .I2(B[10]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I10));
+   (* RLOC = "X0Y5" *) 
+   FMAP  I_36_19 (.I1(A[11]), 
+                 .I2(B[11]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I11));
+   (* RLOC = "X0Y6" *) 
+   FMAP  I_36_20 (.I1(A[12]), 
+                 .I2(B[12]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I12));
+   (* RLOC = "X0Y6" *) 
+   FMAP  I_36_21 (.I1(A[13]), 
+                 .I2(B[13]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I13));
+   (* RLOC = "X0Y7" *) 
+   FMAP  I_36_22 (.I1(A[14]), 
+                 .I2(B[14]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I14));
+   (* RLOC = "X0Y7" *) 
+   FMAP  I_36_23 (.I1(A[15]), 
+                 .I2(B[15]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I15));
+   (* RLOC = "X0Y4" *) 
+   MUXCY_L  I_36_55 (.CI(C8), 
+                    .DI(A[9]), 
+                    .S(I9), 
+                    .LO(C9));
+   (* RLOC = "X0Y5" *) 
+   MUXCY_L  I_36_58 (.CI(C10), 
+                    .DI(A[11]), 
+                    .S(I11), 
+                    .LO(C11));
+   (* RLOC = "X0Y5" *) 
+   MUXCY_L  I_36_62 (.CI(C9), 
+                    .DI(A[10]), 
+                    .S(I10), 
+                    .LO(C10));
+   (* RLOC = "X0Y6" *) 
+   MUXCY_L  I_36_63 (.CI(C11), 
+                    .DI(A[12]), 
+                    .S(I12), 
+                    .LO(C12));
+   (* RLOC = "X0Y7" *) 
+   MUXCY  I_36_64 (.CI(C14), 
+                  .DI(A[15]), 
+                  .S(I15), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(C7), 
+                  .LI(I8), 
+                  .O(S[8]));
+   XORCY  I_36_74 (.CI(C8), 
+                  .LI(I9), 
+                  .O(S[9]));
+   XORCY  I_36_75 (.CI(C10), 
+                  .LI(I11), 
+                  .O(S[11]));
+   XORCY  I_36_76 (.CI(C9), 
+                  .LI(I10), 
+                  .O(S[10]));
+   XORCY  I_36_77 (.CI(C12), 
+                  .LI(I13), 
+                  .O(S[13]));
+   XORCY  I_36_78 (.CI(C11), 
+                  .LI(I12), 
+                  .O(S[12]));
+   XORCY  I_36_80 (.CI(C14), 
+                  .LI(I15), 
+                  .O(S[15]));
+   XORCY  I_36_81 (.CI(C13), 
+                  .LI(I14), 
+                  .O(S[14]));
+   (* RLOC = "X0Y7" *) 
+   MUXCY_D  I_36_107 (.CI(C13), 
+                     .DI(A[14]), 
+                     .S(I14), 
+                     .LO(C14), 
+                     .O(C14O));
+   (* RLOC = "X0Y6" *) 
+   MUXCY_L  I_36_110 (.CI(C12), 
+                     .DI(A[13]), 
+                     .S(I13), 
+                     .LO(C13));
+   (* RLOC = "X0Y4" *) 
+   MUXCY_L  I_36_111 (.CI(C7), 
+                     .DI(A[8]), 
+                     .S(I8), 
+                     .LO(C8));
+   XORCY  I_36_226 (.CI(CI), 
+                   .LI(I0), 
+                   .O(S[0]));
+   XORCY  I_36_227 (.CI(C0), 
+                   .LI(I1), 
+                   .O(S[1]));
+   XORCY  I_36_228 (.CI(C2), 
+                   .LI(I3), 
+                   .O(S[3]));
+   XORCY  I_36_229 (.CI(C1), 
+                   .LI(I2), 
+                   .O(S[2]));
+   XORCY  I_36_230 (.CI(C4), 
+                   .LI(I5), 
+                   .O(S[5]));
+   XORCY  I_36_231 (.CI(C3), 
+                   .LI(I4), 
+                   .O(S[4]));
+   XORCY  I_36_233 (.CI(C6), 
+                   .LI(I7), 
+                   .O(S[7]));
+   XORCY  I_36_234 (.CI(C5), 
+                   .LI(I6), 
+                   .O(S[6]));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_L  I_36_248 (.CI(C6), 
+                     .DI(A[7]), 
+                     .S(I7), 
+                     .LO(C7));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_L  I_36_249 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_250 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_251 (.CI(C3), 
+                     .DI(A[4]), 
+                     .S(I4), 
+                     .LO(C4));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_252 (.CI(C2), 
+                     .DI(A[3]), 
+                     .S(I3), 
+                     .LO(C3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_253 (.CI(C1), 
+                     .DI(A[2]), 
+                     .S(I2), 
+                     .LO(C2));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_254 (.CI(C0), 
+                     .DI(A[1]), 
+                     .S(I1), 
+                     .LO(C1));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_255 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_272 (.I1(A[1]), 
+                  .I2(B[1]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_275 (.I1(A[0]), 
+                  .I2(B[0]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_279 (.I1(A[2]), 
+                  .I2(B[2]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_283 (.I1(A[3]), 
+                  .I2(B[3]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I3));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_287 (.I1(A[4]), 
+                  .I2(B[4]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I4));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_291 (.I1(A[5]), 
+                  .I2(B[5]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I5));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_295 (.I1(A[6]), 
+                  .I2(B[6]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I6));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_299 (.I1(A[7]), 
+                  .I2(B[7]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I7));
+   XOR2  I_36_354 (.I0(A[0]), 
+                  .I1(B[0]), 
+                  .O(I0));
+   XOR2  I_36_355 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .O(I1));
+   XOR2  I_36_356 (.I0(A[2]), 
+                  .I1(B[2]), 
+                  .O(I2));
+   XOR2  I_36_357 (.I0(A[3]), 
+                  .I1(B[3]), 
+                  .O(I3));
+   XOR2  I_36_358 (.I0(A[4]), 
+                  .I1(B[4]), 
+                  .O(I4));
+   XOR2  I_36_359 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .O(I5));
+   XOR2  I_36_360 (.I0(A[6]), 
+                  .I1(B[6]), 
+                  .O(I6));
+   XOR2  I_36_361 (.I0(A[7]), 
+                  .I1(B[7]), 
+                  .O(I7));
+   XOR2  I_36_362 (.I0(A[8]), 
+                  .I1(B[8]), 
+                  .O(I8));
+   XOR2  I_36_363 (.I0(A[9]), 
+                  .I1(B[9]), 
+                  .O(I9));
+   XOR2  I_36_364 (.I0(A[10]), 
+                  .I1(B[10]), 
+                  .O(I10));
+   XOR2  I_36_365 (.I0(A[11]), 
+                  .I1(B[11]), 
+                  .O(I11));
+   XOR2  I_36_366 (.I0(A[12]), 
+                  .I1(B[12]), 
+                  .O(I12));
+   XOR2  I_36_367 (.I0(A[13]), 
+                  .I1(B[13]), 
+                  .O(I13));
+   XOR2  I_36_368 (.I0(A[14]), 
+                  .I1(B[14]), 
+                  .O(I14));
+   XOR2  I_36_369 (.I0(A[15]), 
+                  .I1(B[15]), 
+                  .O(I15));
+   XOR2  I_36_375 (.I0(C14O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module addshiftr2_MUSER_qamtheta(bit0, 
+                                 bit1, 
+                                 InS, 
+                                 outputqam);
+
+    input bit0;
+    input bit1;
+    input [11:0] InS;
+   output [15:0] outputqam;
+   
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_4;
+   wire [15:0] XLXN_6;
+   wire [15:0] XLXN_8;
+   wire XLXN_10;
+   wire XLXN_12;
+   
+   bit16buffermodified_MUSER_qamtheta  XLXI_1 (.buffinput(InS[11:0]), 
+                                              .buffoutput(XLXN_3[15:0]));
+   (* HU_SET = "XLXI_2_0" *) 
+   ADD16_MXILINX_qamtheta  XLXI_2 (.A(XLXN_6[15:0]), 
+                                  .B(XLXN_3[15:0]), 
+                                  .CI(XLXN_12), 
+                                  .CO(), 
+                                  .OFL(), 
+                                  .S(XLXN_4[15:0]));
+   (* HU_SET = "XLXI_4_1" *) 
+   ADSU16_MXILINX_qamtheta  XLXI_4 (.A(XLXN_8[15:0]), 
+                                   .ADD(bit1), 
+                                   .B(XLXN_4[15:0]), 
+                                   .CI(XLXN_10), 
+                                   .CO(), 
+                                   .OFL(), 
+                                   .S(outputqam[15:0]));
+   INV  XLXI_7 (.I(bit1), 
+               .O(XLXN_10));
+   shiftr2_MUSER_qamtheta  XLXI_8 (.insignal(InS[11:0]), 
+                                  .shiftdecide(bit0), 
+                                  .signalout(XLXN_6[15:0]));
+   gnd16bit_MUSER_qamtheta  XLXI_9 (.x_constant(XLXN_8[15:0]));
+   GND  XLXI_10 (.G(XLXN_12));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_qamtheta(C, 
+                             CE, 
+                             CLR, 
+                             T, 
+                             Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB2CE_MXILINX_qamtheta(C, 
+                              CE, 
+                              CLR, 
+                              CEO, 
+                              Q0, 
+                              Q1, 
+                              TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output TC;
+   
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_2" *) 
+   FTCE_MXILINX_qamtheta #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(XLXN_1), 
+                               .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_3" *) 
+   FTCE_MXILINX_qamtheta #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(Q0_DUMMY), 
+                               .Q(Q1_DUMMY));
+   AND2  I_36_37 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   VCC  I_36_47 (.P(XLXN_1));
+   AND2  I_36_52 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module bit4s_MUSER_qamtheta(clk_16, 
+                            inputsig, 
+                            a0, 
+                            a1, 
+                            b0, 
+                            b1);
+
+    input clk_16;
+    input inputsig;
+   output a0;
+   output a1;
+   output b0;
+   output b1;
+   
+   wire q1;
+   wire q2;
+   wire q3;
+   wire q4;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   FDC #( .INIT(1'b0) ) XLXI_5 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(inputsig), 
+               .Q(q1));
+   FDC #( .INIT(1'b0) ) XLXI_6 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(q1), 
+               .Q(q2));
+   FDC #( .INIT(1'b0) ) XLXI_7 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(q2), 
+               .Q(q3));
+   FDC #( .INIT(1'b0) ) XLXI_8 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(q3), 
+               .Q(q4));
+   GND  XLXI_9 (.G(XLXN_11));
+   (* HU_SET = "XLXI_10_4" *) 
+   CB2CE_MXILINX_qamtheta  XLXI_10 (.C(clk_16), 
+                                   .CE(XLXN_12), 
+                                   .CLR(XLXN_11), 
+                                   .CEO(), 
+                                   .Q0(XLXN_13), 
+                                   .Q1(XLXN_15), 
+                                   .TC());
+   VCC  XLXI_11 (.P(XLXN_12));
+   AND2  XLXI_12 (.I0(XLXN_15), 
+                 .I1(XLXN_13), 
+                 .O(XLXN_16));
+   FD #( .INIT(1'b0) ) XLXI_13 (.C(XLXN_16), 
+               .D(q1), 
+               .Q(a1));
+   FD #( .INIT(1'b0) ) XLXI_14 (.C(XLXN_16), 
+               .D(q2), 
+               .Q(a0));
+   FD #( .INIT(1'b0) ) XLXI_15 (.C(XLXN_16), 
+               .D(q3), 
+               .Q(b1));
+   FD #( .INIT(1'b0) ) XLXI_16 (.C(XLXN_16), 
+               .D(q4), 
+               .Q(b0));
+endmodule
+`timescale 1ns / 1ps
+
+module qamtheta(clk_16, 
+                cos, 
+                inputsignal, 
+                sin, 
+                acos, 
+                bitsa, 
+                bitsb, 
+                bsin);
+
+    input clk_16;
+    input [11:0] cos;
+    input inputsignal;
+    input [11:0] sin;
+   output [15:0] acos;
+   output [1:0] bitsa;
+   output [1:0] bitsb;
+   output [15:0] bsin;
+   
+   wire [1:0] bitsa_DUMMY;
+   wire [1:0] bitsb_DUMMY;
+   
+   assign bitsa[1:0] = bitsa_DUMMY[1:0];
+   assign bitsb[1:0] = bitsb_DUMMY[1:0];
+   addshiftr2_MUSER_qamtheta  XLXI_1 (.bit0(bitsb_DUMMY[0]), 
+                                     .bit1(bitsb_DUMMY[1]), 
+                                     .InS(cos[11:0]), 
+                                     .outputqam(acos[15:0]));
+   bit4s_MUSER_qamtheta  XLXI_2 (.clk_16(clk_16), 
+                                .inputsig(inputsignal), 
+                                .a0(bitsa_DUMMY[0]), 
+                                .a1(bitsa_DUMMY[1]), 
+                                .b0(bitsb_DUMMY[0]), 
+                                .b1(bitsb_DUMMY[1]));
+   addshiftr2_MUSER_qamtheta  XLXI_3 (.bit0(bitsa_DUMMY[0]), 
+                                     .bit1(bitsa_DUMMY[1]), 
+                                     .InS(sin[11:0]), 
+                                     .outputqam(bsin[15:0]));
+endmodule

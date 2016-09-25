@@ -1,0 +1,48 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/anglecounter_anglecounter_sch_tb_isim_beh.exe -prj C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/anglecounter_anglecounter_sch_tb_beh.prj work.anglecounter_anglecounter_sch_tb work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/gnd16bit.vf" into library work
+Analyzing Verilog file "C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/Counter_12.vf" into library work
+Analyzing Verilog file "C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/bit16to12.vf" into library work
+Analyzing Verilog file "C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/anglecounter.vf" into library work
+Analyzing Verilog file "C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/Angle_Couner_test.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module XOR2
+Compiling module FDCE
+Compiling module FTCE_MXILINX_anglecounter
+Compiling module AND3
+Compiling module AND2
+Compiling module VCC
+Compiling module AND4
+Compiling module AND5
+Compiling module CB16CE_MXILINX_anglecounter
+Compiling module MUXCY_L
+Compiling module FMAP
+Compiling module GND
+Compiling module NOR4
+Compiling module MUXCY
+Compiling module NOR16_MXILINX_anglecounter
+Compiling module BUF
+Compiling module INV
+Compiling module Counter_12_MUSER_anglecounter
+Compiling module XORCY
+Compiling module MUXCY_D
+Compiling module ADD16_MXILINX_anglecounter
+Compiling module gnd16bit_MUSER_anglecounter
+Compiling module CB4CE_MXILINX_anglecounter
+Compiling module bit16to12_MUSER_anglecounter
+Compiling module FDRE
+Compiling module FD16RE_MXILINX_anglecounter
+Compiling module anglecounter
+Compiling module anglecounter_anglecounter_sch_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 29 Verilog Units
+Built simulation executable C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/anglecounter_anglecounter_sch_tb_isim_beh.exe
+Fuse Memory Usage: 27756 KB
+Fuse CPU Usage: 686 ms

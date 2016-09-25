@@ -1,0 +1,566 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Cordic.vf
+// /___/   /\     Timestamp : 04/17/2016 23:32:04
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Cordic.vf" -w "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Cordic.sch"
+//Design Name: Cordic
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FD8CE_MXILINX_Cordic(C, 
+                            CE, 
+                            CLR, 
+                            D, 
+                            Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [7:0] D;
+   output [7:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module ADSU8_MXILINX_Cordic(A, 
+                            ADD, 
+                            B, 
+                            CI, 
+                            CO, 
+                            OFL, 
+                            S);
+
+    input [7:0] A;
+    input ADD;
+    input [7:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [7:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C6O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I7;
+   wire SUB0;
+   wire SUB1;
+   wire SUB2;
+   wire SUB3;
+   wire SUB4;
+   wire SUB5;
+   wire SUB6;
+   wire SUB7;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_16 (.I1(A[0]), 
+                 .I2(B[0]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I0));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_17 (.I1(A[1]), 
+                 .I2(B[1]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I1));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_18 (.I1(A[2]), 
+                 .I2(B[2]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I2));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_19 (.I1(A[3]), 
+                 .I2(B[3]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I3));
+   (* RLOC = "X1Y2" *) 
+   FMAP  I_36_20 (.I1(A[4]), 
+                 .I2(B[4]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I4));
+   (* RLOC = "X1Y2" *) 
+   FMAP  I_36_21 (.I1(A[5]), 
+                 .I2(B[5]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I5));
+   (* RLOC = "X1Y3" *) 
+   FMAP  I_36_22 (.I1(A[6]), 
+                 .I2(B[6]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I6));
+   (* RLOC = "X1Y3" *) 
+   FMAP  I_36_23 (.I1(A[7]), 
+                 .I2(B[7]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I7));
+   XOR3  I_36_50 (.I0(A[0]), 
+                 .I1(B[0]), 
+                 .I2(SUB0), 
+                 .O(I0));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A[1]), 
+                    .S(I1), 
+                    .LO(C1));
+   XOR3  I_36_56 (.I0(A[2]), 
+                 .I1(B[2]), 
+                 .I2(SUB2), 
+                 .O(I2));
+   XOR3  I_36_57 (.I0(A[3]), 
+                 .I1(B[3]), 
+                 .I2(SUB3), 
+                 .O(I3));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_58 (.CI(C2), 
+                    .DI(A[3]), 
+                    .S(I3), 
+                    .LO(C3));
+   XOR3  I_36_59 (.I0(A[6]), 
+                 .I1(B[6]), 
+                 .I2(SUB6), 
+                 .O(I6));
+   XOR3  I_36_60 (.I0(A[4]), 
+                 .I1(B[4]), 
+                 .I2(SUB4), 
+                 .O(I4));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_62 (.CI(C1), 
+                    .DI(A[2]), 
+                    .S(I2), 
+                    .LO(C2));
+   (* RLOC = "X1Y2" *) 
+   MUXCY_L  I_36_63 (.CI(C3), 
+                    .DI(A[4]), 
+                    .S(I4), 
+                    .LO(C4));
+   (* RLOC = "X1Y3" *) 
+   MUXCY  I_36_64 (.CI(C6), 
+                  .DI(A[7]), 
+                  .S(I7), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S[0]));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S[1]));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S[3]));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S[2]));
+   XORCY  I_36_77 (.CI(C4), 
+                  .LI(I5), 
+                  .O(S[5]));
+   XORCY  I_36_78 (.CI(C3), 
+                  .LI(I4), 
+                  .O(S[4]));
+   XOR3  I_36_79 (.I0(A[7]), 
+                 .I1(B[7]), 
+                 .I2(SUB7), 
+                 .O(I7));
+   XORCY  I_36_80 (.CI(C6), 
+                  .LI(I7), 
+                  .O(S[7]));
+   XORCY  I_36_81 (.CI(C5), 
+                  .LI(I6), 
+                  .O(S[6]));
+   XOR3  I_36_100 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .I2(SUB1), 
+                  .O(I1));
+   (* RLOC = "X1Y3" *) 
+   MUXCY_D  I_36_107 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6), 
+                     .O(C6O));
+   XOR3  I_36_109 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .I2(SUB5), 
+                  .O(I5));
+   (* RLOC = "X1Y2" *) 
+   MUXCY_L  I_36_110 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   INV  I_36_112 (.I(ADD), 
+                 .O(SUB0));
+   XOR2  I_36_221 (.I0(C6O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+   INV  I_36_222 (.I(ADD), 
+                 .O(SUB1));
+   INV  I_36_223 (.I(ADD), 
+                 .O(SUB2));
+   INV  I_36_224 (.I(ADD), 
+                 .O(SUB3));
+   INV  I_36_225 (.I(ADD), 
+                 .O(SUB4));
+   INV  I_36_226 (.I(ADD), 
+                 .O(SUB5));
+   INV  I_36_227 (.I(ADD), 
+                 .O(SUB6));
+   INV  I_36_228 (.I(ADD), 
+                 .O(SUB7));
+endmodule
+`timescale 1ns / 1ps
+
+module Mux_2_8_MUSER_Cordic(Inp0, 
+                            Inp1, 
+                            Sel, 
+                            Outp);
+
+    input [7:0] Inp0;
+    input [7:0] Inp1;
+    input Sel;
+   output [7:0] Outp;
+   
+   
+   MUXCY  XLXI_18 (.CI(Inp1[1]), 
+                  .DI(Inp0[1]), 
+                  .S(Sel), 
+                  .O(Outp[1]));
+   MUXCY  XLXI_19 (.CI(Inp1[0]), 
+                  .DI(Inp0[0]), 
+                  .S(Sel), 
+                  .O(Outp[0]));
+   MUXCY  XLXI_20 (.CI(Inp1[2]), 
+                  .DI(Inp0[2]), 
+                  .S(Sel), 
+                  .O(Outp[2]));
+   MUXCY  XLXI_21 (.CI(Inp1[3]), 
+                  .DI(Inp0[3]), 
+                  .S(Sel), 
+                  .O(Outp[3]));
+   MUXCY  XLXI_24 (.CI(Inp1[4]), 
+                  .DI(Inp0[4]), 
+                  .S(Sel), 
+                  .O(Outp[4]));
+   MUXCY  XLXI_25 (.CI(Inp1[5]), 
+                  .DI(Inp0[5]), 
+                  .S(Sel), 
+                  .O(Outp[5]));
+   MUXCY  XLXI_26 (.CI(Inp1[6]), 
+                  .DI(Inp0[6]), 
+                  .S(Sel), 
+                  .O(Outp[6]));
+   MUXCY  XLXI_27 (.CI(Inp1[7]), 
+                  .DI(Inp0[7]), 
+                  .S(Sel), 
+                  .O(Outp[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module RShift4_8bit_MUSER_Cordic(Inp, 
+                                 Shift_1, 
+                                 Otp_Sh);
+
+    input [7:0] Inp;
+    input Shift_1;
+   output [7:0] Otp_Sh;
+   
+   wire [7:0] Shift1;
+   
+   BUF  XLXI_1 (.I(Inp[7]), 
+               .O(Shift1[7]));
+   BUF  XLXI_2 (.I(Inp[7]), 
+               .O(Shift1[6]));
+   BUF  XLXI_3 (.I(Inp[7]), 
+               .O(Shift1[5]));
+   BUF  XLXI_4 (.I(Inp[7]), 
+               .O(Shift1[4]));
+   BUF  XLXI_5 (.I(Inp[7]), 
+               .O(Shift1[3]));
+   BUF  XLXI_6 (.I(Inp[6]), 
+               .O(Shift1[2]));
+   BUF  XLXI_7 (.I(Inp[5]), 
+               .O(Shift1[1]));
+   Mux_2_8_MUSER_Cordic  XLXI_8 (.Inp0(Inp[7:0]), 
+                                .Inp1(Shift1[7:0]), 
+                                .Sel(Shift_1), 
+                                .Outp(Otp_Sh[7:0]));
+   BUF  XLXI_10 (.I(Inp[4]), 
+                .O(Shift1[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module One_Bit_shifter_8_MUSER_Cordic(Inp, 
+                                      Shift_1, 
+                                      Otp_Sh);
+
+    input [7:0] Inp;
+    input Shift_1;
+   output [7:0] Otp_Sh;
+   
+   wire [7:0] Shift1;
+   
+   BUF  XLXI_2 (.I(Inp[7]), 
+               .O(Shift1[7]));
+   BUF  XLXI_3 (.I(Inp[7]), 
+               .O(Shift1[6]));
+   BUF  XLXI_4 (.I(Inp[6]), 
+               .O(Shift1[5]));
+   BUF  XLXI_5 (.I(Inp[5]), 
+               .O(Shift1[4]));
+   BUF  XLXI_6 (.I(Inp[4]), 
+               .O(Shift1[3]));
+   BUF  XLXI_7 (.I(Inp[3]), 
+               .O(Shift1[2]));
+   BUF  XLXI_8 (.I(Inp[2]), 
+               .O(Shift1[1]));
+   Mux_2_8_MUSER_Cordic  XLXI_9 (.Inp0(Inp[7:0]), 
+                                .Inp1(Shift1[7:0]), 
+                                .Sel(Shift_1), 
+                                .Outp(Otp_Sh[7:0]));
+   BUF  XLXI_10 (.I(Inp[1]), 
+                .O(Shift1[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Bit_RShift2_8bit_MUSER_Cordic(Inp, 
+                                     Shift_1, 
+                                     Otp_Sh);
+
+    input [7:0] Inp;
+    input Shift_1;
+   output [7:0] Otp_Sh;
+   
+   wire [7:0] Shift1;
+   
+   BUF  XLXI_1 (.I(Inp[7]), 
+               .O(Shift1[7]));
+   BUF  XLXI_2 (.I(Inp[7]), 
+               .O(Shift1[6]));
+   BUF  XLXI_3 (.I(Inp[7]), 
+               .O(Shift1[5]));
+   BUF  XLXI_4 (.I(Inp[6]), 
+               .O(Shift1[4]));
+   BUF  XLXI_5 (.I(Inp[5]), 
+               .O(Shift1[3]));
+   BUF  XLXI_6 (.I(Inp[4]), 
+               .O(Shift1[2]));
+   BUF  XLXI_7 (.I(Inp[3]), 
+               .O(Shift1[1]));
+   Mux_2_8_MUSER_Cordic  XLXI_8 (.Inp0(Inp[7:0]), 
+                                .Inp1(Shift1[7:0]), 
+                                .Sel(Shift_1), 
+                                .Outp(Otp_Sh[7:0]));
+   BUF  XLXI_10 (.I(Inp[2]), 
+                .O(Shift1[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module I_Bit_Shifer_MUSER_Cordic(I, 
+                                 Inp, 
+                                 OTP_S);
+
+    input [2:0] I;
+    input [7:0] Inp;
+   output [7:0] OTP_S;
+   
+   wire [7:0] XLXN_8;
+   wire [7:0] XLXN_9;
+   
+   Bit_RShift2_8bit_MUSER_Cordic  XLXI_1 (.Inp(XLXN_8[7:0]), 
+                                         .Shift_1(I[1]), 
+                                         .Otp_Sh(XLXN_9[7:0]));
+   One_Bit_shifter_8_MUSER_Cordic  XLXI_2 (.Inp(Inp[7:0]), 
+                                          .Shift_1(I[0]), 
+                                          .Otp_Sh(XLXN_8[7:0]));
+   RShift4_8bit_MUSER_Cordic  XLXI_3 (.Inp(XLXN_9[7:0]), 
+                                     .Shift_1(I[2]), 
+                                     .Otp_Sh(OTP_S[7:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Cordic(CLK, 
+              Count, 
+              Enable, 
+              Input, 
+              Start, 
+              Thetai, 
+              x, 
+              y, 
+              XOtp, 
+              YOtp);
+
+    input CLK;
+    input [2:0] Count;
+    input Enable;
+    input [7:0] Input;
+    input Start;
+    input [7:0] Thetai;
+    input [7:0] x;
+    input [7:0] y;
+   output [7:0] XOtp;
+   output [7:0] YOtp;
+   
+   wire Delta;
+   wire Delta_bar;
+   wire [7:0] XLXN_1;
+   wire [7:0] XLXN_22;
+   wire [7:0] XLXN_23;
+   wire XLXN_26;
+   wire [7:0] XLXN_56;
+   wire [7:0] XLXN_57;
+   wire XLXN_77;
+   wire XLXN_78;
+   wire [7:0] XLXN_79;
+   wire [7:0] XLXN_81;
+   wire [7:0] XLXN_95;
+   wire [7:0] XLXN_96;
+   wire [7:0] XOtp_DUMMY;
+   wire [7:0] YOtp_DUMMY;
+   
+   assign XOtp[7:0] = XOtp_DUMMY[7:0];
+   assign YOtp[7:0] = YOtp_DUMMY[7:0];
+   (* HU_SET = "XLXI_4_0" *) 
+   ADSU8_MXILINX_Cordic  XLXI_4 (.A(XLXN_1[7:0]), 
+                                .ADD(Delta_bar), 
+                                .B(Thetai[7:0]), 
+                                .CI(Delta), 
+                                .CO(), 
+                                .OFL(), 
+                                .S(XLXN_23[7:0]));
+   INV  XLXI_5 (.I(XLXN_1[7]), 
+               .O(Delta));
+   GND  XLXI_9 (.G(XLXN_26));
+   (* HU_SET = "XLXI_12_2" *) 
+   ADSU8_MXILINX_Cordic  XLXI_12 (.A(XLXN_56[7:0]), 
+                                 .ADD(Delta_bar), 
+                                 .B(XLXN_81[7:0]), 
+                                 .CI(Delta), 
+                                 .CO(), 
+                                 .OFL(), 
+                                 .S(XLXN_95[7:0]));
+   (* HU_SET = "XLXI_13_1" *) 
+   ADSU8_MXILINX_Cordic  XLXI_13 (.A(XLXN_57[7:0]), 
+                                 .ADD(Delta), 
+                                 .B(XLXN_79[7:0]), 
+                                 .CI(Delta_bar), 
+                                 .CO(), 
+                                 .OFL(), 
+                                 .S(XLXN_96[7:0]));
+   Mux_2_8_MUSER_Cordic  XLXI_15 (.Inp0(XLXN_22[7:0]), 
+                                 .Inp1(Input[7:0]), 
+                                 .Sel(Start), 
+                                 .Outp(XLXN_1[7:0]));
+   Mux_2_8_MUSER_Cordic  XLXI_16 (.Inp0(XOtp_DUMMY[7:0]), 
+                                 .Inp1(x[7:0]), 
+                                 .Sel(Start), 
+                                 .Outp(XLXN_56[7:0]));
+   Mux_2_8_MUSER_Cordic  XLXI_17 (.Inp0(YOtp_DUMMY[7:0]), 
+                                 .Inp1(y[7:0]), 
+                                 .Sel(Start), 
+                                 .Outp(XLXN_57[7:0]));
+   I_Bit_Shifer_MUSER_Cordic  XLXI_27 (.I(Count[2:0]), 
+                                      .Inp(XLXN_57[7:0]), 
+                                      .OTP_S(XLXN_81[7:0]));
+   I_Bit_Shifer_MUSER_Cordic  XLXI_28 (.I(Count[2:0]), 
+                                      .Inp(XLXN_56[7:0]), 
+                                      .OTP_S(XLXN_79[7:0]));
+   GND  XLXI_31 (.G(XLXN_77));
+   GND  XLXI_32 (.G(XLXN_78));
+   BUF  XLXI_33 (.I(XLXN_1[7]), 
+                .O(Delta_bar));
+   (* HU_SET = "XLXI_34_3" *) 
+   FD8CE_MXILINX_Cordic  XLXI_34 (.C(CLK), 
+                                 .CE(Enable), 
+                                 .CLR(XLXN_26), 
+                                 .D(XLXN_23[7:0]), 
+                                 .Q(XLXN_22[7:0]));
+   (* HU_SET = "XLXI_35_4" *) 
+   FD8CE_MXILINX_Cordic  XLXI_35 (.C(CLK), 
+                                 .CE(Enable), 
+                                 .CLR(XLXN_77), 
+                                 .D(XLXN_96[7:0]), 
+                                 .Q(YOtp_DUMMY[7:0]));
+   (* HU_SET = "XLXI_36_5" *) 
+   FD8CE_MXILINX_Cordic  XLXI_36 (.C(CLK), 
+                                 .CE(Enable), 
+                                 .CLR(XLXN_78), 
+                                 .D(XLXN_95[7:0]), 
+                                 .Q(XOtp_DUMMY[7:0]));
+endmodule

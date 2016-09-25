@@ -1,0 +1,10 @@
+Command line:
+   anglecounter_anglecounter_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61078
+
+Mon Nov 30 16:15:55 2015
+
+
+ Elaboration Time: 0.046875 sec

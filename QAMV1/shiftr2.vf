@@ -1,0 +1,123 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : shiftr2.vf
+// /___/   /\     Timestamp : 11/27/2015 19:50:36
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog G:/FPGA/BTP/QAMV1/shiftr2.vf -w G:/FPGA/BTP/QAMV1/shiftr2.sch
+//Design Name: shiftr2
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module bit16buffermodified_MUSER_shiftr2(buffinput, 
+                                         buffoutput);
+
+    input [11:0] buffinput;
+   output [15:0] buffoutput;
+   
+   
+   BUF  XLXI_1 (.I(buffinput[11]), 
+               .O(buffoutput[15]));
+   BUF  XLXI_2 (.I(buffinput[11]), 
+               .O(buffoutput[14]));
+   BUF  XLXI_3 (.I(buffinput[11]), 
+               .O(buffoutput[13]));
+   BUF  XLXI_4 (.I(buffinput[11]), 
+               .O(buffoutput[12]));
+   BUF  XLXI_5 (.I(buffinput[11]), 
+               .O(buffoutput[11]));
+   BUF  XLXI_6 (.I(buffinput[10]), 
+               .O(buffoutput[10]));
+   BUF  XLXI_7 (.I(buffinput[9]), 
+               .O(buffoutput[9]));
+   BUF  XLXI_8 (.I(buffinput[8]), 
+               .O(buffoutput[8]));
+   BUF  XLXI_9 (.I(buffinput[7]), 
+               .O(buffoutput[7]));
+   BUF  XLXI_10 (.I(buffinput[6]), 
+                .O(buffoutput[6]));
+   BUF  XLXI_11 (.I(buffinput[5]), 
+                .O(buffoutput[5]));
+   BUF  XLXI_12 (.I(buffinput[4]), 
+                .O(buffoutput[4]));
+   BUF  XLXI_13 (.I(buffinput[3]), 
+                .O(buffoutput[3]));
+   BUF  XLXI_14 (.I(buffinput[2]), 
+                .O(buffoutput[2]));
+   BUF  XLXI_15 (.I(buffinput[1]), 
+                .O(buffoutput[1]));
+   BUF  XLXI_16 (.I(buffinput[0]), 
+                .O(buffoutput[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module shiftr2(insignal, 
+               shiftdecide, 
+               signalout);
+
+    input [11:0] insignal;
+    input shiftdecide;
+   output [15:0] signalout;
+   
+   wire [15:0] inpsign;
+   
+   bit16buffermodified_MUSER_shiftr2  XLXI_1 (.buffinput(insignal[11:0]), 
+                                             .buffoutput(inpsign[15:0]));
+   AND2  XLXI_2 (.I0(shiftdecide), 
+                .I1(inpsign[1]), 
+                .O(signalout[2]));
+   AND2  XLXI_3 (.I0(shiftdecide), 
+                .I1(inpsign[2]), 
+                .O(signalout[3]));
+   AND2  XLXI_4 (.I0(shiftdecide), 
+                .I1(inpsign[3]), 
+                .O(signalout[4]));
+   AND2  XLXI_5 (.I0(shiftdecide), 
+                .I1(inpsign[4]), 
+                .O(signalout[5]));
+   AND2  XLXI_6 (.I0(shiftdecide), 
+                .I1(inpsign[5]), 
+                .O(signalout[6]));
+   AND2  XLXI_7 (.I0(shiftdecide), 
+                .I1(inpsign[6]), 
+                .O(signalout[7]));
+   AND2  XLXI_8 (.I0(shiftdecide), 
+                .I1(inpsign[7]), 
+                .O(signalout[8]));
+   AND2  XLXI_9 (.I0(shiftdecide), 
+                .I1(inpsign[8]), 
+                .O(signalout[9]));
+   AND2  XLXI_10 (.I0(shiftdecide), 
+                 .I1(inpsign[9]), 
+                 .O(signalout[10]));
+   AND2  XLXI_11 (.I0(shiftdecide), 
+                 .I1(inpsign[10]), 
+                 .O(signalout[11]));
+   AND2  XLXI_12 (.I0(shiftdecide), 
+                 .I1(inpsign[11]), 
+                 .O(signalout[12]));
+   AND2  XLXI_13 (.I0(shiftdecide), 
+                 .I1(inpsign[12]), 
+                 .O(signalout[13]));
+   AND2  XLXI_14 (.I0(shiftdecide), 
+                 .I1(inpsign[13]), 
+                 .O(signalout[14]));
+   AND2  XLXI_15 (.I0(shiftdecide), 
+                 .I1(inpsign[14]), 
+                 .O(signalout[15]));
+   AND2  XLXI_16 (.I0(shiftdecide), 
+                 .I1(inpsign[0]), 
+                 .O(signalout[1]));
+   GND  XLXI_18 (.G(signalout[0]));
+endmodule

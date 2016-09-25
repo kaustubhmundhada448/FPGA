@@ -1,0 +1,28 @@
+Command line:
+   DACout_DACout_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  12052
+
+Sun Nov 29 11:44:32 2015
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 356.823 Meg
+
+ Total Signals          : 761
+ Total Nets             : 209
+ Total Signal Drivers   : 184
+ Total Blocks           : 214
+ Total Primitive Blocks : 207
+ Total Processes        : 234
+ Total Traceable Variables  : 69
+ Total Scalar Nets and Variables : 355
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 356.823 Meg
+
+Sun Nov 29 21:49:24 2015
+

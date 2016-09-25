@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym usart_receiver E:/FPGA_Xilinx/USART_updated_3may/usart_receiver.sch E:/FPGA_Xilinx/FIRA_2.0/usart_receiver.sym 

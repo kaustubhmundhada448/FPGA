@@ -1,0 +1,576 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : shifter_full.vf
+// /___/   /\     Timestamp : 11/29/2015 01:17:50
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog G:/FPGA/BTP/QAMV1/shifter_full.vf -w G:/FPGA/BTP/QAMV1/shifter_full.sch
+//Design Name: shifter_full
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_shifter_full(D0, 
+                                 D1, 
+                                 S0, 
+                                 O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1E_MXILINX_shifter_full(D0, 
+                                  D1, 
+                                  E, 
+                                  S0, 
+                                  O);
+
+    input D0;
+    input D1;
+    input E;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND3  I_36_30 (.I0(D1), 
+                 .I1(E), 
+                 .I2(S0), 
+                 .O(M1));
+   AND3B1  I_36_31 (.I0(S0), 
+                   .I1(E), 
+                   .I2(D0), 
+                   .O(M0));
+   OR2  I_36_38 (.I0(M1), 
+                .I1(M0), 
+                .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module M16_1E_MXILINX_shifter_full(D0, 
+                                   D1, 
+                                   D2, 
+                                   D3, 
+                                   D4, 
+                                   D5, 
+                                   D6, 
+                                   D7, 
+                                   D8, 
+                                   D9, 
+                                   D10, 
+                                   D11, 
+                                   D12, 
+                                   D13, 
+                                   D14, 
+                                   D15, 
+                                   E, 
+                                   S0, 
+                                   S1, 
+                                   S2, 
+                                   S3, 
+                                   O);
+
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+    input D4;
+    input D5;
+    input D6;
+    input D7;
+    input D8;
+    input D9;
+    input D10;
+    input D11;
+    input D12;
+    input D13;
+    input D14;
+    input D15;
+    input E;
+    input S0;
+    input S1;
+    input S2;
+    input S3;
+   output O;
+   
+   wire MAB;
+   wire MBF;
+   wire MCD;
+   wire MCF;
+   wire MEF;
+   wire MO7;
+   wire M8B;
+   wire M01;
+   wire M03;
+   wire M23;
+   wire M45;
+   wire M47;
+   wire M67;
+   wire M89;
+   
+   (* HU_SET = "I_MAB_59" *) 
+   M2_1_MXILINX_shifter_full  I_MAB (.D0(D10), 
+                                    .D1(D11), 
+                                    .S0(S0), 
+                                    .O(MAB));
+   (* HU_SET = "I_MCD_58" *) 
+   M2_1_MXILINX_shifter_full  I_MCD (.D0(D12), 
+                                    .D1(D13), 
+                                    .S0(S0), 
+                                    .O(MCD));
+   MUXF5_L  I_MCF (.I0(MCD), 
+                  .I1(MEF), 
+                  .S(S1), 
+                  .LO(MCF));
+   (* HU_SET = "I_MEF_57" *) 
+   M2_1_MXILINX_shifter_full  I_MEF (.D0(D14), 
+                                    .D1(D15), 
+                                    .S0(S0), 
+                                    .O(MEF));
+   MUXF5_L  I_M8B (.I0(M89), 
+                  .I1(MAB), 
+                  .S(S1), 
+                  .LO(M8B));
+   MUXF6  I_M8F (.I0(M8B), 
+                .I1(MCF), 
+                .S(S2), 
+                .O(MBF));
+   (* HU_SET = "I_M01_64" *) 
+   M2_1_MXILINX_shifter_full  I_M01 (.D0(D0), 
+                                    .D1(D1), 
+                                    .S0(S0), 
+                                    .O(M01));
+   MUXF5_L  I_M03 (.I0(M01), 
+                  .I1(M23), 
+                  .S(S1), 
+                  .LO(M03));
+   MUXF6  I_M07 (.I0(M03), 
+                .I1(M47), 
+                .S(S2), 
+                .O(MO7));
+   (* HU_SET = "I_M23_63" *) 
+   M2_1_MXILINX_shifter_full  I_M23 (.D0(D2), 
+                                    .D1(D3), 
+                                    .S0(S0), 
+                                    .O(M23));
+   (* HU_SET = "I_M45_62" *) 
+   M2_1_MXILINX_shifter_full  I_M45 (.D0(D4), 
+                                    .D1(D5), 
+                                    .S0(S0), 
+                                    .O(M45));
+   MUXF5_L  I_M47 (.I0(M45), 
+                  .I1(M67), 
+                  .S(S1), 
+                  .LO(M47));
+   (* HU_SET = "I_M67_61" *) 
+   M2_1_MXILINX_shifter_full  I_M67 (.D0(D6), 
+                                    .D1(D7), 
+                                    .S0(S0), 
+                                    .O(M67));
+   (* HU_SET = "I_M89_60" *) 
+   M2_1_MXILINX_shifter_full  I_M89 (.D0(D8), 
+                                    .D1(D9), 
+                                    .S0(S0), 
+                                    .O(M89));
+   (* HU_SET = "I_O_56" *) 
+   M2_1E_MXILINX_shifter_full  I_O (.D0(MO7), 
+                                   .D1(MBF), 
+                                   .E(E), 
+                                   .S0(S3), 
+                                   .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module shifterhigh_MUSER_shifter_full(count, 
+                                      shiftinp, 
+                                      shiftout);
+
+    input [3:0] count;
+    input [11:0] shiftinp;
+   output [5:0] shiftout;
+   
+   wire XLXN_149;
+   wire XLXN_150;
+   wire XLXN_151;
+   wire XLXN_153;
+   wire XLXN_154;
+   wire XLXN_155;
+   
+   (* HU_SET = "XLXI_1_65" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_1 (.D0(shiftinp[6]), 
+                                       .D1(shiftinp[7]), 
+                                       .D2(shiftinp[8]), 
+                                       .D3(shiftinp[9]), 
+                                       .D4(shiftinp[10]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_155), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[0]));
+   (* HU_SET = "XLXI_2_66" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_2 (.D0(shiftinp[7]), 
+                                       .D1(shiftinp[8]), 
+                                       .D2(shiftinp[9]), 
+                                       .D3(shiftinp[10]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_149), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[1]));
+   (* HU_SET = "XLXI_3_67" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_3 (.D0(shiftinp[8]), 
+                                       .D1(shiftinp[9]), 
+                                       .D2(shiftinp[10]), 
+                                       .D3(shiftinp[11]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_150), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[2]));
+   (* HU_SET = "XLXI_4_68" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_4 (.D0(shiftinp[9]), 
+                                       .D1(shiftinp[10]), 
+                                       .D2(shiftinp[11]), 
+                                       .D3(shiftinp[11]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_151), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[3]));
+   (* HU_SET = "XLXI_5_69" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_5 (.D0(shiftinp[10]), 
+                                       .D1(shiftinp[11]), 
+                                       .D2(shiftinp[11]), 
+                                       .D3(shiftinp[11]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_153), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[4]));
+   (* HU_SET = "XLXI_6_70" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_6 (.D0(shiftinp[11]), 
+                                       .D1(shiftinp[11]), 
+                                       .D2(shiftinp[11]), 
+                                       .D3(shiftinp[11]), 
+                                       .D4(shiftinp[11]), 
+                                       .D5(shiftinp[11]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_154), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[5]));
+   VCC  XLXI_7 (.P(XLXN_149));
+   VCC  XLXI_8 (.P(XLXN_150));
+   VCC  XLXI_9 (.P(XLXN_151));
+   VCC  XLXI_10 (.P(XLXN_153));
+   VCC  XLXI_11 (.P(XLXN_154));
+   VCC  XLXI_12 (.P(XLXN_155));
+endmodule
+`timescale 1ns / 1ps
+
+module shifter_MUSER_shifter_full(count, 
+                                  shiftinp, 
+                                  shiftout);
+
+    input [3:0] count;
+    input [11:0] shiftinp;
+   output [5:0] shiftout;
+   
+   wire XLXN_164;
+   wire XLXN_165;
+   wire XLXN_166;
+   wire XLXN_167;
+   wire XLXN_168;
+   wire XLXN_169;
+   
+   (* HU_SET = "XLXI_1_71" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_1 (.D0(shiftinp[0]), 
+                                       .D1(shiftinp[1]), 
+                                       .D2(shiftinp[2]), 
+                                       .D3(shiftinp[3]), 
+                                       .D4(shiftinp[4]), 
+                                       .D5(shiftinp[5]), 
+                                       .D6(shiftinp[6]), 
+                                       .D7(shiftinp[7]), 
+                                       .D8(shiftinp[8]), 
+                                       .D9(shiftinp[9]), 
+                                       .D10(shiftinp[10]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_169), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[0]));
+   (* HU_SET = "XLXI_2_72" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_2 (.D0(shiftinp[2]), 
+                                       .D1(shiftinp[3]), 
+                                       .D2(shiftinp[4]), 
+                                       .D3(shiftinp[5]), 
+                                       .D4(shiftinp[6]), 
+                                       .D5(shiftinp[7]), 
+                                       .D6(shiftinp[8]), 
+                                       .D7(shiftinp[9]), 
+                                       .D8(shiftinp[10]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_165), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[2]));
+   (* HU_SET = "XLXI_3_73" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_3 (.D0(shiftinp[1]), 
+                                       .D1(shiftinp[2]), 
+                                       .D2(shiftinp[3]), 
+                                       .D3(shiftinp[4]), 
+                                       .D4(shiftinp[5]), 
+                                       .D5(shiftinp[6]), 
+                                       .D6(shiftinp[7]), 
+                                       .D7(shiftinp[8]), 
+                                       .D8(shiftinp[9]), 
+                                       .D9(shiftinp[10]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_164), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[1]));
+   (* HU_SET = "XLXI_4_74" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_4 (.D0(shiftinp[3]), 
+                                       .D1(shiftinp[4]), 
+                                       .D2(shiftinp[5]), 
+                                       .D3(shiftinp[6]), 
+                                       .D4(shiftinp[7]), 
+                                       .D5(shiftinp[8]), 
+                                       .D6(shiftinp[9]), 
+                                       .D7(shiftinp[10]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_166), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[3]));
+   (* HU_SET = "XLXI_5_75" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_5 (.D0(shiftinp[4]), 
+                                       .D1(shiftinp[5]), 
+                                       .D2(shiftinp[6]), 
+                                       .D3(shiftinp[7]), 
+                                       .D4(shiftinp[8]), 
+                                       .D5(shiftinp[9]), 
+                                       .D6(shiftinp[10]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_167), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[4]));
+   (* HU_SET = "XLXI_6_76" *) 
+   M16_1E_MXILINX_shifter_full  XLXI_6 (.D0(shiftinp[5]), 
+                                       .D1(shiftinp[6]), 
+                                       .D2(shiftinp[7]), 
+                                       .D3(shiftinp[8]), 
+                                       .D4(shiftinp[9]), 
+                                       .D5(shiftinp[10]), 
+                                       .D6(shiftinp[11]), 
+                                       .D7(shiftinp[11]), 
+                                       .D8(shiftinp[11]), 
+                                       .D9(shiftinp[11]), 
+                                       .D10(shiftinp[11]), 
+                                       .D11(shiftinp[11]), 
+                                       .D12(shiftinp[11]), 
+                                       .D13(shiftinp[11]), 
+                                       .D14(shiftinp[11]), 
+                                       .D15(shiftinp[11]), 
+                                       .E(XLXN_168), 
+                                       .S0(count[0]), 
+                                       .S1(count[1]), 
+                                       .S2(count[2]), 
+                                       .S3(count[3]), 
+                                       .O(shiftout[5]));
+   VCC  XLXI_8 (.P(XLXN_164));
+   VCC  XLXI_9 (.P(XLXN_165));
+   VCC  XLXI_10 (.P(XLXN_166));
+   VCC  XLXI_11 (.P(XLXN_167));
+   VCC  XLXI_12 (.P(XLXN_168));
+   VCC  XLXI_13 (.P(XLXN_169));
+endmodule
+`timescale 1ns / 1ps
+
+module shifter_full(counter, 
+                    input_shift, 
+                    output_shift);
+
+    input [3:0] counter;
+    input [11:0] input_shift;
+   output [11:0] output_shift;
+   
+   wire [5:0] highbit;
+   wire [5:0] lowbit;
+   
+   shifter_MUSER_shifter_full  XLXI_3 (.count(counter[3:0]), 
+                                      .shiftinp(input_shift[11:0]), 
+                                      .shiftout(lowbit[5:0]));
+   BUF  XLXI_5 (.I(lowbit[0]), 
+               .O(output_shift[0]));
+   BUF  XLXI_6 (.I(lowbit[1]), 
+               .O(output_shift[1]));
+   BUF  XLXI_7 (.I(lowbit[2]), 
+               .O(output_shift[2]));
+   BUF  XLXI_8 (.I(lowbit[3]), 
+               .O(output_shift[3]));
+   BUF  XLXI_9 (.I(lowbit[4]), 
+               .O(output_shift[4]));
+   BUF  XLXI_10 (.I(lowbit[5]), 
+                .O(output_shift[5]));
+   shifterhigh_MUSER_shifter_full  XLXI_18 (.count(counter[3:0]), 
+                                           .shiftinp(input_shift[11:0]), 
+                                           .shiftout(highbit[5:0]));
+   BUF  XLXI_19 (.I(highbit[0]), 
+                .O(output_shift[6]));
+   BUF  XLXI_20 (.I(highbit[1]), 
+                .O(output_shift[7]));
+   BUF  XLXI_21 (.I(highbit[2]), 
+                .O(output_shift[8]));
+   BUF  XLXI_22 (.I(highbit[3]), 
+                .O(output_shift[9]));
+   BUF  XLXI_23 (.I(highbit[4]), 
+                .O(output_shift[10]));
+   BUF  XLXI_24 (.I(highbit[5]), 
+                .O(output_shift[11]));
+endmodule

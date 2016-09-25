@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">FIRA_2_0.vf</arg>&quot; line <arg fmt="%d" index="2">5939</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">Enable</arg>&apos; of instance &apos;<arg fmt="%s" index="4">XLXI_28</arg>&apos; is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">FIRA_2_0.vf</arg>&quot; line <arg fmt="%d" index="2">2497</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">CE</arg>&apos; of instance &apos;<arg fmt="%s" index="4">XLXI_3</arg>&apos; is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">FIRA_2_0.vf</arg>&quot; line <arg fmt="%d" index="2">5145</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">CE</arg>&apos; of instance &apos;<arg fmt="%s" index="4">XLXI_1</arg>&apos; is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">FIRA_2_0.vf</arg>&quot; line <arg fmt="%d" index="2">2337</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">CE</arg>&apos; of instance &apos;<arg fmt="%s" index="4">XLXI_3</arg>&apos; is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">dummy</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">dummy</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">dummy</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">dummy</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Inp&lt;8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Inp&lt;7&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">dummy</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">dummy</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">dummy</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">dummy</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Inp0&lt;15:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXN_52</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">Kp&lt;7:3&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">Kd&lt;7:3&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">Data_ready1</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXN_226</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXN_225</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">OCR2</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="1730" delta="old" >XST has found some RLOC properties in element <arg fmt="%s" index="1">XLXI_2/XLXI_29</arg> which is instantiated several times. To handle this constraint XST will add the property &quot;hu_set <arg fmt="%s" index="2">XLXI_2/XLXI_29</arg>&quot; on each element with RLOC.
+</msg>
+
+<msg type="info" file="Xst" num="1730" delta="old" >XST has found some RLOC properties in element <arg fmt="%s" index="1">XLXI_2/XLXI_23</arg> which is instantiated several times. To handle this constraint XST will add the property &quot;hu_set <arg fmt="%s" index="2">XLXI_2/XLXI_23</arg>&quot; on each element with RLOC.
+</msg>
+
+<msg type="info" file="Xst" num="1730" delta="old" >XST has found some RLOC properties in element <arg fmt="%s" index="1">XLXI_5</arg> which is instantiated several times. To handle this constraint XST will add the property &quot;hu_set <arg fmt="%s" index="2">XLXI_5</arg>&quot; on each element with RLOC.
+</msg>
+
+<msg type="info" file="Xst" num="1730" delta="old" >XST has found some RLOC properties in element <arg fmt="%s" index="1">XLXI_18</arg> which is instantiated several times. To handle this constraint XST will add the property &quot;hu_set <arg fmt="%s" index="2">XLXI_18</arg>&quot; on each element with RLOC.
+</msg>
+
+<msg type="info" file="Xst" num="1730" delta="old" >XST has found some RLOC properties in element <arg fmt="%s" index="1">XLXI_17</arg> which is instantiated several times. To handle this constraint XST will add the property &quot;hu_set <arg fmt="%s" index="2">XLXI_17</arg>&quot; on each element with RLOC.
+</msg>
+
+<msg type="info" file="Xst" num="1730" delta="old" >XST has found some RLOC properties in element <arg fmt="%s" index="1">XLXI_16</arg> which is instantiated several times. To handle this constraint XST will add the property &quot;hu_set <arg fmt="%s" index="2">XLXI_16</arg>&quot; on each element with RLOC.
+</msg>
+
+<msg type="info" file="Xst" num="1730" delta="old" >XST has found some RLOC properties in element <arg fmt="%s" index="1">XLXI_15</arg> which is instantiated several times. To handle this constraint XST will add the property &quot;hu_set <arg fmt="%s" index="2">XLXI_15</arg>&quot; on each element with RLOC.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

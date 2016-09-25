@@ -1,0 +1,22 @@
+Release 14.2 Drc P.28xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Sat Aug 22 22:40:37 2015
+
+drc -z ETC_PWM_USART.ncd ETC_PWM_USART.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_20/XLXN_10 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_8/RST is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_6/dec is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <Kd<3>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Kp<3>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+DRC detected 0 errors and 5 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

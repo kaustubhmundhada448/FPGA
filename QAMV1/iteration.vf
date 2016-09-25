@@ -1,0 +1,224 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : iteration.vf
+// /___/   /\     Timestamp : 11/26/2015 20:41:20
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog G:/FPGA/BTP/QAMV1/iteration.vf -w G:/FPGA/BTP/QAMV1/iteration.sch
+//Design Name: iteration
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module COMP4_MXILINX_iteration(A0, 
+                               A1, 
+                               A2, 
+                               A3, 
+                               B0, 
+                               B1, 
+                               B2, 
+                               B3, 
+                               EQ);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+   output EQ;
+   
+   wire AB0;
+   wire AB1;
+   wire AB2;
+   wire AB3;
+   
+   AND4  I_36_32 (.I0(AB3), 
+                 .I1(AB2), 
+                 .I2(AB1), 
+                 .I3(AB0), 
+                 .O(EQ));
+   XNOR2  I_36_33 (.I0(B2), 
+                  .I1(A2), 
+                  .O(AB2));
+   XNOR2  I_36_34 (.I0(B3), 
+                  .I1(A3), 
+                  .O(AB3));
+   XNOR2  I_36_42 (.I0(B1), 
+                  .I1(A1), 
+                  .O(AB1));
+   XNOR2  I_36_43 (.I0(B0), 
+                  .I1(A0), 
+                  .O(AB0));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_iteration(C, 
+                              CE, 
+                              CLR, 
+                              T, 
+                              Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CE_MXILINX_iteration(C, 
+                               CE, 
+                               CLR, 
+                               CEO, 
+                               Q0, 
+                               Q1, 
+                               Q2, 
+                               Q3, 
+                               TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_0" *) 
+   FTCE_MXILINX_iteration #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(XLXN_1), 
+                                .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_1" *) 
+   FTCE_MXILINX_iteration #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(Q0_DUMMY), 
+                                .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_2" *) 
+   FTCE_MXILINX_iteration #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(T2), 
+                                .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_3" *) 
+   FTCE_MXILINX_iteration #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                .CE(CE), 
+                                .CLR(CLR), 
+                                .T(T3), 
+                                .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module iteration(clk, 
+                 clk_enable_bar_inp, 
+                 clk_en_bar_out, 
+                 counter12);
+
+    input clk;
+    input clk_enable_bar_inp;
+   output clk_en_bar_out;
+   output [3:0] counter12;
+   
+   wire XLXN_35;
+   wire XLXN_42;
+   wire XLXN_51;
+   wire XLXN_52;
+   wire XLXN_53;
+   wire XLXN_55;
+   wire [3:0] counter12_DUMMY;
+   
+   assign counter12[3:0] = counter12_DUMMY[3:0];
+   (* HU_SET = "XLXI_10_4" *) 
+   CB4CE_MXILINX_iteration  XLXI_10 (.C(clk), 
+                                    .CE(XLXN_51), 
+                                    .CLR(XLXN_55), 
+                                    .CEO(), 
+                                    .Q0(counter12_DUMMY[0]), 
+                                    .Q1(counter12_DUMMY[1]), 
+                                    .Q2(counter12_DUMMY[2]), 
+                                    .Q3(counter12_DUMMY[3]), 
+                                    .TC());
+   (* HU_SET = "XLXI_11_5" *) 
+   COMP4_MXILINX_iteration  XLXI_11 (.A0(counter12_DUMMY[0]), 
+                                    .A1(counter12_DUMMY[1]), 
+                                    .A2(counter12_DUMMY[2]), 
+                                    .A3(counter12_DUMMY[3]), 
+                                    .B0(XLXN_42), 
+                                    .B1(XLXN_55), 
+                                    .B2(XLXN_42), 
+                                    .B3(XLXN_42), 
+                                    .EQ(XLXN_35));
+   VCC  XLXI_12 (.P(XLXN_42));
+   GND  XLXI_13 (.G(XLXN_55));
+   NOR2  XLXI_14 (.I0(clk_enable_bar_inp), 
+                 .I1(XLXN_52), 
+                 .O(XLXN_51));
+   GND  XLXI_15 (.G(XLXN_52));
+   NOR2  XLXI_16 (.I0(XLXN_53), 
+                 .I1(XLXN_35), 
+                 .O(clk_en_bar_out));
+   GND  XLXI_17 (.G(XLXN_53));
+endmodule

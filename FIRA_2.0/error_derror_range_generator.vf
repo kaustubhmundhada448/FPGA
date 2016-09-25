@@ -1,0 +1,869 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : error_derror_range_generator.vf
+// /___/   /\     Timestamp : 09/25/2016 23:19:06
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/FIRA_2.0/error_derror_range_generator.vf -w E:/FPGA_Xilinx/FIRA_2.0/error_derror_range_generator.sch
+//Design Name: error_derror_range_generator
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Incrementer_Decrementer_MUSER_error_derror_range_generator(add_0, 
+                                                                  I_0, 
+                                                                  I_1, 
+                                                                  I_2, 
+                                                                  I_3, 
+                                                                  I_4, 
+                                                                  I_5, 
+                                                                  I_6, 
+                                                                  I_7, 
+                                                                  I_8, 
+                                                                  O_0, 
+                                                                  O_1, 
+                                                                  O_2, 
+                                                                  O_3, 
+                                                                  O_4, 
+                                                                  O_5, 
+                                                                  O_6, 
+                                                                  O_7, 
+                                                                  O_8);
+
+    input add_0;
+    input I_0;
+    input I_1;
+    input I_2;
+    input I_3;
+    input I_4;
+    input I_5;
+    input I_6;
+    input I_7;
+    input I_8;
+   output O_0;
+   output O_1;
+   output O_2;
+   output O_3;
+   output O_4;
+   output O_5;
+   output O_6;
+   output O_7;
+   output O_8;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire XLXN_52;
+   wire XLXN_55;
+   wire XLXN_57;
+   wire XLXN_59;
+   wire XLXN_62;
+   wire XLXN_63;
+   wire XLXN_64;
+   wire XLXN_65;
+   wire XLXN_66;
+   wire XLXN_67;
+   wire XLXN_68;
+   wire XLXN_69;
+   wire XLXN_70;
+   wire XLXN_71;
+   wire XLXN_73;
+   wire XLXN_74;
+   wire XLXN_75;
+   
+   XOR2  XLXI_1 (.I0(add_0), 
+                .I1(I_3), 
+                .O(XLXN_2));
+   XOR2  XLXI_2 (.I0(add_0), 
+                .I1(I_2), 
+                .O(XLXN_3));
+   XOR2  XLXI_3 (.I0(add_0), 
+                .I1(I_1), 
+                .O(XLXN_4));
+   INV  XLXI_4 (.I(XLXN_52), 
+               .O(XLXN_63));
+   XOR2  XLXI_5 (.I0(add_0), 
+                .I1(I_5), 
+                .O(XLXN_1));
+   XOR2  XLXI_6 (.I0(add_0), 
+                .I1(I_6), 
+                .O(XLXN_62));
+   XOR2  XLXI_7 (.I0(add_0), 
+                .I1(I_7), 
+                .O(XLXN_5));
+   XOR2  XLXI_8 (.I0(add_0), 
+                .I1(I_4), 
+                .O(XLXN_59));
+   XOR2  XLXI_9 (.I0(add_0), 
+                .I1(I_0), 
+                .O(XLXN_52));
+   XOR2  XLXI_10 (.I0(XLXN_4), 
+                 .I1(XLXN_52), 
+                 .O(XLXN_64));
+   XOR2  XLXI_11 (.I0(XLXN_5), 
+                 .I1(XLXN_75), 
+                 .O(XLXN_68));
+   XOR2  XLXI_12 (.I0(XLXN_62), 
+                 .I1(XLXN_46), 
+                 .O(XLXN_69));
+   XOR2  XLXI_13 (.I0(XLXN_1), 
+                 .I1(XLXN_47), 
+                 .O(XLXN_70));
+   XOR2  XLXI_14 (.I0(XLXN_59), 
+                 .I1(XLXN_48), 
+                 .O(XLXN_67));
+   XOR2  XLXI_15 (.I0(XLXN_2), 
+                 .I1(XLXN_57), 
+                 .O(XLXN_66));
+   XOR2  XLXI_16 (.I0(XLXN_3), 
+                 .I1(XLXN_55), 
+                 .O(XLXN_65));
+   AND2  XLXI_17 (.I0(XLXN_62), 
+                 .I1(XLXN_46), 
+                 .O(XLXN_75));
+   AND2  XLXI_18 (.I0(XLXN_1), 
+                 .I1(XLXN_47), 
+                 .O(XLXN_46));
+   AND2  XLXI_19 (.I0(XLXN_59), 
+                 .I1(XLXN_48), 
+                 .O(XLXN_47));
+   AND2  XLXI_20 (.I0(XLXN_2), 
+                 .I1(XLXN_57), 
+                 .O(XLXN_48));
+   AND2  XLXI_21 (.I0(XLXN_3), 
+                 .I1(XLXN_55), 
+                 .O(XLXN_57));
+   AND2  XLXI_35 (.I0(XLXN_4), 
+                 .I1(XLXN_52), 
+                 .O(XLXN_55));
+   XOR2  XLXI_38 (.I0(add_0), 
+                 .I1(XLXN_63), 
+                 .O(O_0));
+   XOR2  XLXI_39 (.I0(add_0), 
+                 .I1(XLXN_64), 
+                 .O(O_1));
+   XOR2  XLXI_40 (.I0(add_0), 
+                 .I1(XLXN_65), 
+                 .O(O_2));
+   XOR2  XLXI_41 (.I0(add_0), 
+                 .I1(XLXN_66), 
+                 .O(O_3));
+   XOR2  XLXI_42 (.I0(add_0), 
+                 .I1(XLXN_67), 
+                 .O(O_4));
+   XOR2  XLXI_43 (.I0(add_0), 
+                 .I1(XLXN_68), 
+                 .O(O_7));
+   XOR2  XLXI_44 (.I0(add_0), 
+                 .I1(XLXN_69), 
+                 .O(O_6));
+   XOR2  XLXI_45 (.I0(add_0), 
+                 .I1(XLXN_70), 
+                 .O(O_5));
+   XOR2  XLXI_46 (.I0(add_0), 
+                 .I1(XLXN_71), 
+                 .O(O_8));
+   XOR2  XLXI_48 (.I0(XLXN_74), 
+                 .I1(XLXN_73), 
+                 .O(XLXN_71));
+   AND2  XLXI_49 (.I0(XLXN_5), 
+                 .I1(XLXN_75), 
+                 .O(XLXN_73));
+   XOR2  XLXI_50 (.I0(add_0), 
+                 .I1(I_8), 
+                 .O(XLXN_74));
+endmodule
+`timescale 1ns / 1ps
+
+module 
+      
+      twos_compliment_using_inverter_MUSER_error_derror_range_generator(data_input, 
+                                                                         
+      data_output);
+
+    input [8:0] data_input;
+   output [8:0] data_output;
+   
+   wire XLXN_3;
+   wire XLXN_53;
+   wire XLXN_54;
+   wire XLXN_55;
+   wire XLXN_56;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_59;
+   wire XLXN_60;
+   wire XLXN_61;
+   
+   Incrementer_Decrementer_MUSER_error_derror_range_generator  XLXI_2 
+         (.add_0(XLXN_3), 
+                                                                      
+         .I_0(XLXN_61), 
+                                                                      
+         .I_1(XLXN_60), 
+                                                                      
+         .I_2(XLXN_59), 
+                                                                      
+         .I_3(XLXN_58), 
+                                                                      
+         .I_4(XLXN_57), 
+                                                                      
+         .I_5(XLXN_56), 
+                                                                      
+         .I_6(XLXN_55), 
+                                                                      
+         .I_7(XLXN_54), 
+                                                                      
+         .I_8(XLXN_53), 
+                                                                      
+         .O_0(data_output[0]), 
+                                                                      
+         .O_1(data_output[1]), 
+                                                                      
+         .O_2(data_output[2]), 
+                                                                      
+         .O_3(data_output[3]), 
+                                                                      
+         .O_4(data_output[4]), 
+                                                                      
+         .O_5(data_output[5]), 
+                                                                      
+         .O_6(data_output[6]), 
+                                                                      
+         .O_7(data_output[7]), 
+                                                                      
+         .O_8(data_output[8]));
+   GND  XLXI_3 (.G(XLXN_3));
+   INV  XLXI_14 (.I(data_input[8]), 
+                .O(XLXN_53));
+   INV  XLXI_15 (.I(data_input[7]), 
+                .O(XLXN_54));
+   INV  XLXI_16 (.I(data_input[6]), 
+                .O(XLXN_55));
+   INV  XLXI_17 (.I(data_input[5]), 
+                .O(XLXN_56));
+   INV  XLXI_18 (.I(data_input[4]), 
+                .O(XLXN_57));
+   INV  XLXI_19 (.I(data_input[3]), 
+                .O(XLXN_58));
+   INV  XLXI_20 (.I(data_input[2]), 
+                .O(XLXN_59));
+   INV  XLXI_21 (.I(data_input[1]), 
+                .O(XLXN_60));
+   INV  XLXI_22 (.I(data_input[0]), 
+                .O(XLXN_61));
+endmodule
+`timescale 1ns / 1ps
+
+module ADSU4_MXILINX_error_derror_range_generator(ADD, 
+                                                  A0, 
+                                                  A1, 
+                                                  A2, 
+                                                  A3, 
+                                                  B0, 
+                                                  B1, 
+                                                  B2, 
+                                                  B3, 
+                                                  CI, 
+                                                  CO, 
+                                                  OFL, 
+                                                  S0, 
+                                                  S1, 
+                                                  S2, 
+                                                  S3);
+
+    input ADD;
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input CI;
+   output CO;
+   output OFL;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C2O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire SUB0;
+   wire SUB1;
+   wire SUB2;
+   wire SUB3;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   XOR3  I_36_50 (.I0(A0), 
+                 .I1(B0), 
+                 .I2(SUB0), 
+                 .O(I0));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A1), 
+                    .S(I1), 
+                    .LO(C1));
+   XOR3  I_36_56 (.I0(A2), 
+                 .I1(B2), 
+                 .I2(SUB2), 
+                 .O(I2));
+   XOR3  I_36_57 (.I0(A3), 
+                 .I1(B3), 
+                 .I2(SUB3), 
+                 .O(I3));
+   (* RLOC = "X1Y1" *) 
+   MUXCY  I_36_58 (.CI(C2), 
+                  .DI(A3), 
+                  .S(I3), 
+                  .O(CO_DUMMY));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_D  I_36_62 (.CI(C1), 
+                    .DI(A2), 
+                    .S(I2), 
+                    .LO(C2), 
+                    .O(C2O));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S0));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S1));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S3));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S2));
+   XOR3  I_36_100 (.I0(A1), 
+                  .I1(B1), 
+                  .I2(SUB1), 
+                  .O(I1));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A0), 
+                     .S(I0), 
+                     .LO(C0));
+   INV  I_36_112 (.I(ADD), 
+                 .O(SUB0));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_175 (.I1(A1), 
+                  .I2(B1), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_178 (.I1(A0), 
+                  .I2(B0), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_182 (.I1(A2), 
+                  .I2(B2), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_206 (.I1(A3), 
+                  .I2(B3), 
+                  .I3(ADD), 
+                  .I4(dummy), 
+                  .O(I3));
+   XOR2  I_36_241 (.I0(C2O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+   INV  I_36_244 (.I(ADD), 
+                 .O(SUB1));
+   INV  I_36_245 (.I(ADD), 
+                 .O(SUB2));
+   INV  I_36_246 (.I(ADD), 
+                 .O(SUB3));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1E_MXILINX_error_derror_range_generator(D0, 
+                                                  D1, 
+                                                  E, 
+                                                  S0, 
+                                                  O);
+
+    input D0;
+    input D1;
+    input E;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND3  I_36_30 (.I0(D1), 
+                 .I1(E), 
+                 .I2(S0), 
+                 .O(M1));
+   AND3B1  I_36_31 (.I0(S0), 
+                   .I1(E), 
+                   .I2(D0), 
+                   .O(M0));
+   OR2  I_36_38 (.I0(M1), 
+                .I1(M0), 
+                .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module M4_1E_MXILINX_error_derror_range_generator(D0, 
+                                                  D1, 
+                                                  D2, 
+                                                  D3, 
+                                                  E, 
+                                                  S0, 
+                                                  S1, 
+                                                  O);
+
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+    input E;
+    input S0;
+    input S1;
+   output O;
+   
+   wire M01;
+   wire M23;
+   
+   (* HU_SET = "I_M01_1" *) 
+   M2_1E_MXILINX_error_derror_range_generator  I_M01 (.D0(D0), 
+                                                     .D1(D1), 
+                                                     .E(E), 
+                                                     .S0(S0), 
+                                                     .O(M01));
+   (* HU_SET = "I_M23_0" *) 
+   M2_1E_MXILINX_error_derror_range_generator  I_M23 (.D0(D2), 
+                                                     .D1(D3), 
+                                                     .E(E), 
+                                                     .S0(S0), 
+                                                     .O(M23));
+   MUXF5  I_O (.I0(M01), 
+              .I1(M23), 
+              .S(S1), 
+              .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module negative_mux_MUSER_error_derror_range_generator(in0, 
+                                                       in1, 
+                                                       in2, 
+                                                       in3, 
+                                                       S0, 
+                                                       S1, 
+                                                       op);
+
+    input [3:0] in0;
+    input [3:0] in1;
+    input [3:0] in2;
+    input [3:0] in3;
+    input S0;
+    input S1;
+   output [3:0] op;
+   
+   wire E;
+   wire mux0_0;
+   wire mux0_1;
+   wire mux0_2;
+   wire mux0_3;
+   wire mux1_0;
+   wire mux1_1;
+   wire mux1_2;
+   wire mux1_3;
+   wire mux2_0;
+   wire mux2_1;
+   wire mux2_2;
+   wire mux2_3;
+   wire mux3_0;
+   wire mux3_1;
+   wire mux3_2;
+   wire mux3_3;
+   
+   (* HU_SET = "XLXI_2_2" *) 
+   M4_1E_MXILINX_error_derror_range_generator  XLXI_2 (.D0(mux0_0), 
+                                                      .D1(mux0_1), 
+                                                      .D2(mux0_2), 
+                                                      .D3(mux0_3), 
+                                                      .E(E), 
+                                                      .S0(S0), 
+                                                      .S1(S1), 
+                                                      .O(op[0]));
+   BUF  XLXI_6 (.I(in0[0]), 
+               .O(mux0_0));
+   BUF  XLXI_7 (.I(in0[1]), 
+               .O(mux1_0));
+   BUF  XLXI_8 (.I(in0[2]), 
+               .O(mux2_0));
+   BUF  XLXI_9 (.I(in0[3]), 
+               .O(mux3_0));
+   BUF  XLXI_10 (.I(in1[0]), 
+                .O(mux0_1));
+   BUF  XLXI_11 (.I(in1[1]), 
+                .O(mux1_1));
+   BUF  XLXI_13 (.I(in1[2]), 
+                .O(mux2_1));
+   BUF  XLXI_14 (.I(in1[3]), 
+                .O(mux3_1));
+   BUF  XLXI_15 (.I(in2[0]), 
+                .O(mux0_2));
+   BUF  XLXI_16 (.I(in2[1]), 
+                .O(mux1_2));
+   BUF  XLXI_17 (.I(in2[2]), 
+                .O(mux2_2));
+   BUF  XLXI_18 (.I(in2[3]), 
+                .O(mux3_2));
+   BUF  XLXI_19 (.I(in3[0]), 
+                .O(mux0_3));
+   BUF  XLXI_20 (.I(in3[1]), 
+                .O(mux1_3));
+   BUF  XLXI_21 (.I(in3[2]), 
+                .O(mux2_3));
+   BUF  XLXI_22 (.I(in3[3]), 
+                .O(mux3_3));
+   (* HU_SET = "XLXI_23_3" *) 
+   M4_1E_MXILINX_error_derror_range_generator  XLXI_23 (.D0(mux1_0), 
+                                                       .D1(mux1_1), 
+                                                       .D2(mux1_2), 
+                                                       .D3(mux1_3), 
+                                                       .E(E), 
+                                                       .S0(S0), 
+                                                       .S1(S1), 
+                                                       .O(op[1]));
+   (* HU_SET = "XLXI_24_4" *) 
+   M4_1E_MXILINX_error_derror_range_generator  XLXI_24 (.D0(mux2_0), 
+                                                       .D1(mux2_1), 
+                                                       .D2(mux2_2), 
+                                                       .D3(mux2_3), 
+                                                       .E(E), 
+                                                       .S0(S0), 
+                                                       .S1(S1), 
+                                                       .O(op[2]));
+   (* HU_SET = "XLXI_25_5" *) 
+   M4_1E_MXILINX_error_derror_range_generator  XLXI_25 (.D0(mux3_0), 
+                                                       .D1(mux3_1), 
+                                                       .D2(mux3_2), 
+                                                       .D3(mux3_3), 
+                                                       .E(E), 
+                                                       .S0(S0), 
+                                                       .S1(S1), 
+                                                       .O(op[3]));
+   VCC  XLXI_26 (.P(E));
+endmodule
+`timescale 1ns / 1ps
+
+module COMPM4_MXILINX_error_derror_range_generator(A0, 
+                                                   A1, 
+                                                   A2, 
+                                                   A3, 
+                                                   B0, 
+                                                   B1, 
+                                                   B2, 
+                                                   B3, 
+                                                   GT, 
+                                                   LT);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+   output GT;
+   output LT;
+   
+   wire EQ_1;
+   wire EQ_3;
+   wire EQ2_3;
+   wire GE0_1;
+   wire GE2_3;
+   wire GTA;
+   wire GTB;
+   wire GT_1;
+   wire GT_3;
+   wire GT0_1;
+   wire LE0_1;
+   wire LE2_3;
+   wire LTA;
+   wire LTB;
+   wire LT_1;
+   wire LT_3;
+   wire LT0_1;
+   
+   AND2  I_36_1 (.I0(GT0_1), 
+                .I1(EQ2_3), 
+                .O(GTA));
+   AND2  I_36_2 (.I0(EQ2_3), 
+                .I1(LT0_1), 
+                .O(LTA));
+   NOR2  I_36_3 (.I0(GTB), 
+                .I1(LTB), 
+                .O(EQ2_3));
+   AND2B1  I_36_4 (.I0(A3), 
+                  .I1(B3), 
+                  .O(LT_3));
+   OR2  I_36_5 (.I0(LT_1), 
+               .I1(LE0_1), 
+               .O(LT0_1));
+   AND2B1  I_36_6 (.I0(B3), 
+                  .I1(A3), 
+                  .O(GT_3));
+   AND2B1  I_36_7 (.I0(A1), 
+                  .I1(B1), 
+                  .O(LT_1));
+   XNOR2  I_36_8 (.I0(A3), 
+                 .I1(B3), 
+                 .O(EQ_3));
+   AND2B1  I_36_9 (.I0(B1), 
+                  .I1(A1), 
+                  .O(GT_1));
+   OR2  I_36_11 (.I0(LTB), 
+                .I1(LTA), 
+                .O(LT));
+   OR2  I_36_12 (.I0(GTB), 
+                .I1(GTA), 
+                .O(GT));
+   XNOR2  I_36_13 (.I0(A1), 
+                  .I1(B1), 
+                  .O(EQ_1));
+   AND3B1  I_36_14 (.I0(B2), 
+                   .I1(EQ_3), 
+                   .I2(A2), 
+                   .O(GE2_3));
+   AND3B1  I_36_15 (.I0(A2), 
+                   .I1(EQ_3), 
+                   .I2(B2), 
+                   .O(LE2_3));
+   AND3B1  I_36_16 (.I0(B0), 
+                   .I1(EQ_1), 
+                   .I2(A0), 
+                   .O(GE0_1));
+   AND3B1  I_36_17 (.I0(A0), 
+                   .I1(EQ_1), 
+                   .I2(B0), 
+                   .O(LE0_1));
+   OR2  I_36_18 (.I0(GT_1), 
+                .I1(GE0_1), 
+                .O(GT0_1));
+   OR2  I_36_19 (.I0(GT_3), 
+                .I1(GE2_3), 
+                .O(GTB));
+   OR2  I_36_20 (.I0(LT_3), 
+                .I1(LE2_3), 
+                .O(LTB));
+endmodule
+`timescale 1ns / 1ps
+
+module Mux_2_8_MUSER_error_derror_range_generator(Inp0, 
+                                                  Inp1, 
+                                                  Sel, 
+                                                  Outp);
+
+    input [8:0] Inp0;
+    input [8:0] Inp1;
+    input Sel;
+   output [8:0] Outp;
+   
+   
+   MUXCY  XLXI_18 (.CI(Inp1[1]), 
+                  .DI(Inp0[1]), 
+                  .S(Sel), 
+                  .O(Outp[1]));
+   MUXCY  XLXI_19 (.CI(Inp1[0]), 
+                  .DI(Inp0[0]), 
+                  .S(Sel), 
+                  .O(Outp[0]));
+   MUXCY  XLXI_20 (.CI(Inp1[2]), 
+                  .DI(Inp0[2]), 
+                  .S(Sel), 
+                  .O(Outp[2]));
+   MUXCY  XLXI_21 (.CI(Inp1[3]), 
+                  .DI(Inp0[3]), 
+                  .S(Sel), 
+                  .O(Outp[3]));
+   MUXCY  XLXI_24 (.CI(Inp1[4]), 
+                  .DI(Inp0[4]), 
+                  .S(Sel), 
+                  .O(Outp[4]));
+   MUXCY  XLXI_25 (.CI(Inp1[5]), 
+                  .DI(Inp0[5]), 
+                  .S(Sel), 
+                  .O(Outp[5]));
+   MUXCY  XLXI_26 (.CI(Inp1[6]), 
+                  .DI(Inp0[6]), 
+                  .S(Sel), 
+                  .O(Outp[6]));
+   MUXCY  XLXI_27 (.CI(Inp1[7]), 
+                  .DI(Inp0[7]), 
+                  .S(Sel), 
+                  .O(Outp[7]));
+   MUXCY  XLXI_28 (.CI(Inp1[8]), 
+                  .DI(Inp0[8]), 
+                  .S(Sel), 
+                  .O(Outp[8]));
+endmodule
+`timescale 1ns / 1ps
+
+module error_derror_range_generator(error, 
+                                    error_neg, 
+                                    error_pos, 
+                                    error_zero);
+
+    input [8:0] error;
+   output [3:0] error_neg;
+   output [3:0] error_pos;
+   output [3:0] error_zero;
+   
+   wire a;
+   wire above16;
+   wire b;
+   wire [3:0] gnd_wire;
+   wire [8:0] moderror;
+   wire [3:0] moderror_4bit;
+   wire [3:0] ten;
+   wire XLXN_107;
+   wire XLXN_114;
+   wire XLXN_123;
+   wire XLXN_124;
+   wire [3:0] XLXN_135;
+   wire [8:0] XLXN_136;
+   wire XLXN_146;
+   wire XLXN_148;
+   
+   Mux_2_8_MUSER_error_derror_range_generator  XLXI_8 (.Inp0(), 
+                                                      .Inp1(), 
+                                                      .Sel(error[8]), 
+                                                      .Output());
+   (* HU_SET = "XLXI_9_6" *) 
+   COMPM4_MXILINX_error_derror_range_generator  XLXI_9 (.A0(moderror[0]), 
+                                                       .A1(moderror[1]), 
+                                                       .A2(moderror[2]), 
+                                                       .A3(moderror[3]), 
+                                                       .B0(ten[0]), 
+                                                       .B1(ten[1]), 
+                                                       .B2(ten[2]), 
+                                                       .B3(ten[3]), 
+                                                       .GT(XLXN_148), 
+                                                       .LT());
+   BUF  XLXI_44 (.I(error[8]), 
+                .O(a));
+   negative_mux_MUSER_error_derror_range_generator  XLXI_46 
+         (.in0(gnd_wire[3:0]), 
+                                                            
+         .in1(moderror_4bit[3:0]), 
+                                                            
+         .in2(gnd_wire[3:0]), 
+                                                            .in3(ten[3:0]), 
+                                                            .S0(a), 
+                                                            .S1(b), 
+                                                            
+         .op(error_neg[3:0]));
+   GND  XLXI_47 (.G(gnd_wire[3]));
+   GND  XLXI_48 (.G(gnd_wire[2]));
+   GND  XLXI_49 (.G(gnd_wire[1]));
+   GND  XLXI_50 (.G(gnd_wire[0]));
+   BUF  XLXI_52 (.I(moderror[3]), 
+                .O(moderror_4bit[3]));
+   BUF  XLXI_53 (.I(moderror[2]), 
+                .O(moderror_4bit[2]));
+   BUF  XLXI_54 (.I(moderror[1]), 
+                .O(moderror_4bit[1]));
+   BUF  XLXI_56 (.I(moderror[0]), 
+                .O(moderror_4bit[0]));
+   negative_mux_MUSER_error_derror_range_generator  XLXI_64 
+         (.in0(gnd_wire[3:0]), 
+                                                            
+         .in1(moderror_4bit[3:0]), 
+                                                            
+         .in2(gnd_wire[3:0]), 
+                                                            .in3(ten[3:0]), 
+                                                            .S0(XLXN_107), 
+                                                            .S1(b), 
+                                                            
+         .op(error_pos[3:0]));
+   INV  XLXI_65 (.I(a), 
+                .O(XLXN_107));
+   negative_mux_MUSER_error_derror_range_generator  XLXI_66 
+         (.in0(XLXN_135[3:0]), 
+                                                            
+         .in1(gnd_wire[3:0]), 
+                                                            
+         .in2(gnd_wire[3:0]), 
+                                                            
+         .in3(gnd_wire[3:0]), 
+                                                            .S0(b), 
+                                                            .S1(XLXN_114), 
+                                                            
+         .op(error_zero[3:0]));
+   (* HU_SET = "XLXI_68_7" *) 
+   ADSU4_MXILINX_error_derror_range_generator  XLXI_68 (.ADD(XLXN_124), 
+                                                       .A0(ten[0]), 
+                                                       .A1(ten[1]), 
+                                                       .A2(ten[2]), 
+                                                       .A3(ten[3]), 
+                                                       .B0(moderror_4bit[0]), 
+                                                       .B1(moderror_4bit[1]), 
+                                                       .B2(moderror_4bit[2]), 
+                                                       .B3(moderror_4bit[3]), 
+                                                       .CI(XLXN_123), 
+                                                       .CO(), 
+                                                       .OFL(), 
+                                                       .S0(XLXN_135[0]), 
+                                                       .S1(XLXN_135[1]), 
+                                                       .S2(XLXN_135[2]), 
+                                                       .S3(XLXN_135[3]));
+   GND  XLXI_71 (.G(XLXN_114));
+   twos_compliment_using_inverter_MUSER_error_derror_range_generator  XLXI_72 
+         (.data_input(error[8:0]), 
+                                                                              
+         .data_output(XLXN_136[8:0]));
+   OR4  XLXI_73 (.I0(moderror[5]), 
+                .I1(moderror[6]), 
+                .I2(moderror[7]), 
+                .I3(moderror[8]), 
+                .O(XLXN_146));
+   OR2  XLXI_74 (.I0(moderror[4]), 
+                .I1(XLXN_146), 
+                .O(above16));
+   OR2  XLXI_75 (.I0(XLXN_148), 
+                .I1(above16), 
+                .O(b));
+   GND  XLXI_78 (.G(XLXN_124));
+   VCC  XLXI_79 (.P(XLXN_123));
+   GND  XLXI_80 (.G(ten[1]));
+   GND  XLXI_81 (.G(ten[3]));
+   VCC  XLXI_82 (.P(ten[0]));
+   VCC  XLXI_83 (.P(ten[2]));
+endmodule

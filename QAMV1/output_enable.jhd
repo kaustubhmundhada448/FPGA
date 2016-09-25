@@ -1,0 +1,9 @@
+MODULE output_enable
+	SUBMODULE bit16buffermodified
+		INSTANCE XLXI_5
+	SUBMODULE bit16buffermodified
+		INSTANCE XLXI_6
+	SUBMODULE bit16to12
+		INSTANCE XLXI_7
+	SUBMODULE bit16to12
+		INSTANCE XLXI_8

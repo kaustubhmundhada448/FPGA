@@ -1,0 +1,99 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : One_Bit_shifter_8.vf
+// /___/   /\     Timestamp : 04/17/2016 23:32:03
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/One_Bit_shifter_8.vf" -w "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/One_Bit_shifter_8.sch"
+//Design Name: One_Bit_shifter_8
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Mux_2_8_MUSER_One_Bit_shifter_8(Inp0, 
+                                       Inp1, 
+                                       Sel, 
+                                       Outp);
+
+    input [7:0] Inp0;
+    input [7:0] Inp1;
+    input Sel;
+   output [7:0] Outp;
+   
+   
+   MUXCY  XLXI_18 (.CI(Inp1[1]), 
+                  .DI(Inp0[1]), 
+                  .S(Sel), 
+                  .O(Outp[1]));
+   MUXCY  XLXI_19 (.CI(Inp1[0]), 
+                  .DI(Inp0[0]), 
+                  .S(Sel), 
+                  .O(Outp[0]));
+   MUXCY  XLXI_20 (.CI(Inp1[2]), 
+                  .DI(Inp0[2]), 
+                  .S(Sel), 
+                  .O(Outp[2]));
+   MUXCY  XLXI_21 (.CI(Inp1[3]), 
+                  .DI(Inp0[3]), 
+                  .S(Sel), 
+                  .O(Outp[3]));
+   MUXCY  XLXI_24 (.CI(Inp1[4]), 
+                  .DI(Inp0[4]), 
+                  .S(Sel), 
+                  .O(Outp[4]));
+   MUXCY  XLXI_25 (.CI(Inp1[5]), 
+                  .DI(Inp0[5]), 
+                  .S(Sel), 
+                  .O(Outp[5]));
+   MUXCY  XLXI_26 (.CI(Inp1[6]), 
+                  .DI(Inp0[6]), 
+                  .S(Sel), 
+                  .O(Outp[6]));
+   MUXCY  XLXI_27 (.CI(Inp1[7]), 
+                  .DI(Inp0[7]), 
+                  .S(Sel), 
+                  .O(Outp[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module One_Bit_shifter_8(Inp, 
+                         Shift_1, 
+                         Otp_Sh);
+
+    input [7:0] Inp;
+    input Shift_1;
+   output [7:0] Otp_Sh;
+   
+   wire [7:0] Shift1;
+   
+   BUF  XLXI_2 (.I(Inp[7]), 
+               .O(Shift1[7]));
+   BUF  XLXI_3 (.I(Inp[7]), 
+               .O(Shift1[6]));
+   BUF  XLXI_4 (.I(Inp[6]), 
+               .O(Shift1[5]));
+   BUF  XLXI_5 (.I(Inp[5]), 
+               .O(Shift1[4]));
+   BUF  XLXI_6 (.I(Inp[4]), 
+               .O(Shift1[3]));
+   BUF  XLXI_7 (.I(Inp[3]), 
+               .O(Shift1[2]));
+   BUF  XLXI_8 (.I(Inp[2]), 
+               .O(Shift1[1]));
+   Mux_2_8_MUSER_One_Bit_shifter_8  XLXI_9 (.Inp0(Inp[7:0]), 
+                                           .Inp1(Shift1[7:0]), 
+                                           .Sel(Shift_1), 
+                                           .Outp(Otp_Sh[7:0]));
+   BUF  XLXI_10 (.I(Inp[1]), 
+                .O(Shift1[0]));
+endmodule

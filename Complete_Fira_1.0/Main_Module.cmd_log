@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family spartan3e -refsym Main_Module E:/FPGA_Xilinx/ETC_WITH_LEDs/Main_Module.sch E:/FPGA_Xilinx/Complete_Fira_1.0/Main_Module.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog Main_Module_drc.vf -w E:/FPGA_Xilinx/ETC_WITH_LEDs/Main_Module.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog Main_Module_drc.vf -w E:/FPGA_Xilinx/ETC_WITH_LEDs/Main_Module.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym Main_Module E:/FPGA_Xilinx/ETC_WITH_LEDs/Main_Module.sch E:/FPGA_Xilinx/Complete_Fira_1.0/Main_Module.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym Main_Module E:/FPGA_Xilinx/ETC_WITH_LEDs/Main_Module.sch E:/FPGA_Xilinx/Complete_Fira_1.0/Main_Module.sym 

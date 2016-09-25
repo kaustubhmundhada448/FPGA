@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : bit16buffermodified.vf
+// /___/   /\     Timestamp : 11/26/2015 20:41:27
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog G:/FPGA/BTP/QAMV1/bit16buffermodified.vf -w G:/FPGA/BTP/QAMV1/bit16buffermodified.sch
+//Design Name: bit16buffermodified
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module bit16buffermodified(buffinput, 
+                           buffoutput);
+
+    input [11:0] buffinput;
+   output [15:0] buffoutput;
+   
+   
+   BUF  XLXI_1 (.I(buffinput[11]), 
+               .O(buffoutput[15]));
+   BUF  XLXI_2 (.I(buffinput[11]), 
+               .O(buffoutput[14]));
+   BUF  XLXI_3 (.I(buffinput[11]), 
+               .O(buffoutput[13]));
+   BUF  XLXI_4 (.I(buffinput[11]), 
+               .O(buffoutput[12]));
+   BUF  XLXI_5 (.I(buffinput[11]), 
+               .O(buffoutput[11]));
+   BUF  XLXI_6 (.I(buffinput[10]), 
+               .O(buffoutput[10]));
+   BUF  XLXI_7 (.I(buffinput[9]), 
+               .O(buffoutput[9]));
+   BUF  XLXI_8 (.I(buffinput[8]), 
+               .O(buffoutput[8]));
+   BUF  XLXI_9 (.I(buffinput[7]), 
+               .O(buffoutput[7]));
+   BUF  XLXI_10 (.I(buffinput[6]), 
+                .O(buffoutput[6]));
+   BUF  XLXI_11 (.I(buffinput[5]), 
+                .O(buffoutput[5]));
+   BUF  XLXI_12 (.I(buffinput[4]), 
+                .O(buffoutput[4]));
+   BUF  XLXI_13 (.I(buffinput[3]), 
+                .O(buffoutput[3]));
+   BUF  XLXI_14 (.I(buffinput[2]), 
+                .O(buffoutput[2]));
+   BUF  XLXI_15 (.I(buffinput[1]), 
+                .O(buffoutput[1]));
+   BUF  XLXI_16 (.I(buffinput[0]), 
+                .O(buffoutput[0]));
+endmodule

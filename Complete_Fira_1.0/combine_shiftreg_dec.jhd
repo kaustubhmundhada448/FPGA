@@ -1,0 +1,7 @@
+MODULE combine_shiftreg_dec
+	SUBMODULE Parity_gen
+		INSTANCE XLXI_9
+	SUBMODULE decade_counter
+		INSTANCE XLXI_19
+	SUBMODULE bit_11
+		INSTANCE XLXI_20

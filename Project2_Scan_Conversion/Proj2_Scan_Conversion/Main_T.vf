@@ -1,0 +1,311 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Main_T.vf
+// /___/   /\     Timestamp : 04/17/2016 20:20:32
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Proj2_Scan_Conversion/Main_T.vf" -w "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Proj2_Scan_Conversion/Main_T.sch"
+//Design Name: Main_T
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FD12CE_MUSER_Main_T(C, 
+                           CE, 
+                           CLR, 
+                           D, 
+                           Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [11:0] D;
+   output [11:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+   FDCE #( .INIT(1'b0) ) XLXI_9 (.C(C), 
+                .CE(CE), 
+                .CLR(CLR), 
+                .D(D[8]), 
+                .Q(Q[8]));
+   FDCE #( .INIT(1'b0) ) XLXI_10 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(D[9]), 
+                 .Q(Q[9]));
+   FDCE #( .INIT(1'b0) ) XLXI_11 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(D[10]), 
+                 .Q(Q[10]));
+   FDCE #( .INIT(1'b0) ) XLXI_12 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(D[11]), 
+                 .Q(Q[11]));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_Main_T(C, 
+                           CE, 
+                           CLR, 
+                           T, 
+                           Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CE_MXILINX_Main_T(C, 
+                            CE, 
+                            CLR, 
+                            CEO, 
+                            Q0, 
+                            Q1, 
+                            Q2, 
+                            Q3, 
+                            TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_5" *) 
+   FTCE_MXILINX_Main_T #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                             .CE(CE), 
+                             .CLR(CLR), 
+                             .T(XLXN_1), 
+                             .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_6" *) 
+   FTCE_MXILINX_Main_T #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                             .CE(CE), 
+                             .CLR(CLR), 
+                             .T(Q0_DUMMY), 
+                             .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_7" *) 
+   FTCE_MXILINX_Main_T #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                             .CE(CE), 
+                             .CLR(CLR), 
+                             .T(T2), 
+                             .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_8" *) 
+   FTCE_MXILINX_Main_T #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                             .CE(CE), 
+                             .CLR(CLR), 
+                             .T(T3), 
+                             .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module Cb4ce_Bus_MUSER_Main_T(C, 
+                              CE, 
+                              CLR, 
+                              CEO, 
+                              Q, 
+                              TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output [3:0] Q;
+   output TC;
+   
+   
+   (* HU_SET = "XLXI_16_9" *) 
+   CB4CE_MXILINX_Main_T  XLXI_16 (.C(C), 
+                                 .CE(CE), 
+                                 .CLR(CLR), 
+                                 .CEO(CEO), 
+                                 .Q0(Q[0]), 
+                                 .Q1(Q[1]), 
+                                 .Q2(Q[2]), 
+                                 .Q3(Q[3]), 
+                                 .TC(TC));
+endmodule
+`timescale 1ns / 1ps
+
+module Main_T(CLK, 
+              InpX, 
+              InpY, 
+              Inp_The, 
+              Start_Pulse, 
+              OTPX, 
+              OTPY, 
+              Theta_Pre);
+
+    input CLK;
+    input [11:0] InpX;
+    input [11:0] InpY;
+    input [11:0] Inp_The;
+    input Start_Pulse;
+   output [11:0] OTPX;
+   output [11:0] OTPY;
+   output [11:0] Theta_Pre;
+   
+   wire ENABLE;
+   wire [11:0] Scaled_X;
+   wire [11:0] Scaled_Y;
+   wire XLXN_15;
+   wire XLXN_56;
+   wire [11:0] XLXN_205;
+   wire [3:0] XLXN_206;
+   wire XLXN_214;
+   wire XLXN_215;
+   wire XLXN_220;
+   wire [11:0] X_PRE;
+   wire [11:0] Y_PRE;
+   
+   INV  XLXI_10 (.I(XLXN_15), 
+                .O(ENABLE));
+   Cb4ce_Bus_MUSER_Main_T  XLXI_14 (.C(CLK), 
+                                   .CE(ENABLE), 
+                                   .CLR(Start_Pulse), 
+                                   .CEO(), 
+                                   .Q(XLXN_206[3:0]), 
+                                   .TC(XLXN_56));
+   (* HU_SET = "XLXI_15_10" *) 
+   FTCE_MXILINX_Main_T #( .INIT(1'b0) ) XLXI_15 (.C(CLK), 
+                                .CE(ENABLE), 
+                                .CLR(Start_Pulse), 
+                                .T(XLXN_56), 
+                                .Q(XLXN_15));
+   Cordic  XLXI_33 (.CLK(CLK), 
+                   .Count(XLXN_206[3:0]), 
+                   .Delta_B(XLXN_220), 
+                   .Enable(ENABLE), 
+                   .Input_The(Inp_The[11:0]), 
+                   .Input_X(InpX[11:0]), 
+                   .Input_Y(InpY[11:0]), 
+                   .Start(Start_Pulse), 
+                   .Theta_i(XLXN_205[11:0]), 
+                   .Theta_Pre(Theta_Pre[11:0]), 
+                   .X_Out(X_PRE[11:0]), 
+                   .Y_Out(Y_PRE[11:0]));
+   Theta_Gen_12  XLXI_36 (.Count3(XLXN_206[3:0]), 
+                         .Thetai(XLXN_205[11:0]));
+   GND  XLXI_37 (.G(XLXN_214));
+   GND  XLXI_38 (.G(XLXN_215));
+   INV  XLXI_39 (.I(Y_PRE[11]), 
+                .O(XLXN_220));
+   FD12CE_MUSER_Main_T  XLXI_43 (.C(CLK), 
+                                .CE(ENABLE), 
+                                .CLR(XLXN_215), 
+                                .D(Scaled_X[11:0]), 
+                                .Q(OTPX[11:0]));
+   FD12CE_MUSER_Main_T  XLXI_44 (.C(CLK), 
+                                .CE(ENABLE), 
+                                .CLR(XLXN_214), 
+                                .D(Scaled_Y[11:0]), 
+                                .Q(OTPY[11:0]));
+   Scale_For_Cordic  XLXI_45 (.Inpt(X_PRE[11:0]), 
+                             .Otpt(Scaled_X[11:0]));
+   Scale_For_Cordic  XLXI_46 (.Inpt(Y_PRE[11:0]), 
+                             .Otpt(Scaled_Y[11:0]));
+endmodule

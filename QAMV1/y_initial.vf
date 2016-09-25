@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : y_initial.vf
+// /___/   /\     Timestamp : 11/26/2015 20:41:27
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog G:/FPGA/BTP/QAMV1/y_initial.vf -w G:/FPGA/BTP/QAMV1/y_initial.sch
+//Design Name: y_initial
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module y_initial(x_constant);
+
+   output [15:0] x_constant;
+   
+   wire XLXN_35;
+   wire XLXN_48;
+   wire XLXN_67;
+   wire XLXN_68;
+   
+   GND  XLXI_1 (.G(XLXN_67));
+   BUF  XLXI_2 (.I(XLXN_35), 
+               .O(x_constant[0]));
+   BUF  XLXI_3 (.I(XLXN_35), 
+               .O(x_constant[1]));
+   BUF  XLXI_4 (.I(XLXN_35), 
+               .O(x_constant[2]));
+   GND  XLXI_5 (.G(XLXN_35));
+   BUF  XLXI_7 (.I(XLXN_35), 
+               .O(x_constant[3]));
+   GND  XLXI_8 (.G(XLXN_48));
+   BUF  XLXI_9 (.I(XLXN_48), 
+               .O(x_constant[4]));
+   GND  XLXI_11 (.G(XLXN_68));
+   BUF  XLXI_24 (.I(XLXN_68), 
+                .O(x_constant[5]));
+   BUF  XLXI_25 (.I(XLXN_68), 
+                .O(x_constant[6]));
+   BUF  XLXI_26 (.I(XLXN_68), 
+                .O(x_constant[7]));
+   BUF  XLXI_27 (.I(XLXN_68), 
+                .O(x_constant[8]));
+   BUF  XLXI_28 (.I(XLXN_68), 
+                .O(x_constant[9]));
+   BUF  XLXI_29 (.I(XLXN_67), 
+                .O(x_constant[10]));
+   BUF  XLXI_30 (.I(XLXN_67), 
+                .O(x_constant[11]));
+   BUF  XLXI_31 (.I(XLXN_67), 
+                .O(x_constant[12]));
+   BUF  XLXI_32 (.I(XLXN_67), 
+                .O(x_constant[13]));
+   BUF  XLXI_33 (.I(XLXN_67), 
+                .O(x_constant[14]));
+   BUF  XLXI_34 (.I(XLXN_67), 
+                .O(x_constant[15]));
+endmodule

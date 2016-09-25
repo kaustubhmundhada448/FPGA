@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Mux_2_8 E:/FPGA_Xilinx/FIRA_2.0/Mux_2_8.sch E:/FPGA_Xilinx/FIRA_2.0/Mux_2_8.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym Mux_2_8 E:/FPGA_Xilinx/FIRA_2.0/Mux_2_8.sch E:/FPGA_Xilinx/FIRA_2.0/Mux_2_8.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym Mux_2_8 E:/FPGA_Xilinx/FIRA_2.0/Mux_2_8.sch E:/FPGA_Xilinx/FIRA_2.0/Mux_2_8.sym 

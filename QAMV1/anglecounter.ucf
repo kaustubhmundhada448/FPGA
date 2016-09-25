@@ -1,0 +1,16 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "CLK_16" LOC = P76;
+NET "OUTF[0]" LOC = P81;
+NET "OUTF[1]" LOC = P79;
+NET "OUTF[3]" LOC = P97;
+NET "OUTF[4]" LOC = P93;
+NET "OUTF[5]" LOC = P90;
+NET "OUTF[6]" LOC = P94;
+NET "OUTF[7]" LOC = P95;
+NET "OUTF[8]" LOC = P96;
+NET "OUTF[9]" LOC = P102;
+NET "OUTF[10]" LOC = P101;
+NET "OUTF[11]" LOC = P80;
+NET "OUTF[2]" LOC = P100;

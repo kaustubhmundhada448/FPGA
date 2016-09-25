@@ -1,0 +1,6 @@
+verilog isim_temp "gnd16bit.vf"
+verilog isim_temp "Counter_12.vf"
+verilog isim_temp "bit16to12.vf"
+verilog isim_temp "anglecounter.vf"
+verilog isim_temp "Angle_Couner_test.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

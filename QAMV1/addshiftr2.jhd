@@ -1,0 +1,7 @@
+MODULE addshiftr2
+	SUBMODULE bit16buffermodified
+		INSTANCE XLXI_1
+	SUBMODULE shiftr2
+		INSTANCE XLXI_8
+	SUBMODULE gnd16bit
+		INSTANCE XLXI_9

@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Inverter_12_op_drc.vf
+// /___/   /\     Timestamp : 11/29/2015 01:06:47
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan3 -verilog Inverter_12_op_drc.vf -w G:/FPGA/BTP/QAMV1/Inverter_12_op.sch
+//Design Name: Inverter_12_op
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Inverter_12_op(INPT, 
+                      INV_1, 
+                      OPT);
+
+    input [11:0] INPT;
+    input INV_1;
+   output [11:0] OPT;
+   
+   
+   XOR2  XLXI_5 (.I0(INPT[11]), 
+                .I1(INV_1), 
+                .O(OPT[11]));
+   XOR2  XLXI_6 (.I0(INPT[10]), 
+                .I1(INV_1), 
+                .O(OPT[10]));
+   XOR2  XLXI_7 (.I0(INPT[9]), 
+                .I1(INV_1), 
+                .O(OPT[9]));
+   XOR2  XLXI_8 (.I0(INPT[8]), 
+                .I1(INV_1), 
+                .O(OPT[8]));
+   XOR2  XLXI_9 (.I0(INPT[7]), 
+                .I1(INV_1), 
+                .O(OPT[7]));
+   XOR2  XLXI_10 (.I0(INPT[6]), 
+                 .I1(INV_1), 
+                 .O(OPT[6]));
+   XOR2  XLXI_11 (.I0(INPT[5]), 
+                 .I1(INV_1), 
+                 .O(OPT[5]));
+   XOR2  XLXI_12 (.I0(INPT[4]), 
+                 .I1(INV_1), 
+                 .O(OPT[4]));
+   XOR2  XLXI_13 (.I0(INPT[3]), 
+                 .I1(INV_1), 
+                 .O(OPT[3]));
+   XOR2  XLXI_14 (.I0(INPT[2]), 
+                 .I1(INV_1), 
+                 .O(OPT[2]));
+   XOR2  XLXI_15 (.I0(INPT[1]), 
+                 .I1(INV_1), 
+                 .O(OPT[1]));
+   XOR2  XLXI_16 (.I0(INPT[0]), 
+                 .I1(INV_1), 
+                 .O(OPT[0]));
+endmodule

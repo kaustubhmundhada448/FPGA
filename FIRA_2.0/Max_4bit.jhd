@@ -1,0 +1,3 @@
+MODULE Max_4bit
+	SUBMODULE Mux_2_4bit
+		INSTANCE XLXI_2

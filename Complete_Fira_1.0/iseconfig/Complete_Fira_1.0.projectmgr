@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="Complete_Fira_1.0" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Counter_18 E:|FPGA_Xilinx|ETC_WITH_LEDs|Counter_18.sch</ClosedNode>
+         <ClosedNode>/D_error E:|FPGA_Xilinx|Error|D_error.sch</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_17 - Timer_PWM</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_18 - Timer_PWM</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_20 - Counter_18</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_21 - PID_Module/XLXI_5 - TotError/XLXI_2 - D_error</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_21 - PID_Module/XLXI_5 - TotError/XLXI_35 - Multiplier</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_21 - PID_Module/XLXI_5 - TotError/XLXI_37 - Multiplier</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_21 - PID_Module/XLXI_8 - OCR_Generator</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_25 - Main_Module</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_6 - usart_receiver</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_7 - usart_transmiter</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|ETC_PWM_USART.sch/XLXI_8 - Precale_434</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_1 - Main_Module</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_1 - Main_Module/XLXI_36 - Counter_18</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_1 - Main_Module/XLXI_40 - ETC_SYNCRONOUS</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_17 - Timer_PWM</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_18 - Timer_PWM</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_19 - PID_Module/XLXI_4 - OCR_Generator</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_19 - PID_Module/XLXI_4 - OCR_Generator/XLXI_8 - Twos_Comp</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_19 - PID_Module/XLXI_5 - TotError/XLXI_2 - D_error</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_2 - Timer_PWM</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_20 - Counter_18</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_21 - PID_Module</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_21 - PID_Module/XLXI_5 - TotError</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_21 - PID_Module/XLXI_8 - OCR_Generator</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_25 - Main_Module</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_25 - twos_compliment_using_inverter</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_3 - PID_Module</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_3 - PID_Module/XLXI_1 - TotError/XLXI_2 - D_error</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_3 - PID_Module/XLXI_4 - OCR_Generator</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_4 - Timer_PWM</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_5 - Counter_18</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_6 - usart_receiver</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_7 - usart_transmiter</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_8 - Precale_434</ClosedNode>
+         <ClosedNode>/Main_Module E:|FPGA_Xilinx|ETC_WITH_LEDs|Main_Module.sch</ClosedNode>
+         <ClosedNode>/OCR_Generator C:|Users|Kaustubh Mundhada|Dropbox|FIRA_FPGA|Encoder_Ticks_Counter|OCR_Generator.sch/XLXI_8 - Twos_Comp</ClosedNode>
+         <ClosedNode>/PID_Module E:|FPGA_Xilinx|PID|PID_Module.sch</ClosedNode>
+         <ClosedNode>/PWM_ETC E:|FPGA_Xilinx|ETC_PWM|PWM_ETC.sch/XLXI_1 - Main_Module</ClosedNode>
+         <ClosedNode>/PWM_ETC E:|FPGA_Xilinx|ETC_PWM|PWM_ETC.sch/XLXI_1 - Main_Module/XLXI_36 - Counter_18</ClosedNode>
+         <ClosedNode>/PWM_ETC E:|FPGA_Xilinx|ETC_PWM|PWM_ETC.sch/XLXI_2 - Timer_PWM</ClosedNode>
+         <ClosedNode>/PWM_ETC E:|FPGA_Xilinx|ETC_PWM|PWM_ETC.sch/XLXI_4 - Counter_18</ClosedNode>
+         <ClosedNode>/Precale_434 E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|Precale_434.sch</ClosedNode>
+         <ClosedNode>/Precale_434 E:|FPGA_Xilinx|USART_updated_3may|Precale_434.sch</ClosedNode>
+         <ClosedNode>/twos_compliment_using_inverter E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|twos_compliment_using_inverter.sch</ClosedNode>
+         <ClosedNode>/twos_compliment_using_inverter E:|FPGA_Xilinx|twos_compliment_8bit|twos_compliment_using_inverter.sch</ClosedNode>
+         <ClosedNode>/usart_receiver E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|usart_receiver.sch</ClosedNode>
+         <ClosedNode>/usart_receiver E:|FPGA_Xilinx|USART_updated_3may|usart_receiver.sch</ClosedNode>
+         <ClosedNode>/usart_transmiter E:|FPGA_Xilinx|Complete_Fira_1.0_working_22_08_2015|usart_transmiter.sch</ClosedNode>
+         <ClosedNode>/usart_transmiter E:|FPGA_Xilinx|USART_updated_3may|usart_transmiter.sch</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>ETC_PWM_USART (E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.sch)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000134000000020000000000000000000000000200000064ffffffff000000810000000300000002000001340000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>ETC_PWM_USART (E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.sch)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000196000000010000000100000000000000000000000064ffffffff000000810000000000000001000001960000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Multiplier_2.sch</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >12</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000003f5000000040101000100000000000000000000000064ffffffff000000810000000000000004000002d70000000100000000000000540000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Multiplier_2.sch</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >15</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000001b9000000010001000100000000000000000000000064ffffffff000000810000000000000001000001b90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000000f0000000ce01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Map/Generate Post-Map Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Place &amp; Route</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000185000000010000000100000000000000000000000064ffffffff000000810000000000000001000001850000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Place &amp; Route</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_1 - Main_Module</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_2 - Timer_PWM</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_3 - PID_Module</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_4 - Timer_PWM</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_5 - Counter_18</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_6 - usart_receiver</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_7 - usart_transmiter</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_8 - Precale_434</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d7000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d70000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bb0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e50000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+</Project>

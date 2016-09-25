@@ -1,0 +1,6 @@
+verilog work "bit16buffermodified.vf"
+verilog work "shiftr2.vf"
+verilog work "gnd16bit.vf"
+verilog work "bit4s.vf"
+verilog work "addshiftr2.vf"
+verilog work "qamtheta.vf"

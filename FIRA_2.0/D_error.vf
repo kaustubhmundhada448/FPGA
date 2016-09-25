@@ -1,0 +1,136 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : D_error.vf
+// /___/   /\     Timestamp : 05/30/2015 19:32:03
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/FIRA_2.0/D_error.vf -w E:/FPGA_Xilinx/Error/D_error.sch
+//Design Name: D_error
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Flip_flip9_MUSER_D_error(C_0, 
+                                I_0, 
+                                I_1, 
+                                I_2, 
+                                I_3, 
+                                I_4, 
+                                I_5, 
+                                I_6, 
+                                I_7, 
+                                I_8, 
+                                RST, 
+                                O_0, 
+                                O_1, 
+                                O_2, 
+                                O_3, 
+                                O_4, 
+                                O_5, 
+                                O_6, 
+                                O_7, 
+                                O_8);
+
+    input C_0;
+    input I_0;
+    input I_1;
+    input I_2;
+    input I_3;
+    input I_4;
+    input I_5;
+    input I_6;
+    input I_7;
+    input I_8;
+    input RST;
+   output O_0;
+   output O_1;
+   output O_2;
+   output O_3;
+   output O_4;
+   output O_5;
+   output O_6;
+   output O_7;
+   output O_8;
+   
+   
+   FDR #( .INIT(1'b0) ) XLXI_3 (.C(C_0), 
+               .D(I_8), 
+               .R(RST), 
+               .Q(O_8));
+   FDR #( .INIT(1'b0) ) XLXI_4 (.C(C_0), 
+               .D(I_7), 
+               .R(RST), 
+               .Q(O_7));
+   FDR #( .INIT(1'b0) ) XLXI_5 (.C(C_0), 
+               .D(I_6), 
+               .R(RST), 
+               .Q(O_6));
+   FDR #( .INIT(1'b0) ) XLXI_6 (.C(C_0), 
+               .D(I_5), 
+               .R(RST), 
+               .Q(O_5));
+   FDR #( .INIT(1'b0) ) XLXI_7 (.C(C_0), 
+               .D(I_4), 
+               .R(RST), 
+               .Q(O_4));
+   FDR #( .INIT(1'b0) ) XLXI_8 (.C(C_0), 
+               .D(I_3), 
+               .R(RST), 
+               .Q(O_3));
+   FDR #( .INIT(1'b0) ) XLXI_9 (.C(C_0), 
+               .D(I_2), 
+               .R(RST), 
+               .Q(O_2));
+   FDR #( .INIT(1'b0) ) XLXI_10 (.C(C_0), 
+                .D(I_1), 
+                .R(RST), 
+                .Q(O_1));
+   FDR #( .INIT(1'b0) ) XLXI_11 (.C(C_0), 
+                .D(I_0), 
+                .R(RST), 
+                .Q(O_0));
+endmodule
+`timescale 1ns / 1ps
+
+module D_error(clk_32, 
+               Err, 
+               DErr);
+
+    input clk_32;
+    input [8:0] Err;
+   output [8:0] DErr;
+   
+   wire XLXN_25;
+   
+   Flip_flip9_MUSER_D_error  XLXI_1 (.C_0(clk_32), 
+                                    .I_0(Err[0]), 
+                                    .I_1(Err[1]), 
+                                    .I_2(Err[2]), 
+                                    .I_3(Err[3]), 
+                                    .I_4(Err[4]), 
+                                    .I_5(Err[5]), 
+                                    .I_6(Err[6]), 
+                                    .I_7(Err[7]), 
+                                    .I_8(Err[8]), 
+                                    .RST(XLXN_25), 
+                                    .O_0(DErr[0]), 
+                                    .O_1(DErr[1]), 
+                                    .O_2(DErr[2]), 
+                                    .O_3(DErr[3]), 
+                                    .O_4(DErr[4]), 
+                                    .O_5(DErr[5]), 
+                                    .O_6(DErr[6]), 
+                                    .O_7(DErr[7]), 
+                                    .O_8(DErr[8]));
+   GND  XLXI_2 (.G(XLXN_25));
+endmodule

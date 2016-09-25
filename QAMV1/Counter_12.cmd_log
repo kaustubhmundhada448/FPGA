@@ -1,0 +1,6 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym Counter_12 G:/FPGA/BTP/QAMV1/Counter_12.sch G:/FPGA/BTP/QAMV1/Counter_12.sym 
+sch2hdl -intstyle ise -family spartan3 -verilog Counter_12_drc.vf -w G:/FPGA/BTP/QAMV1/Counter_12.sch 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/Counter_12.xst" -ofn "G:/FPGA/BTP/QAMV1/Counter_12.syr" 
+sch2sym -intstyle ise -family spartan3 -w -refsym Counter_12 G:/FPGA/BTP/QAMV1/Counter_12.sch G:/FPGA/BTP/QAMV1/Counter_12.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym Counter_12 G:/FPGA/BTP/QAMV1/Counter_12.sch G:/FPGA/BTP/QAMV1/Counter_12.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym Counter_12 G:/FPGA/BTP/QAMV1/Counter_12.sch G:/FPGA/BTP/QAMV1/Counter_12.sym 

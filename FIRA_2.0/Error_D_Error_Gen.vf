@@ -1,0 +1,359 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Error_D_Error_Gen.vf
+// /___/   /\     Timestamp : 05/30/2015 19:32:02
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/FIRA_2.0/Error_D_Error_Gen.vf -w E:/FPGA_Xilinx/Error/Error_D_Error_Gen.sch
+//Design Name: Error_D_Error_Gen
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module sub9bit_MUSER_Error_D_Error_Gen(A, 
+                                       ADD, 
+                                       B, 
+                                       CI, 
+                                       CO, 
+                                       OFL, 
+                                       S);
+
+    input [8:0] A;
+    input ADD;
+    input [8:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [8:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C6O;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I8;
+   wire SUB0;
+   wire SUB1;
+   wire SUB2;
+   wire SUB3;
+   wire SUB4;
+   wire SUB5;
+   wire SUB6;
+   wire SUB7;
+   wire SUB8;
+   wire XLXN_329;
+   wire XLXN_346;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   XOR3  I_36_50 (.I0(A[0]), 
+                 .I1(B[0]), 
+                 .I2(SUB0), 
+                 .O(I0));
+ 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A[1]), 
+                    .S(I1), 
+                    .LO(C1));
+   XOR3  I_36_56 (.I0(A[2]), 
+                 .I1(B[2]), 
+                 .I2(SUB2), 
+                 .O(I2));
+   XOR3  I_36_57 (.I0(A[3]), 
+                 .I1(B[3]), 
+                 .I2(SUB3), 
+                 .O(I3));
+ 
+   MUXCY_L  I_36_58 (.CI(C2), 
+                    .DI(A[3]), 
+                    .S(I3), 
+                    .LO(C3));
+   XOR3  I_36_59 (.I0(A[6]), 
+                 .I1(B[6]), 
+                 .I2(SUB6), 
+                 .O(I6));
+   XOR3  I_36_60 (.I0(A[4]), 
+                 .I1(B[4]), 
+                 .I2(SUB4), 
+                 .O(I4));
+  
+   MUXCY_L  I_36_62 (.CI(C1), 
+                    .DI(A[2]), 
+                    .S(I2), 
+                    .LO(C2));
+  
+   MUXCY_L  I_36_63 (.CI(C3), 
+                    .DI(A[4]), 
+                    .S(I4), 
+                    .LO(C4));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S[0]));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S[1]));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S[3]));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S[2]));
+   XORCY  I_36_77 (.CI(C4), 
+                  .LI(I5), 
+                  .O(S[5]));
+   XORCY  I_36_78 (.CI(C3), 
+                  .LI(I4), 
+                  .O(S[4]));
+   XOR3  I_36_79 (.I0(A[7]), 
+                 .I1(B[7]), 
+                 .I2(SUB7), 
+                 .O(XLXN_329));
+   XORCY  I_36_80 (.CI(C6), 
+                  .LI(XLXN_329), 
+                  .O(S[7]));
+   XORCY  I_36_81 (.CI(C5), 
+                  .LI(I6), 
+                  .O(S[6]));
+   XOR3  I_36_100 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .I2(SUB1), 
+                  .O(I1));
+   XOR3  I_36_109 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .I2(SUB5), 
+                  .O(I5));
+ 
+   MUXCY_L  I_36_110 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+ 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   INV  I_36_112 (.I(ADD), 
+                 .O(SUB0));
+   XOR2  I_36_221 (.I0(C6O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+   INV  I_36_222 (.I(ADD), 
+                 .O(SUB1));
+   INV  I_36_223 (.I(ADD), 
+                 .O(SUB2));
+   INV  I_36_224 (.I(ADD), 
+                 .O(SUB3));
+   INV  I_36_225 (.I(ADD), 
+                 .O(SUB4));
+   INV  I_36_226 (.I(ADD), 
+                 .O(SUB5));
+   INV  I_36_227 (.I(ADD), 
+                 .O(SUB6));
+   INV  I_36_228 (.I(ADD), 
+                 .O(SUB7));
+ 
+   MUXCY  XLXI_151 (.CI(XLXN_346), 
+                   .DI(A[8]), 
+                   .S(I8), 
+                   .O(CO_DUMMY));
+   XORCY  XLXI_152 (.CI(XLXN_346), 
+                   .LI(I8), 
+                   .O(S[8]));
+   INV  XLXI_153 (.I(ADD), 
+                 .O(SUB8));
+   XOR3  XLXI_154 (.I0(A[8]), 
+                  .I1(B[8]), 
+                  .I2(SUB8), 
+                  .O(I8));
+ 
+   MUXCY_D  XLXI_155 (.CI(C6), 
+                     .DI(A[7]), 
+                     .S(XLXN_329), 
+                     .LO(XLXN_346), 
+                     .O(C6O));
+ 
+   MUXCY_L  XLXI_156 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6));
+endmodule
+`timescale 1ns / 1ps
+
+module Flip_flip9_MUSER_Error_D_Error_Gen(C_0, 
+                                          I_0, 
+                                          I_1, 
+                                          I_2, 
+                                          I_3, 
+                                          I_4, 
+                                          I_5, 
+                                          I_6, 
+                                          I_7, 
+                                          I_8, 
+                                          RST, 
+                                          O_0, 
+                                          O_1, 
+                                          O_2, 
+                                          O_3, 
+                                          O_4, 
+                                          O_5, 
+                                          O_6, 
+                                          O_7, 
+                                          O_8);
+
+    input C_0;
+    input I_0;
+    input I_1;
+    input I_2;
+    input I_3;
+    input I_4;
+    input I_5;
+    input I_6;
+    input I_7;
+    input I_8;
+    input RST;
+   output O_0;
+   output O_1;
+   output O_2;
+   output O_3;
+   output O_4;
+   output O_5;
+   output O_6;
+   output O_7;
+   output O_8;
+   
+   
+   FDR #( .INIT(1'b0) ) XLXI_3 (.C(C_0), 
+               .D(I_8), 
+               .R(RST), 
+               .Q(O_8));
+   FDR #( .INIT(1'b0) ) XLXI_4 (.C(C_0), 
+               .D(I_7), 
+               .R(RST), 
+               .Q(O_7));
+   FDR #( .INIT(1'b0) ) XLXI_5 (.C(C_0), 
+               .D(I_6), 
+               .R(RST), 
+               .Q(O_6));
+   FDR #( .INIT(1'b0) ) XLXI_6 (.C(C_0), 
+               .D(I_5), 
+               .R(RST), 
+               .Q(O_5));
+   FDR #( .INIT(1'b0) ) XLXI_7 (.C(C_0), 
+               .D(I_4), 
+               .R(RST), 
+               .Q(O_4));
+   FDR #( .INIT(1'b0) ) XLXI_8 (.C(C_0), 
+               .D(I_3), 
+               .R(RST), 
+               .Q(O_3));
+   FDR #( .INIT(1'b0) ) XLXI_9 (.C(C_0), 
+               .D(I_2), 
+               .R(RST), 
+               .Q(O_2));
+   FDR #( .INIT(1'b0) ) XLXI_10 (.C(C_0), 
+                .D(I_1), 
+                .R(RST), 
+                .Q(O_1));
+   FDR #( .INIT(1'b0) ) XLXI_11 (.C(C_0), 
+                .D(I_0), 
+                .R(RST), 
+                .Q(O_0));
+endmodule
+`timescale 1ns / 1ps
+
+module D_error_MUSER_Error_D_Error_Gen(clk_32, 
+                                       Err, 
+                                       DErr);
+
+    input clk_32;
+    input [8:0] Err;
+   output [8:0] DErr;
+   
+   wire XLXN_25;
+   
+   Flip_flip9_MUSER_Error_D_Error_Gen  XLXI_1 (.C_0(clk_32), 
+                                              .I_0(Err[0]), 
+                                              .I_1(Err[1]), 
+                                              .I_2(Err[2]), 
+                                              .I_3(Err[3]), 
+                                              .I_4(Err[4]), 
+                                              .I_5(Err[5]), 
+                                              .I_6(Err[6]), 
+                                              .I_7(Err[7]), 
+                                              .I_8(Err[8]), 
+                                              .RST(XLXN_25), 
+                                              .O_0(DErr[0]), 
+                                              .O_1(DErr[1]), 
+                                              .O_2(DErr[2]), 
+                                              .O_3(DErr[3]), 
+                                              .O_4(DErr[4]), 
+                                              .O_5(DErr[5]), 
+                                              .O_6(DErr[6]), 
+                                              .O_7(DErr[7]), 
+                                              .O_8(DErr[8]));
+   GND  XLXI_2 (.G(XLXN_25));
+endmodule
+`timescale 1ns / 1ps
+
+module Error_D_Error_Gen(clk_32, 
+                         Target, 
+                         Ticks, 
+                         D_ERROR, 
+                         Err);
+
+    input clk_32;
+    input [8:0] Target;
+    input [8:0] Ticks;
+   output [8:0] D_ERROR;
+   output [8:0] Err;
+   
+   wire [8:0] XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire [8:0] Err_DUMMY;
+   
+   assign Err[8:0] = Err_DUMMY[8:0];
+   D_error_MUSER_Error_D_Error_Gen  XLXI_1 (.clk_32(clk_32), 
+                                           .Err(Err_DUMMY[8:0]), 
+                                           .DErr(XLXN_17[8:0]));
+   sub9bit_MUSER_Error_D_Error_Gen  XLXI_23 (.A(Err_DUMMY[8:0]), 
+                                            .ADD(XLXN_24), 
+                                            .B(XLXN_17[8:0]), 
+                                            .CI(XLXN_25), 
+                                            .CO(), 
+                                            .OFL(), 
+                                            .S(D_ERROR[8:0]));
+   sub9bit_MUSER_Error_D_Error_Gen  XLXI_29 (.A(Target[8:0]), 
+                                            .ADD(XLXN_19), 
+                                            .B(Ticks[8:0]), 
+                                            .CI(XLXN_18), 
+                                            .CO(), 
+                                            .OFL(), 
+                                            .S(Err_DUMMY[8:0]));
+   GND  XLXI_30 (.G(XLXN_19));
+   VCC  XLXI_31 (.P(XLXN_18));
+   VCC  XLXI_32 (.P(XLXN_25));
+   GND  XLXI_33 (.G(XLXN_24));
+endmodule

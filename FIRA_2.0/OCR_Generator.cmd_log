@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3e -refsym OCR_Generator {C:/Users/Kaustubh Mundhada/Dropbox/FIRA_FPGA/Encoder_Ticks_Counter/OCR_Generator.sch} E:/FPGA_Xilinx/FIRA_2.0/OCR_Generator.sym 
+sch2sym -intstyle ise -family spartan3e -refsym OCR_Generator E:/FPGA_Xilinx/FIRA_2.0/OCR_Generator.sch E:/FPGA_Xilinx/FIRA_2.0/OCR_Generator.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym OCR_Generator E:/FPGA_Xilinx/FIRA_2.0/OCR_Generator.sch E:/FPGA_Xilinx/FIRA_2.0/OCR_Generator.sym 

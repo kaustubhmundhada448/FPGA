@@ -1,0 +1,7 @@
+MODULE test_usart
+	SUBMODULE Precale_434
+		INSTANCE XLXI_30
+	SUBMODULE usart_receiver
+		INSTANCE XLXI_33
+	SUBMODULE usart_transmiter
+		INSTANCE XLXI_34

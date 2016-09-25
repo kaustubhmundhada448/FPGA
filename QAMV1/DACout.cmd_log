@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym DACout G:/FPGA/BTP/QAMV1/DACout.sch G:/FPGA/BTP/QAMV1/DACout.sym 

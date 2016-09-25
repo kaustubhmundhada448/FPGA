@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Mux_2_8Bit E:/FPGA_Xilinx/FIRA_2.0/Mux_2_8Bit.sch E:/FPGA_Xilinx/FIRA_2.0/Mux_2_8Bit.sym 

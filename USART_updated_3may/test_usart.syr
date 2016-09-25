@@ -1,0 +1,784 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: test_usart.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "test_usart.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "test_usart"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-cp132
+
+---- Source Options
+Top Module Name                    : test_usart
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Reg_4bit.vf" in library work
+Compiling verilog file "Add_sub_4bit.vf" in library work
+Module <Reg_4bit> compiled
+Compiling verilog file "SIPO_reg.vf" in library work
+Module <Add_sub_4bit> compiled
+Compiling verilog file "Parity_gen.vf" in library work
+Module <SIPO_reg> compiled
+Compiling verilog file "outputreg_at_end_ofinput.vf" in library work
+Module <Parity_gen> compiled
+Compiling verilog file "nin_counter.vf" in library work
+Module <outputreg_at_end_ofinput> compiled
+Module <Reg_4bit_MUSER_nin_counter> compiled
+Module <Add_sub_4bit_MUSER_nin_counter> compiled
+Compiling verilog file "Incrementer_Decrementer.vf" in library work
+Module <nin_counter> compiled
+Compiling verilog file "Flip_flip9.vf" in library work
+Module <Incrementer_Decrementer> compiled
+Compiling verilog file "Digital_Filter.vf" in library work
+Module <Flip_flip9> compiled
+Module <FJKC_MXILINX_Digital_Filter> compiled
+Compiling verilog file "decade_counter_new.vf" in library work
+Module <Digital_Filter> compiled
+Module <Reg_4bit_MUSER_decade_counter_new> compiled
+Module <Add_sub_4bit_MUSER_decade_counter_new> compiled
+Compiling verilog file "bit10datareg_to_transmit.vf" in library work
+Module <decade_counter_new> compiled
+Compiling verilog file "usart_transmiter.vf" in library work
+Module <bit10datareg_to_transmit> compiled
+Module <Reg_4bit_MUSER_usart_transmiter> compiled
+Module <Add_sub_4bit_MUSER_usart_transmiter> compiled
+Module <decade_counter_new_MUSER_usart_transmiter> compiled
+Module <bit10datareg_to_transmit_MUSER_usart_transmiter> compiled
+Module <Parity_gen_MUSER_usart_transmiter> compiled
+Compiling verilog file "usart_receiver.vf" in library work
+Module <usart_transmiter> compiled
+Module <FJKC_MXILINX_usart_receiver> compiled
+Module <Digital_Filter_MUSER_usart_receiver> compiled
+Module <outputreg_at_end_ofinput_MUSER_usart_receiver> compiled
+Module <Reg_4bit_MUSER_usart_receiver> compiled
+Module <Add_sub_4bit_MUSER_usart_receiver> compiled
+Module <nin_counter_MUSER_usart_receiver> compiled
+Module <SIPO_reg_MUSER_usart_receiver> compiled
+Module <Parity_gen_MUSER_usart_receiver> compiled
+Compiling verilog file "Precale_434.vf" in library work
+Module <usart_receiver> compiled
+Module <FTC_MXILINX_Precale_434> compiled
+Module <Incrementer_Decrementer_MUSER_Precale_434> compiled
+Module <Flip_flip9_MUSER_Precale_434> compiled
+Compiling verilog file "test_usart.vf" in library work
+Module <Precale_434> compiled
+Module <Reg_4bit_MUSER_test_usart> compiled
+Module <Add_sub_4bit_MUSER_test_usart> compiled
+Module <decade_counter_new_MUSER_test_usart> compiled
+Module <bit10datareg_to_transmit_MUSER_test_usart> compiled
+Module <Parity_gen_MUSER_test_usart> compiled
+Module <usart_transmiter_MUSER_test_usart> compiled
+Module <FJKC_MXILINX_test_usart> compiled
+Module <Digital_Filter_MUSER_test_usart> compiled
+Module <outputreg_at_end_ofinput_MUSER_test_usart> compiled
+Module <nin_counter_MUSER_test_usart> compiled
+Module <SIPO_reg_MUSER_test_usart> compiled
+Module <usart_receiver_MUSER_test_usart> compiled
+Module <FTC_MXILINX_test_usart> compiled
+Module <Incrementer_Decrementer_MUSER_test_usart> compiled
+Module <Flip_flip9_MUSER_test_usart> compiled
+Module <Precale_434_MUSER_test_usart> compiled
+Module <test_usart> compiled
+No errors in compilation
+Analysis of file <"test_usart.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <test_usart> in library <work>.
+
+Analyzing hierarchy for module <Precale_434_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <usart_receiver_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <usart_transmiter_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <Flip_flip9_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <Incrementer_Decrementer_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <FTC_MXILINX_test_usart> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <Parity_gen_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <SIPO_reg_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <nin_counter_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <outputreg_at_end_ofinput_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <Digital_Filter_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <bit10datareg_to_transmit_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <decade_counter_new_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <Add_sub_4bit_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <Reg_4bit_MUSER_test_usart> in library <work>.
+
+Analyzing hierarchy for module <FJKC_MXILINX_test_usart> in library <work> with parameters.
+	INIT = "0"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <test_usart>.
+Module <test_usart> is correct for synthesis.
+ 
+Analyzing module <Precale_434_MUSER_test_usart> in library <work>.
+Module <Precale_434_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_14_4" for instance <XLXI_14> in unit <Precale_434_MUSER_test_usart>.
+Analyzing module <Flip_flip9_MUSER_test_usart> in library <work>.
+Module <Flip_flip9_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <Flip_flip9_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_13> in unit <Flip_flip9_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_14> in unit <Flip_flip9_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_15> in unit <Flip_flip9_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_16> in unit <Flip_flip9_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_17> in unit <Flip_flip9_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_18> in unit <Flip_flip9_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_19> in unit <Flip_flip9_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_20> in unit <Flip_flip9_MUSER_test_usart>.
+Analyzing module <Incrementer_Decrementer_MUSER_test_usart> in library <work>.
+Module <Incrementer_Decrementer_MUSER_test_usart> is correct for synthesis.
+ 
+Analyzing module <FTC_MXILINX_test_usart> in library <work>.
+	INIT = 1'b0
+Module <FTC_MXILINX_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTC_MXILINX_test_usart>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTC_MXILINX_test_usart>.
+Analyzing module <usart_receiver_MUSER_test_usart> in library <work>.
+Module <usart_receiver_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_65> in unit <usart_receiver_MUSER_test_usart>.
+Analyzing module <Parity_gen_MUSER_test_usart> in library <work>.
+Module <Parity_gen_MUSER_test_usart> is correct for synthesis.
+ 
+Analyzing module <SIPO_reg_MUSER_test_usart> in library <work>.
+Module <SIPO_reg_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_1> in unit <SIPO_reg_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_2> in unit <SIPO_reg_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_3> in unit <SIPO_reg_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <SIPO_reg_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_5> in unit <SIPO_reg_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_6> in unit <SIPO_reg_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_7> in unit <SIPO_reg_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_8> in unit <SIPO_reg_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_9> in unit <SIPO_reg_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_10> in unit <SIPO_reg_MUSER_test_usart>.
+Analyzing module <nin_counter_MUSER_test_usart> in library <work>.
+Module <nin_counter_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_50> in unit <nin_counter_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_51> in unit <nin_counter_MUSER_test_usart>.
+Analyzing module <Add_sub_4bit_MUSER_test_usart> in library <work>.
+Module <Add_sub_4bit_MUSER_test_usart> is correct for synthesis.
+ 
+Analyzing module <Reg_4bit_MUSER_test_usart> in library <work>.
+Module <Reg_4bit_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_11> in unit <Reg_4bit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <Reg_4bit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_13> in unit <Reg_4bit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_14> in unit <Reg_4bit_MUSER_test_usart>.
+Analyzing module <outputreg_at_end_ofinput_MUSER_test_usart> in library <work>.
+Module <outputreg_at_end_ofinput_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <outputreg_at_end_ofinput_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_13> in unit <outputreg_at_end_ofinput_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_14> in unit <outputreg_at_end_ofinput_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_15> in unit <outputreg_at_end_ofinput_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_16> in unit <outputreg_at_end_ofinput_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_17> in unit <outputreg_at_end_ofinput_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_19> in unit <outputreg_at_end_ofinput_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_20> in unit <outputreg_at_end_ofinput_MUSER_test_usart>.
+Analyzing module <Digital_Filter_MUSER_test_usart> in library <work>.
+Module <Digital_Filter_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_1> in unit <Digital_Filter_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_2> in unit <Digital_Filter_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_3> in unit <Digital_Filter_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <Digital_Filter_MUSER_test_usart>.
+    Set user-defined property "HU_SET =  XLXI_11_3" for instance <XLXI_11> in unit <Digital_Filter_MUSER_test_usart>.
+Analyzing module <FJKC_MXILINX_test_usart> in library <work>.
+	INIT = 1'b0
+Module <FJKC_MXILINX_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_32> in unit <FJKC_MXILINX_test_usart>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_32> in unit <FJKC_MXILINX_test_usart>.
+Analyzing module <usart_transmiter_MUSER_test_usart> in library <work>.
+Module <usart_transmiter_MUSER_test_usart> is correct for synthesis.
+ 
+Analyzing module <bit10datareg_to_transmit_MUSER_test_usart> in library <work>.
+Module <bit10datareg_to_transmit_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_60> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_61> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_62> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_63> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_64> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_65> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_66> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_67> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_68> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_69> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_71> in unit <bit10datareg_to_transmit_MUSER_test_usart>.
+Analyzing module <decade_counter_new_MUSER_test_usart> in library <work>.
+Module <decade_counter_new_MUSER_test_usart> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_50> in unit <decade_counter_new_MUSER_test_usart>.
+    Set user-defined property "INIT =  0" for instance <XLXI_51> in unit <decade_counter_new_MUSER_test_usart>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Flip_flip9_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <Flip_flip9_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <Incrementer_Decrementer_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <Incrementer_Decrementer_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <FTC_MXILINX_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <FTC_MXILINX_test_usart> synthesized.
+
+
+Synthesizing Unit <Parity_gen_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <Parity_gen_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <SIPO_reg_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <SIPO_reg_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <outputreg_at_end_ofinput_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <outputreg_at_end_ofinput_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <Add_sub_4bit_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <Add_sub_4bit_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <Reg_4bit_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <Reg_4bit_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <FJKC_MXILINX_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <FJKC_MXILINX_test_usart> synthesized.
+
+
+Synthesizing Unit <bit10datareg_to_transmit_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <bit10datareg_to_transmit_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <Precale_434_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <Precale_434_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <nin_counter_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <nin_counter_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <Digital_Filter_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <Digital_Filter_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <decade_counter_new_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <decade_counter_new_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <usart_receiver_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <usart_receiver_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <usart_transmiter_MUSER_test_usart>.
+    Related source file is "test_usart.vf".
+Unit <usart_transmiter_MUSER_test_usart> synthesized.
+
+
+Synthesizing Unit <test_usart>.
+    Related source file is "test_usart.vf".
+Unit <test_usart> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 57
+ Flip-Flops                                            : 57
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <test_usart> ...
+
+Optimizing unit <Flip_flip9_MUSER_test_usart> ...
+
+Optimizing unit <Incrementer_Decrementer_MUSER_test_usart> ...
+
+Optimizing unit <FTC_MXILINX_test_usart> ...
+
+Optimizing unit <SIPO_reg_MUSER_test_usart> ...
+
+Optimizing unit <outputreg_at_end_ofinput_MUSER_test_usart> ...
+
+Optimizing unit <FJKC_MXILINX_test_usart> ...
+
+Optimizing unit <bit10datareg_to_transmit_MUSER_test_usart> ...
+
+Optimizing unit <Precale_434_MUSER_test_usart> ...
+
+Optimizing unit <nin_counter_MUSER_test_usart> ...
+
+Optimizing unit <Digital_Filter_MUSER_test_usart> ...
+
+Optimizing unit <decade_counter_new_MUSER_test_usart> ...
+
+Optimizing unit <usart_receiver_MUSER_test_usart> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block test_usart, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 57
+ Flip-Flops                                            : 57
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : test_usart.ngr
+Top Level Output File Name         : test_usart
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 21
+
+Cell Usage :
+# BELS                             : 119
+#      AND2                        : 16
+#      AND2B1                      : 1
+#      AND3B1                      : 1
+#      AND3B2                      : 1
+#      AND4                        : 4
+#      GND                         : 1
+#      INV                         : 18
+#      MUXCY                       : 11
+#      OR3                         : 1
+#      VCC                         : 1
+#      XOR2                        : 64
+# FlipFlops/Latches                : 57
+#      FD                          : 20
+#      FDC                         : 2
+#      FDCE                        : 25
+#      FDRE                        : 10
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 10
+#      OBUF                        : 10
+# Logical                          : 13
+#      NAND4                       : 12
+#      NOR2                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250ecp132-5 
+
+ Number of Slices:                       44  out of   2448     1%  
+ Number of Slice Flip Flops:             48  out of   4896     0%  
+ Number of 4 input LUTs:                 18  out of   4896     0%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of     92    22%  
+    IOB Flip Flops:                       9
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------+---------------------------------+-------+
+Clock Signal                          | Clock buffer(FF name)           | Load  |
+--------------------------------------+---------------------------------+-------+
+XLXI_30/XLXI_14/Q_DUMMY1              | BUFG                            | 33    |
+XLXI_30/RST(XLXI_30/XLXI_25:O)        | NONE(*)(XLXI_30/XLXI_14/I_36_35)| 1     |
+CLK                                   | BUFGP                           | 14    |
+XLXI_33/dec(XLXI_33/XLXI_57/XLXI_45:O)| NONE(*)(XLXI_33/XLXI_59/XLXI_12)| 9     |
+--------------------------------------+---------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------+--------------------------------------+-------+
+Control Signal                                 | Buffer(FF name)                      | Load  |
+-----------------------------------------------+--------------------------------------+-------+
+XLXI_34/XLXN_54(XLXI_34/XLXI_8:G)              | NONE(XLXI_30/XLXI_14/I_36_35)        | 10    |
+XLXI_30/RST(XLXI_30/XLXI_25:O)                 | NONE(XLXI_30/XLXI_3/XLXI_12)         | 9     |
+XLXI_33/XLXI_57/cllr(XLXI_33/XLXI_57/XLXI_53:O)| NONE(XLXI_33/XLXI_57/XLXI_49/XLXI_11)| 4     |
+XLXI_34/XLXI_39/cllr(XLXI_34/XLXI_39/XLXI_53:O)| NONE(XLXI_34/XLXI_39/XLXI_49/XLXI_11)| 4     |
+-----------------------------------------------+--------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 11.084ns (Maximum Frequency: 90.220MHz)
+   Minimum input arrival time before clock: 5.291ns
+   Maximum output required time after clock: 7.189ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_30/XLXI_14/Q_DUMMY1'
+  Clock period: 6.561ns (frequency: 152.412MHz)
+  Total number of paths / destination ports: 157 / 48
+-------------------------------------------------------------------------
+Delay:               6.561ns (Levels of Logic = 5)
+  Source:            XLXI_34/XLXI_39/XLXI_49/XLXI_14 (FF)
+  Destination:       XLXI_34/XLXI_39/XLXI_49/XLXI_11 (FF)
+  Source Clock:      XLXI_30/XLXI_14/Q_DUMMY1 rising
+  Destination Clock: XLXI_30/XLXI_14/Q_DUMMY1 rising
+
+  Data Path: XLXI_34/XLXI_39/XLXI_49/XLXI_14 to XLXI_34/XLXI_39/XLXI_49/XLXI_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            12   0.514   0.817  XLXI_34/XLXI_39/XLXI_49/XLXI_14 (XLXI_34/XLXI_39/XLXN_109)
+     XOR2:I1->O            3   0.612   0.451  XLXI_34/XLXI_39/XLXI_1/XLXI_9 (XLXI_34/XLXI_39/XLXI_1/XLXN_52)
+     AND2:I1->O            2   0.612   0.380  XLXI_34/XLXI_39/XLXI_1/XLXI_35 (XLXI_34/XLXI_39/XLXI_1/XLXN_55)
+     AND2:I1->O            1   0.612   0.357  XLXI_34/XLXI_39/XLXI_1/XLXI_34 (XLXI_34/XLXI_39/XLXI_1/XLXN_57)
+     XOR2:I1->O            1   0.612   0.357  XLXI_34/XLXI_39/XLXI_1/XLXI_15 (XLXI_34/XLXI_39/XLXI_1/XLXN_66)
+     XOR2:I1->O            1   0.612   0.357  XLXI_34/XLXI_39/XLXI_1/XLXI_41 (XLXI_34/XLXI_39/XLXN_114)
+     FDCE:D                    0.268          XLXI_34/XLXI_39/XLXI_49/XLXI_11
+    ----------------------------------------
+    Total                      6.561ns (3.842ns logic, 2.719ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_30/RST'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            XLXI_30/XLXI_14/I_36_35 (FF)
+  Destination:       XLXI_30/XLXI_14/I_36_35 (FF)
+  Source Clock:      XLXI_30/RST rising
+  Destination Clock: XLXI_30/RST rising
+
+  Data Path: XLXI_30/XLXI_14/I_36_35 to XLXI_30/XLXI_14/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.380  I_36_35 (Q_DUMMY1)
+     XOR2:I1->O            1   0.612   0.357  I_36_32 (TQ)
+     FDC:D                     0.268          I_36_35
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 11.084ns (frequency: 90.220MHz)
+  Total number of paths / destination ports: 74 / 13
+-------------------------------------------------------------------------
+Delay:               11.084ns (Levels of Logic = 10)
+  Source:            XLXI_30/XLXI_3/XLXI_17 (FF)
+  Destination:       XLXI_30/XLXI_3/XLXI_18 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: XLXI_30/XLXI_3/XLXI_17 to XLXI_30/XLXI_3/XLXI_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.380  XLXI_30/XLXI_3/XLXI_17 (XLXI_30/TICK0)
+     XOR2:I1->O            3   0.612   0.451  XLXI_30/XLXI_4/XLXI_9 (XLXI_30/XLXI_4/XLXN_52)
+     AND2:I1->O            2   0.612   0.380  XLXI_30/XLXI_4/XLXI_35 (XLXI_30/XLXI_4/XLXN_55)
+     AND2:I1->O            2   0.612   0.380  XLXI_30/XLXI_4/XLXI_21 (XLXI_30/XLXI_4/XLXN_57)
+     AND2:I1->O            2   0.612   0.380  XLXI_30/XLXI_4/XLXI_20 (XLXI_30/XLXI_4/XLXN_48)
+     AND2:I1->O            2   0.612   0.380  XLXI_30/XLXI_4/XLXI_19 (XLXI_30/XLXI_4/XLXN_47)
+     AND2:I1->O            2   0.612   0.380  XLXI_30/XLXI_4/XLXI_18 (XLXI_30/XLXI_4/XLXN_46)
+     AND2:I1->O            2   0.612   0.380  XLXI_30/XLXI_4/XLXI_17 (XLXI_30/XLXI_4/XLXN_75)
+     AND2:I1->O            1   0.612   0.357  XLXI_30/XLXI_4/XLXI_49 (XLXI_30/XLXI_4/XLXN_73)
+     XOR2:I1->O            1   0.612   0.357  XLXI_30/XLXI_4/XLXI_48 (XLXI_30/XLXI_4/XLXN_71)
+     XOR2:I1->O            1   0.612   0.357  XLXI_30/XLXI_4/XLXI_46 (XLXI_30/XLXN_13)
+     FDCE:D                    0.268          XLXI_30/XLXI_3/XLXI_18
+    ----------------------------------------
+    Total                     11.084ns (6.902ns logic, 4.182ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_30/XLXI_14/Q_DUMMY1'
+  Total number of paths / destination ports: 17 / 10
+-------------------------------------------------------------------------
+Offset:              5.291ns (Levels of Logic = 5)
+  Source:            Data_Tx<7> (PAD)
+  Destination:       XLXI_34/XLXI_36/XLXI_60 (FF)
+  Destination Clock: XLXI_30/XLXI_14/Q_DUMMY1 rising
+
+  Data Path: Data_Tx<7> to XLXI_34/XLXI_36/XLXI_60
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Data_Tx_7_IBUF (Data_Tx_7_IBUF)
+     XOR2:I0->O            1   0.612   0.357  XLXI_34/XLXI_9/XLXI_4 (XLXI_34/XLXI_9/XLXN_6)
+     XOR2:I0->O            1   0.612   0.357  XLXI_34/XLXI_9/XLXI_7 (XLXI_34/XLXI_9/XLXN_10)
+     XOR2:I0->O            0   0.612   0.000  XLXI_34/XLXI_9/XLXI_8 (XLXI_34/XLXN_42)
+     MUXCY:DI->O           1   1.010   0.000  XLXI_34/XLXI_36/XLXI_72 (XLXI_34/XLXI_36/XLXN_137)
+     FD:D                      0.268          XLXI_34/XLXI_36/XLXI_60
+    ----------------------------------------
+    Total                      5.291ns (4.220ns logic, 1.071ns route)
+                                       (79.8% logic, 20.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            Rx (PAD)
+  Destination:       XLXI_33/XLXI_64/XLXI_1 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Rx to XLXI_33/XLXI_64/XLXI_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Rx_IBUF (Rx_IBUF)
+     FD:D                      0.268          XLXI_33/XLXI_64/XLXI_1
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_33/dec'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            XLXI_33/XLXI_65 (FF)
+  Destination:       parity_err (PAD)
+  Source Clock:      XLXI_33/dec rising
+
+  Data Path: XLXI_33/XLXI_65 to parity_err
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.514   0.357  XLXI_33/XLXI_65 (parity_err_OBUF)
+     OBUF:I->O                 3.169          parity_err_OBUF (parity_err)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_30/XLXI_14/Q_DUMMY1'
+  Total number of paths / destination ports: 5 / 1
+-------------------------------------------------------------------------
+Offset:              7.189ns (Levels of Logic = 4)
+  Source:            XLXI_34/XLXI_39/XLXI_49/XLXI_12 (FF)
+  Destination:       Tx (PAD)
+  Source Clock:      XLXI_30/XLXI_14/Q_DUMMY1 rising
+
+  Data Path: XLXI_34/XLXI_39/XLXI_49/XLXI_12 to Tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.380  XLXI_34/XLXI_39/XLXI_49/XLXI_12 (XLXI_34/XLXI_39/XLXN_49)
+     INV:I->O             11   0.612   0.793  XLXI_34/XLXI_39/XLXI_46 (XLXI_34/XLXI_39/XLXN_209)
+     NAND4:I2->O           2   0.612   0.000  XLXI_34/XLXI_39/XLXI_45 (XLXI_34/XLXN_78)
+     MUXCY:S->O            1   0.752   0.357  XLXI_34/XLXI_37 (Tx_OBUF)
+     OBUF:I->O                 3.169          Tx_OBUF (Tx)
+    ----------------------------------------
+    Total                      7.189ns (5.659ns logic, 1.530ns route)
+                                       (78.7% logic, 21.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.68 secs
+ 
+--> 
+
+Total memory usage is 302220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

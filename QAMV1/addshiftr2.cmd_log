@@ -1,0 +1,6 @@
+sch2sym -intstyle ise -family spartan3 -refsym addshiftr2 G:/FPGA/BTP/QAMV1/addshiftr2.sch G:/FPGA/BTP/QAMV1/addshiftr2.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym addshiftr2 G:/FPGA/BTP/QAMV1/addshiftr2.sch G:/FPGA/BTP/QAMV1/addshiftr2.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym addshiftr2 G:/FPGA/BTP/QAMV1/addshiftr2.sch G:/FPGA/BTP/QAMV1/addshiftr2.sym 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/addshiftr2.xst" -ofn "G:/FPGA/BTP/QAMV1/addshiftr2.syr" 
+sch2sym -intstyle ise -family spartan3 -w -refsym addshiftr2 G:/FPGA/BTP/QAMV1/addshiftr2.sch G:/FPGA/BTP/QAMV1/addshiftr2.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym addshiftr2 G:/FPGA/BTP/QAMV1/addshiftr2.sch G:/FPGA/BTP/QAMV1/addshiftr2.sym 

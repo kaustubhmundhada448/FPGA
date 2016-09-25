@@ -1,0 +1,175 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : FIRA_2_0_drc.vf
+// /___/   /\     Timestamp : 05/30/2015 19:31:26
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt\unwrapped\sch2hdl.exe -intstyle ise -family spartan3e -verilog FIRA_2_0_drc.vf -w E:/FPGA_Xilinx/FIRA_2.0/FIRA_2_0.sch
+//Design Name: FIRA_2_0
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FD8CE_MXILINX_FIRA_2_0(C, 
+                              CE, 
+                              CLR, 
+                              D, 
+                              Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [7:0] D;
+   output [7:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module FIRA_2_0(CLK, 
+                Enable, 
+                E_1, 
+                E_2, 
+                Rx, 
+                PWM1, 
+                PWM2, 
+                Tx);
+
+    input CLK;
+    input Enable;
+    input E_1;
+    input E_2;
+    input Rx;
+   output PWM1;
+   output PWM2;
+   output Tx;
+   
+   wire Baud_Rate;
+   wire [7:0] OCR1;
+   wire [7:0] OCR2;
+   wire [8:0] Target;
+   wire [8:0] Ticks;
+   wire TInt;
+   wire [7:0] XLXN_4;
+   wire [15:0] XLXN_7;
+   wire XLXN_8;
+   wire [7:0] XLXN_11;
+   wire [7:0] XLXN_12;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_49;
+   wire XLXN_71;
+   wire XLXN_74;
+   wire XLXN_76;
+   
+   Main_Module  XLXI_1 (.CLK(CLK), 
+                       .CLK_TInt(TInt), 
+                       .E_1(E_1), 
+                       .E_2(E_2), 
+                       .RST_1(XLXN_71), 
+                       .Ticks(Ticks[8:0]));
+   Fuzzy_PID  XLXI_2 (.CLK(CLK), 
+                     .Target(Target[8:0]), 
+                     .Ticks(Ticks[8:0]), 
+                     .TInt(TInt), 
+                     .Data_Ready(XLXN_8), 
+                     .OCR_Corr(XLXN_7[15:0]));
+   Bit9_to_Bit8  XLXI_3 (.Data_9(Ticks[8:0]), 
+                        .Data_8(XLXN_4[7:0]), 
+                        .OFL());
+   Bit8_to_bit9  XLXI_4 (.Data_8(XLXN_12[7:0]), 
+                        .Data_9(Target[8:0]));
+   usart_transmiter  XLXI_5 (.CLK_Baud(Baud_Rate), 
+                            .CLR(TInt), 
+                            .Data(XLXN_4[7:0]), 
+                            .Enable(Enable), 
+                            .OUT_ser(Tx));
+   OCR_Generator  XLXI_6 (.C_0(XLXN_8), 
+                         .OCR_In(XLXN_7[15:0]), 
+                         .Open_Loop_1(XLXN_74), 
+                         .Reset(XLXN_76), 
+                         .Target(Target[8:0]), 
+                         .OCR1(OCR1[7:0]), 
+                         .OCR2(OCR2[7:0]));
+   usart_receiver  XLXI_7 (.CLK_Baud(Baud_Rate), 
+                          .CLK_Sys(CLK), 
+                          .Serial_input(Rx), 
+                          .Data(XLXN_11[7:0]), 
+                          .Parity_ERR(XLXN_14));
+   (* HU_SET = "XLXI_8_0" *) 
+   FD8CE_MXILINX_FIRA_2_0  XLXI_8 (.C(CLK), 
+                                  .CE(XLXN_15), 
+                                  .CLR(XLXN_49), 
+                                  .D(XLXN_11[7:0]), 
+                                  .Q(XLXN_12[7:0]));
+   INV  XLXI_9 (.I(XLXN_14), 
+               .O(XLXN_15));
+   GND  XLXI_26 (.G(XLXN_49));
+   Precale_434  XLXI_27 (.CLK(CLK), 
+                        .CLK_O(Baud_Rate));
+   Counter_18  XLXI_28 (.CLK_sys(CLK), 
+                       .Enable(Enable), 
+                       .C_0(TInt));
+   GND  XLXI_29 (.G(XLXN_71));
+   INV  XLXI_30 (.I(Enable), 
+                .O(XLXN_74));
+   GND  XLXI_31 (.G(XLXN_76));
+   Timer_PWM  XLXI_38 (.CLK(CLK), 
+                      .Enable(Enable), 
+                      .OCR(OCR2[7:0]), 
+                      .Outp(PWM1));
+   Timer_PWM  XLXI_39 (.CLK(CLK), 
+                      .Enable(Enable), 
+                      .OCR(OCR1[7:0]), 
+                      .Outp(PWM2));
+endmodule

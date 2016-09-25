@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym twos_compliment_using_inverter E:/FPGA_Xilinx/twos_compliment_8bit/twos_compliment_using_inverter.sch E:/FPGA_Xilinx/Complete_Fira_1.0/twos_compliment_using_inverter.sym 

@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mux_2_4bit.vf
+// /___/   /\     Timestamp : 09/26/2016 01:01:03
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Dept Porj/Digital Lab/Xillinx/OCR/mux_2_4bit.vf" -w "E:/Dept Porj/Digital Lab/Xillinx/OCR/mux_2_4bit.sch"
+//Design Name: mux_2_4bit
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mux_2_4bit(in0, 
+                  in1, 
+                  S, 
+                  op);
+
+    input [3:0] in0;
+    input [3:0] in1;
+    input S;
+   output [3:0] op;
+   
+   
+   MUXCY  XLXI_1 (.CI(in1[0]), 
+                 .DI(in0[0]), 
+                 .S(S), 
+                 .O(op[0]));
+   MUXCY  XLXI_2 (.CI(in1[1]), 
+                 .DI(in0[1]), 
+                 .S(S), 
+                 .O(op[1]));
+   MUXCY  XLXI_3 (.CI(in1[3]), 
+                 .DI(in0[3]), 
+                 .S(S), 
+                 .O(op[3]));
+   MUXCY  XLXI_4 (.CI(in1[2]), 
+                 .DI(in0[2]), 
+                 .S(S), 
+                 .O(op[2]));
+endmodule

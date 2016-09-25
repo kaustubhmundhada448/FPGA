@@ -1,0 +1,175 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Multiply_4Bit_5.vf
+// /___/   /\     Timestamp : 05/30/2015 19:31:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/FIRA_2.0/Multiply_4Bit_5.vf -w E:/FPGA_Xilinx/Fira_Fuzzy/Multiply_4Bit_5.sch
+//Design Name: Multiply_4Bit_5
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ADD4_MXILINX_Multiply_4Bit_5(A0, 
+                                    A1, 
+                                    A2, 
+                                    A3, 
+                                    B0, 
+                                    B1, 
+                                    B2, 
+                                    B3, 
+                                    CI, 
+                                    CO, 
+                                    OFL, 
+                                    S0, 
+                                    S1, 
+                                    S2, 
+                                    S3);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input CI;
+   output CO;
+   output OFL;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C2O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A1), 
+                    .S(I1), 
+                    .LO(C1));
+   (* RLOC = "X0Y1" *) 
+   MUXCY  I_36_58 (.CI(C2), 
+                  .DI(A3), 
+                  .S(I3), 
+                  .O(CO_DUMMY));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_D  I_36_62 (.CI(C1), 
+                    .DI(A2), 
+                    .S(I2), 
+                    .LO(C2), 
+                    .O(C2O));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S0));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S1));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S3));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S2));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A0), 
+                     .S(I0), 
+                     .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_175 (.I1(A1), 
+                  .I2(B1), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_178 (.I1(A0), 
+                  .I2(B0), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_182 (.I1(A2), 
+                  .I2(B2), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_206 (.I1(A3), 
+                  .I2(B3), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I3));
+   XOR2  I_36_239 (.I0(A0), 
+                  .I1(B0), 
+                  .O(I0));
+   XOR2  I_36_240 (.I0(A1), 
+                  .I1(B1), 
+                  .O(I1));
+   XOR2  I_36_241 (.I0(A2), 
+                  .I1(B2), 
+                  .O(I2));
+   XOR2  I_36_242 (.I0(A3), 
+                  .I1(B3), 
+                  .O(I3));
+   XOR2  I_36_259 (.I0(C2O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module Multiply_4Bit_5(Inp, 
+                       Outp);
+
+    input [3:0] Inp;
+   output [5:0] Outp;
+   
+   wire XLXN_5;
+   wire XLXN_13;
+   wire XLXN_16;
+   
+   BUF  XLXI_1 (.I(Inp[0]), 
+               .O(Outp[0]));
+   (* HU_SET = "XLXI_2_23" *) 
+   ADD4_MXILINX_Multiply_4Bit_5  XLXI_2 (.A0(Inp[2]), 
+                                        .A1(Inp[3]), 
+                                        .A2(XLXN_16), 
+                                        .A3(XLXN_13), 
+                                        .B0(Inp[0]), 
+                                        .B1(Inp[1]), 
+                                        .B2(Inp[2]), 
+                                        .B3(Inp[3]), 
+                                        .CI(XLXN_5), 
+                                        .CO(), 
+                                        .OFL(), 
+                                        .S0(Outp[2]), 
+                                        .S1(Outp[3]), 
+                                        .S2(Outp[4]), 
+                                        .S3(Outp[5]));
+   GND  XLXI_3 (.G(XLXN_5));
+   GND  XLXI_4 (.G(XLXN_13));
+   BUF  XLXI_5 (.I(Inp[1]), 
+               .O(Outp[1]));
+   GND  XLXI_6 (.G(XLXN_16));
+endmodule

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR/MAX_2_32.v} -lang verilog -prj OCR -o MAX_2_32.spl -module MAX_2_32 -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e MAX_2_32.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR/MAX_2_32.sym} 

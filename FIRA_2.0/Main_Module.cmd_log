@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym Main_Module E:/FPGA_Xilinx/ETC_WITH_LEDs/Main_Module.sch E:/FPGA_Xilinx/FIRA_2.0/Main_Module.sym 

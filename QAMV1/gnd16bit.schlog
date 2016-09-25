@@ -1,0 +1,2 @@
+select figure at 615 169 8 -branches -sn=1
+select all in 615 169 2889 2274 -branches -enclosed -sn=1

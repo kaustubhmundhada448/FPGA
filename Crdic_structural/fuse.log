@@ -1,0 +1,62 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Main_Main_sch_tb_isim_beh.exe -prj E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Main_Main_sch_tb_beh.prj work.Main_Main_sch_tb work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Mux_2_8.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/RShift4_8bit.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/One_Bit_shifter_8.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Bit_RShift2_8bit.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/I_Bit_Shifer.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Incrementer_Decrementer.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/twos_compliment_using_inverter.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Thetai_Gen.v" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Scale_8Bit.v" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Cordic.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/cb3ce.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Main.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Test_Main.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module FMAP
+Compiling module XOR3
+Compiling module MUXCY_L
+Compiling module MUXCY
+Compiling module XORCY
+Compiling module MUXCY_D
+Compiling module INV
+Compiling module XOR2
+Compiling module ADSU8_MXILINX_Main
+Compiling module GND
+Compiling module Mux_2_8_MUSER_Main
+Compiling module BUF
+Compiling module Bit_RShift2_8bit_MUSER_Main
+Compiling module One_Bit_shifter_8_MUSER_Main
+Compiling module RShift4_8bit_MUSER_Main
+Compiling module I_Bit_Shifer_MUSER_Main
+Compiling module FDCE
+Compiling module FD8CE_MXILINX_Main
+Compiling module Cordic_MUSER_Main
+Compiling module Thetai_Gen
+Compiling module FTCE_MXILINX_Main
+Compiling module AND2
+Compiling module VCC
+Compiling module AND3
+Compiling module NOR4
+Compiling module cb3ce_MUSER_Main
+Compiling module INV8_MXILINX_Main
+Compiling module Incrementer_Decrementer_MUSER_Ma...
+Compiling module twos_compliment_using_inverter_M...
+Compiling module FDRE
+Compiling module FD8RE_MXILINX_Main
+Compiling module Scale_8Bit
+Compiling module Main
+Compiling module Main_Main_sch_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 11 sub-compilation(s) to finish...
+Compiled 35 Verilog Units
+Built simulation executable E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Main_Main_sch_tb_isim_beh.exe
+Fuse Memory Usage: 30884 KB
+Fuse CPU Usage: 640 ms

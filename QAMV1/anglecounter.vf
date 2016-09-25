@@ -1,0 +1,1214 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : anglecounter.vf
+// /___/   /\     Timestamp : 11/30/2015 09:33:06
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/anglecounter.vf -w C:/Users/Kaustubh_mundhada/Desktop/QAMV1/QAMV1/anglecounter.sch
+//Design Name: anglecounter
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FD16RE_MXILINX_anglecounter(C, 
+                                   CE, 
+                                   D, 
+                                   R, 
+                                   Q);
+
+    input C;
+    input CE;
+    input [15:0] D;
+    input R;
+   output [15:0] Q;
+   
+   
+   FDRE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .D(D[0]), 
+              .R(R), 
+              .Q(Q[0]));
+   FDRE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .D(D[1]), 
+              .R(R), 
+              .Q(Q[1]));
+   FDRE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .D(D[2]), 
+              .R(R), 
+              .Q(Q[2]));
+   FDRE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .D(D[3]), 
+              .R(R), 
+              .Q(Q[3]));
+   FDRE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .D(D[4]), 
+              .R(R), 
+              .Q(Q[4]));
+   FDRE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .D(D[5]), 
+              .R(R), 
+              .Q(Q[5]));
+   FDRE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .D(D[6]), 
+              .R(R), 
+              .Q(Q[6]));
+   FDRE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .D(D[7]), 
+              .R(R), 
+              .Q(Q[7]));
+   FDRE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .D(D[8]), 
+              .R(R), 
+              .Q(Q[8]));
+   FDRE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .D(D[9]), 
+              .R(R), 
+              .Q(Q[9]));
+   FDRE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .D(D[10]), 
+               .R(R), 
+               .Q(Q[10]));
+   FDRE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .D(D[11]), 
+               .R(R), 
+               .Q(Q[11]));
+   FDRE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .D(D[12]), 
+               .R(R), 
+               .Q(Q[12]));
+   FDRE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .D(D[13]), 
+               .R(R), 
+               .Q(Q[13]));
+   FDRE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .D(D[14]), 
+               .R(R), 
+               .Q(Q[14]));
+   FDRE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .D(D[15]), 
+               .R(R), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module bit16to12_MUSER_anglecounter(buffinput, 
+                                    buffoutput);
+
+    input [15:0] buffinput;
+   output [11:0] buffoutput;
+   
+   
+   BUF  XLXI_5 (.I(buffinput[11]), 
+               .O(buffoutput[11]));
+   BUF  XLXI_6 (.I(buffinput[10]), 
+               .O(buffoutput[10]));
+   BUF  XLXI_7 (.I(buffinput[9]), 
+               .O(buffoutput[9]));
+   BUF  XLXI_8 (.I(buffinput[8]), 
+               .O(buffoutput[8]));
+   BUF  XLXI_9 (.I(buffinput[7]), 
+               .O(buffoutput[7]));
+   BUF  XLXI_10 (.I(buffinput[6]), 
+                .O(buffoutput[6]));
+   BUF  XLXI_11 (.I(buffinput[5]), 
+                .O(buffoutput[5]));
+   BUF  XLXI_12 (.I(buffinput[4]), 
+                .O(buffoutput[4]));
+   BUF  XLXI_13 (.I(buffinput[3]), 
+                .O(buffoutput[3]));
+   BUF  XLXI_14 (.I(buffinput[2]), 
+                .O(buffoutput[2]));
+   BUF  XLXI_15 (.I(buffinput[1]), 
+                .O(buffoutput[1]));
+   BUF  XLXI_16 (.I(buffinput[0]), 
+                .O(buffoutput[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module ADD16_MXILINX_anglecounter(A, 
+                                  B, 
+                                  CI, 
+                                  CO, 
+                                  OFL, 
+                                  S);
+
+    input [15:0] A;
+    input [15:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [15:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C7;
+   wire C8;
+   wire C9;
+   wire C10;
+   wire C11;
+   wire C12;
+   wire C13;
+   wire C14;
+   wire C14O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I7;
+   wire I8;
+   wire I9;
+   wire I10;
+   wire I11;
+   wire I12;
+   wire I13;
+   wire I14;
+   wire I15;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X0Y4" *) 
+   FMAP  I_36_16 (.I1(A[8]), 
+                 .I2(B[8]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I8));
+   (* RLOC = "X0Y4" *) 
+   FMAP  I_36_17 (.I1(A[9]), 
+                 .I2(B[9]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I9));
+   (* RLOC = "X0Y5" *) 
+   FMAP  I_36_18 (.I1(A[10]), 
+                 .I2(B[10]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I10));
+   (* RLOC = "X0Y5" *) 
+   FMAP  I_36_19 (.I1(A[11]), 
+                 .I2(B[11]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I11));
+   (* RLOC = "X0Y6" *) 
+   FMAP  I_36_20 (.I1(A[12]), 
+                 .I2(B[12]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I12));
+   (* RLOC = "X0Y6" *) 
+   FMAP  I_36_21 (.I1(A[13]), 
+                 .I2(B[13]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I13));
+   (* RLOC = "X0Y7" *) 
+   FMAP  I_36_22 (.I1(A[14]), 
+                 .I2(B[14]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I14));
+   (* RLOC = "X0Y7" *) 
+   FMAP  I_36_23 (.I1(A[15]), 
+                 .I2(B[15]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I15));
+   (* RLOC = "X0Y4" *) 
+   MUXCY_L  I_36_55 (.CI(C8), 
+                    .DI(A[9]), 
+                    .S(I9), 
+                    .LO(C9));
+   (* RLOC = "X0Y5" *) 
+   MUXCY_L  I_36_58 (.CI(C10), 
+                    .DI(A[11]), 
+                    .S(I11), 
+                    .LO(C11));
+   (* RLOC = "X0Y5" *) 
+   MUXCY_L  I_36_62 (.CI(C9), 
+                    .DI(A[10]), 
+                    .S(I10), 
+                    .LO(C10));
+   (* RLOC = "X0Y6" *) 
+   MUXCY_L  I_36_63 (.CI(C11), 
+                    .DI(A[12]), 
+                    .S(I12), 
+                    .LO(C12));
+   (* RLOC = "X0Y7" *) 
+   MUXCY  I_36_64 (.CI(C14), 
+                  .DI(A[15]), 
+                  .S(I15), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(C7), 
+                  .LI(I8), 
+                  .O(S[8]));
+   XORCY  I_36_74 (.CI(C8), 
+                  .LI(I9), 
+                  .O(S[9]));
+   XORCY  I_36_75 (.CI(C10), 
+                  .LI(I11), 
+                  .O(S[11]));
+   XORCY  I_36_76 (.CI(C9), 
+                  .LI(I10), 
+                  .O(S[10]));
+   XORCY  I_36_77 (.CI(C12), 
+                  .LI(I13), 
+                  .O(S[13]));
+   XORCY  I_36_78 (.CI(C11), 
+                  .LI(I12), 
+                  .O(S[12]));
+   XORCY  I_36_80 (.CI(C14), 
+                  .LI(I15), 
+                  .O(S[15]));
+   XORCY  I_36_81 (.CI(C13), 
+                  .LI(I14), 
+                  .O(S[14]));
+   (* RLOC = "X0Y7" *) 
+   MUXCY_D  I_36_107 (.CI(C13), 
+                     .DI(A[14]), 
+                     .S(I14), 
+                     .LO(C14), 
+                     .O(C14O));
+   (* RLOC = "X0Y6" *) 
+   MUXCY_L  I_36_110 (.CI(C12), 
+                     .DI(A[13]), 
+                     .S(I13), 
+                     .LO(C13));
+   (* RLOC = "X0Y4" *) 
+   MUXCY_L  I_36_111 (.CI(C7), 
+                     .DI(A[8]), 
+                     .S(I8), 
+                     .LO(C8));
+   XORCY  I_36_226 (.CI(CI), 
+                   .LI(I0), 
+                   .O(S[0]));
+   XORCY  I_36_227 (.CI(C0), 
+                   .LI(I1), 
+                   .O(S[1]));
+   XORCY  I_36_228 (.CI(C2), 
+                   .LI(I3), 
+                   .O(S[3]));
+   XORCY  I_36_229 (.CI(C1), 
+                   .LI(I2), 
+                   .O(S[2]));
+   XORCY  I_36_230 (.CI(C4), 
+                   .LI(I5), 
+                   .O(S[5]));
+   XORCY  I_36_231 (.CI(C3), 
+                   .LI(I4), 
+                   .O(S[4]));
+   XORCY  I_36_233 (.CI(C6), 
+                   .LI(I7), 
+                   .O(S[7]));
+   XORCY  I_36_234 (.CI(C5), 
+                   .LI(I6), 
+                   .O(S[6]));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_L  I_36_248 (.CI(C6), 
+                     .DI(A[7]), 
+                     .S(I7), 
+                     .LO(C7));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_L  I_36_249 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_250 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_251 (.CI(C3), 
+                     .DI(A[4]), 
+                     .S(I4), 
+                     .LO(C4));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_252 (.CI(C2), 
+                     .DI(A[3]), 
+                     .S(I3), 
+                     .LO(C3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_253 (.CI(C1), 
+                     .DI(A[2]), 
+                     .S(I2), 
+                     .LO(C2));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_254 (.CI(C0), 
+                     .DI(A[1]), 
+                     .S(I1), 
+                     .LO(C1));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_255 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_272 (.I1(A[1]), 
+                  .I2(B[1]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_275 (.I1(A[0]), 
+                  .I2(B[0]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_279 (.I1(A[2]), 
+                  .I2(B[2]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_283 (.I1(A[3]), 
+                  .I2(B[3]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I3));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_287 (.I1(A[4]), 
+                  .I2(B[4]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I4));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_291 (.I1(A[5]), 
+                  .I2(B[5]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I5));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_295 (.I1(A[6]), 
+                  .I2(B[6]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I6));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_299 (.I1(A[7]), 
+                  .I2(B[7]), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I7));
+   XOR2  I_36_354 (.I0(A[0]), 
+                  .I1(B[0]), 
+                  .O(I0));
+   XOR2  I_36_355 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .O(I1));
+   XOR2  I_36_356 (.I0(A[2]), 
+                  .I1(B[2]), 
+                  .O(I2));
+   XOR2  I_36_357 (.I0(A[3]), 
+                  .I1(B[3]), 
+                  .O(I3));
+   XOR2  I_36_358 (.I0(A[4]), 
+                  .I1(B[4]), 
+                  .O(I4));
+   XOR2  I_36_359 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .O(I5));
+   XOR2  I_36_360 (.I0(A[6]), 
+                  .I1(B[6]), 
+                  .O(I6));
+   XOR2  I_36_361 (.I0(A[7]), 
+                  .I1(B[7]), 
+                  .O(I7));
+   XOR2  I_36_362 (.I0(A[8]), 
+                  .I1(B[8]), 
+                  .O(I8));
+   XOR2  I_36_363 (.I0(A[9]), 
+                  .I1(B[9]), 
+                  .O(I9));
+   XOR2  I_36_364 (.I0(A[10]), 
+                  .I1(B[10]), 
+                  .O(I10));
+   XOR2  I_36_365 (.I0(A[11]), 
+                  .I1(B[11]), 
+                  .O(I11));
+   XOR2  I_36_366 (.I0(A[12]), 
+                  .I1(B[12]), 
+                  .O(I12));
+   XOR2  I_36_367 (.I0(A[13]), 
+                  .I1(B[13]), 
+                  .O(I13));
+   XOR2  I_36_368 (.I0(A[14]), 
+                  .I1(B[14]), 
+                  .O(I14));
+   XOR2  I_36_369 (.I0(A[15]), 
+                  .I1(B[15]), 
+                  .O(I15));
+   XOR2  I_36_375 (.I0(C14O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_anglecounter(C, 
+                                 CE, 
+                                 CLR, 
+                                 T, 
+                                 Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CE_MXILINX_anglecounter(C, 
+                                  CE, 
+                                  CLR, 
+                                  CEO, 
+                                  Q0, 
+                                  Q1, 
+                                  Q2, 
+                                  Q3, 
+                                  TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_0" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(XLXN_1), 
+                                   .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_1" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(Q0_DUMMY), 
+                                   .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_2" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T2), 
+                                   .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_3" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T3), 
+                                   .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module gnd16bit_MUSER_anglecounter(x_constant);
+
+   output [15:0] x_constant;
+   
+   wire XLXN_36;
+   wire XLXN_48;
+   wire XLXN_53;
+   wire XLXN_67;
+   
+   GND  XLXI_1 (.G(XLXN_67));
+   BUF  XLXI_2 (.I(XLXN_36), 
+               .O(x_constant[0]));
+   BUF  XLXI_3 (.I(XLXN_36), 
+               .O(x_constant[1]));
+   BUF  XLXI_4 (.I(XLXN_36), 
+               .O(x_constant[2]));
+   GND  XLXI_5 (.G(XLXN_36));
+   BUF  XLXI_7 (.I(XLXN_36), 
+               .O(x_constant[3]));
+   GND  XLXI_8 (.G(XLXN_48));
+   BUF  XLXI_9 (.I(XLXN_48), 
+               .O(x_constant[4]));
+   GND  XLXI_11 (.G(XLXN_53));
+   BUF  XLXI_24 (.I(XLXN_48), 
+                .O(x_constant[5]));
+   BUF  XLXI_25 (.I(XLXN_48), 
+                .O(x_constant[6]));
+   BUF  XLXI_26 (.I(XLXN_53), 
+                .O(x_constant[7]));
+   BUF  XLXI_27 (.I(XLXN_53), 
+                .O(x_constant[8]));
+   BUF  XLXI_28 (.I(XLXN_53), 
+                .O(x_constant[9]));
+   BUF  XLXI_29 (.I(XLXN_67), 
+                .O(x_constant[10]));
+   BUF  XLXI_30 (.I(XLXN_67), 
+                .O(x_constant[11]));
+   BUF  XLXI_31 (.I(XLXN_67), 
+                .O(x_constant[12]));
+   BUF  XLXI_32 (.I(XLXN_67), 
+                .O(x_constant[13]));
+   BUF  XLXI_33 (.I(XLXN_67), 
+                .O(x_constant[14]));
+   BUF  XLXI_34 (.I(XLXN_67), 
+                .O(x_constant[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module NOR16_MXILINX_anglecounter(I0, 
+                                  I1, 
+                                  I2, 
+                                  I3, 
+                                  I4, 
+                                  I5, 
+                                  I6, 
+                                  I7, 
+                                  I8, 
+                                  I9, 
+                                  I10, 
+                                  I11, 
+                                  I12, 
+                                  I13, 
+                                  I14, 
+                                  I15, 
+                                  O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+    input I8;
+    input I9;
+    input I10;
+    input I11;
+    input I12;
+    input I13;
+    input I14;
+    input I15;
+   output O;
+   
+   wire CIN;
+   wire C0;
+   wire C1;
+   wire C2;
+   wire S0;
+   wire S1;
+   wire S2;
+   wire S3;
+   wire XLXN_46;
+   
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_2 (.CI(CIN), 
+                   .DI(XLXN_46), 
+                   .S(S0), 
+                   .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_29 (.I1(I0), 
+                 .I2(I1), 
+                 .I3(I2), 
+                 .I4(I3), 
+                 .O(S0));
+   VCC  I_36_107 (.P(CIN));
+   GND  I_36_109 (.G(XLXN_46));
+   NOR4  I_36_110 (.I0(I0), 
+                  .I1(I1), 
+                  .I2(I2), 
+                  .I3(I3), 
+                  .O(S0));
+   NOR4  I_36_127 (.I0(I4), 
+                  .I1(I5), 
+                  .I2(I6), 
+                  .I3(I7), 
+                  .O(S1));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_129 (.CI(C0), 
+                     .DI(XLXN_46), 
+                     .S(S1), 
+                     .LO(C1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_138 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_142 (.I1(I8), 
+                  .I2(I9), 
+                  .I3(I10), 
+                  .I4(I11), 
+                  .O(S2));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_147 (.CI(C1), 
+                     .DI(XLXN_46), 
+                     .S(S2), 
+                     .LO(C2));
+   NOR4  I_36_151 (.I0(I8), 
+                  .I1(I9), 
+                  .I2(I10), 
+                  .I3(I11), 
+                  .O(S2));
+   NOR4  I_36_161 (.I0(I12), 
+                  .I1(I13), 
+                  .I2(I14), 
+                  .I3(I15), 
+                  .O(S3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY  I_36_165 (.CI(C2), 
+                   .DI(XLXN_46), 
+                   .S(S3), 
+                   .O(O));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_170 (.I1(I12), 
+                  .I2(I13), 
+                  .I3(I14), 
+                  .I4(I15), 
+                  .O(S3));
+endmodule
+`timescale 1ns / 1ps
+
+module CB16CE_MXILINX_anglecounter(C, 
+                                   CE, 
+                                   CLR, 
+                                   CEO, 
+                                   Q, 
+                                   TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output [15:0] Q;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire T4;
+   wire T5;
+   wire T6;
+   wire T7;
+   wire T8;
+   wire T9;
+   wire T10;
+   wire T11;
+   wire T12;
+   wire T13;
+   wire T14;
+   wire T15;
+   wire XLXN_1;
+   wire [15:0] Q_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q[15:0] = Q_DUMMY[15:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_5" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(XLXN_1), 
+                                   .Q(Q_DUMMY[0]));
+   (* HU_SET = "I_Q1_4" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(Q_DUMMY[0]), 
+                                   .Q(Q_DUMMY[1]));
+   (* HU_SET = "I_Q2_7" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T2), 
+                                   .Q(Q_DUMMY[2]));
+   (* HU_SET = "I_Q3_6" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T3), 
+                                   .Q(Q_DUMMY[3]));
+   (* HU_SET = "I_Q4_11" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q4 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T4), 
+                                   .Q(Q_DUMMY[4]));
+   (* HU_SET = "I_Q5_10" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q5 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T5), 
+                                   .Q(Q_DUMMY[5]));
+   (* HU_SET = "I_Q6_9" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q6 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T6), 
+                                   .Q(Q_DUMMY[6]));
+   (* HU_SET = "I_Q7_8" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q7 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T7), 
+                                   .Q(Q_DUMMY[7]));
+   (* HU_SET = "I_Q8_12" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q8 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T8), 
+                                   .Q(Q_DUMMY[8]));
+   (* HU_SET = "I_Q9_13" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q9 (.C(C), 
+                                   .CE(CE), 
+                                   .CLR(CLR), 
+                                   .T(T9), 
+                                   .Q(Q_DUMMY[9]));
+   (* HU_SET = "I_Q10_14" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q10 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T10), 
+                                    .Q(Q_DUMMY[10]));
+   (* HU_SET = "I_Q11_15" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q11 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T11), 
+                                    .Q(Q_DUMMY[11]));
+   (* HU_SET = "I_Q12_16" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q12 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T12), 
+                                    .Q(Q_DUMMY[12]));
+   (* HU_SET = "I_Q13_17" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q13 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T13), 
+                                    .Q(Q_DUMMY[13]));
+   (* HU_SET = "I_Q14_18" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q14 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T14), 
+                                    .Q(Q_DUMMY[14]));
+   (* HU_SET = "I_Q15_19" *) 
+   FTCE_MXILINX_anglecounter #( .INIT(1'b0) ) I_Q15 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .T(T15), 
+                                    .Q(Q_DUMMY[15]));
+   AND3  I_36_3 (.I0(Q_DUMMY[2]), 
+                .I1(Q_DUMMY[1]), 
+                .I2(Q_DUMMY[0]), 
+                .O(T3));
+   AND2  I_36_4 (.I0(Q_DUMMY[1]), 
+                .I1(Q_DUMMY[0]), 
+                .O(T2));
+   VCC  I_36_9 (.P(XLXN_1));
+   AND4  I_36_10 (.I0(Q_DUMMY[3]), 
+                 .I1(Q_DUMMY[2]), 
+                 .I2(Q_DUMMY[1]), 
+                 .I3(Q_DUMMY[0]), 
+                 .O(T4));
+   AND5  I_36_14 (.I0(Q_DUMMY[7]), 
+                 .I1(Q_DUMMY[6]), 
+                 .I2(Q_DUMMY[5]), 
+                 .I3(Q_DUMMY[4]), 
+                 .I4(T4), 
+                 .O(T8));
+   AND2  I_36_15 (.I0(Q_DUMMY[4]), 
+                 .I1(T4), 
+                 .O(T5));
+   AND3  I_36_19 (.I0(Q_DUMMY[5]), 
+                 .I1(Q_DUMMY[4]), 
+                 .I2(T4), 
+                 .O(T6));
+   AND4  I_36_21 (.I0(Q_DUMMY[6]), 
+                 .I1(Q_DUMMY[5]), 
+                 .I2(Q_DUMMY[4]), 
+                 .I3(T4), 
+                 .O(T7));
+   AND5  I_36_22 (.I0(Q_DUMMY[15]), 
+                 .I1(Q_DUMMY[14]), 
+                 .I2(Q_DUMMY[13]), 
+                 .I3(Q_DUMMY[12]), 
+                 .I4(T12), 
+                 .O(TC_DUMMY));
+   AND2  I_36_23 (.I0(Q_DUMMY[12]), 
+                 .I1(T12), 
+                 .O(T13));
+   AND3  I_36_24 (.I0(Q_DUMMY[13]), 
+                 .I1(Q_DUMMY[12]), 
+                 .I2(T12), 
+                 .O(T14));
+   AND4  I_36_25 (.I0(Q_DUMMY[14]), 
+                 .I1(Q_DUMMY[13]), 
+                 .I2(Q_DUMMY[12]), 
+                 .I3(T12), 
+                 .O(T15));
+   AND4  I_36_26 (.I0(Q_DUMMY[10]), 
+                 .I1(Q_DUMMY[9]), 
+                 .I2(Q_DUMMY[8]), 
+                 .I3(T8), 
+                 .O(T11));
+   AND3  I_36_27 (.I0(Q_DUMMY[9]), 
+                 .I1(Q_DUMMY[8]), 
+                 .I2(T8), 
+                 .O(T10));
+   AND2  I_36_28 (.I0(Q_DUMMY[8]), 
+                 .I1(T8), 
+                 .O(T9));
+   AND5  I_36_29 (.I0(Q_DUMMY[11]), 
+                 .I1(Q_DUMMY[10]), 
+                 .I2(Q_DUMMY[9]), 
+                 .I3(Q_DUMMY[8]), 
+                 .I4(T8), 
+                 .O(T12));
+   AND2  I_36_54 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module Counter_12_MUSER_anglecounter(CLK, 
+                                     CLR, 
+                                     C10, 
+                                     C11, 
+                                     XLXN_2);
+
+    input CLK;
+   output CLR;
+   output C10;
+   output C11;
+   output [15:0] XLXN_2;
+   
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_39;
+   wire XLXN_40;
+   wire XLXN_43;
+   wire [15:0] XLXN_2_DUMMY;
+   
+   assign XLXN_2[15:0] = XLXN_2_DUMMY[15:0];
+   (* HU_SET = "XLXI_1_20" *) 
+   CB16CE_MXILINX_anglecounter  XLXI_1 (.C(CLK), 
+                                       .CE(XLXN_39), 
+                                       .CLR(XLXN_40), 
+                                       .CEO(), 
+                                       .Q(XLXN_2_DUMMY[15:0]), 
+                                       .TC());
+   (* HU_SET = "XLXI_2_21" *) 
+   NOR16_MXILINX_anglecounter  XLXI_2 (.I0(XLXN_23), 
+                                      .I1(XLXN_24), 
+                                      .I2(XLXN_25), 
+                                      .I3(XLXN_26), 
+                                      .I4(XLXN_43), 
+                                      .I5(XLXN_2_DUMMY[10]), 
+                                      .I6(XLXN_2_DUMMY[9]), 
+                                      .I7(XLXN_2_DUMMY[8]), 
+                                      .I8(XLXN_2_DUMMY[7]), 
+                                      .I9(XLXN_2_DUMMY[6]), 
+                                      .I10(XLXN_2_DUMMY[5]), 
+                                      .I11(XLXN_2_DUMMY[4]), 
+                                      .I12(XLXN_2_DUMMY[3]), 
+                                      .I13(XLXN_2_DUMMY[2]), 
+                                      .I14(XLXN_2_DUMMY[1]), 
+                                      .I15(XLXN_2_DUMMY[0]), 
+                                      .O(CLR));
+   GND  XLXI_3 (.G(XLXN_23));
+   GND  XLXI_4 (.G(XLXN_24));
+   GND  XLXI_5 (.G(XLXN_25));
+   GND  XLXI_6 (.G(XLXN_26));
+   BUF  XLXI_7 (.I(XLXN_2_DUMMY[11]), 
+               .O(C11));
+   BUF  XLXI_9 (.I(XLXN_2_DUMMY[10]), 
+               .O(C10));
+   VCC  XLXI_10 (.P(XLXN_39));
+   GND  XLXI_11 (.G(XLXN_40));
+   INV  XLXI_12 (.I(XLXN_2_DUMMY[11]), 
+                .O(XLXN_43));
+endmodule
+`timescale 1ns / 1ps
+
+module anglecounter(CLK_16, 
+                    countclk, 
+                    OUTF, 
+                    Quad_Change);
+
+    input CLK_16;
+   output [15:0] countclk;
+   output [11:0] OUTF;
+   output Quad_Change;
+   
+   wire [15:0] OTP;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire [15:0] XLXN_37;
+   wire [15:0] XLXN_39;
+   wire [15:0] XLXN_40;
+   wire [15:0] XLXN_42;
+   wire [15:0] XLXN_43;
+   wire XLXN_44;
+   wire XLXN_45;
+   wire [15:0] XLXN_47;
+   wire [15:0] XLXN_68;
+   wire [15:0] XLXN_69;
+   wire XLXN_90;
+   wire XLXN_94;
+   wire XLXN_96;
+   wire XLXN_98;
+   wire XLXN_100;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_103;
+   wire XLXN_104;
+   wire XLXN_108;
+   wire XLXN_109;
+   wire XLXN_110;
+   wire XLXN_112;
+   
+   Counter_12_MUSER_anglecounter  XLXI_10 (.CLK(XLXN_36), 
+                                          .CLR(XLXN_112), 
+                                          .C10(XLXN_34), 
+                                          .C11(XLXN_35), 
+                                          .XLXN_2(countclk[15:0]));
+   XOR2  XLXI_11 (.I0(XLXN_34), 
+                 .I1(XLXN_35), 
+                 .O(Quad_Change));
+   (* HU_SET = "XLXI_13_22" *) 
+   ADD16_MXILINX_anglecounter  XLXI_13 (.A(XLXN_40[15:0]), 
+                                       .B(XLXN_39[15:0]), 
+                                       .CI(XLXN_45), 
+                                       .CO(XLXN_44), 
+                                       .OFL(), 
+                                       .S(XLXN_37[15:0]));
+   (* HU_SET = "XLXI_15_23" *) 
+   ADD16_MXILINX_anglecounter  XLXI_15 (.A(XLXN_43[15:0]), 
+                                       .B(XLXN_47[15:0]), 
+                                       .CI(XLXN_44), 
+                                       .CO(), 
+                                       .OFL(), 
+                                       .S(XLXN_42[15:0]));
+   GND  XLXI_17 (.G(XLXN_45));
+   gnd16bit_MUSER_anglecounter  XLXI_24 (.x_constant(XLXN_47[15:0]));
+   GND  XLXI_26 (.G(XLXN_40[2]));
+   GND  XLXI_27 (.G(XLXN_40[3]));
+   GND  XLXI_28 (.G(XLXN_40[5]));
+   GND  XLXI_29 (.G(XLXN_40[6]));
+   GND  XLXI_30 (.G(XLXN_40[9]));
+   GND  XLXI_31 (.G(XLXN_40[10]));
+   GND  XLXI_32 (.G(XLXN_40[11]));
+   GND  XLXI_33 (.G(XLXN_40[12]));
+   GND  XLXI_34 (.G(XLXN_40[13]));
+   GND  XLXI_35 (.G(XLXN_40[14]));
+   GND  XLXI_36 (.G(XLXN_40[15]));
+   VCC  XLXI_37 (.P(XLXN_40[8]));
+   VCC  XLXI_38 (.P(XLXN_40[1]));
+   VCC  XLXI_39 (.P(XLXN_40[4]));
+   BUF  XLXI_43 (.I(XLXN_39[8]), 
+                .O(OTP[0]));
+   BUF  XLXI_44 (.I(XLXN_39[9]), 
+                .O(OTP[1]));
+   BUF  XLXI_45 (.I(XLXN_39[10]), 
+                .O(OTP[2]));
+   BUF  XLXI_46 (.I(XLXN_39[11]), 
+                .O(OTP[3]));
+   BUF  XLXI_47 (.I(XLXN_39[12]), 
+                .O(OTP[4]));
+   BUF  XLXI_48 (.I(XLXN_39[13]), 
+                .O(OTP[5]));
+   BUF  XLXI_49 (.I(XLXN_39[14]), 
+                .O(OTP[6]));
+   BUF  XLXI_50 (.I(XLXN_39[15]), 
+                .O(OTP[7]));
+   BUF  XLXI_51 (.I(XLXN_43[0]), 
+                .O(OTP[8]));
+   BUF  XLXI_52 (.I(XLXN_43[1]), 
+                .O(OTP[9]));
+   BUF  XLXI_53 (.I(XLXN_43[2]), 
+                .O(OTP[10]));
+   BUF  XLXI_54 (.I(XLXN_43[3]), 
+                .O(OTP[11]));
+   (* HU_SET = "XLXI_55_24" *) 
+   CB4CE_MXILINX_anglecounter  XLXI_55 (.C(CLK_16), 
+                                       .CE(XLXN_101), 
+                                       .CLR(XLXN_104), 
+                                       .CEO(), 
+                                       .Q0(), 
+                                       .Q1(), 
+                                       .Q2(), 
+                                       .Q3(XLXN_36), 
+                                       .TC());
+   (* HU_SET = "XLXI_59_25" *) 
+   ADD16_MXILINX_anglecounter  XLXI_59 (.A(XLXN_68[15:0]), 
+                                       .B(OTP[15:0]), 
+                                       .CI(XLXN_100), 
+                                       .CO(), 
+                                       .OFL(), 
+                                       .S(XLXN_69[15:0]));
+   bit16to12_MUSER_anglecounter  XLXI_60 (.buffinput(XLXN_69[15:0]), 
+                                         .buffoutput(OUTF[11:0]));
+   AND2  XLXI_61 (.I0(XLXN_90), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[0]));
+   AND2  XLXI_62 (.I0(XLXN_90), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[1]));
+   AND2  XLXI_63 (.I0(XLXN_90), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[2]));
+   AND2  XLXI_64 (.I0(XLXN_90), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[3]));
+   AND2  XLXI_65 (.I0(XLXN_98), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[4]));
+   AND2  XLXI_66 (.I0(XLXN_108), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[5]));
+   AND2  XLXI_67 (.I0(XLXN_110), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[6]));
+   AND2  XLXI_68 (.I0(XLXN_109), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[7]));
+   AND2  XLXI_69 (.I0(XLXN_94), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[8]));
+   AND2  XLXI_70 (.I0(XLXN_94), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[9]));
+   AND2  XLXI_71 (.I0(XLXN_96), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[10]));
+   AND2  XLXI_72 (.I0(XLXN_96), 
+                 .I1(XLXN_34), 
+                 .O(XLXN_68[11]));
+   GND  XLXI_81 (.G(XLXN_98));
+   GND  XLXI_82 (.G(XLXN_109));
+   GND  XLXI_84 (.G(XLXN_96));
+   VCC  XLXI_85 (.P(XLXN_94));
+   VCC  XLXI_87 (.P(XLXN_108));
+   VCC  XLXI_89 (.P(XLXN_90));
+   GND  XLXI_90 (.G(XLXN_100));
+   VCC  XLXI_91 (.P(XLXN_101));
+   VCC  XLXI_92 (.P(XLXN_102));
+   VCC  XLXI_93 (.P(XLXN_103));
+   VCC  XLXI_94 (.P(XLXN_40[7]));
+   GND  XLXI_95 (.G(XLXN_40[0]));
+   GND  XLXI_96 (.G(XLXN_104));
+   VCC  XLXI_101 (.P(XLXN_110));
+   BUF  XLXI_105 (.I(XLXN_68[8]), 
+                 .O(XLXN_68[12]));
+   BUF  XLXI_106 (.I(XLXN_68[8]), 
+                 .O(XLXN_68[13]));
+   BUF  XLXI_107 (.I(XLXN_68[8]), 
+                 .O(XLXN_68[14]));
+   BUF  XLXI_108 (.I(XLXN_68[8]), 
+                 .O(XLXN_68[15]));
+   BUF  XLXI_109 (.I(XLXN_43[4]), 
+                 .O(OTP[12]));
+   BUF  XLXI_110 (.I(XLXN_43[5]), 
+                 .O(OTP[13]));
+   BUF  XLXI_111 (.I(XLXN_43[6]), 
+                 .O(OTP[14]));
+   BUF  XLXI_112 (.I(XLXN_43[7]), 
+                 .O(OTP[15]));
+   (* HU_SET = "XLXI_117_26" *) 
+   FD16RE_MXILINX_anglecounter  XLXI_117 (.C(XLXN_36), 
+                                         .CE(XLXN_103), 
+                                         .D(XLXN_37[15:0]), 
+                                         .R(XLXN_112), 
+                                         .Q(XLXN_39[15:0]));
+   (* HU_SET = "XLXI_118_27" *) 
+   FD16RE_MXILINX_anglecounter  XLXI_118 (.C(XLXN_36), 
+                                         .CE(XLXN_102), 
+                                         .D(XLXN_42[15:0]), 
+                                         .R(XLXN_112), 
+                                         .Q(XLXN_43[15:0]));
+endmodule

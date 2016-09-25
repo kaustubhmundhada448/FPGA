@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym gnd16bit G:/FPGA/BTP/QAMV1/gnd16bit.sch G:/FPGA/BTP/QAMV1/gnd16bit.sym 

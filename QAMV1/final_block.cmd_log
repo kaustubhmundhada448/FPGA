@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/final_block.xst" -ofn "G:/FPGA/BTP/QAMV1/final_block.syr" 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/final_block.xst" -ofn "G:/FPGA/BTP/QAMV1/final_block.syr" 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/final_block.xst" -ofn "G:/FPGA/BTP/QAMV1/final_block.syr" 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/final_block.xst" -ofn "G:/FPGA/BTP/QAMV1/final_block.syr" 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/final_block.xst" -ofn "G:/FPGA/BTP/QAMV1/final_block.syr" 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/final_block.xst" -ofn "G:/FPGA/BTP/QAMV1/final_block.syr" 
+sch2sym -intstyle ise -family spartan3 -w -refsym final_block G:/FPGA/BTP/QAMV1/final_block.sch G:/FPGA/BTP/QAMV1/final_block.sym 

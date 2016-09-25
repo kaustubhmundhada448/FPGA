@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Left_Shift_9Bit.vf
+// /___/   /\     Timestamp : 05/30/2015 19:31:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/FPGA_Xilinx/FIRA_2.0/Left_Shift_9Bit.vf -w E:/FPGA_Xilinx/Fira_Fuzzy/Left_Shift_9Bit.sch
+//Design Name: Left_Shift_9Bit
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Left_Shift_9Bit(Inp, 
+                       Out_0, 
+                       Outp);
+
+    input [8:0] Inp;
+    input Out_0;
+   output [8:0] Outp;
+   
+   
+   BUF  XLXI_1 (.I(Inp[7]), 
+               .O(Outp[8]));
+   BUF  XLXI_2 (.I(Inp[6]), 
+               .O(Outp[7]));
+   BUF  XLXI_3 (.I(Inp[5]), 
+               .O(Outp[6]));
+   BUF  XLXI_4 (.I(Inp[4]), 
+               .O(Outp[5]));
+   BUF  XLXI_5 (.I(Inp[3]), 
+               .O(Outp[4]));
+   BUF  XLXI_7 (.I(Out_0), 
+               .O(Outp[0]));
+   BUF  XLXI_9 (.I(Inp[1]), 
+               .O(Outp[2]));
+   BUF  XLXI_10 (.I(Inp[0]), 
+                .O(Outp[1]));
+   BUF  XLXI_11 (.I(Inp[2]), 
+                .O(Outp[3]));
+endmodule

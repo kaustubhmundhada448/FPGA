@@ -1,0 +1,322 @@
+--------------------------------------------------------------------------------
+Release 14.2 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml Main.twx Main.ncd -o Main.twr Main.pcf
+
+Design file:              Main.ncd
+Physical constraint file: Main.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2012-07-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+Start       |    5.796(R)|    0.065(R)|CLK_BUFGP         |   0.000|
+X_Inp<0>    |    4.445(R)|   -1.388(R)|CLK_BUFGP         |   0.000|
+X_Inp<1>    |    3.986(R)|   -1.088(R)|CLK_BUFGP         |   0.000|
+X_Inp<2>    |    4.080(R)|   -1.097(R)|CLK_BUFGP         |   0.000|
+X_Inp<3>    |    3.752(R)|   -0.901(R)|CLK_BUFGP         |   0.000|
+X_Inp<4>    |    3.898(R)|   -0.786(R)|CLK_BUFGP         |   0.000|
+X_Inp<5>    |    3.810(R)|   -0.978(R)|CLK_BUFGP         |   0.000|
+X_Inp<6>    |    3.370(R)|   -0.394(R)|CLK_BUFGP         |   0.000|
+X_Inp<7>    |    3.252(R)|   -0.548(R)|CLK_BUFGP         |   0.000|
+X_Inp<8>    |    3.459(R)|   -1.011(R)|CLK_BUFGP         |   0.000|
+X_Inp<9>    |    2.902(R)|   -0.823(R)|CLK_BUFGP         |   0.000|
+X_Inp<10>   |    2.697(R)|   -0.617(R)|CLK_BUFGP         |   0.000|
+X_Inp<11>   |    2.003(R)|   -0.483(R)|CLK_BUFGP         |   0.000|
+X_Offset<0> |    3.760(R)|   -0.985(R)|CLK_BUFGP         |   0.000|
+X_Offset<1> |    3.116(R)|   -0.471(R)|CLK_BUFGP         |   0.000|
+X_Offset<2> |    3.376(R)|   -0.679(R)|CLK_BUFGP         |   0.000|
+X_Offset<3> |    3.282(R)|   -0.603(R)|CLK_BUFGP         |   0.000|
+X_Offset<4> |    3.341(R)|   -0.340(R)|CLK_BUFGP         |   0.000|
+X_Offset<5> |    3.161(R)|   -0.538(R)|CLK_BUFGP         |   0.000|
+X_Offset<6> |    3.519(R)|   -0.514(R)|CLK_BUFGP         |   0.000|
+X_Offset<7> |    3.577(R)|   -0.808(R)|CLK_BUFGP         |   0.000|
+X_Offset<8> |    3.116(R)|   -0.737(R)|CLK_BUFGP         |   0.000|
+X_Offset<9> |    2.654(R)|   -0.704(R)|CLK_BUFGP         |   0.000|
+X_Offset<10>|    2.963(R)|   -0.830(R)|CLK_BUFGP         |   0.000|
+X_Offset<11>|    2.582(R)|   -0.947(R)|CLK_BUFGP         |   0.000|
+Y_Inp<0>    |    4.992(R)|   -1.626(R)|CLK_BUFGP         |   0.000|
+Y_Inp<1>    |    5.106(R)|   -1.783(R)|CLK_BUFGP         |   0.000|
+Y_Inp<2>    |    5.075(R)|   -1.642(R)|CLK_BUFGP         |   0.000|
+Y_Inp<3>    |    4.681(R)|   -1.444(R)|CLK_BUFGP         |   0.000|
+Y_Inp<4>    |    4.992(R)|   -1.796(R)|CLK_BUFGP         |   0.000|
+Y_Inp<5>    |    4.677(R)|   -1.610(R)|CLK_BUFGP         |   0.000|
+Y_Inp<6>    |    4.660(R)|   -1.365(R)|CLK_BUFGP         |   0.000|
+Y_Inp<7>    |    4.437(R)|   -1.221(R)|CLK_BUFGP         |   0.000|
+Y_Inp<8>    |    4.269(R)|   -1.721(R)|CLK_BUFGP         |   0.000|
+Y_Inp<9>    |    4.280(R)|   -1.969(R)|CLK_BUFGP         |   0.000|
+Y_Inp<10>   |    3.544(R)|   -1.556(R)|CLK_BUFGP         |   0.000|
+Y_Inp<11>   |    2.960(R)|   -1.247(R)|CLK_BUFGP         |   0.000|
+Y_Offset<0> |    5.357(R)|   -2.063(R)|CLK_BUFGP         |   0.000|
+Y_Offset<1> |    5.052(R)|   -1.819(R)|CLK_BUFGP         |   0.000|
+Y_Offset<2> |    5.262(R)|   -1.792(R)|CLK_BUFGP         |   0.000|
+Y_Offset<3> |    5.312(R)|   -2.028(R)|CLK_BUFGP         |   0.000|
+Y_Offset<4> |    5.119(R)|   -2.042(R)|CLK_BUFGP         |   0.000|
+Y_Offset<5> |    4.703(R)|   -1.710(R)|CLK_BUFGP         |   0.000|
+Y_Offset<6> |    4.939(R)|   -1.588(R)|CLK_BUFGP         |   0.000|
+Y_Offset<7> |    4.607(R)|   -1.357(R)|CLK_BUFGP         |   0.000|
+Y_Offset<8> |    4.333(R)|   -1.917(R)|CLK_BUFGP         |   0.000|
+Y_Offset<9> |    3.997(R)|   -1.822(R)|CLK_BUFGP         |   0.000|
+Y_Offset<10>|    3.547(R)|   -1.559(R)|CLK_BUFGP         |   0.000|
+Y_Offset<11>|    3.138(R)|   -1.389(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+R_Otp<0>    |   10.471(R)|CLK_BUFGP         |   0.000|
+R_Otp<1>    |    9.893(R)|CLK_BUFGP         |   0.000|
+R_Otp<2>    |   10.892(R)|CLK_BUFGP         |   0.000|
+R_Otp<3>    |   10.113(R)|CLK_BUFGP         |   0.000|
+R_Otp<4>    |    9.853(R)|CLK_BUFGP         |   0.000|
+R_Otp<5>    |   11.282(R)|CLK_BUFGP         |   0.000|
+R_Otp<6>    |   10.788(R)|CLK_BUFGP         |   0.000|
+R_Otp<7>    |   11.547(R)|CLK_BUFGP         |   0.000|
+R_Otp<8>    |   10.588(R)|CLK_BUFGP         |   0.000|
+R_Otp<9>    |   10.942(R)|CLK_BUFGP         |   0.000|
+R_Otp<10>   |   10.872(R)|CLK_BUFGP         |   0.000|
+R_Otp<11>   |   11.224(R)|CLK_BUFGP         |   0.000|
+The_Otp<0>  |    9.358(R)|CLK_BUFGP         |   0.000|
+The_Otp<1>  |    9.597(R)|CLK_BUFGP         |   0.000|
+The_Otp<2>  |    9.582(R)|CLK_BUFGP         |   0.000|
+The_Otp<3>  |   10.185(R)|CLK_BUFGP         |   0.000|
+The_Otp<4>  |   10.299(R)|CLK_BUFGP         |   0.000|
+The_Otp<5>  |   10.652(R)|CLK_BUFGP         |   0.000|
+The_Otp<6>  |   10.126(R)|CLK_BUFGP         |   0.000|
+The_Otp<7>  |   10.601(R)|CLK_BUFGP         |   0.000|
+The_Otp<8>  |    9.850(R)|CLK_BUFGP         |   0.000|
+The_Otp<9>  |   11.013(R)|CLK_BUFGP         |   0.000|
+The_Otp<10> |   10.520(R)|CLK_BUFGP         |   0.000|
+The_Otp<11> |   11.149(R)|CLK_BUFGP         |   0.000|
+Y_Otp<0>    |    7.819(R)|CLK_BUFGP         |   0.000|
+Y_Otp<1>    |    7.568(R)|CLK_BUFGP         |   0.000|
+Y_Otp<2>    |    7.104(R)|CLK_BUFGP         |   0.000|
+Y_Otp<3>    |    7.152(R)|CLK_BUFGP         |   0.000|
+Y_Otp<4>    |    7.186(R)|CLK_BUFGP         |   0.000|
+Y_Otp<5>    |    7.514(R)|CLK_BUFGP         |   0.000|
+Y_Otp<6>    |    7.235(R)|CLK_BUFGP         |   0.000|
+Y_Otp<7>    |    7.774(R)|CLK_BUFGP         |   0.000|
+Y_Otp<8>    |    7.296(R)|CLK_BUFGP         |   0.000|
+Y_Otp<9>    |    7.293(R)|CLK_BUFGP         |   0.000|
+Y_Otp<10>   |    7.284(R)|CLK_BUFGP         |   0.000|
+Y_Otp<11>   |    7.532(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   13.724|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+R_Offset<0>    |R_Otp<0>       |    7.651|
+R_Offset<0>    |R_Otp<1>       |    7.073|
+R_Offset<0>    |R_Otp<2>       |    7.988|
+R_Offset<0>    |R_Otp<3>       |    7.209|
+R_Offset<0>    |R_Otp<4>       |    6.949|
+R_Offset<0>    |R_Otp<5>       |    8.378|
+R_Offset<0>    |R_Otp<6>       |    7.884|
+R_Offset<0>    |R_Otp<7>       |    8.643|
+R_Offset<0>    |R_Otp<8>       |    7.684|
+R_Offset<0>    |R_Otp<9>       |    8.038|
+R_Offset<0>    |R_Otp<10>      |    7.968|
+R_Offset<0>    |R_Otp<11>      |    8.320|
+R_Offset<1>    |R_Otp<1>       |    6.612|
+R_Offset<1>    |R_Otp<2>       |    7.744|
+R_Offset<1>    |R_Otp<3>       |    6.965|
+R_Offset<1>    |R_Otp<4>       |    6.705|
+R_Offset<1>    |R_Otp<5>       |    8.134|
+R_Offset<1>    |R_Otp<6>       |    7.640|
+R_Offset<1>    |R_Otp<7>       |    8.399|
+R_Offset<1>    |R_Otp<8>       |    7.440|
+R_Offset<1>    |R_Otp<9>       |    7.794|
+R_Offset<1>    |R_Otp<10>      |    7.724|
+R_Offset<1>    |R_Otp<11>      |    8.076|
+R_Offset<2>    |R_Otp<2>       |    6.978|
+R_Offset<2>    |R_Otp<3>       |    6.350|
+R_Offset<2>    |R_Otp<4>       |    6.327|
+R_Offset<2>    |R_Otp<5>       |    7.756|
+R_Offset<2>    |R_Otp<6>       |    7.262|
+R_Offset<2>    |R_Otp<7>       |    8.021|
+R_Offset<2>    |R_Otp<8>       |    7.062|
+R_Offset<2>    |R_Otp<9>       |    7.416|
+R_Offset<2>    |R_Otp<10>      |    7.346|
+R_Offset<2>    |R_Otp<11>      |    7.698|
+R_Offset<3>    |R_Otp<3>       |    6.168|
+R_Offset<3>    |R_Otp<4>       |    6.362|
+R_Offset<3>    |R_Otp<5>       |    7.791|
+R_Offset<3>    |R_Otp<6>       |    7.297|
+R_Offset<3>    |R_Otp<7>       |    8.056|
+R_Offset<3>    |R_Otp<8>       |    7.097|
+R_Offset<3>    |R_Otp<9>       |    7.451|
+R_Offset<3>    |R_Otp<10>      |    7.381|
+R_Offset<3>    |R_Otp<11>      |    7.733|
+R_Offset<4>    |R_Otp<4>       |    5.904|
+R_Offset<4>    |R_Otp<5>       |    7.484|
+R_Offset<4>    |R_Otp<6>       |    7.227|
+R_Offset<4>    |R_Otp<7>       |    7.986|
+R_Offset<4>    |R_Otp<8>       |    7.027|
+R_Offset<4>    |R_Otp<9>       |    7.381|
+R_Offset<4>    |R_Otp<10>      |    7.311|
+R_Offset<4>    |R_Otp<11>      |    7.663|
+R_Offset<5>    |R_Otp<5>       |    6.744|
+R_Offset<5>    |R_Otp<6>       |    6.704|
+R_Offset<5>    |R_Otp<7>       |    7.463|
+R_Offset<5>    |R_Otp<8>       |    6.504|
+R_Offset<5>    |R_Otp<9>       |    6.858|
+R_Offset<5>    |R_Otp<10>      |    6.788|
+R_Offset<5>    |R_Otp<11>      |    7.140|
+R_Offset<6>    |R_Otp<6>       |    6.516|
+R_Offset<6>    |R_Otp<7>       |    7.426|
+R_Offset<6>    |R_Otp<8>       |    6.704|
+R_Offset<6>    |R_Otp<9>       |    7.058|
+R_Offset<6>    |R_Otp<10>      |    6.988|
+R_Offset<6>    |R_Otp<11>      |    7.340|
+R_Offset<7>    |R_Otp<7>       |    7.754|
+R_Offset<7>    |R_Otp<8>       |    7.249|
+R_Offset<7>    |R_Otp<9>       |    7.603|
+R_Offset<7>    |R_Otp<10>      |    7.533|
+R_Offset<7>    |R_Otp<11>      |    7.885|
+R_Offset<8>    |R_Otp<8>       |    6.974|
+R_Offset<8>    |R_Otp<9>       |    7.479|
+R_Offset<8>    |R_Otp<10>      |    7.646|
+R_Offset<8>    |R_Otp<11>      |    7.998|
+R_Offset<9>    |R_Otp<9>       |    6.198|
+R_Offset<9>    |R_Otp<10>      |    6.582|
+R_Offset<9>    |R_Otp<11>      |    6.934|
+R_Offset<10>   |R_Otp<10>      |    6.728|
+R_Offset<10>   |R_Otp<11>      |    7.231|
+R_Offset<11>   |R_Otp<11>      |    6.377|
+The_Offset<0>  |The_Otp<0>     |    6.995|
+The_Offset<0>  |The_Otp<1>     |    7.234|
+The_Offset<0>  |The_Otp<2>     |    7.164|
+The_Offset<0>  |The_Otp<3>     |    7.767|
+The_Offset<0>  |The_Otp<4>     |    7.810|
+The_Offset<0>  |The_Otp<5>     |    8.163|
+The_Offset<0>  |The_Otp<6>     |    7.637|
+The_Offset<0>  |The_Otp<7>     |    8.112|
+The_Offset<0>  |The_Otp<8>     |    7.314|
+The_Offset<0>  |The_Otp<9>     |    8.477|
+The_Offset<0>  |The_Otp<10>    |    7.941|
+The_Offset<0>  |The_Otp<11>    |    8.570|
+The_Offset<1>  |The_Otp<1>     |    6.664|
+The_Offset<1>  |The_Otp<2>     |    6.811|
+The_Offset<1>  |The_Otp<3>     |    7.414|
+The_Offset<1>  |The_Otp<4>     |    7.457|
+The_Offset<1>  |The_Otp<5>     |    7.810|
+The_Offset<1>  |The_Otp<6>     |    7.284|
+The_Offset<1>  |The_Otp<7>     |    7.759|
+The_Offset<1>  |The_Otp<8>     |    6.961|
+The_Offset<1>  |The_Otp<9>     |    8.124|
+The_Offset<1>  |The_Otp<10>    |    7.588|
+The_Offset<1>  |The_Otp<11>    |    8.217|
+The_Offset<2>  |The_Otp<2>     |    6.572|
+The_Offset<2>  |The_Otp<3>     |    7.326|
+The_Offset<2>  |The_Otp<4>     |    7.606|
+The_Offset<2>  |The_Otp<5>     |    7.959|
+The_Offset<2>  |The_Otp<6>     |    7.433|
+The_Offset<2>  |The_Otp<7>     |    7.908|
+The_Offset<2>  |The_Otp<8>     |    7.110|
+The_Offset<2>  |The_Otp<9>     |    8.273|
+The_Offset<2>  |The_Otp<10>    |    7.737|
+The_Offset<2>  |The_Otp<11>    |    8.366|
+The_Offset<3>  |The_Otp<3>     |    6.701|
+The_Offset<3>  |The_Otp<4>     |    7.198|
+The_Offset<3>  |The_Otp<5>     |    7.551|
+The_Offset<3>  |The_Otp<6>     |    7.025|
+The_Offset<3>  |The_Otp<7>     |    7.500|
+The_Offset<3>  |The_Otp<8>     |    6.702|
+The_Offset<3>  |The_Otp<9>     |    7.865|
+The_Offset<3>  |The_Otp<10>    |    7.329|
+The_Offset<3>  |The_Otp<11>    |    7.958|
+The_Offset<4>  |The_Otp<4>     |    6.778|
+The_Offset<4>  |The_Otp<5>     |    7.282|
+The_Offset<4>  |The_Otp<6>     |    6.993|
+The_Offset<4>  |The_Otp<7>     |    7.468|
+The_Offset<4>  |The_Otp<8>     |    6.670|
+The_Offset<4>  |The_Otp<9>     |    7.833|
+The_Offset<4>  |The_Otp<10>    |    7.297|
+The_Offset<4>  |The_Otp<11>    |    7.926|
+The_Offset<5>  |The_Otp<5>     |    6.862|
+The_Offset<5>  |The_Otp<6>     |    6.790|
+The_Offset<5>  |The_Otp<7>     |    7.265|
+The_Offset<5>  |The_Otp<8>     |    6.467|
+The_Offset<5>  |The_Otp<9>     |    7.630|
+The_Offset<5>  |The_Otp<10>    |    7.094|
+The_Offset<5>  |The_Otp<11>    |    7.723|
+The_Offset<6>  |The_Otp<6>     |    6.332|
+The_Offset<6>  |The_Otp<7>     |    6.958|
+The_Offset<6>  |The_Otp<8>     |    6.397|
+The_Offset<6>  |The_Otp<9>     |    7.560|
+The_Offset<6>  |The_Otp<10>    |    7.024|
+The_Offset<6>  |The_Otp<11>    |    7.653|
+The_Offset<7>  |The_Otp<7>     |    6.449|
+The_Offset<7>  |The_Otp<8>     |    6.105|
+The_Offset<7>  |The_Otp<9>     |    7.268|
+The_Offset<7>  |The_Otp<10>    |    6.732|
+The_Offset<7>  |The_Otp<11>    |    7.361|
+The_Offset<8>  |The_Otp<8>     |    5.866|
+The_Offset<8>  |The_Otp<9>     |    7.180|
+The_Offset<8>  |The_Otp<10>    |    6.881|
+The_Offset<8>  |The_Otp<11>    |    7.510|
+The_Offset<9>  |The_Otp<9>     |    7.066|
+The_Offset<9>  |The_Otp<10>    |    6.984|
+The_Offset<9>  |The_Otp<11>    |    7.613|
+The_Offset<10> |The_Otp<10>    |    6.734|
+The_Offset<10> |The_Otp<11>    |    7.514|
+The_Offset<11> |The_Otp<11>    |    7.309|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Apr 17 20:55:43 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 176 MB
+
+
+

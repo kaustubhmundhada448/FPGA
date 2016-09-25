@@ -1,0 +1,3 @@
+MODULE shiftr2
+	SUBMODULE bit16buffermodified
+		INSTANCE XLXI_1

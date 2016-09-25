@@ -1,0 +1,22 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym Fial_Combine G:/FPGA/BTP/QAMV1/Fial_Combine.sch G:/FPGA/BTP/QAMV1/Fial_Combine.sym 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/Fial_Combine.xst" -ofn "G:/FPGA/BTP/QAMV1/Fial_Combine.syr" 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/Fial_Combine.xst" -ofn "G:/FPGA/BTP/QAMV1/Fial_Combine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Fial_Combine.ucf -p xc3s400-pq208-4 Fial_Combine.ngc Fial_Combine.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o Fial_Combine_map.ncd Fial_Combine.ngd Fial_Combine.pcf 
+par -w -intstyle ise -ol high -t 1 Fial_Combine_map.ncd Fial_Combine.ncd Fial_Combine.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Fial_Combine.twx Fial_Combine.ncd -o Fial_Combine.twr Fial_Combine.pcf -ucf Fial_Combine.ucf 
+bitgen -intstyle ise -f Fial_Combine.ut Fial_Combine.ncd 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/Fial_Combine.xst" -ofn "G:/FPGA/BTP/QAMV1/Fial_Combine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Fial_Combine.ucf -p xc3s400-pq208-4 Fial_Combine.ngc Fial_Combine.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o Fial_Combine_map.ncd Fial_Combine.ngd Fial_Combine.pcf 
+par -w -intstyle ise -ol high -t 1 Fial_Combine_map.ncd Fial_Combine.ncd Fial_Combine.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Fial_Combine.twx Fial_Combine.ncd -o Fial_Combine.twr Fial_Combine.pcf -ucf Fial_Combine.ucf 
+bitgen -intstyle ise -f Fial_Combine.ut Fial_Combine.ncd 
+bitgen -intstyle ise -f Fial_Combine.ut Fial_Combine.ncd 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/Fial_Combine.xst" -ofn "G:/FPGA/BTP/QAMV1/Fial_Combine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Fial_Combine.ucf -p xc3s400-pq208-4 Fial_Combine.ngc Fial_Combine.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o Fial_Combine_map.ncd Fial_Combine.ngd Fial_Combine.pcf 
+par -w -intstyle ise -ol high -t 1 Fial_Combine_map.ncd Fial_Combine.ncd Fial_Combine.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Fial_Combine.twx Fial_Combine.ncd -o Fial_Combine.twr Fial_Combine.pcf -ucf Fial_Combine.ucf 
+bitgen -intstyle ise -f Fial_Combine.ut Fial_Combine.ncd 
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/QAMV1/QAMV1/Fial_Combine.xst" -ofn "E:/FPGA_Xilinx/QAMV1/QAMV1/Fial_Combine.syr" 

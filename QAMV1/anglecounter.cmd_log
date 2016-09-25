@@ -1,0 +1,18 @@
+sch2hdl -intstyle ise -family spartan3 -verilog anglecounter_drc.vf -w G:/FPGA/BTP/QAMV1/anglecounter.sch 
+sch2sym -intstyle ise -family spartan3 -w -refsym anglecounter G:/FPGA/BTP/QAMV1/anglecounter.sch G:/FPGA/BTP/QAMV1/anglecounter.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym anglecounter G:/FPGA/BTP/QAMV1/anglecounter.sch G:/FPGA/BTP/QAMV1/anglecounter.sym 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/anglecounter.xst" -ofn "G:/FPGA/BTP/QAMV1/anglecounter.syr" 
+sch2sym -intstyle ise -family spartan3 -w -refsym anglecounter G:/FPGA/BTP/QAMV1/anglecounter.sch G:/FPGA/BTP/QAMV1/anglecounter.sym 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/anglecounter.xst" -ofn "G:/FPGA/BTP/QAMV1/anglecounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 anglecounter.ngc anglecounter.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o anglecounter_map.ncd anglecounter.ngd anglecounter.pcf 
+par -w -intstyle ise -ol high -t 1 anglecounter_map.ncd anglecounter.ncd anglecounter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml anglecounter.twx anglecounter.ncd -o anglecounter.twr anglecounter.pcf 
+bitgen -intstyle ise -f anglecounter.ut anglecounter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc anglecounter.ucf -p xc3s400-pq208-4 anglecounter.ngc anglecounter.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o anglecounter_map.ncd anglecounter.ngd anglecounter.pcf 
+par -w -intstyle ise -ol high -t 1 anglecounter_map.ncd anglecounter.ncd anglecounter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml anglecounter.twx anglecounter.ncd -o anglecounter.twr anglecounter.pcf -ucf anglecounter.ucf 
+bitgen -intstyle ise -f anglecounter.ut anglecounter.ncd 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/anglecounter.xst" -ofn "G:/FPGA/BTP/QAMV1/anglecounter.syr" 
+xst -intstyle ise -ifn "G:/FPGA/BTP/QAMV1/anglecounter.xst" -ofn "G:/FPGA/BTP/QAMV1/anglecounter.syr" 

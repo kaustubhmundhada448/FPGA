@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Main_Main_sch_tb_isim_beh.exe" -prj "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Crdic_structural/Main_Main_sch_tb_beh.prj" "work.Main_Main_sch_tb" "work.glbl" 

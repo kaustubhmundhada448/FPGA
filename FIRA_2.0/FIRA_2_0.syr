@@ -1,0 +1,3000 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.32 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.32 secs
+ 
+--> Reading design: FIRA_2_0.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FIRA_2_0.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FIRA_2_0"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-cp132
+
+---- Source Options
+Top Module Name                    : FIRA_2_0
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Mux_2_4bit.vf" in library work
+Compiling verilog file "Incrementer_Decrementer.vf" in library work
+Module <Mux_2_4bit> compiled
+Compiling verilog file "twos_compliment_using_inverter.vf" in library work
+Module <Incrementer_Decrementer> compiled
+Module <Incrementer_Decrementer_MUSER_twos_compliment_using_inverter> compiled
+Compiling verilog file "sub9bit.vf" in library work
+Module <twos_compliment_using_inverter> compiled
+Compiling verilog file "negative_mux.vf" in library work
+Module <sub9bit> compiled
+Module <M2_1E_MXILINX_negative_mux> compiled
+Module <M4_1E_MXILINX_negative_mux> compiled
+Compiling verilog file "Mux_2_8Bit.vf" in library work
+Module <negative_mux> compiled
+Compiling verilog file "Mux_2_8.vf" in library work
+Module <Mux_2_8Bit> compiled
+Compiling verilog file "Min_4bit.vf" in library work
+Module <Mux_2_8> compiled
+Module <Mux_2_4bit_MUSER_Min_4bit> compiled
+Module <COMPM4_MXILINX_Min_4bit> compiled
+Compiling verilog file "Max_4bit.vf" in library work
+Module <Min_4bit> compiled
+Module <Mux_2_4bit_MUSER_Max_4bit> compiled
+Module <COMPM4_MXILINX_Max_4bit> compiled
+Compiling verilog file "Left_Shift_9Bit.vf" in library work
+Module <Max_4bit> compiled
+Compiling verilog file "Left_Shift_8Bit.vf" in library work
+Module <Left_Shift_9Bit> compiled
+Compiling verilog file "Flip_flip9.vf" in library work
+Module <Left_Shift_8Bit> compiled
+Compiling verilog file "FD9CE.vf" in library work
+Module <Flip_flip9> compiled
+Compiling verilog file "Bit8_to_bit9.vf" in library work
+Module <FD9CE> compiled
+Compiling verilog file "Reg_4bit.vf" in library work
+Module <Bit8_to_bit9> compiled
+Compiling verilog file "Mux_2_16.vf" in library work
+Module <Reg_4bit> compiled
+Compiling verilog file "Multiply_4Bit_5.vf" in library work
+Module <Mux_2_16> compiled
+Module <ADD4_MXILINX_Multiply_4Bit_5> compiled
+Compiling verilog file "Multiply_4Bit_3.vf" in library work
+Module <Multiply_4Bit_5> compiled
+Module <ADD4_MXILINX_Multiply_4Bit_3> compiled
+Compiling verilog file "Min_Array_3_by_3.vf" in library work
+Module <Multiply_4Bit_3> compiled
+Module <Mux_2_4bit_MUSER_Min_Array_3_by_3> compiled
+Module <COMPM4_MXILINX_Min_Array_3_by_3> compiled
+Module <Min_4bit_MUSER_Min_Array_3_by_3> compiled
+Compiling verilog file "Kp_Defuzzy.vf" in library work
+Module <Min_Array_3_by_3> compiled
+Module <Mux_2_4bit_MUSER_Kp_Defuzzy> compiled
+Module <COMPM4_MXILINX_Kp_Defuzzy> compiled
+Module <Max_4bit_MUSER_Kp_Defuzzy> compiled
+Compiling verilog file "Kd_Deffuzy.vf" in library work
+Module <Kp_Defuzzy> compiled
+Module <Mux_2_4bit_MUSER_Kd_Deffuzy> compiled
+Module <COMPM4_MXILINX_Kd_Deffuzy> compiled
+Module <Max_4bit_MUSER_Kd_Deffuzy> compiled
+Compiling verilog file "Incrementer_Decrementer_16.vf" in library work
+Module <Kd_Deffuzy> compiled
+Compiling verilog file "error_derror_range_generator.vf" in library work
+Module <Incrementer_Decrementer_16> compiled
+Module <Incrementer_Decrementer_MUSER_error_derror_range_generator> compiled
+Module <twos_compliment_using_inverter_MUSER_error_derror_range_generator> compiled
+Module <ADSU4_MXILINX_error_derror_range_generator> compiled
+Module <M2_1E_MXILINX_error_derror_range_generator> compiled
+Module <M4_1E_MXILINX_error_derror_range_generator> compiled
+Module <negative_mux_MUSER_error_derror_range_generator> compiled
+Module <COMPM4_MXILINX_error_derror_range_generator> compiled
+Module <Mux_2_8_MUSER_error_derror_range_generator> compiled
+Compiling verilog file "D_error.vf" in library work
+Module <error_derror_range_generator> compiled
+Module <Flip_flip9_MUSER_D_error> compiled
+Compiling verilog file "Divide_8bit_8bit_restore.vf" in library work
+Module <D_error> compiled
+Module <FD8CE_MXILINX_Divide_8bit_8bit_restore> compiled
+Module <FTCE_MXILINX_Divide_8bit_8bit_restore> compiled
+Module <CB4CE_MXILINX_Divide_8bit_8bit_restore> compiled
+Module <Left_Shift_8Bit_MUSER_Divide_8bit_8bit_restore> compiled
+Module <Mux_2_8Bit_MUSER_Divide_8bit_8bit_restore> compiled
+Module <sub9bit_MUSER_Divide_8bit_8bit_restore> compiled
+Module <Mux_2_8_MUSER_Divide_8bit_8bit_restore> compiled
+Module <Left_Shift_9Bit_MUSER_Divide_8bit_8bit_restore> compiled
+Compiling verilog file "Couter_9CE.vf" in library work
+Module <Divide_8bit_8bit_restore> compiled
+Module <Incrementer_Decrementer_MUSER_Couter_9CE> compiled
+Module <Flip_flip9_MUSER_Couter_9CE> compiled
+Compiling verilog file "Add_sub_4bit.vf" in library work
+Module <Couter_9CE> compiled
+Compiling verilog file "add6.vf" in library work
+Module <Add_sub_4bit> compiled
+Compiling verilog file "add4_bus.vf" in library work
+Module <add6> compiled
+Module <ADD4_MXILINX_add4_bus> compiled
+Compiling verilog file "Twos_Comp.vf" in library work
+Module <add4_bus> compiled
+Module <Incrementer_Decrementer_16_MUSER_Twos_Comp> compiled
+Module <INV16_MXILINX_Twos_Comp> compiled
+Compiling verilog file "SIPO_reg.vf" in library work
+Module <Twos_Comp> compiled
+Compiling verilog file "Parity_gen.vf" in library work
+Module <SIPO_reg> compiled
+Compiling verilog file "outputreg_at_end_ofinput.vf" in library work
+Module <Parity_gen> compiled
+Compiling verilog file "OCR_8.vf" in library work
+Module <outputreg_at_end_ofinput> compiled
+Compiling verilog file "nin_counter.vf" in library work
+Module <OCR_8> compiled
+Module <Reg_4bit_MUSER_nin_counter> compiled
+Module <Add_sub_4bit_MUSER_nin_counter> compiled
+Compiling verilog file "Mult_9bit_3Bit_Comb.vf" in library work
+Module <nin_counter> compiled
+Module <ADD16_MXILINX_Mult_9bit_3Bit_Comb> compiled
+Module <Mux_2_16_MUSER_Mult_9bit_3Bit_Comb> compiled
+Compiling verilog file "Incre_dcre_18.vf" in library work
+Module <Mult_9bit_3Bit_Comb> compiled
+Compiling verilog file "Flip_Flop_18.vf" in library work
+Module <Incre_dcre_18> compiled
+Compiling verilog file "FIRA_Fuzzy_1_0.vf" in library work
+Module <Flip_Flop_18> compiled
+Module <FD8CE_MXILINX_FIRA_Fuzzy_1_0> compiled
+Module <FTCE_MXILINX_FIRA_Fuzzy_1_0> compiled
+Module <CB4CE_MXILINX_FIRA_Fuzzy_1_0> compiled
+Module <FD9CE_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Left_Shift_8Bit_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Mux_2_8Bit_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Bit8_to_bit9_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <sub9bit_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Mux_2_8_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Left_Shift_9Bit_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Divide_8bit_8bit_restore_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <ADD4_MXILINX_FIRA_Fuzzy_1_0> compiled
+Module <add4_bus_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <add6_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Multiply_4Bit_5_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Multiply_4Bit_3_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Mux_2_4bit_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <COMPM4_MXILINX_FIRA_Fuzzy_1_0> compiled
+Module <Max_4bit_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Kd_Deffuzy_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Kp_Defuzzy_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Min_4bit_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Min_Array_3_by_3_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <Incrementer_Decrementer_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <twos_compliment_using_inverter_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <ADSU4_MXILINX_FIRA_Fuzzy_1_0> compiled
+Module <M2_1E_MXILINX_FIRA_Fuzzy_1_0> compiled
+Module <M4_1E_MXILINX_FIRA_Fuzzy_1_0> compiled
+Module <negative_mux_MUSER_FIRA_Fuzzy_1_0> compiled
+Module <error_derror_range_generator_MUSER_FIRA_Fuzzy_1_0> compiled
+Compiling verilog file "ETC_SYNCRONOUS.vf" in library work
+Module <FIRA_Fuzzy_1_0> compiled
+Module <FD9CE_MUSER_ETC_SYNCRONOUS> compiled
+Module <Incrementer_Decrementer_MUSER_ETC_SYNCRONOUS> compiled
+Module <Flip_flip9_MUSER_ETC_SYNCRONOUS> compiled
+Module <Couter_9CE_MUSER_ETC_SYNCRONOUS> compiled
+Compiling verilog file "Error_D_Error_Gen.vf" in library work
+Module <ETC_SYNCRONOUS> compiled
+Module <sub9bit_MUSER_Error_D_Error_Gen> compiled
+Module <Flip_flip9_MUSER_Error_D_Error_Gen> compiled
+Module <D_error_MUSER_Error_D_Error_Gen> compiled
+Compiling verilog file "Digital_Filter.vf" in library work
+Module <Error_D_Error_Gen> compiled
+Module <FJKC_MXILINX_Digital_Filter> compiled
+Compiling verilog file "decade_counter_new.vf" in library work
+Module <Digital_Filter> compiled
+Module <Reg_4bit_MUSER_decade_counter_new> compiled
+Module <Add_sub_4bit_MUSER_decade_counter_new> compiled
+Compiling verilog file "counter.vf" in library work
+Module <decade_counter_new> compiled
+Module <FTPE_MXILINX_counter> compiled
+Module <CC8CE_MXILINX_counter> compiled
+Compiling verilog file "bit10datareg_to_transmit.vf" in library work
+Module <counter> compiled
+Compiling verilog file "usart_transmiter.vf" in library work
+Module <bit10datareg_to_transmit> compiled
+Module <Reg_4bit_MUSER_usart_transmiter> compiled
+Module <Add_sub_4bit_MUSER_usart_transmiter> compiled
+Module <decade_counter_new_MUSER_usart_transmiter> compiled
+Module <bit10datareg_to_transmit_MUSER_usart_transmiter> compiled
+Module <Parity_gen_MUSER_usart_transmiter> compiled
+Compiling verilog file "usart_receiver.vf" in library work
+Module <usart_transmiter> compiled
+Module <FJKC_MXILINX_usart_receiver> compiled
+Module <Digital_Filter_MUSER_usart_receiver> compiled
+Module <outputreg_at_end_ofinput_MUSER_usart_receiver> compiled
+Module <Reg_4bit_MUSER_usart_receiver> compiled
+Module <Add_sub_4bit_MUSER_usart_receiver> compiled
+Module <nin_counter_MUSER_usart_receiver> compiled
+Module <SIPO_reg_MUSER_usart_receiver> compiled
+Module <Parity_gen_MUSER_usart_receiver> compiled
+Compiling verilog file "Timer_PWM.vf" in library work
+Module <usart_receiver> compiled
+Module <FTPE_MXILINX_Timer_PWM> compiled
+Module <CC8CE_MXILINX_Timer_PWM> compiled
+Module <counter_MUSER_Timer_PWM> compiled
+Module <FTCE_MXILINX_Timer_PWM> compiled
+Module <FTRSE_MXILINX_Timer_PWM> compiled
+Module <CB2RE_MXILINX_Timer_PWM> compiled
+Compiling verilog file "Precale_434.vf" in library work
+Module <Timer_PWM> compiled
+Module <FTC_MXILINX_Precale_434> compiled
+Module <Incrementer_Decrementer_MUSER_Precale_434> compiled
+Module <Flip_flip9_MUSER_Precale_434> compiled
+Compiling verilog file "OCR_Generator.vf" in library work
+Module <Precale_434> compiled
+Module <Mux_2_8Bit_MUSER_OCR_Generator> compiled
+Module <OCR_8_MUSER_OCR_Generator> compiled
+Module <Mux_2_16_MUSER_OCR_Generator> compiled
+Module <Incrementer_Decrementer_16_MUSER_OCR_Generator> compiled
+Module <INV16_MXILINX_OCR_Generator> compiled
+Module <Twos_Comp_MUSER_OCR_Generator> compiled
+Module <FD16RE_MXILINX_OCR_Generator> compiled
+Module <ADD16_MXILINX_OCR_Generator> compiled
+Compiling verilog file "Main_Module.vf" in library work
+Module <OCR_Generator> compiled
+Module <FD9CE_MUSER_Main_Module> compiled
+Module <Incrementer_Decrementer_MUSER_Main_Module> compiled
+Module <Flip_flip9_MUSER_Main_Module> compiled
+Module <Couter_9CE_MUSER_Main_Module> compiled
+Module <ETC_SYNCRONOUS_MUSER_Main_Module> compiled
+Module <FJKC_MXILINX_Main_Module> compiled
+Module <Digital_Filter_MUSER_Main_Module> compiled
+Compiling verilog file "Fuzzy_PID.vf" in library work
+Module <Main_Module> compiled
+Module <ADD16_MXILINX_Fuzzy_PID> compiled
+Module <Mux_2_16_MUSER_Fuzzy_PID> compiled
+Module <Mult_9bit_3Bit_Comb_MUSER_Fuzzy_PID> compiled
+Module <FD8CE_MXILINX_Fuzzy_PID> compiled
+Module <FTCE_MXILINX_Fuzzy_PID> compiled
+Module <CB4CE_MXILINX_Fuzzy_PID> compiled
+Module <FD9CE_MUSER_Fuzzy_PID> compiled
+Module <Left_Shift_8Bit_MUSER_Fuzzy_PID> compiled
+Module <Mux_2_8Bit_MUSER_Fuzzy_PID> compiled
+Module <Bit8_to_bit9_MUSER_Fuzzy_PID> compiled
+Module <sub9bit_MUSER_Fuzzy_PID> compiled
+Module <Mux_2_8_MUSER_Fuzzy_PID> compiled
+Module <Left_Shift_9Bit_MUSER_Fuzzy_PID> compiled
+Module <Divide_8bit_8bit_restore_MUSER_Fuzzy_PID> compiled
+Module <ADD4_MXILINX_Fuzzy_PID> compiled
+Module <add4_bus_MUSER_Fuzzy_PID> compiled
+Module <add6_MUSER_Fuzzy_PID> compiled
+Module <Multiply_4Bit_5_MUSER_Fuzzy_PID> compiled
+Module <Multiply_4Bit_3_MUSER_Fuzzy_PID> compiled
+Module <Mux_2_4bit_MUSER_Fuzzy_PID> compiled
+Module <COMPM4_MXILINX_Fuzzy_PID> compiled
+Module <Max_4bit_MUSER_Fuzzy_PID> compiled
+Module <Kd_Deffuzy_MUSER_Fuzzy_PID> compiled
+Module <Kp_Defuzzy_MUSER_Fuzzy_PID> compiled
+Module <Min_4bit_MUSER_Fuzzy_PID> compiled
+Module <Min_Array_3_by_3_MUSER_Fuzzy_PID> compiled
+Module <Incrementer_Decrementer_MUSER_Fuzzy_PID> compiled
+Module <twos_compliment_using_inverter_MUSER_Fuzzy_PID> compiled
+Module <ADSU4_MXILINX_Fuzzy_PID> compiled
+Module <M2_1E_MXILINX_Fuzzy_PID> compiled
+Module <M4_1E_MXILINX_Fuzzy_PID> compiled
+Module <negative_mux_MUSER_Fuzzy_PID> compiled
+Module <error_derror_range_generator_MUSER_Fuzzy_PID> compiled
+Module <FIRA_Fuzzy_1_0_MUSER_Fuzzy_PID> compiled
+Module <Flip_flip9_MUSER_Fuzzy_PID> compiled
+Module <D_error_MUSER_Fuzzy_PID> compiled
+Module <Error_D_Error_Gen_MUSER_Fuzzy_PID> compiled
+Compiling verilog file "Counter_18.vf" in library work
+Module <Fuzzy_PID> compiled
+Module <FTPE_MXILINX_Counter_18> compiled
+Module <Flip_Flop_18_MUSER_Counter_18> compiled
+Module <Incre_dcre_18_MUSER_Counter_18> compiled
+Compiling verilog file "Bit9_to_Bit8.vf" in library work
+Module <Counter_18> compiled
+Compiling verilog file "FIRA_2_0.vf" in library work
+Module <Bit9_to_Bit8> compiled
+Module <Bit8_to_bit9_MUSER_FIRA_2_0> compiled
+Module <FTPE_MXILINX_FIRA_2_0> compiled
+Module <Flip_Flop_18_MUSER_FIRA_2_0> compiled
+Module <Incre_dcre_18_MUSER_FIRA_2_0> compiled
+Module <Counter_18_MUSER_FIRA_2_0> compiled
+Module <Bit9_to_Bit8_MUSER_FIRA_2_0> compiled
+Module <Reg_4bit_MUSER_FIRA_2_0> compiled
+Module <Add_sub_4bit_MUSER_FIRA_2_0> compiled
+Module <decade_counter_new_MUSER_FIRA_2_0> compiled
+Module <bit10datareg_to_transmit_MUSER_FIRA_2_0> compiled
+Module <Parity_gen_MUSER_FIRA_2_0> compiled
+Module <usart_transmiter_MUSER_FIRA_2_0> compiled
+Module <FJKC_MXILINX_FIRA_2_0> compiled
+Module <Digital_Filter_MUSER_FIRA_2_0> compiled
+Module <outputreg_at_end_ofinput_MUSER_FIRA_2_0> compiled
+Module <nin_counter_MUSER_FIRA_2_0> compiled
+Module <SIPO_reg_MUSER_FIRA_2_0> compiled
+Module <usart_receiver_MUSER_FIRA_2_0> compiled
+Module <FD8CE_MXILINX_FIRA_2_0> compiled
+Module <CC8CE_MXILINX_FIRA_2_0> compiled
+Module <counter_MUSER_FIRA_2_0> compiled
+Module <FTCE_MXILINX_FIRA_2_0> compiled
+Module <FTRSE_MXILINX_FIRA_2_0> compiled
+Module <CB2RE_MXILINX_FIRA_2_0> compiled
+Module <Timer_PWM_MUSER_FIRA_2_0> compiled
+Module <FTC_MXILINX_FIRA_2_0> compiled
+Module <Incrementer_Decrementer_MUSER_FIRA_2_0> compiled
+Module <Flip_flip9_MUSER_FIRA_2_0> compiled
+Module <Precale_434_MUSER_FIRA_2_0> compiled
+Module <FD9CE_MUSER_FIRA_2_0> compiled
+Module <Couter_9CE_MUSER_FIRA_2_0> compiled
+Module <ETC_SYNCRONOUS_MUSER_FIRA_2_0> compiled
+Module <Main_Module_MUSER_FIRA_2_0> compiled
+Module <ADD16_MXILINX_FIRA_2_0> compiled
+Module <Mux_2_16_MUSER_FIRA_2_0> compiled
+Module <Mult_9bit_3Bit_Comb_MUSER_FIRA_2_0> compiled
+Module <CB4CE_MXILINX_FIRA_2_0> compiled
+Module <Left_Shift_8Bit_MUSER_FIRA_2_0> compiled
+Module <Mux_2_8Bit_MUSER_FIRA_2_0> compiled
+Module <sub9bit_MUSER_FIRA_2_0> compiled
+Module <Mux_2_8_MUSER_FIRA_2_0> compiled
+Module <Left_Shift_9Bit_MUSER_FIRA_2_0> compiled
+Module <Divide_8bit_8bit_restore_MUSER_FIRA_2_0> compiled
+Module <ADD4_MXILINX_FIRA_2_0> compiled
+Module <add4_bus_MUSER_FIRA_2_0> compiled
+Module <add6_MUSER_FIRA_2_0> compiled
+Module <Multiply_4Bit_5_MUSER_FIRA_2_0> compiled
+Module <Multiply_4Bit_3_MUSER_FIRA_2_0> compiled
+Module <Mux_2_4bit_MUSER_FIRA_2_0> compiled
+Module <COMPM4_MXILINX_FIRA_2_0> compiled
+Module <Max_4bit_MUSER_FIRA_2_0> compiled
+Module <Kd_Deffuzy_MUSER_FIRA_2_0> compiled
+Module <Kp_Defuzzy_MUSER_FIRA_2_0> compiled
+Module <Min_4bit_MUSER_FIRA_2_0> compiled
+Module <Min_Array_3_by_3_MUSER_FIRA_2_0> compiled
+Module <twos_compliment_using_inverter_MUSER_FIRA_2_0> compiled
+Module <ADSU4_MXILINX_FIRA_2_0> compiled
+Module <M2_1E_MXILINX_FIRA_2_0> compiled
+Module <M4_1E_MXILINX_FIRA_2_0> compiled
+Module <negative_mux_MUSER_FIRA_2_0> compiled
+Module <error_derror_range_generator_MUSER_FIRA_2_0> compiled
+Module <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0> compiled
+Module <D_error_MUSER_FIRA_2_0> compiled
+Module <Error_D_Error_Gen_MUSER_FIRA_2_0> compiled
+Module <Fuzzy_PID_MUSER_FIRA_2_0> compiled
+Module <OCR_8_MUSER_FIRA_2_0> compiled
+Module <Incrementer_Decrementer_16_MUSER_FIRA_2_0> compiled
+Module <INV16_MXILINX_FIRA_2_0> compiled
+Module <Twos_Comp_MUSER_FIRA_2_0> compiled
+Module <FD16RE_MXILINX_FIRA_2_0> compiled
+Module <OCR_Generator_MUSER_FIRA_2_0> compiled
+Module <FIRA_2_0> compiled
+No errors in compilation
+Analysis of file <"FIRA_2_0.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Main_Module_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Fuzzy_PID_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Bit9_to_Bit8_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Bit8_to_bit9_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <usart_transmiter_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <OCR_Generator_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <usart_receiver_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Precale_434_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Counter_18_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Timer_PWM_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Digital_Filter_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <ETC_SYNCRONOUS_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Error_D_Error_Gen_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Mult_9bit_3Bit_Comb_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Parity_gen_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <bit10datareg_to_transmit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <decade_counter_new_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FD16RE_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Twos_Comp_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <OCR_8_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Mux_2_16_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Mux_2_8Bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <SIPO_reg_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <nin_counter_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <outputreg_at_end_ofinput_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Flip_flip9_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Incrementer_Decrementer_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FTC_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <Incre_dcre_18_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Flip_Flop_18_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FTPE_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "1"
+
+Analyzing hierarchy for module <CB2RE_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <counter_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FJKC_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <Couter_9CE_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FD9CE_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <D_error_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <sub9bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <error_derror_range_generator_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Kp_Defuzzy_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Kd_Deffuzy_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Min_Array_3_by_3_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Multiply_4Bit_3_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Multiply_4Bit_5_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <add6_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Divide_8bit_8bit_restore_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <add4_bus_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <ADD16_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Add_sub_4bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Reg_4bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <INV16_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Incrementer_Decrementer_16_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FTRSE_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <CC8CE_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FTPE_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "1"
+
+Analyzing hierarchy for module <Flip_flip9_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Incrementer_Decrementer_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Mux_2_8_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <COMPM4_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <negative_mux_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <ADSU4_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <twos_compliment_using_inverter_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Max_4bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Min_4bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <ADD4_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <ADD4_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FD9CE_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Left_Shift_9Bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <sub9bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Bit8_to_bit9_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FD8CE_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Mux_2_8Bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Left_Shift_8Bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <ADD4_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <M4_1E_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <M4_1E_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <M4_1E_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <M4_1E_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Incrementer_Decrementer_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <COMPM4_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <Mux_2_4bit_MUSER_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <COMPM4_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_FIRA_2_0> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <M2_1E_MXILINX_FIRA_2_0> in library <work>.
+
+Analyzing hierarchy for module <M2_1E_MXILINX_FIRA_2_0> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <FIRA_2_0>.
+WARNING:Xst:852 - "FIRA_2_0.vf" line 5939: Unconnected input port 'Enable' of instance 'XLXI_28' is tied to GND.
+Module <FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_8_37" for instance <XLXI_8> in unit <FIRA_2_0>.
+Analyzing module <Main_Module_MUSER_FIRA_2_0> in library <work>.
+Module <Main_Module_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Digital_Filter_MUSER_FIRA_2_0> in library <work>.
+Module <Digital_Filter_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_1> in unit <Digital_Filter_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_2> in unit <Digital_Filter_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_3> in unit <Digital_Filter_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <Digital_Filter_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_11_4" for instance <XLXI_11> in unit <Digital_Filter_MUSER_FIRA_2_0>.
+Analyzing module <FJKC_MXILINX_FIRA_2_0> in library <work>.
+	INIT = 1'b0
+Module <FJKC_MXILINX_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_32> in unit <FJKC_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_32> in unit <FJKC_MXILINX_FIRA_2_0>.
+Analyzing module <ETC_SYNCRONOUS_MUSER_FIRA_2_0> in library <work>.
+Module <ETC_SYNCRONOUS_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_1> in unit <ETC_SYNCRONOUS_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_37> in unit <ETC_SYNCRONOUS_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_38> in unit <ETC_SYNCRONOUS_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_39> in unit <ETC_SYNCRONOUS_MUSER_FIRA_2_0>.
+Analyzing module <Couter_9CE_MUSER_FIRA_2_0> in library <work>.
+WARNING:Xst:852 - "FIRA_2_0.vf" line 2497: Unconnected input port 'CE' of instance 'XLXI_3' is tied to GND.
+Module <Couter_9CE_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Flip_flip9_MUSER_FIRA_2_0> in library <work>.
+Module <Flip_flip9_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <Flip_flip9_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_13> in unit <Flip_flip9_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_14> in unit <Flip_flip9_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_15> in unit <Flip_flip9_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_16> in unit <Flip_flip9_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_17> in unit <Flip_flip9_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_18> in unit <Flip_flip9_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_19> in unit <Flip_flip9_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_20> in unit <Flip_flip9_MUSER_FIRA_2_0>.
+Analyzing module <Incrementer_Decrementer_MUSER_FIRA_2_0> in library <work>.
+Module <Incrementer_Decrementer_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <FD9CE_MUSER_FIRA_2_0> in library <work>.
+Module <FD9CE_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD9CE_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD9CE_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD9CE_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD9CE_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD9CE_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD9CE_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD9CE_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD9CE_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_9> in unit <FD9CE_MUSER_FIRA_2_0>.
+Analyzing module <Fuzzy_PID_MUSER_FIRA_2_0> in library <work>.
+Module <Fuzzy_PID_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_7> in unit <Fuzzy_PID_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_8> in unit <Fuzzy_PID_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <Fuzzy_PID_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_9_33" for instance <XLXI_9> in unit <Fuzzy_PID_MUSER_FIRA_2_0>.
+Analyzing module <Error_D_Error_Gen_MUSER_FIRA_2_0> in library <work>.
+Module <Error_D_Error_Gen_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <D_error_MUSER_FIRA_2_0> in library <work>.
+WARNING:Xst:852 - "FIRA_2_0.vf" line 5145: Unconnected input port 'CE' of instance 'XLXI_1' is tied to GND.
+Module <D_error_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <sub9bit_MUSER_FIRA_2_0> in library <work>.
+Module <sub9bit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_55> in unit <sub9bit_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_58> in unit <sub9bit_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_62> in unit <sub9bit_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_111> in unit <sub9bit_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y3" for instance <XLXI_151> in unit <sub9bit_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y3" for instance <XLXI_155> in unit <sub9bit_MUSER_FIRA_2_0>.
+Analyzing module <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0> in library <work>.
+Module <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_126> in unit <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_129> in unit <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_132> in unit <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_133> in unit <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_136> in unit <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_137> in unit <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0>.
+Analyzing module <error_derror_range_generator_MUSER_FIRA_2_0> in library <work>.
+Module <error_derror_range_generator_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_68_32" for instance <XLXI_68> in unit <error_derror_range_generator_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_9_31" for instance <XLXI_9> in unit <error_derror_range_generator_MUSER_FIRA_2_0>.
+Analyzing module <Mux_2_8_MUSER_FIRA_2_0> in library <work>.
+Module <Mux_2_8_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <COMPM4_MXILINX_FIRA_2_0.1> in library <work>.
+Module <COMPM4_MXILINX_FIRA_2_0.1> is correct for synthesis.
+ 
+Analyzing module <negative_mux_MUSER_FIRA_2_0> in library <work>.
+Module <negative_mux_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_2_27" for instance <XLXI_2> in unit <negative_mux_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_23_28" for instance <XLXI_23> in unit <negative_mux_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_24_29" for instance <XLXI_24> in unit <negative_mux_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_25_30" for instance <XLXI_25> in unit <negative_mux_MUSER_FIRA_2_0>.
+Analyzing module <M4_1E_MXILINX_FIRA_2_0.1> in library <work>.
+Module <M4_1E_MXILINX_FIRA_2_0.1> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_26" for instance <I_M01> in unit <M4_1E_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "HU_SET =  I_M23_25" for instance <I_M23> in unit <M4_1E_MXILINX_FIRA_2_0.1>.
+Analyzing module <M2_1E_MXILINX_FIRA_2_0.1> in library <work>.
+Module <M2_1E_MXILINX_FIRA_2_0.1> is correct for synthesis.
+ 
+Analyzing module <M2_1E_MXILINX_FIRA_2_0.2> in library <work>.
+Module <M2_1E_MXILINX_FIRA_2_0.2> is correct for synthesis.
+ 
+Analyzing module <M4_1E_MXILINX_FIRA_2_0.2> in library <work>.
+Module <M4_1E_MXILINX_FIRA_2_0.2> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_26" for instance <I_M01> in unit <M4_1E_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "HU_SET =  I_M23_25" for instance <I_M23> in unit <M4_1E_MXILINX_FIRA_2_0.2>.
+Analyzing module <M4_1E_MXILINX_FIRA_2_0.3> in library <work>.
+Module <M4_1E_MXILINX_FIRA_2_0.3> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_26" for instance <I_M01> in unit <M4_1E_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "HU_SET =  I_M23_25" for instance <I_M23> in unit <M4_1E_MXILINX_FIRA_2_0.3>.
+Analyzing module <M4_1E_MXILINX_FIRA_2_0.4> in library <work>.
+Module <M4_1E_MXILINX_FIRA_2_0.4> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_26" for instance <I_M01> in unit <M4_1E_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "HU_SET =  I_M23_25" for instance <I_M23> in unit <M4_1E_MXILINX_FIRA_2_0.4>.
+Analyzing module <ADSU4_MXILINX_FIRA_2_0> in library <work>.
+Module <ADSU4_MXILINX_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_55> in unit <ADSU4_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_58> in unit <ADSU4_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_62> in unit <ADSU4_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_111> in unit <ADSU4_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_175> in unit <ADSU4_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y0" for instance <I_36_178> in unit <ADSU4_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_182> in unit <ADSU4_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X1Y1" for instance <I_36_206> in unit <ADSU4_MXILINX_FIRA_2_0>.
+Analyzing module <twos_compliment_using_inverter_MUSER_FIRA_2_0> in library <work>.
+Module <twos_compliment_using_inverter_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Kp_Defuzzy_MUSER_FIRA_2_0> in library <work>.
+Module <Kp_Defuzzy_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Max_4bit_MUSER_FIRA_2_0> in library <work>.
+Module <Max_4bit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_23" for instance <XLXI_1> in unit <Max_4bit_MUSER_FIRA_2_0>.
+Analyzing module <COMPM4_MXILINX_FIRA_2_0.2> in library <work>.
+Module <COMPM4_MXILINX_FIRA_2_0.2> is correct for synthesis.
+ 
+Analyzing module <Mux_2_4bit_MUSER_FIRA_2_0> in library <work>.
+Module <Mux_2_4bit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Kd_Deffuzy_MUSER_FIRA_2_0> in library <work>.
+Module <Kd_Deffuzy_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Min_Array_3_by_3_MUSER_FIRA_2_0> in library <work>.
+Module <Min_Array_3_by_3_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Min_4bit_MUSER_FIRA_2_0> in library <work>.
+Module <Min_4bit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_24" for instance <XLXI_1> in unit <Min_4bit_MUSER_FIRA_2_0>.
+Analyzing module <COMPM4_MXILINX_FIRA_2_0.3> in library <work>.
+Module <COMPM4_MXILINX_FIRA_2_0.3> is correct for synthesis.
+ 
+Analyzing module <Multiply_4Bit_3_MUSER_FIRA_2_0> in library <work>.
+Module <Multiply_4Bit_3_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_2_22" for instance <XLXI_2> in unit <Multiply_4Bit_3_MUSER_FIRA_2_0>.
+Analyzing module <ADD4_MXILINX_FIRA_2_0.1> in library <work>.
+Module <ADD4_MXILINX_FIRA_2_0.1> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD4_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD4_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD4_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD4_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_175> in unit <ADD4_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_178> in unit <ADD4_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_182> in unit <ADD4_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_206> in unit <ADD4_MXILINX_FIRA_2_0.1>.
+Analyzing module <Multiply_4Bit_5_MUSER_FIRA_2_0> in library <work>.
+Module <Multiply_4Bit_5_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_2_21" for instance <XLXI_2> in unit <Multiply_4Bit_5_MUSER_FIRA_2_0>.
+Analyzing module <ADD4_MXILINX_FIRA_2_0.2> in library <work>.
+Module <ADD4_MXILINX_FIRA_2_0.2> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD4_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD4_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD4_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD4_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_175> in unit <ADD4_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_178> in unit <ADD4_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_182> in unit <ADD4_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_206> in unit <ADD4_MXILINX_FIRA_2_0.2>.
+Analyzing module <add6_MUSER_FIRA_2_0> in library <work>.
+Module <add6_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <add6_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <add6_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <add6_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_64> in unit <add6_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_107> in unit <add6_MUSER_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <add6_MUSER_FIRA_2_0>.
+Analyzing module <Divide_8bit_8bit_restore_MUSER_FIRA_2_0> in library <work>.
+Module <Divide_8bit_8bit_restore_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_41_19" for instance <XLXI_41> in unit <Divide_8bit_8bit_restore_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_54_18" for instance <XLXI_54> in unit <Divide_8bit_8bit_restore_MUSER_FIRA_2_0>.
+Analyzing module <Left_Shift_9Bit_MUSER_FIRA_2_0> in library <work>.
+Module <Left_Shift_9Bit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <FD8CE_MXILINX_FIRA_2_0.2> in library <work>.
+Module <FD8CE_MXILINX_FIRA_2_0.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_FIRA_2_0.2>.
+Analyzing module <Mux_2_8Bit_MUSER_FIRA_2_0> in library <work>.
+Module <Mux_2_8Bit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Left_Shift_8Bit_MUSER_FIRA_2_0> in library <work>.
+Module <Left_Shift_8Bit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <CB4CE_MXILINX_FIRA_2_0> in library <work>.
+Module <CB4CE_MXILINX_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_14" for instance <I_Q0> in unit <CB4CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "HU_SET =  I_Q1_15" for instance <I_Q1> in unit <CB4CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "HU_SET =  I_Q2_16" for instance <I_Q2> in unit <CB4CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "HU_SET =  I_Q3_17" for instance <I_Q3> in unit <CB4CE_MXILINX_FIRA_2_0>.
+Analyzing module <FTCE_MXILINX_FIRA_2_0.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_FIRA_2_0.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.2>.
+Analyzing module <FTCE_MXILINX_FIRA_2_0.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_FIRA_2_0.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.3>.
+Analyzing module <FTCE_MXILINX_FIRA_2_0.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_FIRA_2_0.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.4>.
+Analyzing module <FTCE_MXILINX_FIRA_2_0.5> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_FIRA_2_0.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.5>.
+Analyzing module <add4_bus_MUSER_FIRA_2_0> in library <work>.
+Module <add4_bus_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_20" for instance <XLXI_1> in unit <add4_bus_MUSER_FIRA_2_0>.
+Analyzing module <ADD4_MXILINX_FIRA_2_0.3> in library <work>.
+Module <ADD4_MXILINX_FIRA_2_0.3> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_55> in unit <ADD4_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_58> in unit <ADD4_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_62> in unit <ADD4_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_111> in unit <ADD4_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_175> in unit <ADD4_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_178> in unit <ADD4_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_182> in unit <ADD4_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_206> in unit <ADD4_MXILINX_FIRA_2_0.3>.
+Analyzing module <Mult_9bit_3Bit_Comb_MUSER_FIRA_2_0> in library <work>.
+Module <Mult_9bit_3Bit_Comb_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_21_12" for instance <XLXI_21> in unit <Mult_9bit_3Bit_Comb_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_22_13" for instance <XLXI_22> in unit <Mult_9bit_3Bit_Comb_MUSER_FIRA_2_0>.
+Analyzing module <Mux_2_16_MUSER_FIRA_2_0> in library <work>.
+Module <Mux_2_16_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <ADD16_MXILINX_FIRA_2_0.3> in library <work>.
+Module <ADD16_MXILINX_FIRA_2_0.3> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_FIRA_2_0.3>.
+Analyzing module <ADD16_MXILINX_FIRA_2_0.4> in library <work>.
+Module <ADD16_MXILINX_FIRA_2_0.4> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_FIRA_2_0.4>.
+Analyzing module <ADD16_MXILINX_FIRA_2_0.1> in library <work>.
+Module <ADD16_MXILINX_FIRA_2_0.1> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_FIRA_2_0.1>.
+Analyzing module <Bit9_to_Bit8_MUSER_FIRA_2_0> in library <work>.
+Module <Bit9_to_Bit8_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Bit8_to_bit9_MUSER_FIRA_2_0> in library <work>.
+Module <Bit8_to_bit9_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <usart_transmiter_MUSER_FIRA_2_0> in library <work>.
+Module <usart_transmiter_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Parity_gen_MUSER_FIRA_2_0> in library <work>.
+Module <Parity_gen_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <bit10datareg_to_transmit_MUSER_FIRA_2_0> in library <work>.
+Module <bit10datareg_to_transmit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_60> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_61> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_62> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_63> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_64> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_65> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_66> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_67> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_68> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_69> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_71> in unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+Analyzing module <decade_counter_new_MUSER_FIRA_2_0> in library <work>.
+Module <decade_counter_new_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_50> in unit <decade_counter_new_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_51> in unit <decade_counter_new_MUSER_FIRA_2_0>.
+Analyzing module <Add_sub_4bit_MUSER_FIRA_2_0> in library <work>.
+Module <Add_sub_4bit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Reg_4bit_MUSER_FIRA_2_0> in library <work>.
+Module <Reg_4bit_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_11> in unit <Reg_4bit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <Reg_4bit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_13> in unit <Reg_4bit_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_14> in unit <Reg_4bit_MUSER_FIRA_2_0>.
+Analyzing module <OCR_Generator_MUSER_FIRA_2_0> in library <work>.
+Module <OCR_Generator_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_35" for instance <XLXI_1> in unit <OCR_Generator_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_2_36" for instance <XLXI_2> in unit <OCR_Generator_MUSER_FIRA_2_0>.
+Analyzing module <ADD16_MXILINX_FIRA_2_0.2> in library <work>.
+Module <ADD16_MXILINX_FIRA_2_0.2> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_16> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_17> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_18> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_19> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_20> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_21> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_22> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_23> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_55> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_58> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y5" for instance <I_36_62> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_63> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_64> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y7" for instance <I_36_107> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y6" for instance <I_36_110> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y4" for instance <I_36_111> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_248> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_249> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_251> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_252> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_253> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_254> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_255> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_272> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_275> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_279> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_283> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_287> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_291> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_295> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_299> in unit <ADD16_MXILINX_FIRA_2_0.2>.
+Analyzing module <FD16RE_MXILINX_FIRA_2_0> in library <work>.
+Module <FD16RE_MXILINX_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16RE_MXILINX_FIRA_2_0>.
+Analyzing module <Twos_Comp_MUSER_FIRA_2_0> in library <work>.
+Module <Twos_Comp_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_34" for instance <XLXI_1> in unit <Twos_Comp_MUSER_FIRA_2_0>.
+Analyzing module <INV16_MXILINX_FIRA_2_0> in library <work>.
+Module <INV16_MXILINX_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Incrementer_Decrementer_16_MUSER_FIRA_2_0> in library <work>.
+Module <Incrementer_Decrementer_16_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <OCR_8_MUSER_FIRA_2_0> in library <work>.
+Module <OCR_8_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <usart_receiver_MUSER_FIRA_2_0> in library <work>.
+Module <usart_receiver_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_65> in unit <usart_receiver_MUSER_FIRA_2_0>.
+Analyzing module <SIPO_reg_MUSER_FIRA_2_0> in library <work>.
+Module <SIPO_reg_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_1> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_2> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_3> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_5> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_6> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_7> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_8> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_9> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_10> in unit <SIPO_reg_MUSER_FIRA_2_0>.
+Analyzing module <nin_counter_MUSER_FIRA_2_0> in library <work>.
+Module <nin_counter_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_50> in unit <nin_counter_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_51> in unit <nin_counter_MUSER_FIRA_2_0>.
+Analyzing module <outputreg_at_end_ofinput_MUSER_FIRA_2_0> in library <work>.
+Module <outputreg_at_end_ofinput_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_13> in unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_14> in unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_15> in unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_16> in unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_17> in unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_19> in unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_20> in unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0>.
+Analyzing module <FD8CE_MXILINX_FIRA_2_0.1> in library <work>.
+Module <FD8CE_MXILINX_FIRA_2_0.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD8CE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD8CE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD8CE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD8CE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD8CE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD8CE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD8CE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD8CE_MXILINX_FIRA_2_0.1>.
+Analyzing module <Precale_434_MUSER_FIRA_2_0> in library <work>.
+WARNING:Xst:852 - "FIRA_2_0.vf" line 2337: Unconnected input port 'CE' of instance 'XLXI_3' is tied to GND.
+Module <Precale_434_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_14_11" for instance <XLXI_14> in unit <Precale_434_MUSER_FIRA_2_0>.
+Analyzing module <FTC_MXILINX_FIRA_2_0> in library <work>.
+	INIT = 1'b0
+Module <FTC_MXILINX_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTC_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTC_MXILINX_FIRA_2_0>.
+Analyzing module <Counter_18_MUSER_FIRA_2_0> in library <work>.
+Module <Counter_18_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_64> in unit <Counter_18_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_67_3" for instance <XLXI_67> in unit <Counter_18_MUSER_FIRA_2_0>.
+Analyzing module <Incre_dcre_18_MUSER_FIRA_2_0> in library <work>.
+Module <Incre_dcre_18_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+Analyzing module <Flip_Flop_18_MUSER_FIRA_2_0> in library <work>.
+Module <Flip_Flop_18_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_1> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_2> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_3> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_5> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_6> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_7> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_10> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_11> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_12> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_13> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_14> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_15> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_16> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_17> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_18> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_19> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <XLXI_22> in unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+Analyzing module <FTPE_MXILINX_FIRA_2_0.1> in library <work>.
+	INIT = 1'b1
+Module <FTPE_MXILINX_FIRA_2_0.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  1" for instance <I_36_35> in unit <FTPE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTPE_MXILINX_FIRA_2_0.1>.
+Analyzing module <Timer_PWM_MUSER_FIRA_2_0> in library <work>.
+Module <Timer_PWM_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_16_9" for instance <XLXI_16> in unit <Timer_PWM_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_18_10" for instance <XLXI_18> in unit <Timer_PWM_MUSER_FIRA_2_0>.
+Analyzing module <CB2RE_MXILINX_FIRA_2_0> in library <work>.
+Module <CB2RE_MXILINX_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_7" for instance <I_Q0> in unit <CB2RE_MXILINX_FIRA_2_0>.
+    Set user-defined property "HU_SET =  I_Q1_8" for instance <I_Q1> in unit <CB2RE_MXILINX_FIRA_2_0>.
+Analyzing module <FTRSE_MXILINX_FIRA_2_0.1> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_FIRA_2_0.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_FIRA_2_0.1>.
+Analyzing module <FTRSE_MXILINX_FIRA_2_0.2> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_FIRA_2_0.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_FIRA_2_0.2>.
+Analyzing module <FTCE_MXILINX_FIRA_2_0.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_FIRA_2_0.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_FIRA_2_0.1>.
+Analyzing module <counter_MUSER_FIRA_2_0> in library <work>.
+Module <counter_MUSER_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_3_5" for instance <XLXI_3> in unit <counter_MUSER_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_30_6" for instance <XLXI_30> in unit <counter_MUSER_FIRA_2_0>.
+Analyzing module <CC8CE_MXILINX_FIRA_2_0> in library <work>.
+Module <CC8CE_MXILINX_FIRA_2_0> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_4> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_26> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_36_36> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_36> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_36_224> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_224> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_233> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_36_237> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_237> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_246> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_36_250> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_250> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_259> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_36_263> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_263> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y2" for instance <I_36_272> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_36_276> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_276> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_285> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "INIT =  0" for instance <I_36_289> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_289> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "RLOC =  X0Y3" for instance <I_36_298> in unit <CC8CE_MXILINX_FIRA_2_0>.
+    Set user-defined property "HU_SET =  XLXI_3_5" for instance <XLXI_3> in unit <CC8CE_MXILINX_FIRA_2_0>.
+Analyzing module <FTPE_MXILINX_FIRA_2_0.2> in library <work>.
+	INIT = 1'b1
+Module <FTPE_MXILINX_FIRA_2_0.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  1" for instance <I_36_35> in unit <FTPE_MXILINX_FIRA_2_0.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTPE_MXILINX_FIRA_2_0.2>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Bit9_to_Bit8_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Bit9_to_Bit8_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Bit8_to_bit9_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Bit8_to_bit9_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_FIRA_2_0_1>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FD8CE_MXILINX_FIRA_2_0_1> synthesized.
+
+
+Synthesizing Unit <FJKC_MXILINX_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FJKC_MXILINX_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <FD9CE_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FD9CE_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Flip_flip9_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Flip_flip9_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Incrementer_Decrementer_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Incrementer_Decrementer_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_FIRA_2_0_1>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_FIRA_2_0_1> synthesized.
+
+
+Synthesizing Unit <sub9bit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <sub9bit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <add6_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <add6_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Mux_2_8_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Mux_2_8_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <COMPM4_MXILINX_FIRA_2_0_1>.
+    Related source file is "FIRA_2_0.vf".
+Unit <COMPM4_MXILINX_FIRA_2_0_1> synthesized.
+
+
+Synthesizing Unit <ADSU4_MXILINX_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADSU4_MXILINX_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <M2_1E_MXILINX_FIRA_2_0_1>.
+    Related source file is "FIRA_2_0.vf".
+Unit <M2_1E_MXILINX_FIRA_2_0_1> synthesized.
+
+
+Synthesizing Unit <M2_1E_MXILINX_FIRA_2_0_2>.
+    Related source file is "FIRA_2_0.vf".
+Unit <M2_1E_MXILINX_FIRA_2_0_2> synthesized.
+
+
+Synthesizing Unit <COMPM4_MXILINX_FIRA_2_0_2>.
+    Related source file is "FIRA_2_0.vf".
+Unit <COMPM4_MXILINX_FIRA_2_0_2> synthesized.
+
+
+Synthesizing Unit <Mux_2_4bit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Mux_2_4bit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <COMPM4_MXILINX_FIRA_2_0_3>.
+    Related source file is "FIRA_2_0.vf".
+Unit <COMPM4_MXILINX_FIRA_2_0_3> synthesized.
+
+
+Synthesizing Unit <ADD4_MXILINX_FIRA_2_0_1>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD4_MXILINX_FIRA_2_0_1> synthesized.
+
+
+Synthesizing Unit <ADD4_MXILINX_FIRA_2_0_2>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD4_MXILINX_FIRA_2_0_2> synthesized.
+
+
+Synthesizing Unit <Left_Shift_9Bit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:647 - Input <Inp<8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <Left_Shift_9Bit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <FD8CE_MXILINX_FIRA_2_0_2>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FD8CE_MXILINX_FIRA_2_0_2> synthesized.
+
+
+Synthesizing Unit <Mux_2_8Bit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Mux_2_8Bit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Left_Shift_8Bit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:647 - Input <Inp<7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <Left_Shift_8Bit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_FIRA_2_0_2>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTCE_MXILINX_FIRA_2_0_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_FIRA_2_0_3>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTCE_MXILINX_FIRA_2_0_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_FIRA_2_0_4>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTCE_MXILINX_FIRA_2_0_4> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_FIRA_2_0_5>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTCE_MXILINX_FIRA_2_0_5> synthesized.
+
+
+Synthesizing Unit <ADD4_MXILINX_FIRA_2_0_3>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD4_MXILINX_FIRA_2_0_3> synthesized.
+
+
+Synthesizing Unit <Mux_2_16_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Mux_2_16_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_FIRA_2_0_3>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_FIRA_2_0_3> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_FIRA_2_0_4>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_FIRA_2_0_4> synthesized.
+
+
+Synthesizing Unit <Parity_gen_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Parity_gen_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <bit10datareg_to_transmit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <bit10datareg_to_transmit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Add_sub_4bit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Add_sub_4bit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Reg_4bit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Reg_4bit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <ADD16_MXILINX_FIRA_2_0_2>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <ADD16_MXILINX_FIRA_2_0_2> synthesized.
+
+
+Synthesizing Unit <FD16RE_MXILINX_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FD16RE_MXILINX_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <OCR_8_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:647 - Input <Inp0<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <OCR_8_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <INV16_MXILINX_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <INV16_MXILINX_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Incrementer_Decrementer_16_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Incrementer_Decrementer_16_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <SIPO_reg_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <SIPO_reg_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <FTC_MXILINX_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTC_MXILINX_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Incre_dcre_18_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Incre_dcre_18_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Flip_Flop_18_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Flip_Flop_18_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <FTPE_MXILINX_FIRA_2_0_1>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTPE_MXILINX_FIRA_2_0_1> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_FIRA_2_0_1>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTCE_MXILINX_FIRA_2_0_1> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_FIRA_2_0_1>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTRSE_MXILINX_FIRA_2_0_1> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_FIRA_2_0_2>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTRSE_MXILINX_FIRA_2_0_2> synthesized.
+
+
+Synthesizing Unit <CC8CE_MXILINX_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <CC8CE_MXILINX_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <FTPE_MXILINX_FIRA_2_0_2>.
+    Related source file is "FIRA_2_0.vf".
+Unit <FTPE_MXILINX_FIRA_2_0_2> synthesized.
+
+
+Synthesizing Unit <Precale_434_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:646 - Signal <XLXN_52> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Precale_434_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Counter_18_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Counter_18_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Digital_Filter_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Digital_Filter_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Couter_9CE_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:647 - Input <CE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <Couter_9CE_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Mult_9bit_3Bit_Comb_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Mult_9bit_3Bit_Comb_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <D_error_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <D_error_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Multiply_4Bit_3_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Multiply_4Bit_3_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Multiply_4Bit_5_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Multiply_4Bit_5_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <add4_bus_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <add4_bus_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <twos_compliment_using_inverter_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <twos_compliment_using_inverter_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <M4_1E_MXILINX_FIRA_2_0_1>.
+    Related source file is "FIRA_2_0.vf".
+Unit <M4_1E_MXILINX_FIRA_2_0_1> synthesized.
+
+
+Synthesizing Unit <M4_1E_MXILINX_FIRA_2_0_2>.
+    Related source file is "FIRA_2_0.vf".
+Unit <M4_1E_MXILINX_FIRA_2_0_2> synthesized.
+
+
+Synthesizing Unit <M4_1E_MXILINX_FIRA_2_0_3>.
+    Related source file is "FIRA_2_0.vf".
+Unit <M4_1E_MXILINX_FIRA_2_0_3> synthesized.
+
+
+Synthesizing Unit <M4_1E_MXILINX_FIRA_2_0_4>.
+    Related source file is "FIRA_2_0.vf".
+Unit <M4_1E_MXILINX_FIRA_2_0_4> synthesized.
+
+
+Synthesizing Unit <Max_4bit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Max_4bit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Min_4bit_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Min_4bit_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <CB4CE_MXILINX_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <decade_counter_new_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <decade_counter_new_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Twos_Comp_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Twos_Comp_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <nin_counter_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <nin_counter_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <CB2RE_MXILINX_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <CB2RE_MXILINX_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <counter_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <counter_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <usart_transmiter_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <usart_transmiter_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <OCR_Generator_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <OCR_Generator_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <usart_receiver_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <usart_receiver_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Timer_PWM_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Timer_PWM_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <ETC_SYNCRONOUS_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <ETC_SYNCRONOUS_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Error_D_Error_Gen_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Error_D_Error_Gen_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Kp_Defuzzy_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Kp_Defuzzy_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Kd_Deffuzy_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Kd_Deffuzy_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Min_Array_3_by_3_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Min_Array_3_by_3_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Divide_8bit_8bit_restore_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Divide_8bit_8bit_restore_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <negative_mux_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <negative_mux_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Main_Module_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Main_Module_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <error_derror_range_generator_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <error_derror_range_generator_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:646 - Signal <Kp<7:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Kd<7:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Data_ready1> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <Fuzzy_PID_MUSER_FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+Unit <Fuzzy_PID_MUSER_FIRA_2_0> synthesized.
+
+
+Synthesizing Unit <FIRA_2_0>.
+    Related source file is "FIRA_2_0.vf".
+WARNING:Xst:646 - Signal <XLXN_226> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <XLXN_225> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <OCR2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+Unit <FIRA_2_0> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 217
+ Flip-Flops                                            : 217
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <FIRA_2_0> ...
+
+Optimizing unit <Bit9_to_Bit8_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Bit8_to_bit9_MUSER_FIRA_2_0> ...
+
+Optimizing unit <FD8CE_MXILINX_FIRA_2_0_1> ...
+
+Optimizing unit <FJKC_MXILINX_FIRA_2_0> ...
+
+Optimizing unit <FD9CE_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Flip_flip9_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Incrementer_Decrementer_MUSER_FIRA_2_0> ...
+
+Optimizing unit <ADD16_MXILINX_FIRA_2_0_1> ...
+
+Optimizing unit <sub9bit_MUSER_FIRA_2_0> ...
+
+Optimizing unit <add6_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Mux_2_8_MUSER_FIRA_2_0> ...
+
+Optimizing unit <COMPM4_MXILINX_FIRA_2_0_1> ...
+
+Optimizing unit <ADSU4_MXILINX_FIRA_2_0> ...
+
+Optimizing unit <M2_1E_MXILINX_FIRA_2_0_1> ...
+
+Optimizing unit <M2_1E_MXILINX_FIRA_2_0_2> ...
+
+Optimizing unit <COMPM4_MXILINX_FIRA_2_0_2> ...
+
+Optimizing unit <COMPM4_MXILINX_FIRA_2_0_3> ...
+
+Optimizing unit <ADD4_MXILINX_FIRA_2_0_1> ...
+
+Optimizing unit <ADD4_MXILINX_FIRA_2_0_2> ...
+
+Optimizing unit <Left_Shift_9Bit_MUSER_FIRA_2_0> ...
+
+Optimizing unit <FD8CE_MXILINX_FIRA_2_0_2> ...
+
+Optimizing unit <Left_Shift_8Bit_MUSER_FIRA_2_0> ...
+
+Optimizing unit <FTCE_MXILINX_FIRA_2_0_2> ...
+
+Optimizing unit <FTCE_MXILINX_FIRA_2_0_3> ...
+
+Optimizing unit <FTCE_MXILINX_FIRA_2_0_4> ...
+
+Optimizing unit <FTCE_MXILINX_FIRA_2_0_5> ...
+
+Optimizing unit <ADD4_MXILINX_FIRA_2_0_3> ...
+
+Optimizing unit <Mux_2_16_MUSER_FIRA_2_0> ...
+
+Optimizing unit <ADD16_MXILINX_FIRA_2_0_3> ...
+
+Optimizing unit <ADD16_MXILINX_FIRA_2_0_4> ...
+
+Optimizing unit <bit10datareg_to_transmit_MUSER_FIRA_2_0> ...
+
+Optimizing unit <ADD16_MXILINX_FIRA_2_0_2> ...
+
+Optimizing unit <FD16RE_MXILINX_FIRA_2_0> ...
+
+Optimizing unit <OCR_8_MUSER_FIRA_2_0> ...
+
+Optimizing unit <INV16_MXILINX_FIRA_2_0> ...
+
+Optimizing unit <Incrementer_Decrementer_16_MUSER_FIRA_2_0> ...
+
+Optimizing unit <SIPO_reg_MUSER_FIRA_2_0> ...
+
+Optimizing unit <outputreg_at_end_ofinput_MUSER_FIRA_2_0> ...
+
+Optimizing unit <FTC_MXILINX_FIRA_2_0> ...
+
+Optimizing unit <Incre_dcre_18_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Flip_Flop_18_MUSER_FIRA_2_0> ...
+
+Optimizing unit <FTPE_MXILINX_FIRA_2_0_1> ...
+
+Optimizing unit <FTCE_MXILINX_FIRA_2_0_1> ...
+
+Optimizing unit <FTRSE_MXILINX_FIRA_2_0_1> ...
+
+Optimizing unit <FTRSE_MXILINX_FIRA_2_0_2> ...
+
+Optimizing unit <CC8CE_MXILINX_FIRA_2_0> ...
+
+Optimizing unit <FTPE_MXILINX_FIRA_2_0_2> ...
+
+Optimizing unit <Precale_434_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Counter_18_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Digital_Filter_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Mult_9bit_3Bit_Comb_MUSER_FIRA_2_0> ...
+
+Optimizing unit <twos_compliment_using_inverter_MUSER_FIRA_2_0> ...
+
+Optimizing unit <M4_1E_MXILINX_FIRA_2_0_1> ...
+
+Optimizing unit <M4_1E_MXILINX_FIRA_2_0_2> ...
+
+Optimizing unit <M4_1E_MXILINX_FIRA_2_0_3> ...
+
+Optimizing unit <M4_1E_MXILINX_FIRA_2_0_4> ...
+
+Optimizing unit <CB4CE_MXILINX_FIRA_2_0> ...
+
+Optimizing unit <decade_counter_new_MUSER_FIRA_2_0> ...
+
+Optimizing unit <nin_counter_MUSER_FIRA_2_0> ...
+
+Optimizing unit <CB2RE_MXILINX_FIRA_2_0> ...
+
+Optimizing unit <counter_MUSER_FIRA_2_0> ...
+
+Optimizing unit <OCR_Generator_MUSER_FIRA_2_0> ...
+
+Optimizing unit <usart_receiver_MUSER_FIRA_2_0> ...
+
+Optimizing unit <ETC_SYNCRONOUS_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Min_Array_3_by_3_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Divide_8bit_8bit_restore_MUSER_FIRA_2_0> ...
+
+Optimizing unit <negative_mux_MUSER_FIRA_2_0> ...
+
+Optimizing unit <error_derror_range_generator_MUSER_FIRA_2_0> ...
+
+Optimizing unit <FIRA_Fuzzy_1_0_MUSER_FIRA_2_0> ...
+
+Optimizing unit <Fuzzy_PID_MUSER_FIRA_2_0> ...
+INFO:Xst:1730 - XST has found some RLOC properties in element XLXI_2/XLXI_29 which is instantiated several times. To handle this constraint XST will add the property "hu_set XLXI_2/XLXI_29" on each element with RLOC.
+INFO:Xst:1730 - XST has found some RLOC properties in element XLXI_2/XLXI_23 which is instantiated several times. To handle this constraint XST will add the property "hu_set XLXI_2/XLXI_23" on each element with RLOC.
+INFO:Xst:1730 - XST has found some RLOC properties in element XLXI_5 which is instantiated several times. To handle this constraint XST will add the property "hu_set XLXI_5" on each element with RLOC.
+INFO:Xst:1730 - XST has found some RLOC properties in element XLXI_18 which is instantiated several times. To handle this constraint XST will add the property "hu_set XLXI_18" on each element with RLOC.
+INFO:Xst:1730 - XST has found some RLOC properties in element XLXI_17 which is instantiated several times. To handle this constraint XST will add the property "hu_set XLXI_17" on each element with RLOC.
+INFO:Xst:1730 - XST has found some RLOC properties in element XLXI_16 which is instantiated several times. To handle this constraint XST will add the property "hu_set XLXI_16" on each element with RLOC.
+INFO:Xst:1730 - XST has found some RLOC properties in element XLXI_15 which is instantiated several times. To handle this constraint XST will add the property "hu_set XLXI_15" on each element with RLOC.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FIRA_2_0, actual ratio is 21.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 217
+ Flip-Flops                                            : 217
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : FIRA_2_0.ngr
+Top Level Output File Name         : FIRA_2_0
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 24
+
+Cell Usage :
+# BELS                             : 2612
+#      AND2                        : 128
+#      AND2B1                      : 95
+#      AND3                        : 54
+#      AND3B1                      : 143
+#      AND3B2                      : 3
+#      AND4                        : 16
+#      BUF                         : 293
+#      GND                         : 21
+#      INV                         : 151
+#      LUT1                        : 180
+#      MUXCY                       : 326
+#      MUXCY_D                     : 24
+#      MUXCY_L                     : 162
+#      MUXF5                       : 24
+#      OR2                         : 212
+#      OR3                         : 3
+#      OR4                         : 16
+#      VCC                         : 7
+#      XNOR2                       : 46
+#      XOR2                        : 452
+#      XOR3                        : 44
+#      XORCY                       : 212
+# FlipFlops/Latches                : 217
+#      FD                          : 38
+#      FDC                         : 4
+#      FDCE                        : 120
+#      FDPE                        : 3
+#      FDR                         : 22
+#      FDRE                        : 30
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 23
+#      IBUF                        : 11
+#      OBUF                        : 12
+# Logical                          : 43
+#      NAND4                       : 12
+#      NOR2                        : 30
+#      NOR3                        : 1
+# Others                           : 136
+#      FMAP                        : 136
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250ecp132-5 
+
+ Number of Slices:                      166  out of   2448     6%  
+ Number of Slice Flip Flops:            217  out of   4896     4%  
+ Number of 4 input LUTs:                331  out of   4896     6%  
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of     92    26%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------+--------------------------------------+-------+
+Clock Signal                        | Clock buffer(FF name)                | Load  |
+------------------------------------+--------------------------------------+-------+
+CLK                                 | BUFGP                                | 115   |
+XLXI_27/XLXI_14/Q_DUMMY1            | BUFG                                 | 33    |
+XLXI_27/RST(XLXI_27/XLXI_25:O)      | NONE(*)(XLXI_27/XLXI_14/I_36_35)     | 1     |
+XLXI_28/XLXN_10(XLXI_28/XLXI_45:O)  | NONE(*)(XLXI_28/XLXI_67/I_36_35)     | 1     |
+XLXI_38/XLXI_18/Q                   | NONE(XLXI_38/XLXI_25/XLXI_30/I_36_35)| 9     |
+XLXI_39/XLXI_18/Q                   | NONE(XLXI_39/XLXI_25/XLXI_30/I_36_35)| 9     |
+XLXN_8                              | NONE(XLXI_6/XLXI_2/I_Q0)             | 16    |
+XLXI_7/dec(XLXI_7/XLXI_57/XLXI_45:O)| NONE(*)(XLXI_7/XLXI_59/XLXI_12)      | 9     |
+XLXI_28/XLXI_67/Q                   | NONE(XLXI_1/XLXI_41/XLXI_48/I_Q0)    | 18    |
+XLXI_30_1                           | NONE(XLXI_2/XLXI_3/XLXI_126)         | 6     |
+------------------------------------+--------------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------+-------------------------------------------+-------+
+Control Signal                                     | Buffer(FF name)                           | Load  |
+---------------------------------------------------+-------------------------------------------+-------+
+XLXI_30_1(XLXI_5/XLXI_8:G)                         | NONE(XLXI_1/XLXI_33/XLXI_11/I_36_32)      | 72    |
+XLXI_2/XLXI_3/XLXN_304(XLXI_2/XLXI_3/XLXI_110:O)   | NONE(XLXI_2/XLXI_3/XLXI_52/XLXI_3/I_Q0)   | 26    |
+XLXI_1/XLXI_41/XLXN_122(XLXI_1/XLXI_41/XLXI_43:O)  | NONE(XLXI_1/XLXI_41/XLXI_8/XLXI_3/XLXI_12)| 9     |
+XLXI_27/RST(XLXI_27/XLXI_25:O)                     | NONE(XLXI_27/XLXI_3/XLXI_12)              | 9     |
+XLXI_5/XLXI_39/cllr(XLXI_5/XLXI_39/XLXI_53:O)      | NONE(XLXI_5/XLXI_39/XLXI_49/XLXI_11)      | 4     |
+XLXI_7/XLXI_57/cllr(XLXI_7/XLXI_57/XLXI_53:O)      | NONE(XLXI_7/XLXI_57/XLXI_49/XLXI_11)      | 4     |
+XLXI_28/XLXN_99(XLXI_28/XLXI_68:O)                 | NONE(XLXI_28/XLXI_67/I_36_35)             | 1     |
+XLXI_38/XLXI_25/XLXN_129(XLXI_38/XLXI_25/XLXI_50:O)| NONE(XLXI_38/XLXI_25/XLXI_30/I_36_35)     | 1     |
+XLXI_39/XLXI_25/XLXN_129(XLXI_39/XLXI_25/XLXI_50:O)| NONE(XLXI_39/XLXI_25/XLXI_30/I_36_35)     | 1     |
+---------------------------------------------------+-------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 20.012ns (Maximum Frequency: 49.971MHz)
+   Minimum input arrival time before clock: 63.267ns
+   Maximum output required time after clock: 42.733ns
+   Maximum combinational path delay: 44.222ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_27/XLXI_14/Q_DUMMY1'
+  Clock period: 6.561ns (frequency: 152.412MHz)
+  Total number of paths / destination ports: 157 / 48
+-------------------------------------------------------------------------
+Delay:               6.561ns (Levels of Logic = 5)
+  Source:            XLXI_5/XLXI_39/XLXI_49/XLXI_14 (FF)
+  Destination:       XLXI_5/XLXI_39/XLXI_49/XLXI_11 (FF)
+  Source Clock:      XLXI_27/XLXI_14/Q_DUMMY1 rising
+  Destination Clock: XLXI_27/XLXI_14/Q_DUMMY1 rising
+
+  Data Path: XLXI_5/XLXI_39/XLXI_49/XLXI_14 to XLXI_5/XLXI_39/XLXI_49/XLXI_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            12   0.514   0.817  XLXI_5/XLXI_39/XLXI_49/XLXI_14 (XLXI_5/XLXI_39/XLXN_109)
+     XOR2:I1->O            3   0.612   0.451  XLXI_5/XLXI_39/XLXI_1/XLXI_9 (XLXI_5/XLXI_39/XLXI_1/XLXN_52)
+     AND2:I1->O            2   0.612   0.380  XLXI_5/XLXI_39/XLXI_1/XLXI_35 (XLXI_5/XLXI_39/XLXI_1/XLXN_55)
+     AND2:I1->O            1   0.612   0.357  XLXI_5/XLXI_39/XLXI_1/XLXI_34 (XLXI_5/XLXI_39/XLXI_1/XLXN_57)
+     XOR2:I1->O            1   0.612   0.357  XLXI_5/XLXI_39/XLXI_1/XLXI_15 (XLXI_5/XLXI_39/XLXI_1/XLXN_66)
+     XOR2:I1->O            1   0.612   0.357  XLXI_5/XLXI_39/XLXI_1/XLXI_41 (XLXI_5/XLXI_39/XLXN_114)
+     FDCE:D                    0.268          XLXI_5/XLXI_39/XLXI_49/XLXI_11
+    ----------------------------------------
+    Total                      6.561ns (3.842ns logic, 2.719ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 20.012ns (frequency: 49.971MHz)
+  Total number of paths / destination ports: 1409 / 167
+-------------------------------------------------------------------------
+Delay:               20.012ns (Levels of Logic = 19)
+  Source:            XLXI_28/XLXI_2/XLXI_1 (FF)
+  Destination:       XLXI_28/XLXI_2/XLXI_22 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: XLXI_28/XLXI_2/XLXI_1 to XLXI_28/XLXI_2/XLXI_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.380  XLXI_28/XLXI_2/XLXI_1 (XLXI_28/CNT<0>)
+     XOR2:I1->O            3   0.612   0.451  XLXI_28/XLXI_1/XLXI_9 (XLXI_28/XLXI_1/XLXN_52)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_22 (XLXI_28/XLXI_1/XLXN_10)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_21 (XLXI_28/XLXI_1/XLXN_11)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_20 (XLXI_28/XLXI_1/XLXN_8)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_19 (XLXI_28/XLXI_1/XLXN_7)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_18 (XLXI_28/XLXI_1/XLXN_6)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_17 (XLXI_28/XLXI_1/XLXN_24)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_31 (XLXI_28/XLXI_1/XLXN_50)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_528 (XLXI_28/XLXI_1/XLXN_989)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_529 (XLXI_28/XLXI_1/XLXN_982)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_106 (XLXI_28/XLXI_1/XLXN_129)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_105 (XLXI_28/XLXI_1/XLXN_130)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_104 (XLXI_28/XLXI_1/XLXN_127)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_103 (XLXI_28/XLXI_1/XLXN_126)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_102 (XLXI_28/XLXI_1/XLXN_1018)
+     AND2:I1->O            2   0.612   0.380  XLXI_28/XLXI_1/XLXI_532 (XLXI_28/XLXI_1/XLXN_1019)
+     AND2:I1->O            1   0.612   0.357  XLXI_28/XLXI_1/XLXI_533 (XLXI_28/XLXI_1/XLXN_1013)
+     XOR2:I1->O            1   0.612   0.357  XLXI_28/XLXI_1/XLXI_535 (XLXI_28/XLXI_1/XLXN_1025)
+     XOR2:I1->O            1   0.612   0.357  XLXI_28/XLXI_1/XLXI_537 (XLXI_28/XLXN_1<17>)
+     FDR:D                     0.268          XLXI_28/XLXI_2/XLXI_22
+    ----------------------------------------
+    Total                     20.012ns (12.410ns logic, 7.602ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_27/RST'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            XLXI_27/XLXI_14/I_36_35 (FF)
+  Destination:       XLXI_27/XLXI_14/I_36_35 (FF)
+  Source Clock:      XLXI_27/RST rising
+  Destination Clock: XLXI_27/RST rising
+
+  Data Path: XLXI_27/XLXI_14/I_36_35 to XLXI_27/XLXI_14/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.380  I_36_35 (Q_DUMMY1)
+     XOR2:I1->O            1   0.612   0.357  I_36_32 (TQ)
+     FDC:D                     0.268          I_36_35
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_28/XLXN_10'
+  Clock period: 2.740ns (frequency: 364.910MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.740ns (Levels of Logic = 1)
+  Source:            XLXI_28/XLXI_67/I_36_35 (FF)
+  Destination:       XLXI_28/XLXI_67/I_36_35 (FF)
+  Source Clock:      XLXI_28/XLXN_10 rising
+  Destination Clock: XLXI_28/XLXN_10 rising
+
+  Data Path: XLXI_28/XLXI_67/I_36_35 to XLXI_28/XLXI_67/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            22   0.514   0.989  I_36_35 (Q)
+     XOR2:I1->O            1   0.612   0.357  I_36_32 (TQ)
+     FDPE:D                    0.268          I_36_35
+    ----------------------------------------
+    Total                      2.740ns (1.394ns logic, 1.346ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_38/XLXI_18/Q'
+  Clock period: 5.109ns (frequency: 195.720MHz)
+  Total number of paths / destination ports: 45 / 9
+-------------------------------------------------------------------------
+Delay:               5.109ns (Levels of Logic = 5)
+  Source:            XLXI_38/XLXI_25/XLXI_3/I_36_36 (FF)
+  Destination:       XLXI_38/XLXI_25/XLXI_30/I_36_35 (FF)
+  Source Clock:      XLXI_38/XLXI_18/Q rising
+  Destination Clock: XLXI_38/XLXI_18/Q rising
+
+  Data Path: XLXI_38/XLXI_25/XLXI_3/I_36_36 to XLXI_38/XLXI_25/XLXI_30/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.514   0.451  I_36_36 (Q<0>)
+     end scope: 'XLXI_38/XLXI_25/XLXI_3'
+     XOR2:I0->O            1   0.612   0.357  XLXI_38/XLXI_25/XLXI_4 (XLXI_38/XLXI_25/XLXN_29)
+     OR4:I0->O             1   0.612   0.357  XLXI_38/XLXI_25/XLXI_34 (XLXI_38/XLXI_25/XLXN_110)
+     NOR2:I0->O            1   0.612   0.357  XLXI_38/XLXI_25/XLXI_36 (XLXI_38/XLXI_25/XLXN_101)
+     begin scope: 'XLXI_38/XLXI_25/XLXI_30'
+     XOR2:I0->O            1   0.612   0.357  I_36_32 (TQ)
+     FDPE:D                    0.268          I_36_35
+    ----------------------------------------
+    Total                      5.109ns (3.230ns logic, 1.879ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_39/XLXI_18/Q'
+  Clock period: 5.109ns (frequency: 195.720MHz)
+  Total number of paths / destination ports: 45 / 9
+-------------------------------------------------------------------------
+Delay:               5.109ns (Levels of Logic = 5)
+  Source:            XLXI_39/XLXI_25/XLXI_3/I_36_36 (FF)
+  Destination:       XLXI_39/XLXI_25/XLXI_30/I_36_35 (FF)
+  Source Clock:      XLXI_39/XLXI_18/Q rising
+  Destination Clock: XLXI_39/XLXI_18/Q rising
+
+  Data Path: XLXI_39/XLXI_25/XLXI_3/I_36_36 to XLXI_39/XLXI_25/XLXI_30/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.514   0.451  I_36_36 (Q<0>)
+     end scope: 'XLXI_39/XLXI_25/XLXI_3'
+     XOR2:I0->O            1   0.612   0.357  XLXI_39/XLXI_25/XLXI_4 (XLXI_39/XLXI_25/XLXN_29)
+     OR4:I0->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_34 (XLXI_39/XLXI_25/XLXN_110)
+     NOR2:I0->O            1   0.612   0.357  XLXI_39/XLXI_25/XLXI_36 (XLXI_39/XLXI_25/XLXN_101)
+     begin scope: 'XLXI_39/XLXI_25/XLXI_30'
+     XOR2:I0->O            1   0.612   0.357  I_36_32 (TQ)
+     FDPE:D                    0.268          I_36_35
+    ----------------------------------------
+    Total                      5.109ns (3.230ns logic, 1.879ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXN_8'
+  Clock period: 5.044ns (frequency: 198.255MHz)
+  Total number of paths / destination ports: 256 / 16
+-------------------------------------------------------------------------
+Delay:               5.044ns (Levels of Logic = 20)
+  Source:            XLXI_6/XLXI_2/I_Q0 (FF)
+  Destination:       XLXI_6/XLXI_2/I_Q15 (FF)
+  Source Clock:      XLXN_8 rising
+  Destination Clock: XLXN_8 rising
+
+  Data Path: XLXI_6/XLXI_2/I_Q0 to XLXI_6/XLXI_2/I_Q15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.514   0.357  I_Q0 (Q<0>)
+     end scope: 'XLXI_6/XLXI_2'
+     begin scope: 'XLXI_6/XLXI_1'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_255 (C0)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_254 (C1)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_253 (C2)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_252 (C3)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_251 (C4)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_250 (C5)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_249 (C6)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_248 (C7)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_111 (C8)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_55 (C9)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_62 (C10)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_58 (C11)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_63 (C12)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_110 (C13)
+     MUXCY_D:CI->LO        1   0.399   0.000  I_36_107 (C14)
+     XORCY:CI->O           0   0.699   0.000  I_36_80 (S<15>)
+     end scope: 'XLXI_6/XLXI_1'
+     MUXCY:DI->O          18   1.121   0.000  XLXI_6/XLXI_67/XLXI_57 (XLXI_6/OCR_f<15>)
+     begin scope: 'XLXI_6/XLXI_2'
+     FDRE:D                    0.268          I_Q15
+    ----------------------------------------
+    Total                      5.044ns (4.687ns logic, 0.357ns route)
+                                       (92.9% logic, 7.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_28/XLXI_67/Q'
+  Clock period: 3.657ns (frequency: 273.459MHz)
+  Total number of paths / destination ports: 45 / 9
+-------------------------------------------------------------------------
+Delay:               3.657ns (Levels of Logic = 10)
+  Source:            XLXI_1/XLXI_41/XLXI_48/I_Q0 (FF)
+  Destination:       XLXI_2/XLXI_2/XLXI_1/XLXI_1/XLXI_18 (FF)
+  Source Clock:      XLXI_28/XLXI_67/Q rising
+  Destination Clock: XLXI_28/XLXI_67/Q rising
+
+  Data Path: XLXI_1/XLXI_41/XLXI_48/I_Q0 to XLXI_2/XLXI_2/XLXI_1/XLXI_1/XLXI_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.514   0.451  XLXI_1/XLXI_41/XLXI_48/I_Q0 (Ticks_0_OBUF)
+     XOR3:I1->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_50 (XLXI_2/XLXI_2/XLXI_29/I0)
+     MUXCY_L:S->LO         1   0.404   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_111 (XLXI_2/XLXI_2/XLXI_29/C0)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_55 (XLXI_2/XLXI_2/XLXI_29/C1)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_62 (XLXI_2/XLXI_2/XLXI_29/C2)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_58 (XLXI_2/XLXI_2/XLXI_29/C3)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_63 (XLXI_2/XLXI_2/XLXI_29/C4)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_110 (XLXI_2/XLXI_2/XLXI_29/C5)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/XLXI_156 (XLXI_2/XLXI_2/XLXI_29/C6)
+     MUXCY_D:CI->LO        1   0.400   0.000  XLXI_2/XLXI_2/XLXI_29/XLXI_155 (XLXI_2/XLXI_2/XLXI_29/XLXN_346)
+     XORCY:CI->O          16   0.699   0.000  XLXI_2/XLXI_2/XLXI_29/XLXI_152 (XLXI_2/XLXN_5<8>)
+     FDCE:D                    0.268          XLXI_2/XLXI_2/XLXI_1/XLXI_1/XLXI_18
+    ----------------------------------------
+    Total                      3.657ns (3.206ns logic, 0.451ns route)
+                                       (87.7% logic, 12.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1839528182271 / 33
+-------------------------------------------------------------------------
+Offset:              63.267ns (Levels of Logic = 81)
+  Source:            Target_Inp<0> (PAD)
+  Destination:       XLXI_2/XLXI_3/XLXI_74/XLXI_41/I_Q0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Target_Inp<0> to XLXI_2/XLXI_3/XLXI_74/XLXI_41/I_Q0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Target_Inp_0_IBUF (Target_Inp_0_IBUF)
+     BUF:I->O              2   0.612   0.380  XLXI_79/XLXI_1 (Target<0>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_50 (XLXI_2/XLXI_2/XLXI_29/I0)
+     XORCY:LI->O           6   0.458   0.569  XLXI_2/XLXI_2/XLXI_29/I_36_73 (XLXI_2/XLXN_5<0>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_23/I_36_50 (XLXI_2/XLXI_2/XLXI_23/I0)
+     MUXCY_L:S->LO         1   0.404   0.000  XLXI_2/XLXI_2/XLXI_23/I_36_111 (XLXI_2/XLXI_2/XLXI_23/C0)
+     XORCY:CI->O           4   0.699   0.499  XLXI_2/XLXI_2/XLXI_23/I_36_74 (XLXI_2/XLXN_7<1>)
+     INV:I->O              1   0.612   0.357  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_21 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXN_60)
+     XOR2:I1->O            2   0.612   0.380  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_3 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXN_4)
+     AND2:I0->O            2   0.612   0.380  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_35 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXN_55)
+     AND2:I1->O            2   0.612   0.380  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_21 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXN_57)
+     AND2:I1->O            2   0.612   0.380  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_20 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXN_48)
+     AND2:I1->O            2   0.612   0.380  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_19 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXN_47)
+     AND2:I1->O            2   0.612   0.380  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_18 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXN_46)
+     AND2:I1->O            2   0.612   0.380  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_17 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXN_75)
+     AND2:I1->O            1   0.612   0.357  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_49 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXN_73)
+     XOR2:I1->O            1   0.612   0.357  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_48 (XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXN_71)
+     XOR2:I1->O            1   0.612   0.357  XLXI_2/XLXI_3/XLXI_2/XLXI_72/XLXI_2/XLXI_46 (XLXI_2/XLXI_3/XLXI_2/XLXN_136<8>)
+     MUXCY:CI->O           1   0.400   0.357  XLXI_2/XLXI_3/XLXI_2/XLXI_8/XLXI_28 (XLXI_2/XLXI_3/XLXI_2/moderror<8>)
+     OR4:I3->O             1   0.612   0.357  XLXI_2/XLXI_3/XLXI_2/XLXI_73 (XLXI_2/XLXI_3/XLXI_2/XLXN_146)
+     OR2:I1->O             1   0.612   0.357  XLXI_2/XLXI_3/XLXI_2/XLXI_74 (XLXI_2/XLXI_3/XLXI_2/above16)
+     OR2:I1->O            24   0.612   1.064  XLXI_2/XLXI_3/XLXI_2/XLXI_75 (XLXI_2/XLXI_3/XLXI_2/b)
+     begin scope: 'XLXI_2/XLXI_3/XLXI_2/XLXI_66/XLXI_25'
+     begin scope: 'I_M01'
+     AND3:I2->O            1   0.612   0.357  I_36_30 (M1)
+     OR2:I0->O             1   0.612   0.000  I_36_38 (O)
+     end scope: 'I_M01'
+     MUXF5:I0->O          12   0.278   0.817  I_O (O)
+     end scope: 'XLXI_2/XLXI_3/XLXI_2/XLXI_66/XLXI_25'
+     begin scope: 'XLXI_2/XLXI_3/XLXI_9/XLXI_6/XLXI_1'
+     XNOR2:I0->O           2   0.612   0.380  I_36_8 (EQ_3)
+     AND3B1:I1->O          1   0.612   0.357  I_36_14 (GE2_3)
+     OR2:I1->O             2   0.612   0.380  I_36_19 (GTB)
+     NOR2:I0->O            2   0.612   0.380  I_36_3 (EQ2_3)
+     AND2:I0->O            1   0.612   0.357  I_36_2 (LTA)
+     OR2:I1->O             4   0.612   0.000  I_36_11 (LT)
+     end scope: 'XLXI_2/XLXI_3/XLXI_9/XLXI_6/XLXI_1'
+     MUXCY:S->O            6   0.752   0.569  XLXI_2/XLXI_3/XLXI_9/XLXI_6/XLXI_2/XLXI_1 (XLXI_2/XLXI_3/W_5<3>)
+     begin scope: 'XLXI_2/XLXI_3/XLXI_4/XLXI_2/XLXI_1'
+     XNOR2:I1->O           2   0.612   0.380  I_36_8 (EQ_3)
+     AND3B1:I1->O          1   0.612   0.357  I_36_14 (GE2_3)
+     OR2:I1->O             2   0.612   0.380  I_36_19 (GTB)
+     NOR2:I0->O            2   0.612   0.380  I_36_3 (EQ2_3)
+     AND2:I1->O            1   0.612   0.357  I_36_1 (GTA)
+     OR2:I1->O             4   0.612   0.000  I_36_12 (GT)
+     end scope: 'XLXI_2/XLXI_3/XLXI_4/XLXI_2/XLXI_1'
+     MUXCY:S->O            3   0.752   0.451  XLXI_2/XLXI_3/XLXI_4/XLXI_2/XLXI_2/XLXI_1 (XLXI_2/XLXI_3/XLXI_4/XLXN_2<3>)
+     begin scope: 'XLXI_2/XLXI_3/XLXI_4/XLXI_3/XLXI_1'
+     XNOR2:I1->O           2   0.612   0.380  I_36_8 (EQ_3)
+     AND3B1:I1->O          1   0.612   0.357  I_36_14 (GE2_3)
+     OR2:I1->O             2   0.612   0.380  I_36_19 (GTB)
+     NOR2:I0->O            2   0.612   0.380  I_36_3 (EQ2_3)
+     AND2:I1->O            1   0.612   0.357  I_36_1 (GTA)
+     OR2:I1->O             4   0.612   0.000  I_36_12 (GT)
+     end scope: 'XLXI_2/XLXI_3/XLXI_4/XLXI_3/XLXI_1'
+     MUXCY:S->O            4   0.404   0.499  XLXI_2/XLXI_3/XLXI_4/XLXI_3/XLXI_2/XLXI_1 (XLXI_2/XLXI_3/XLXI_4/XLXN_3<3>)
+     begin scope: 'XLXI_2/XLXI_3/XLXI_4/XLXI_4/XLXI_1'
+     XNOR2:I0->O           2   0.612   0.380  I_36_8 (EQ_3)
+     AND3B1:I1->O          1   0.612   0.357  I_36_14 (GE2_3)
+     OR2:I1->O             2   0.612   0.380  I_36_19 (GTB)
+     NOR2:I0->O            2   0.612   0.380  I_36_3 (EQ2_3)
+     AND2:I1->O            1   0.612   0.357  I_36_1 (GTA)
+     OR2:I1->O             4   0.612   0.000  I_36_12 (GT)
+     end scope: 'XLXI_2/XLXI_3/XLXI_4/XLXI_4/XLXI_1'
+     MUXCY:S->O            3   0.752   0.451  XLXI_2/XLXI_3/XLXI_4/XLXI_4/XLXI_2/XLXI_4 (XLXI_2/XLXI_3/XLXN_24<0>)
+     begin scope: 'XLXI_2/XLXI_3/XLXI_114/XLXI_1'
+     XOR2:I0->O            1   0.612   0.000  I_36_239 (I0)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_111 (C0)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_55 (C1)
+     XORCY:CI->O           1   0.699   0.357  I_36_76 (S2)
+     end scope: 'XLXI_2/XLXI_3/XLXI_114/XLXI_1'
+     begin scope: 'XLXI_2/XLXI_3/XLXI_115/XLXI_1'
+     XOR2:I0->O            1   0.612   0.000  I_36_241 (I2)
+     MUXCY_D:S->LO         1   0.752   0.000  I_36_62 (C2)
+     XORCY:CI->O           1   0.699   0.357  I_36_75 (S3)
+     end scope: 'XLXI_2/XLXI_3/XLXI_115/XLXI_1'
+     BUF:I->O              1   0.612   0.357  XLXI_2/XLXI_3/XLXI_78 (XLXI_2/XLXI_3/Sum_w_for_kp8<3>)
+     BUF:I->O              1   0.612   0.357  XLXI_2/XLXI_3/XLXI_74/XLXI_13/XLXI_4 (XLXI_2/XLXI_3/XLXI_74/XLXN_10<3>)
+     XOR3:I1->O            1   0.612   0.000  XLXI_2/XLXI_3/XLXI_74/XLXI_5/I_36_57 (XLXI_2/XLXI_3/XLXI_74/XLXI_5/I3)
+     MUXCY_L:S->LO         1   0.404   0.000  XLXI_2/XLXI_3/XLXI_74/XLXI_5/I_36_58 (XLXI_2/XLXI_3/XLXI_74/XLXI_5/C3)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_3/XLXI_74/XLXI_5/I_36_63 (XLXI_2/XLXI_3/XLXI_74/XLXI_5/C4)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_3/XLXI_74/XLXI_5/I_36_110 (XLXI_2/XLXI_3/XLXI_74/XLXI_5/C5)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_3/XLXI_74/XLXI_5/XLXI_156 (XLXI_2/XLXI_3/XLXI_74/XLXI_5/C6)
+     MUXCY_D:CI->LO        1   0.399   0.000  XLXI_2/XLXI_3/XLXI_74/XLXI_5/XLXI_155 (XLXI_2/XLXI_3/XLXI_74/XLXI_5/XLXN_346)
+     XORCY:CI->O          10   0.699   0.750  XLXI_2/XLXI_3/XLXI_74/XLXI_5/XLXI_152 (XLXI_2/XLXI_3/XLXI_74/Rem_man<8>)
+     INV:I->O              1   0.612   0.357  XLXI_2/XLXI_3/XLXI_74/XLXI_46 (XLXI_2/XLXI_3/XLXI_74/XLXN_70)
+     BUF:I->O              0   0.612   0.000  XLXI_2/XLXI_3/XLXI_74/XLXI_45/XLXI_7 (XLXI_2/XLXI_3/XLXI_74/XLXN_65<0>)
+     MUXCY:DI->O           1   1.010   0.000  XLXI_2/XLXI_3/XLXI_74/XLXI_43/XLXI_19 (XLXI_2/XLXI_3/XLXI_74/Quo_1<0>)
+     begin scope: 'XLXI_2/XLXI_3/XLXI_74/XLXI_41'
+     FDCE:D                    0.268          I_Q0
+    ----------------------------------------
+    Total                     63.267ns (42.145ns logic, 21.122ns route)
+                                       (66.6% logic, 33.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_39/XLXI_18/Q'
+  Total number of paths / destination ports: 192284812 / 1
+-------------------------------------------------------------------------
+Offset:              42.290ns (Levels of Logic = 52)
+  Source:            Target_Inp<0> (PAD)
+  Destination:       XLXI_39/XLXI_25/XLXI_30/I_36_35 (FF)
+  Destination Clock: XLXI_39/XLXI_18/Q rising
+
+  Data Path: Target_Inp<0> to XLXI_39/XLXI_25/XLXI_30/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Target_Inp_0_IBUF (Target_Inp_0_IBUF)
+     BUF:I->O              2   0.612   0.380  XLXI_79/XLXI_1 (Target<0>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_50 (XLXI_2/XLXI_2/XLXI_29/I0)
+     XORCY:LI->O           6   0.458   0.569  XLXI_2/XLXI_2/XLXI_29/I_36_73 (XLXI_2/XLXN_5<0>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_23/I_36_50 (XLXI_2/XLXI_2/XLXI_23/I0)
+     XORCY:LI->O           4   0.458   0.499  XLXI_2/XLXI_2/XLXI_23/I_36_73 (XLXI_2/XLXN_7<0>)
+     BUF:I->O              1   0.612   0.357  XLXI_2/XLXI_4/XLXI_86 (XLXI_2/XLXI_4/Multiplicant_1<0>)
+     MUXCY:CI->O           1   0.400   0.357  XLXI_2/XLXI_4/XLXI_2/XLXI_9 (XLXI_2/XLXI_4/XLXN_5<0>)
+     begin scope: 'XLXI_2/XLXI_4/XLXI_21'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_21'
+     begin scope: 'XLXI_2/XLXI_4/XLXI_22'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_22'
+     begin scope: 'XLXI_2/XLXI_9'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_9'
+     begin scope: 'XLXI_6/XLXI_1'
+     XOR2:I1->O            1   0.612   0.000  I_36_354 (I0)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_255 (C0)
+     XORCY:CI->O           0   0.699   0.000  I_36_227 (S<1>)
+     end scope: 'XLXI_6/XLXI_1'
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_67/XLXI_18 (XLXI_6/OCR_f<1>)
+     begin scope: 'XLXI_6/XLXI_8/XLXI_1'
+     INV:I->O              1   0.612   0.357  I_36_44 (O<1>)
+     end scope: 'XLXI_6/XLXI_8/XLXI_1'
+     XOR2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_3 (XLXI_6/XLXI_8/XLXI_2/XLXN_4)
+     AND2:I0->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_35 (XLXI_6/XLXI_8/XLXI_2/XLXN_55)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_21 (XLXI_6/XLXI_8/XLXI_2/XLXN_57)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_20 (XLXI_6/XLXI_8/XLXI_2/XLXN_48)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_19 (XLXI_6/XLXI_8/XLXI_2/XLXN_47)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_18 (XLXI_6/XLXI_8/XLXI_2/XLXN_46)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_17 (XLXI_6/XLXI_8/XLXI_2/XLXN_75)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_49 (XLXI_6/XLXI_8/XLXI_2/XLXN_73)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_528 (XLXI_6/XLXI_8/XLXI_2/XLXN_989)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_529 (XLXI_6/XLXI_8/XLXI_2/XLXN_982)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_106 (XLXI_6/XLXI_8/XLXI_2/XLXN_129)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_105 (XLXI_6/XLXI_8/XLXI_2/XLXN_130)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_104 (XLXI_6/XLXI_8/XLXI_2/XLXN_127)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_103 (XLXI_6/XLXI_8/XLXI_2/XLXN_126)
+     AND2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_102 (XLXI_6/XLXI_8/XLXI_2/XLXN_1008)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_96 (XLXI_6/XLXI_8/XLXI_2/XLXN_971)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_108 (XLXI_6/OCR_Twos<15>)
+     MUXCY:CI->O           1   0.399   0.357  XLXI_6/XLXI_54/XLXI_57 (XLXI_6/OCR_16<15>)
+     OR4:I3->O             1   0.612   0.357  XLXI_6/XLXI_111 (XLXI_6/XLXN_27)
+     OR2:I1->O             8   0.612   0.643  XLXI_6/XLXI_113 (XLXI_6/XLXN_18)
+     OR2:I1->O             1   0.612   0.000  XLXI_6/XLXI_56 (XLXI_6/XLXN_19)
+     MUXCY:S->O            1   0.404   0.000  XLXI_6/XLXI_20/XLXI_18 (XLXI_6/XLXN_15<1>)
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_117/XLXI_18 (OCR1<1>)
+     XOR2:I1->O            1   0.612   0.357  XLXI_39/XLXI_25/XLXI_5 (XLXI_39/XLXI_25/XLXN_30)
+     OR4:I1->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_34 (XLXI_39/XLXI_25/XLXN_110)
+     NOR2:I0->O            1   0.612   0.357  XLXI_39/XLXI_25/XLXI_36 (XLXI_39/XLXI_25/XLXN_101)
+     begin scope: 'XLXI_39/XLXI_25/XLXI_30'
+     XOR2:I0->O            1   0.612   0.357  I_36_32 (TQ)
+     FDPE:D                    0.268          I_36_35
+    ----------------------------------------
+    Total                     42.290ns (28.408ns logic, 13.882ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXN_8'
+  Total number of paths / destination ports: 3080215 / 16
+-------------------------------------------------------------------------
+Offset:              19.509ns (Levels of Logic = 37)
+  Source:            Target_Inp<0> (PAD)
+  Destination:       XLXI_6/XLXI_2/I_Q15 (FF)
+  Destination Clock: XLXN_8 rising
+
+  Data Path: Target_Inp<0> to XLXI_6/XLXI_2/I_Q15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Target_Inp_0_IBUF (Target_Inp_0_IBUF)
+     BUF:I->O              2   0.612   0.380  XLXI_79/XLXI_1 (Target<0>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_50 (XLXI_2/XLXI_2/XLXI_29/I0)
+     MUXCY_L:S->LO         1   0.404   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_111 (XLXI_2/XLXI_2/XLXI_29/C0)
+     MUXCY_L:CI->LO        1   0.052   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_55 (XLXI_2/XLXI_2/XLXI_29/C1)
+     MUXCY_L:CI->LO        1   0.052   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_62 (XLXI_2/XLXI_2/XLXI_29/C2)
+     MUXCY_L:CI->LO        1   0.052   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_58 (XLXI_2/XLXI_2/XLXI_29/C3)
+     MUXCY_L:CI->LO        1   0.052   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_63 (XLXI_2/XLXI_2/XLXI_29/C4)
+     XORCY:CI->O           6   0.699   0.569  XLXI_2/XLXI_2/XLXI_29/I_36_77 (XLXI_2/XLXN_5<5>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_23/I_36_109 (XLXI_2/XLXI_2/XLXI_23/I5)
+     MUXCY_L:S->LO         1   0.404   0.000  XLXI_2/XLXI_2/XLXI_23/I_36_110 (XLXI_2/XLXI_2/XLXI_23/C5)
+     MUXCY_L:CI->LO        1   0.052   0.000  XLXI_2/XLXI_2/XLXI_23/XLXI_156 (XLXI_2/XLXI_2/XLXI_23/C6)
+     MUXCY_D:CI->LO        1   0.399   0.000  XLXI_2/XLXI_2/XLXI_23/XLXI_155 (XLXI_2/XLXI_2/XLXI_23/XLXN_346)
+     XORCY:CI->O          14   0.699   0.850  XLXI_2/XLXI_2/XLXI_23/XLXI_152 (XLXI_2/XLXN_7<8>)
+     BUF:I->O              1   0.612   0.357  XLXI_2/XLXI_4/XLXI_94 (XLXI_2/XLXI_4/Multiplicant_1<8>)
+     MUXCY:CI->O           1   0.399   0.357  XLXI_2/XLXI_4/XLXI_2/XLXI_28 (XLXI_2/XLXI_4/XLXN_5<8>)
+     begin scope: 'XLXI_2/XLXI_4/XLXI_21'
+     XOR2:I0->O            1   0.612   0.000  I_36_362 (I8)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_111 (C8)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_55 (C9)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_62 (C10)
+     MUXCY_L:CI->LO        1   0.052   0.000  I_36_58 (C11)
+     XORCY:CI->O           1   0.699   0.357  I_36_78 (S<12>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_21'
+     begin scope: 'XLXI_2/XLXI_4/XLXI_22'
+     XOR2:I0->O            1   0.612   0.000  I_36_366 (I12)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_63 (C12)
+     XORCY:CI->O           1   0.699   0.357  I_36_77 (S<13>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_22'
+     begin scope: 'XLXI_2/XLXI_9'
+     XOR2:I0->O            1   0.612   0.000  I_36_367 (I13)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_110 (C13)
+     XORCY:CI->O           1   0.699   0.357  I_36_81 (S<14>)
+     end scope: 'XLXI_2/XLXI_9'
+     begin scope: 'XLXI_6/XLXI_1'
+     XOR2:I1->O            1   0.612   0.000  I_36_368 (I14)
+     MUXCY_D:S->LO         1   0.752   0.000  I_36_107 (C14)
+     XORCY:CI->O           0   0.699   0.000  I_36_80 (S<15>)
+     end scope: 'XLXI_6/XLXI_1'
+     MUXCY:DI->O          18   1.121   0.000  XLXI_6/XLXI_67/XLXI_57 (XLXI_6/OCR_f<15>)
+     begin scope: 'XLXI_6/XLXI_2'
+     FDRE:D                    0.268          I_Q15
+    ----------------------------------------
+    Total                     19.509ns (15.568ns logic, 3.941ns route)
+                                       (79.8% logic, 20.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_28/XLXI_67/Q'
+  Total number of paths / destination ports: 81 / 9
+-------------------------------------------------------------------------
+Offset:              5.146ns (Levels of Logic = 12)
+  Source:            Target_Inp<0> (PAD)
+  Destination:       XLXI_2/XLXI_2/XLXI_1/XLXI_1/XLXI_18 (FF)
+  Destination Clock: XLXI_28/XLXI_67/Q rising
+
+  Data Path: Target_Inp<0> to XLXI_2/XLXI_2/XLXI_1/XLXI_1/XLXI_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Target_Inp_0_IBUF (Target_Inp_0_IBUF)
+     BUF:I->O              2   0.612   0.380  XLXI_79/XLXI_1 (Target<0>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_50 (XLXI_2/XLXI_2/XLXI_29/I0)
+     MUXCY_L:S->LO         1   0.404   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_111 (XLXI_2/XLXI_2/XLXI_29/C0)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_55 (XLXI_2/XLXI_2/XLXI_29/C1)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_62 (XLXI_2/XLXI_2/XLXI_29/C2)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_58 (XLXI_2/XLXI_2/XLXI_29/C3)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_63 (XLXI_2/XLXI_2/XLXI_29/C4)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_110 (XLXI_2/XLXI_2/XLXI_29/C5)
+     MUXCY_L:CI->LO        1   0.051   0.000  XLXI_2/XLXI_2/XLXI_29/XLXI_156 (XLXI_2/XLXI_2/XLXI_29/C6)
+     MUXCY_D:CI->LO        1   0.400   0.000  XLXI_2/XLXI_2/XLXI_29/XLXI_155 (XLXI_2/XLXI_2/XLXI_29/XLXN_346)
+     XORCY:CI->O          16   0.699   0.000  XLXI_2/XLXI_2/XLXI_29/XLXI_152 (XLXI_2/XLXN_5<8>)
+     FDCE:D                    0.268          XLXI_2/XLXI_2/XLXI_1/XLXI_1/XLXI_18
+    ----------------------------------------
+    Total                      5.146ns (4.410ns logic, 0.737ns route)
+                                       (85.7% logic, 14.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_38/XLXI_18/Q'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.032ns (Levels of Logic = 3)
+  Source:            XLXI_38/XLXI_25/XLXI_30/I_36_35 (FF)
+  Destination:       PWM1 (PAD)
+  Source Clock:      XLXI_38/XLXI_18/Q rising
+
+  Data Path: XLXI_38/XLXI_25/XLXI_30/I_36_35 to PWM1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             2   0.514   0.380  I_36_35 (Q)
+     end scope: 'XLXI_38/XLXI_25/XLXI_30'
+     AND3:I1->O            1   0.612   0.357  XLXI_38/XLXI_25/XLXI_52 (PWM1_OBUF)
+     OBUF:I->O                 3.169          PWM1_OBUF (PWM1)
+    ----------------------------------------
+    Total                      5.032ns (4.295ns logic, 0.737ns route)
+                                       (85.4% logic, 14.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_39/XLXI_18/Q'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.032ns (Levels of Logic = 3)
+  Source:            XLXI_39/XLXI_25/XLXI_30/I_36_35 (FF)
+  Destination:       PWM2 (PAD)
+  Source Clock:      XLXI_39/XLXI_18/Q rising
+
+  Data Path: XLXI_39/XLXI_25/XLXI_30/I_36_35 to PWM2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             2   0.514   0.380  I_36_35 (Q)
+     end scope: 'XLXI_39/XLXI_25/XLXI_30'
+     AND3:I1->O            1   0.612   0.357  XLXI_39/XLXI_25/XLXI_52 (PWM2_OBUF)
+     OBUF:I->O                 3.169          PWM2_OBUF (PWM2)
+    ----------------------------------------
+    Total                      5.032ns (4.295ns logic, 0.737ns route)
+                                       (85.4% logic, 14.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_28/XLXI_67/Q'
+  Total number of paths / destination ports: 140335983 / 10
+-------------------------------------------------------------------------
+Offset:              42.733ns (Levels of Logic = 49)
+  Source:            XLXI_1/XLXI_41/XLXI_48/I_Q0 (FF)
+  Destination:       PWM2 (PAD)
+  Source Clock:      XLXI_28/XLXI_67/Q rising
+
+  Data Path: XLXI_1/XLXI_41/XLXI_48/I_Q0 to PWM2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.514   0.451  XLXI_1/XLXI_41/XLXI_48/I_Q0 (Ticks_0_OBUF)
+     XOR3:I1->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_50 (XLXI_2/XLXI_2/XLXI_29/I0)
+     XORCY:LI->O           6   0.458   0.569  XLXI_2/XLXI_2/XLXI_29/I_36_73 (XLXI_2/XLXN_5<0>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_23/I_36_50 (XLXI_2/XLXI_2/XLXI_23/I0)
+     XORCY:LI->O           4   0.458   0.499  XLXI_2/XLXI_2/XLXI_23/I_36_73 (XLXI_2/XLXN_7<0>)
+     BUF:I->O              1   0.612   0.357  XLXI_2/XLXI_4/XLXI_86 (XLXI_2/XLXI_4/Multiplicant_1<0>)
+     MUXCY:CI->O           1   0.400   0.357  XLXI_2/XLXI_4/XLXI_2/XLXI_9 (XLXI_2/XLXI_4/XLXN_5<0>)
+     begin scope: 'XLXI_2/XLXI_4/XLXI_21'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_21'
+     begin scope: 'XLXI_2/XLXI_4/XLXI_22'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_22'
+     begin scope: 'XLXI_2/XLXI_9'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_9'
+     begin scope: 'XLXI_6/XLXI_1'
+     XOR2:I1->O            1   0.612   0.000  I_36_354 (I0)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_255 (C0)
+     XORCY:CI->O           0   0.699   0.000  I_36_227 (S<1>)
+     end scope: 'XLXI_6/XLXI_1'
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_67/XLXI_18 (XLXI_6/OCR_f<1>)
+     begin scope: 'XLXI_6/XLXI_8/XLXI_1'
+     INV:I->O              1   0.612   0.357  I_36_44 (O<1>)
+     end scope: 'XLXI_6/XLXI_8/XLXI_1'
+     XOR2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_3 (XLXI_6/XLXI_8/XLXI_2/XLXN_4)
+     AND2:I0->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_35 (XLXI_6/XLXI_8/XLXI_2/XLXN_55)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_21 (XLXI_6/XLXI_8/XLXI_2/XLXN_57)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_20 (XLXI_6/XLXI_8/XLXI_2/XLXN_48)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_19 (XLXI_6/XLXI_8/XLXI_2/XLXN_47)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_18 (XLXI_6/XLXI_8/XLXI_2/XLXN_46)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_17 (XLXI_6/XLXI_8/XLXI_2/XLXN_75)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_49 (XLXI_6/XLXI_8/XLXI_2/XLXN_73)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_528 (XLXI_6/XLXI_8/XLXI_2/XLXN_989)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_529 (XLXI_6/XLXI_8/XLXI_2/XLXN_982)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_106 (XLXI_6/XLXI_8/XLXI_2/XLXN_129)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_105 (XLXI_6/XLXI_8/XLXI_2/XLXN_130)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_104 (XLXI_6/XLXI_8/XLXI_2/XLXN_127)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_103 (XLXI_6/XLXI_8/XLXI_2/XLXN_126)
+     AND2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_102 (XLXI_6/XLXI_8/XLXI_2/XLXN_1008)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_96 (XLXI_6/XLXI_8/XLXI_2/XLXN_971)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_108 (XLXI_6/OCR_Twos<15>)
+     MUXCY:CI->O           1   0.399   0.357  XLXI_6/XLXI_54/XLXI_57 (XLXI_6/OCR_16<15>)
+     OR4:I3->O             1   0.612   0.357  XLXI_6/XLXI_111 (XLXI_6/XLXN_27)
+     OR2:I1->O             8   0.612   0.643  XLXI_6/XLXI_113 (XLXI_6/XLXN_18)
+     OR2:I1->O             1   0.612   0.000  XLXI_6/XLXI_56 (XLXI_6/XLXN_19)
+     MUXCY:S->O            1   0.404   0.000  XLXI_6/XLXI_20/XLXI_18 (XLXI_6/XLXN_15<1>)
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_117/XLXI_18 (OCR1<1>)
+     OR4:I1->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_55 (XLXI_39/XLXI_25/XLXN_144)
+     OR2:I0->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_57 (XLXI_39/XLXI_25/XLXN_128)
+     AND3:I2->O            1   0.612   0.357  XLXI_39/XLXI_25/XLXI_52 (PWM2_OBUF)
+     OBUF:I->O                 3.169          PWM2_OBUF (PWM2)
+    ----------------------------------------
+    Total                     42.733ns (29.493ns logic, 13.240ns route)
+                                       (69.0% logic, 31.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_30_1'
+  Total number of paths / destination ports: 13042270 / 1
+-------------------------------------------------------------------------
+Offset:              40.100ns (Levels of Logic = 45)
+  Source:            XLXI_2/XLXI_3/XLXI_129 (FF)
+  Destination:       PWM2 (PAD)
+  Source Clock:      XLXI_30_1 rising
+
+  Data Path: XLXI_2/XLXI_3/XLXI_129 to PWM2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              16   0.514   1.031  XLXI_2/XLXI_3/XLXI_129 (XLXI_2/XLXN_1<0>)
+     LUT1:I0->O            1   0.612   0.000  XLXI_2/XLXI_4/XLXI_2/XLXI_9_rt (XLXI_2/XLXI_4/XLXI_2/XLXI_9_rt)
+     MUXCY:S->O            1   0.752   0.357  XLXI_2/XLXI_4/XLXI_2/XLXI_9 (XLXI_2/XLXI_4/XLXN_5<0>)
+     begin scope: 'XLXI_2/XLXI_4/XLXI_21'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_21'
+     begin scope: 'XLXI_2/XLXI_4/XLXI_22'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_22'
+     begin scope: 'XLXI_2/XLXI_9'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_9'
+     begin scope: 'XLXI_6/XLXI_1'
+     XOR2:I1->O            1   0.612   0.000  I_36_354 (I0)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_255 (C0)
+     XORCY:CI->O           0   0.699   0.000  I_36_227 (S<1>)
+     end scope: 'XLXI_6/XLXI_1'
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_67/XLXI_18 (XLXI_6/OCR_f<1>)
+     begin scope: 'XLXI_6/XLXI_8/XLXI_1'
+     INV:I->O              1   0.612   0.357  I_36_44 (O<1>)
+     end scope: 'XLXI_6/XLXI_8/XLXI_1'
+     XOR2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_3 (XLXI_6/XLXI_8/XLXI_2/XLXN_4)
+     AND2:I0->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_35 (XLXI_6/XLXI_8/XLXI_2/XLXN_55)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_21 (XLXI_6/XLXI_8/XLXI_2/XLXN_57)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_20 (XLXI_6/XLXI_8/XLXI_2/XLXN_48)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_19 (XLXI_6/XLXI_8/XLXI_2/XLXN_47)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_18 (XLXI_6/XLXI_8/XLXI_2/XLXN_46)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_17 (XLXI_6/XLXI_8/XLXI_2/XLXN_75)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_49 (XLXI_6/XLXI_8/XLXI_2/XLXN_73)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_528 (XLXI_6/XLXI_8/XLXI_2/XLXN_989)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_529 (XLXI_6/XLXI_8/XLXI_2/XLXN_982)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_106 (XLXI_6/XLXI_8/XLXI_2/XLXN_129)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_105 (XLXI_6/XLXI_8/XLXI_2/XLXN_130)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_104 (XLXI_6/XLXI_8/XLXI_2/XLXN_127)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_103 (XLXI_6/XLXI_8/XLXI_2/XLXN_126)
+     AND2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_102 (XLXI_6/XLXI_8/XLXI_2/XLXN_1008)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_96 (XLXI_6/XLXI_8/XLXI_2/XLXN_971)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_108 (XLXI_6/OCR_Twos<15>)
+     MUXCY:CI->O           1   0.399   0.357  XLXI_6/XLXI_54/XLXI_57 (XLXI_6/OCR_16<15>)
+     OR4:I3->O             1   0.612   0.357  XLXI_6/XLXI_111 (XLXI_6/XLXN_27)
+     OR2:I1->O             8   0.612   0.643  XLXI_6/XLXI_113 (XLXI_6/XLXN_18)
+     OR2:I1->O             1   0.612   0.000  XLXI_6/XLXI_56 (XLXI_6/XLXN_19)
+     MUXCY:S->O            1   0.404   0.000  XLXI_6/XLXI_20/XLXI_18 (XLXI_6/XLXN_15<1>)
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_117/XLXI_18 (OCR1<1>)
+     OR4:I1->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_55 (XLXI_39/XLXI_25/XLXN_144)
+     OR2:I0->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_57 (XLXI_39/XLXI_25/XLXN_128)
+     AND3:I2->O            1   0.612   0.357  XLXI_39/XLXI_25/XLXI_52 (PWM2_OBUF)
+     OBUF:I->O                 3.169          PWM2_OBUF (PWM2)
+    ----------------------------------------
+    Total                     40.100ns (27.705ns logic, 12.395ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_8'
+  Total number of paths / destination ports: 15364 / 1
+-------------------------------------------------------------------------
+Offset:              33.424ns (Levels of Logic = 35)
+  Source:            XLXI_6/XLXI_2/I_Q0 (FF)
+  Destination:       PWM2 (PAD)
+  Source Clock:      XLXN_8 rising
+
+  Data Path: XLXI_6/XLXI_2/I_Q0 to PWM2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.514   0.357  I_Q0 (Q<0>)
+     end scope: 'XLXI_6/XLXI_2'
+     begin scope: 'XLXI_6/XLXI_1'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_255 (C0)
+     XORCY:CI->O           0   0.699   0.000  I_36_227 (S<1>)
+     end scope: 'XLXI_6/XLXI_1'
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_67/XLXI_18 (XLXI_6/OCR_f<1>)
+     begin scope: 'XLXI_6/XLXI_8/XLXI_1'
+     INV:I->O              1   0.612   0.357  I_36_44 (O<1>)
+     end scope: 'XLXI_6/XLXI_8/XLXI_1'
+     XOR2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_3 (XLXI_6/XLXI_8/XLXI_2/XLXN_4)
+     AND2:I0->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_35 (XLXI_6/XLXI_8/XLXI_2/XLXN_55)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_21 (XLXI_6/XLXI_8/XLXI_2/XLXN_57)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_20 (XLXI_6/XLXI_8/XLXI_2/XLXN_48)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_19 (XLXI_6/XLXI_8/XLXI_2/XLXN_47)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_18 (XLXI_6/XLXI_8/XLXI_2/XLXN_46)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_17 (XLXI_6/XLXI_8/XLXI_2/XLXN_75)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_49 (XLXI_6/XLXI_8/XLXI_2/XLXN_73)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_528 (XLXI_6/XLXI_8/XLXI_2/XLXN_989)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_529 (XLXI_6/XLXI_8/XLXI_2/XLXN_982)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_106 (XLXI_6/XLXI_8/XLXI_2/XLXN_129)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_105 (XLXI_6/XLXI_8/XLXI_2/XLXN_130)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_104 (XLXI_6/XLXI_8/XLXI_2/XLXN_127)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_103 (XLXI_6/XLXI_8/XLXI_2/XLXN_126)
+     AND2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_102 (XLXI_6/XLXI_8/XLXI_2/XLXN_1008)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_96 (XLXI_6/XLXI_8/XLXI_2/XLXN_971)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_108 (XLXI_6/OCR_Twos<15>)
+     MUXCY:CI->O           1   0.399   0.357  XLXI_6/XLXI_54/XLXI_57 (XLXI_6/OCR_16<15>)
+     OR4:I3->O             1   0.612   0.357  XLXI_6/XLXI_111 (XLXI_6/XLXN_27)
+     OR2:I1->O             8   0.612   0.643  XLXI_6/XLXI_113 (XLXI_6/XLXN_18)
+     OR2:I1->O             1   0.612   0.000  XLXI_6/XLXI_56 (XLXI_6/XLXN_19)
+     MUXCY:S->O            1   0.404   0.000  XLXI_6/XLXI_20/XLXI_18 (XLXI_6/XLXN_15<1>)
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_117/XLXI_18 (OCR1<1>)
+     OR4:I1->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_55 (XLXI_39/XLXI_25/XLXN_144)
+     OR2:I0->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_57 (XLXI_39/XLXI_25/XLXN_128)
+     AND3:I2->O            1   0.612   0.357  XLXI_39/XLXI_25/XLXI_52 (PWM2_OBUF)
+     OBUF:I->O                 3.169          PWM2_OBUF (PWM2)
+    ----------------------------------------
+    Total                     33.424ns (23.131ns logic, 10.293ns route)
+                                       (69.2% logic, 30.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_27/XLXI_14/Q_DUMMY1'
+  Total number of paths / destination ports: 5 / 1
+-------------------------------------------------------------------------
+Offset:              7.189ns (Levels of Logic = 4)
+  Source:            XLXI_5/XLXI_39/XLXI_49/XLXI_12 (FF)
+  Destination:       Tx (PAD)
+  Source Clock:      XLXI_27/XLXI_14/Q_DUMMY1 rising
+
+  Data Path: XLXI_5/XLXI_39/XLXI_49/XLXI_12 to Tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.380  XLXI_5/XLXI_39/XLXI_49/XLXI_12 (XLXI_5/XLXI_39/XLXN_49)
+     INV:I->O             11   0.612   0.793  XLXI_5/XLXI_39/XLXI_46 (XLXI_5/XLXI_39/XLXN_209)
+     NAND4:I2->O           2   0.612   0.000  XLXI_5/XLXI_39/XLXI_45 (XLXI_5/XLXN_78)
+     MUXCY:S->O            1   0.752   0.357  XLXI_5/XLXI_37 (Tx_OBUF)
+     OBUF:I->O                 3.169          Tx_OBUF (Tx)
+    ----------------------------------------
+    Total                      7.189ns (5.659ns logic, 1.530ns route)
+                                       (78.7% logic, 21.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 192284812 / 1
+-------------------------------------------------------------------------
+Delay:               44.222ns (Levels of Logic = 51)
+  Source:            Target_Inp<0> (PAD)
+  Destination:       PWM2 (PAD)
+
+  Data Path: Target_Inp<0> to PWM2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  Target_Inp_0_IBUF (Target_Inp_0_IBUF)
+     BUF:I->O              2   0.612   0.380  XLXI_79/XLXI_1 (Target<0>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_29/I_36_50 (XLXI_2/XLXI_2/XLXI_29/I0)
+     XORCY:LI->O           6   0.458   0.569  XLXI_2/XLXI_2/XLXI_29/I_36_73 (XLXI_2/XLXN_5<0>)
+     XOR3:I0->O            1   0.612   0.000  XLXI_2/XLXI_2/XLXI_23/I_36_50 (XLXI_2/XLXI_2/XLXI_23/I0)
+     XORCY:LI->O           4   0.458   0.499  XLXI_2/XLXI_2/XLXI_23/I_36_73 (XLXI_2/XLXN_7<0>)
+     BUF:I->O              1   0.612   0.357  XLXI_2/XLXI_4/XLXI_86 (XLXI_2/XLXI_4/Multiplicant_1<0>)
+     MUXCY:CI->O           1   0.400   0.357  XLXI_2/XLXI_4/XLXI_2/XLXI_9 (XLXI_2/XLXI_4/XLXN_5<0>)
+     begin scope: 'XLXI_2/XLXI_4/XLXI_21'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_21'
+     begin scope: 'XLXI_2/XLXI_4/XLXI_22'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_4/XLXI_22'
+     begin scope: 'XLXI_2/XLXI_9'
+     XOR2:I0->O            1   0.612   0.000  I_36_354 (I0)
+     XORCY:LI->O           1   0.458   0.357  I_36_226 (S<0>)
+     end scope: 'XLXI_2/XLXI_9'
+     begin scope: 'XLXI_6/XLXI_1'
+     XOR2:I1->O            1   0.612   0.000  I_36_354 (I0)
+     MUXCY_L:S->LO         1   0.404   0.000  I_36_255 (C0)
+     XORCY:CI->O           0   0.699   0.000  I_36_227 (S<1>)
+     end scope: 'XLXI_6/XLXI_1'
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_67/XLXI_18 (XLXI_6/OCR_f<1>)
+     begin scope: 'XLXI_6/XLXI_8/XLXI_1'
+     INV:I->O              1   0.612   0.357  I_36_44 (O<1>)
+     end scope: 'XLXI_6/XLXI_8/XLXI_1'
+     XOR2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_3 (XLXI_6/XLXI_8/XLXI_2/XLXN_4)
+     AND2:I0->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_35 (XLXI_6/XLXI_8/XLXI_2/XLXN_55)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_21 (XLXI_6/XLXI_8/XLXI_2/XLXN_57)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_20 (XLXI_6/XLXI_8/XLXI_2/XLXN_48)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_19 (XLXI_6/XLXI_8/XLXI_2/XLXN_47)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_18 (XLXI_6/XLXI_8/XLXI_2/XLXN_46)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_17 (XLXI_6/XLXI_8/XLXI_2/XLXN_75)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_49 (XLXI_6/XLXI_8/XLXI_2/XLXN_73)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_528 (XLXI_6/XLXI_8/XLXI_2/XLXN_989)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_529 (XLXI_6/XLXI_8/XLXI_2/XLXN_982)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_106 (XLXI_6/XLXI_8/XLXI_2/XLXN_129)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_105 (XLXI_6/XLXI_8/XLXI_2/XLXN_130)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_104 (XLXI_6/XLXI_8/XLXI_2/XLXN_127)
+     AND2:I1->O            2   0.612   0.380  XLXI_6/XLXI_8/XLXI_2/XLXI_103 (XLXI_6/XLXI_8/XLXI_2/XLXN_126)
+     AND2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_102 (XLXI_6/XLXI_8/XLXI_2/XLXN_1008)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_96 (XLXI_6/XLXI_8/XLXI_2/XLXN_971)
+     XOR2:I1->O            1   0.612   0.357  XLXI_6/XLXI_8/XLXI_2/XLXI_108 (XLXI_6/OCR_Twos<15>)
+     MUXCY:CI->O           1   0.399   0.357  XLXI_6/XLXI_54/XLXI_57 (XLXI_6/OCR_16<15>)
+     OR4:I3->O             1   0.612   0.357  XLXI_6/XLXI_111 (XLXI_6/XLXN_27)
+     OR2:I1->O             8   0.612   0.643  XLXI_6/XLXI_113 (XLXI_6/XLXN_18)
+     OR2:I1->O             1   0.612   0.000  XLXI_6/XLXI_56 (XLXI_6/XLXN_19)
+     MUXCY:S->O            1   0.404   0.000  XLXI_6/XLXI_20/XLXI_18 (XLXI_6/XLXN_15<1>)
+     MUXCY:DI->O           2   1.121   0.380  XLXI_6/XLXI_117/XLXI_18 (OCR1<1>)
+     OR4:I1->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_55 (XLXI_39/XLXI_25/XLXN_144)
+     OR2:I0->O             1   0.612   0.357  XLXI_39/XLXI_25/XLXI_57 (XLXI_39/XLXI_25/XLXN_128)
+     AND3:I2->O            1   0.612   0.357  XLXI_39/XLXI_25/XLXI_52 (PWM2_OBUF)
+     OBUF:I->O                 3.169          PWM2_OBUF (PWM2)
+    ----------------------------------------
+    Total                     44.222ns (30.697ns logic, 13.525ns route)
+                                       (69.4% logic, 30.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 37.80 secs
+ 
+--> 
+
+Total memory usage is 421208 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

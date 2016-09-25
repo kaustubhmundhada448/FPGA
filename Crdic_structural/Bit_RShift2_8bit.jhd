@@ -1,0 +1,3 @@
+MODULE Bit_RShift2_8bit
+	SUBMODULE Mux_2_8
+		INSTANCE XLXI_8

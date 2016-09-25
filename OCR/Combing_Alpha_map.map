@@ -1,0 +1,131 @@
+Release 14.2 Map P.28xd (nt64)
+Xilinx Map Application Log File for Design 'Combing_Alpha'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off
+-c 100 -o Combing_Alpha_map.ncd Combing_Alpha.ngd Combing_Alpha.pcf 
+Target Device  : xc3s250e
+Target Package : cp132
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Mon Sep 26 01:34:22 2016
+
+Mapping design into LUTs...
+Running directed packing...
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5951_12 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5951_11_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5141_162 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5141_15_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5141_165 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5141_15_f5_2.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5141_176 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5141_16_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5141_203 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5141_19_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT4381_187 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA4381_17_f5_2.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT1071_1610 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA1071_15_f5_5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT1071_171 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA1071_16_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT1071_181 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA1071_17_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5651_213 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5651_20_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5651_153 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5651_14_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5651_171 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5651_16_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5651_172 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5651_16_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5651_181 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5651_17_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5901_143 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5901_13_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5141_166 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5901_13_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT3351_202 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA3351_19_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5141_18 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5141_17_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT3351_191 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA3351_18_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_13/Mrom_opT5901_13 failed to
+   merge with F5 multiplexer XLXI_13/Mrom_opA5901_12_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   20
+Logic Utilization:
+  Number of Slice Flip Flops:            81 out of   4,896    1%
+  Number of 4 input LUTs:             2,280 out of   4,896   46%
+Logic Distribution:
+  Number of occupied Slices:          1,424 out of   2,448   58%
+    Number of Slices containing only related logic:   1,424 out of   1,424 100%
+    Number of Slices containing unrelated logic:          0 out of   1,424   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       2,329 out of   4,896   47%
+    Number used as logic:             2,280
+    Number used as a route-thru:         49
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 10 out of      92   10%
+  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of MULT18X18SIOs:                3 out of      12   25%
+
+  Number of RPM macros:           12
+Average Fanout of Non-Clock Nets:                4.19
+
+Peak Memory Usage:  307 MB
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   8 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "Combing_Alpha_map.mrp" for details.

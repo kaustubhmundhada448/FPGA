@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "E:/FPGA_Xilinx/Complete_Fira_1.0/bit10datareg_to_transmit.xst" -ofn "E:/FPGA_Xilinx/Complete_Fira_1.0/bit10datareg_to_transmit.syr" 
+sch2sym -intstyle ise -family spartan3e -w -refsym bit10datareg_to_transmit E:/FPGA_Xilinx/USART_updated_3may/bit10datareg_to_transmit.sch E:/FPGA_Xilinx/Complete_Fira_1.0/bit10datareg_to_transmit.sym 

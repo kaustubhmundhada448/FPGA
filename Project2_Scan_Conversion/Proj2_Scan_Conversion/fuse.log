@@ -1,0 +1,44 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Test_Final_isim_beh.exe -prj E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Test_Final_beh.prj work.Test_Final work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/R_Shift_12.v" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/FD12CE.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Theta_Gen_12.v" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Scale_For_Cordic.v" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Cordic.v" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Cb4ce_Bus.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Main_T.vf" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Main.v" into library work
+Analyzing Verilog file "E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Test_Final.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module INV
+Compiling module XOR2
+Compiling module FDCE
+Compiling module FTCE_MXILINX_Main_T
+Compiling module AND4
+Compiling module AND3
+Compiling module AND2
+Compiling module VCC
+Compiling module CB4CE_MXILINX_Main_T
+Compiling module Cb4ce_Bus_MUSER_Main_T
+Compiling module R_Shift_12
+Compiling module FD12CE
+Compiling module Cordic
+Compiling module Theta_Gen_12
+Compiling module GND
+Compiling module FD12CE_MUSER_Main_T
+Compiling module Scale_For_Cordic
+Compiling module Main_T
+Compiling module Main
+Compiling module Test_Final
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 14 sub-compilation(s) to finish...
+Compiled 21 Verilog Units
+Built simulation executable E:/Acads/6th Sem/vlsilab/Xillinx/Final Submission/Tuesday_Group20_Kaustubh_Mundhada_13EC10040_Project/Project2_Scan_Conversion/Proj2_Scan_Conversion/Test_Final_isim_beh.exe
+Fuse Memory Usage: 27536 KB
+Fuse CPU Usage: 500 ms

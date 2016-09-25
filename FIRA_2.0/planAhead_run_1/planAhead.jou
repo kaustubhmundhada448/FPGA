@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Sat May 30 21:50:26 2015
+# Process ID: 9752
+# Log file: E:/FPGA_Xilinx/FIRA_2.0/planAhead_run_1/planAhead.log
+# Journal file: E:/FPGA_Xilinx/FIRA_2.0/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/FPGA_Xilinx/FIRA_2.0/pa.fromNetlist.tcl

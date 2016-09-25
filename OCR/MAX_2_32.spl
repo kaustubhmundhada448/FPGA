@@ -1,0 +1,10 @@
+[Inputs]
+=I0[31:0]=
+=I1[31:0]=
+[Outputs]
+S
+=C[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel MAX_2_32
+

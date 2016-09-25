@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "E:/Dept Porj/Digital Lab/Xillinx/OCR/Combing_Alpha.xst" -ofn "E:/Dept Porj/Digital Lab/Xillinx/OCR/Combing_Alpha.syr" 
+xst -intstyle ise -ifn "E:/Dept Porj/Digital Lab/Xillinx/OCR/Combing_Alpha.xst" -ofn "E:/Dept Porj/Digital Lab/Xillinx/OCR/Combing_Alpha.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Combing_Alpha.ucf -p xc3s250e-cp132-5 "Combing_Alpha.ngc" Combing_Alpha.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o Combing_Alpha_map.ncd Combing_Alpha.ngd Combing_Alpha.pcf 
+par -w -intstyle ise -ol high -t 1 Combing_Alpha_map.ncd Combing_Alpha.ncd Combing_Alpha.pcf 
+par -w -intstyle ise -ol high -t 1 Combing_Alpha_map.ncd Combing_Alpha.ncd Combing_Alpha.pcf 

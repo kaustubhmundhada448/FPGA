@@ -1,0 +1,28 @@
+Command line:
+   qamtheta_qamtheta_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3586
+
+Fri Nov 27 21:37:59 2015
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 356.848 Meg
+
+ Total Signals          : 1675
+ Total Nets             : 456
+ Total Signal Drivers   : 430
+ Total Blocks           : 471
+ Total Primitive Blocks : 451
+ Total Processes        : 534
+ Total Traceable Variables  : 112
+ Total Scalar Nets and Variables : 652
+
+ Total Simulation Time: 0.15625 sec
+
+ Current Memory Usage: 356.848 Meg
+
+Fri Nov 27 21:50:01 2015
+

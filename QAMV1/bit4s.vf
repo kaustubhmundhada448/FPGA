@@ -1,0 +1,164 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : bit4s.vf
+// /___/   /\     Timestamp : 11/27/2015 19:50:36
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog G:/FPGA/BTP/QAMV1/bit4s.vf -w G:/FPGA/BTP/QAMV1/bit4s.sch
+//Design Name: bit4s
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_bit4s(C, 
+                          CE, 
+                          CLR, 
+                          T, 
+                          Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB2CE_MXILINX_bit4s(C, 
+                           CE, 
+                           CLR, 
+                           CEO, 
+                           Q0, 
+                           Q1, 
+                           TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output TC;
+   
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_5" *) 
+   FTCE_MXILINX_bit4s #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(XLXN_1), 
+                            .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_6" *) 
+   FTCE_MXILINX_bit4s #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(Q0_DUMMY), 
+                            .Q(Q1_DUMMY));
+   AND2  I_36_37 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   VCC  I_36_47 (.P(XLXN_1));
+   AND2  I_36_52 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module bit4s(clk_16, 
+             inputsig, 
+             a0, 
+             a1, 
+             b0, 
+             b1);
+
+    input clk_16;
+    input inputsig;
+   output a0;
+   output a1;
+   output b0;
+   output b1;
+   
+   wire q1;
+   wire q2;
+   wire q3;
+   wire q4;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   FDC #( .INIT(1'b0) ) XLXI_5 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(inputsig), 
+               .Q(q1));
+   FDC #( .INIT(1'b0) ) XLXI_6 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(q1), 
+               .Q(q2));
+   FDC #( .INIT(1'b0) ) XLXI_7 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(q2), 
+               .Q(q3));
+   FDC #( .INIT(1'b0) ) XLXI_8 (.C(clk_16), 
+               .CLR(XLXN_11), 
+               .D(q3), 
+               .Q(q4));
+   GND  XLXI_9 (.G(XLXN_11));
+   (* HU_SET = "XLXI_10_7" *) 
+   CB2CE_MXILINX_bit4s  XLXI_10 (.C(clk_16), 
+                                .CE(XLXN_12), 
+                                .CLR(XLXN_11), 
+                                .CEO(), 
+                                .Q0(XLXN_13), 
+                                .Q1(XLXN_15), 
+                                .TC());
+   VCC  XLXI_11 (.P(XLXN_12));
+   AND2  XLXI_12 (.I0(XLXN_15), 
+                 .I1(XLXN_13), 
+                 .O(XLXN_16));
+   FD #( .INIT(1'b0) ) XLXI_13 (.C(XLXN_16), 
+               .D(q1), 
+               .Q(a1));
+   FD #( .INIT(1'b0) ) XLXI_14 (.C(XLXN_16), 
+               .D(q2), 
+               .Q(a0));
+   FD #( .INIT(1'b0) ) XLXI_15 (.C(XLXN_16), 
+               .D(q3), 
+               .Q(b1));
+   FD #( .INIT(1'b0) ) XLXI_16 (.C(XLXN_16), 
+               .D(q4), 
+               .Q(b0));
+endmodule

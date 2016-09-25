@@ -1,0 +1,3 @@
+sch2hdl -intstyle ise -family spartan3e -verilog usart_receiver_drc.vf -w E:/FPGA_Xilinx/USART_updated_3may/usart_receiver.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym usart_receiver E:/FPGA_Xilinx/USART_updated_3may/usart_receiver.sch E:/FPGA_Xilinx/Complete_Fira_1.0/usart_receiver.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym usart_receiver E:/FPGA_Xilinx/USART_updated_3may/usart_receiver.sch E:/FPGA_Xilinx/Complete_Fira_1.0/usart_receiver.sym 
