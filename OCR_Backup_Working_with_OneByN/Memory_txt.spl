@@ -1,0 +1,10 @@
+[Inputs]
+=ip_address[3:0]=
+=ip_count[7:0]=
+[Outputs]
+=opA[7:0]=
+=opT[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Memory_txt
+

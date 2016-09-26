@@ -1,0 +1,7 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Main_Module {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sym} 
+xst -intstyle ise -ifn "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.xst" -ofn "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.syr" 
+sch2sym -intstyle ise -family spartan3e -w -refsym Main_Module {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym Main_Module {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sym} 
+sch2hdl -intstyle ise -family spartan3e -verilog Main_Module_drc.vf -w {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sch} 
+sch2sym -intstyle ise -family spartan3e -w -refsym Main_Module {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym Main_Module {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sym} 

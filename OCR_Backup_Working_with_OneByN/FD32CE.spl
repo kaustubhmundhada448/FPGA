@@ -1,0 +1,11 @@
+[Inputs]
+CLK
+RST
+CE
+=D[31:0]=
+[Outputs]
+=Q[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel FD32CE
+

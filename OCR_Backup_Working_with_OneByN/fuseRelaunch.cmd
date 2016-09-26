@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Combing_Alpha_Combing_Alpha_sch_tb_isim_beh.exe" -prj "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Combing_Alpha_Combing_Alpha_sch_tb_beh.prj" "Combing_Alpha_Combing_Alpha_sch_tb" "work.glbl" 

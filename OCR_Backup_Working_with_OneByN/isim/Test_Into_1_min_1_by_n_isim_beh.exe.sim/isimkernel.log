@@ -1,0 +1,28 @@
+Command line:
+   Test_Into_1_min_1_by_n_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58660
+
+Wed Dec 02 02:33:06 2015
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 836.567 Meg
+
+ Total Signals          : 27
+ Total Nets             : 365
+ Total Signal Drivers   : 18
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 19
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 494
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 836.567 Meg
+
+Wed Dec 02 02:33:15 2015
+

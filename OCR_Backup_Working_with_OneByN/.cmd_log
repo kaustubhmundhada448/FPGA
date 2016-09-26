@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj OCR_FTS -o "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/.tfi" -lib work "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS//Into1byN.v" -module "" -template C:/Xilinx/14.2/ISE_DS/ISE//data/tfi.tft -deleteonerror 

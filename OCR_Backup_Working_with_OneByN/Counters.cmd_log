@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Counters {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym Counters {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym Counters {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym Counters {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.sym} 

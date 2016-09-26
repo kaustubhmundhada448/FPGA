@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Adder_32.xst" -ofn "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Adder_32.syr" 
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Adder_32.v} -lang verilog -prj OCR_FTS -o Adder_32.spl -module Adder_32 -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Adder_32.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Adder_32.sym} 

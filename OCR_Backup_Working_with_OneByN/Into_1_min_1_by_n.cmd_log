@@ -1,0 +1,6 @@
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into_1_min_1_by_n.v} -lang verilog -prj OCR_FTS -o Into_1_min_1_by_n.spl -module Into_1_min_1_by_n -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Into_1_min_1_by_n.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into_1_min_1_by_n.sym} 
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into_1_min_1_by_n.v} -lang verilog -prj OCR_FTS -o Into_1_min_1_by_n.spl -module Into_1_min_1_by_n -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Into_1_min_1_by_n.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into_1_min_1_by_n.sym} 
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into_1_min_1_by_n.v} -lang verilog -prj OCR_FTS -o Into_1_min_1_by_n.spl -module Into_1_min_1_by_n -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Into_1_min_1_by_n.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into_1_min_1_by_n.sym} 

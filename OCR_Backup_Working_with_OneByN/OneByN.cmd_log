@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/OneByN.v} -lang verilog -prj OCR_FTS -o OneByN.spl -module OneByN -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w OneByN.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/OneByN.sym} 

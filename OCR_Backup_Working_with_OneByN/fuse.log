@@ -1,0 +1,59 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Combing_Alpha_Combing_Alpha_sch_tb_isim_beh.exe -prj E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Combing_Alpha_Combing_Alpha_sch_tb_beh.prj Combing_Alpha_Combing_Alpha_sch_tb work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/OneByN.v" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/mux_2_4bit.vf" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/MAX_2_32.v" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into_1_min_1_by_n.v" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into1byN.v" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/FD4CE_B.vf" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/FD32CE.v" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Booth_Comb.v" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Adder_32.v" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Memory_txt.v" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Max_at_num.vf" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.vf" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.vf" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Combing_Alpha.vf" into library work
+Analyzing Verilog file "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Test_Comb_Module.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Memory_txt
+Compiling module MUXCY
+Compiling module mux_2_4bit_MUSER_Combing_Alpha
+Compiling module FDCE
+Compiling module FD4CE_B_MUSER_Combing_Alpha
+Compiling module FD32CE
+Compiling module MAX_2_32
+Compiling module Max_at_num_MUSER_Combing_Alpha
+Compiling module XOR2
+Compiling module FTCE_MXILINX_Combing_Alpha
+Compiling module AND4
+Compiling module AND3
+Compiling module AND2
+Compiling module VCC
+Compiling module CB4CE_MXILINX_Combing_Alpha
+Compiling module AND5
+Compiling module CB8CE_MXILINX_Combing_Alpha
+Compiling module NAND2
+Compiling module Counters_MUSER_Combing_Alpha
+Compiling module FD
+Compiling module OR2
+Compiling module Booth_Comb
+Compiling module Into1byN
+Compiling module OneByN
+Compiling module Adder_32
+Compiling module Into_1_min_1_by_n
+Compiling module Main_Module_MUSER_Combing_Alpha
+Compiling module Combing_Alpha
+Compiling module Combing_Alpha_Combing_Alpha_sch_...
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 8 sub-compilation(s) to finish...
+Compiled 30 Verilog Units
+Built simulation executable E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Combing_Alpha_Combing_Alpha_sch_tb_isim_beh.exe
+Fuse Memory Usage: 27692 KB
+Fuse CPU Usage: 531 ms

@@ -1,0 +1,9 @@
+[Inputs]
+=XnCn[15:0]=
+=OnebyN[16:0]=
+[Outputs]
+=Op[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Into1byN
+

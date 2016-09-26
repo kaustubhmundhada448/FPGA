@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Booth_Comb.v} -lang verilog -prj OCR_FTS -o Booth_Comb.spl -module Booth_Comb -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Booth_Comb.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Booth_Comb.sym} 

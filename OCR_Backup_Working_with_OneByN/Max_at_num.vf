@@ -1,0 +1,128 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Max_at_num.vf
+// /___/   /\     Timestamp : 12/02/2015 06:19:05
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Max_at_num.vf" -w "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Max_at_num.sch"
+//Design Name: Max_at_num
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mux_2_4bit_MUSER_Max_at_num(in0, 
+                                   in1, 
+                                   S, 
+                                   op);
+
+    input [3:0] in0;
+    input [3:0] in1;
+    input S;
+   output [3:0] op;
+   
+   
+   MUXCY  XLXI_1 (.CI(in1[0]), 
+                 .DI(in0[0]), 
+                 .S(S), 
+                 .O(op[0]));
+   MUXCY  XLXI_2 (.CI(in1[1]), 
+                 .DI(in0[1]), 
+                 .S(S), 
+                 .O(op[1]));
+   MUXCY  XLXI_3 (.CI(in1[3]), 
+                 .DI(in0[3]), 
+                 .S(S), 
+                 .O(op[3]));
+   MUXCY  XLXI_4 (.CI(in1[2]), 
+                 .DI(in0[2]), 
+                 .S(S), 
+                 .O(op[2]));
+endmodule
+`timescale 1ns / 1ps
+
+module FD4CE_B_MUSER_Max_at_num(C, 
+                                CE, 
+                                CLR, 
+                                D, 
+                                Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [3:0] D;
+   output [3:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module Max_at_num(A, 
+                  A_AC, 
+                  C, 
+                  CE, 
+                  CLR, 
+                  B);
+
+    input [3:0] A;
+    input [31:0] A_AC;
+    input C;
+    input CE;
+    input CLR;
+   output [3:0] B;
+   
+   wire [31:0] XLXN_17;
+   wire [3:0] XLXN_18;
+   wire [31:0] XLXN_19;
+   wire XLXN_24;
+   wire [3:0] B_DUMMY;
+   
+   assign B[3:0] = B_DUMMY[3:0];
+   mux_2_4bit_MUSER_Max_at_num  XLXI_7 (.in0(B_DUMMY[3:0]), 
+                                       .in1(A[3:0]), 
+                                       .S(XLXN_24), 
+                                       .op(XLXN_18[3:0]));
+   FD4CE_B_MUSER_Max_at_num  XLXI_8 (.C(C), 
+                                    .CE(CE), 
+                                    .CLR(CLR), 
+                                    .D(XLXN_18[3:0]), 
+                                    .Q(B_DUMMY[3:0]));
+   FD32CE  XLXI_9 (.CE(CE), 
+                  .CLK(C), 
+                  .D(XLXN_19[31:0]), 
+                  .RST(CLR), 
+                  .Q(XLXN_17[31:0]));
+   MAX_2_32  XLXI_11 (.I0(XLXN_17[31:0]), 
+                     .I1(A_AC[31:0]), 
+                     .C(XLXN_19[31:0]), 
+                     .S(XLXN_24));
+endmodule

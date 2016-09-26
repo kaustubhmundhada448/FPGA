@@ -1,0 +1,7 @@
+verilog work "OneByN.v"
+verilog work "Into_1_min_1_by_n.v"
+verilog work "Into1byN.v"
+verilog work "FD32CE.v"
+verilog work "Booth_Comb.v"
+verilog work "Adder_32.v"
+verilog work "Main_Module.vf"

@@ -1,0 +1,28 @@
+Command line:
+   Combing_Alpha_Combing_Alpha_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60687
+
+Wed Dec 02 06:20:48 2015
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 840.778 Meg
+
+ Total Signals          : 433
+ Total Nets             : 762
+ Total Signal Drivers   : 141
+ Total Blocks           : 80
+ Total Primitive Blocks : 59
+ Total Processes        : 219
+ Total Traceable Variables  : 81
+ Total Scalar Nets and Variables : 27902
+
+ Total Simulation Time: 0.140625 sec
+
+ Current Memory Usage: 840.778 Meg
+
+Wed Dec 02 06:21:06 2015
+

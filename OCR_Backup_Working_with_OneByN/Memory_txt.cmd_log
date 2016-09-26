@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Memory_txt.v} -lang verilog -prj OCR_FTS -o Memory_txt.spl -module Memory_txt -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Memory_txt.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Memory_txt.sym} 

@@ -1,0 +1,9 @@
+[Inputs]
+=D[31:0]=
+=One_by_N[16:0]=
+[Outputs]
+=Prod[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Into_1_min_1_by_n
+

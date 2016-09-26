@@ -1,0 +1,5 @@
+set -tmpdir "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/xst/projnav.tmp"
+set -xsthdpdir "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/xst"
+elaborate
+-ifn MAX_2_32.prj
+-ifmt mixed

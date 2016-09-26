@@ -1,0 +1,282 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Counters.vf
+// /___/   /\     Timestamp : 12/02/2015 04:44:30
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.vf" -w "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Counters.sch"
+//Design Name: Counters
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_Counters(C, 
+                             CE, 
+                             CLR, 
+                             T, 
+                             Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB8CE_MXILINX_Counters(C, 
+                              CE, 
+                              CLR, 
+                              CEO, 
+                              Q, 
+                              TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output [7:0] Q;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire T4;
+   wire T5;
+   wire T6;
+   wire T7;
+   wire XLXN_1;
+   wire [7:0] Q_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_30" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(XLXN_1), 
+                               .Q(Q_DUMMY[0]));
+   (* HU_SET = "I_Q1_31" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(Q_DUMMY[0]), 
+                               .Q(Q_DUMMY[1]));
+   (* HU_SET = "I_Q2_27" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(T2), 
+                               .Q(Q_DUMMY[2]));
+   (* HU_SET = "I_Q3_28" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(T3), 
+                               .Q(Q_DUMMY[3]));
+   (* HU_SET = "I_Q4_29" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q4 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(T4), 
+                               .Q(Q_DUMMY[4]));
+   (* HU_SET = "I_Q5_26" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q5 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(T5), 
+                               .Q(Q_DUMMY[5]));
+   (* HU_SET = "I_Q6_25" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q6 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(T6), 
+                               .Q(Q_DUMMY[6]));
+   (* HU_SET = "I_Q7_24" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q7 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(T7), 
+                               .Q(Q_DUMMY[7]));
+   AND5  I_36_1 (.I0(Q_DUMMY[7]), 
+                .I1(Q_DUMMY[6]), 
+                .I2(Q_DUMMY[5]), 
+                .I3(Q_DUMMY[4]), 
+                .I4(T4), 
+                .O(TC_DUMMY));
+   AND2  I_36_2 (.I0(Q_DUMMY[4]), 
+                .I1(T4), 
+                .O(T5));
+   AND3  I_36_11 (.I0(Q_DUMMY[5]), 
+                 .I1(Q_DUMMY[4]), 
+                 .I2(T4), 
+                 .O(T6));
+   AND4  I_36_15 (.I0(Q_DUMMY[3]), 
+                 .I1(Q_DUMMY[2]), 
+                 .I2(Q_DUMMY[1]), 
+                 .I3(Q_DUMMY[0]), 
+                 .O(T4));
+   VCC  I_36_16 (.P(XLXN_1));
+   AND2  I_36_24 (.I0(Q_DUMMY[1]), 
+                 .I1(Q_DUMMY[0]), 
+                 .O(T2));
+   AND3  I_36_26 (.I0(Q_DUMMY[2]), 
+                 .I1(Q_DUMMY[1]), 
+                 .I2(Q_DUMMY[0]), 
+                 .O(T3));
+   AND4  I_36_28 (.I0(Q_DUMMY[6]), 
+                 .I1(Q_DUMMY[5]), 
+                 .I2(Q_DUMMY[4]), 
+                 .I3(T4), 
+                 .O(T7));
+   AND2  I_36_31 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CE_MXILINX_Counters(C, 
+                              CE, 
+                              CLR, 
+                              CEO, 
+                              Q0, 
+                              Q1, 
+                              Q2, 
+                              Q3, 
+                              TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_32" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(XLXN_1), 
+                               .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_33" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(Q0_DUMMY), 
+                               .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_34" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(T2), 
+                               .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_35" *) 
+   FTCE_MXILINX_Counters #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                               .CE(CE), 
+                               .CLR(CLR), 
+                               .T(T3), 
+                               .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module Counters(CLK, 
+                CLR, 
+                IP_ADDR, 
+                IP_Count, 
+                TC, 
+                TEN);
+
+    input CLK;
+    input CLR;
+   output [3:0] IP_ADDR;
+   output [7:0] IP_Count;
+   output TC;
+   output TEN;
+   
+   wire [3:0] IP_ADDR_DUMMY;
+   wire TEN_DUMMY;
+   wire TC_DUMMY;
+   
+   assign IP_ADDR[3:0] = IP_ADDR_DUMMY[3:0];
+   assign TC = TC_DUMMY;
+   assign TEN = TEN_DUMMY;
+   (* HU_SET = "XLXI_1_36" *) 
+   CB4CE_MXILINX_Counters  XLXI_1 (.C(CLK), 
+                                  .CE(TC_DUMMY), 
+                                  .CLR(CLR), 
+                                  .CEO(), 
+                                  .Q0(IP_ADDR_DUMMY[0]), 
+                                  .Q1(IP_ADDR_DUMMY[1]), 
+                                  .Q2(IP_ADDR_DUMMY[2]), 
+                                  .Q3(IP_ADDR_DUMMY[3]), 
+                                  .TC());
+   (* HU_SET = "XLXI_4_37" *) 
+   CB8CE_MXILINX_Counters  XLXI_4 (.C(CLK), 
+                                  .CE(TEN_DUMMY), 
+                                  .CLR(CLR), 
+                                  .CEO(), 
+                                  .Q(IP_Count[7:0]), 
+                                  .TC(TC_DUMMY));
+   NAND2  XLXI_8 (.I0(IP_ADDR_DUMMY[3]), 
+                 .I1(IP_ADDR_DUMMY[1]), 
+                 .O(TEN_DUMMY));
+endmodule

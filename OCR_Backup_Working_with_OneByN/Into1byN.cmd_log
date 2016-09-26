@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into1byN.xst" -ofn "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into1byN.syr" 
+xst -intstyle ise -ifn "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into1byN.xst" -ofn "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into1byN.syr" 
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into1byN.v} -lang verilog -prj OCR_FTS -o Into1byN.spl -module Into1byN -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Into1byN.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Into1byN.sym} 

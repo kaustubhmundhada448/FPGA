@@ -1,0 +1,6 @@
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/FD32CE.v} -lang verilog -prj OCR_FTS -o FD32CE.spl -module FD32CE -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e FD32CE.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/FD32CE.sym} 
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/FD32CE.v} -lang verilog -prj OCR_FTS -o FD32CE.spl -module FD32CE -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e FD32CE.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/FD32CE.sym} 
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/FD32CE.v} -lang verilog -prj OCR_FTS -o FD32CE.spl -module FD32CE -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w FD32CE.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/FD32CE.sym} 

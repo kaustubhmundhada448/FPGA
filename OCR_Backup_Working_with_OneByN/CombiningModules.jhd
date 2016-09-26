@@ -1,0 +1,5 @@
+MODULE CombiningModules
+	SUBMODULE Max_at_num
+		INSTANCE XLXI_2
+	SUBMODULE Memory_txt
+		INSTANCE XLXI_9

@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Main_Module.vf
+// /___/   /\     Timestamp : 12/02/2015 06:19:05
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.vf" -w "E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module.sch"
+//Design Name: Main_Module
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Main_Module(CE, 
+                   CLK, 
+                   Cn, 
+                   IP_COUN, 
+                   RST, 
+                   Xn, 
+                   OP_AR);
+
+    input CE;
+    input CLK;
+    input [7:0] Cn;
+    input [7:0] IP_COUN;
+    input RST;
+    input [7:0] Xn;
+   output [31:0] OP_AR;
+   
+   wire [31:0] ABOneByN;
+   wire [15:0] A_B;
+   wire [16:0] One_By_N;
+   wire [31:0] Sum_XnCn_Byn;
+   wire [31:0] SUM_Xn_CN_One_Min_ByN;
+   wire [31:0] OP_AR_DUMMY;
+   
+   assign OP_AR[31:0] = OP_AR_DUMMY[31:0];
+   Booth_Comb  XLXI_2 (.a(Xn[7:0]), 
+                      .b(Cn[7:0]), 
+                      .c(A_B[15:0]));
+   Into1byN  XLXI_3 (.OnebyN(One_By_N[16:0]), 
+                    .XnCn(A_B[15:0]), 
+                    .Op(ABOneByN[31:0]));
+   OneByN  XLXI_4 (.N(IP_COUN[7:0]), 
+                  .OneByN(One_By_N[16:0]));
+   Adder_32  XLXI_5 (.A(ABOneByN[31:0]), 
+                    .B(SUM_Xn_CN_One_Min_ByN[31:0]), 
+                    .C(), 
+                    .S(Sum_XnCn_Byn[31:0]));
+   FD32CE  XLXI_6 (.CE(CE), 
+                  .CLK(CLK), 
+                  .D(Sum_XnCn_Byn[31:0]), 
+                  .RST(RST), 
+                  .Q(OP_AR_DUMMY[31:0]));
+   Into_1_min_1_by_n  XLXI_8 (.D(OP_AR_DUMMY[31:0]), 
+                             .One_by_N(One_By_N[16:0]), 
+                             .Prod(SUM_Xn_CN_One_Min_ByN[31:0]));
+endmodule

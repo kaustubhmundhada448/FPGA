@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Main_Module_Main_Module_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Main_Module_Main_Module_sch_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/OP_AR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OP_AR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OP_AR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/IP_COUN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">IP_COUN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">IP_COUN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/UUT/One_By_N" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">One_By_N[16:0]</obj_property>
+      <obj_property name="ObjectShortName">One_By_N[16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/Xn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Xn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Xn[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/Cn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Cn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Cn[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/UUT/A_B" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A_B[15:0]</obj_property>
+      <obj_property name="ObjectShortName">A_B[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/UUT/ABOneByN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ABOneByN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ABOneByN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/UUT/Sum_XnCn_Byn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Sum_XnCn_Byn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Sum_XnCn_Byn[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/UUT/SUM_Xn_CN_One_Min_ByN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SUM_Xn_CN_One_Min_ByN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SUM_Xn_CN_One_Min_ByN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Module_Main_Module_sch_tb/UUT/OP_AR_DUMMY" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OP_AR_DUMMY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OP_AR_DUMMY[31:0]</obj_property>
+   </wvobject>
+</wave_config>

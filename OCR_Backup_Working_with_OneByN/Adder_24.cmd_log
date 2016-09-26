@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Adder_24.v} -lang verilog -prj OCR_FTS -o Adder_24.spl -module Adder_24 -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Adder_24.spl {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Adder_24.sym} 

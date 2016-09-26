@@ -1,0 +1,3 @@
+verilog isim_temp "Into1byN.v"
+verilog isim_temp "Test_into_1_by_n.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

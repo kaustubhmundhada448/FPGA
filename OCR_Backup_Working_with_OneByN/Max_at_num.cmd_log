@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym Max_at_num {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Max_at_num.sch} {E:/Dept Porj/Digital Lab/Xillinx/OCR_FTS/Max_at_num.sym} 
