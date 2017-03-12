@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-Release 14.2 Trace  (nt)
+Release 14.2 Trace  (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.2\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 5 -n
-3 -fastpaths -xml test_usart.twx test_usart.ncd -o test_usart.twr
+C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml test_usart.twx test_usart.ncd -o test_usart.twr
 test_usart.pcf -ucf test_usart.ucf
 
 Design file:              test_usart.ncd
@@ -45,26 +45,54 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-Rx          |    0.024(R)|    1.088(R)|CLK_BUFGP         |   0.000|
+CLR         |    3.255(R)|    0.524(R)|CLK_BUFGP         |   0.000|
+CLR_Rec     |    1.841(R)|    0.229(R)|CLK_BUFGP         |   0.000|
+Data_Tx<0>  |    3.155(R)|   -0.462(R)|CLK_BUFGP         |   0.000|
+Data_Tx<1>  |    2.215(R)|   -0.092(R)|CLK_BUFGP         |   0.000|
+Data_Tx<2>  |    2.361(R)|    0.192(R)|CLK_BUFGP         |   0.000|
+Data_Tx<3>  |    2.318(R)|    0.075(R)|CLK_BUFGP         |   0.000|
+Data_Tx<4>  |    1.378(R)|    0.240(R)|CLK_BUFGP         |   0.000|
+Data_Tx<5>  |    1.912(R)|    0.494(R)|CLK_BUFGP         |   0.000|
+Data_Tx<6>  |    1.575(R)|    0.675(R)|CLK_BUFGP         |   0.000|
+Data_Tx<7>  |    1.695(R)|   -0.024(R)|CLK_BUFGP         |   0.000|
+Rx          |    0.388(R)|    0.796(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+CLK_B       |    7.854(R)|CLK_BUFGP         |   0.000|
+Data_Rx<0>  |    7.343(R)|CLK_BUFGP         |   0.000|
+Data_Rx<1>  |    7.508(R)|CLK_BUFGP         |   0.000|
+Data_Rx<2>  |    6.557(R)|CLK_BUFGP         |   0.000|
+Data_Rx<3>  |    6.550(R)|CLK_BUFGP         |   0.000|
+Data_Rx<4>  |    6.696(R)|CLK_BUFGP         |   0.000|
+Data_Rx<5>  |    7.168(R)|CLK_BUFGP         |   0.000|
+Data_Rx<6>  |    6.966(R)|CLK_BUFGP         |   0.000|
+Data_Rx<7>  |    8.166(R)|CLK_BUFGP         |   0.000|
+Tx          |    9.162(R)|CLK_BUFGP         |   0.000|
+parity_err  |   10.601(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    3.272|         |         |         |
+CLK            |    4.120|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon May 11 01:44:19 2015 
+Analysis completed Sat Mar 11 11:10:24 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 129 MB
+Peak Memory Usage: 179 MB
 
 
 

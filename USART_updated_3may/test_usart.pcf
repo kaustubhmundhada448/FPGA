@@ -1,11 +1,12 @@
 //! **************************************************************************
-// Written by: Map P.28xd on Mon May 11 01:41:51 2015
+// Written by: Map P.28xd on Sat Mar 11 11:09:43 2017
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "Data_Tx<5>" LOCATE = SITE "F3" LEVEL 1;
 COMP "Data_Tx<6>" LOCATE = SITE "E2" LEVEL 1;
 COMP "Data_Tx<7>" LOCATE = SITE "N3" LEVEL 1;
+COMP "CLR_Rec" LOCATE = SITE "M4" LEVEL 1;
 COMP "parity_err" LOCATE = SITE "N13" LEVEL 1;
 COMP "Data_Rx<0>" LOCATE = SITE "M5" LEVEL 1;
 COMP "Data_Rx<1>" LOCATE = SITE "M11" LEVEL 1;

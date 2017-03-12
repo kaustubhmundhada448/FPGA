@@ -1,0 +1,43 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib simprims_ver -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/Git/FPGA/UART_1.0/test_usart_test_usart_sch_tb_isim_translate.exe -prj E:/Git/FPGA/UART_1.0/test_usart_test_usart_sch_tb_translate.prj work.test_usart_test_usart_sch_tb work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Git/FPGA/UART_1.0/netgen/translate/test_usart_translate.v" into library work
+Analyzing Verilog file "E:/Git/FPGA/UART_1.0/test_Bus.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module X_ZERO
+Compiling module X_ONE
+Compiling module X_XOR2
+Compiling module mux
+Compiling module X_MUX2
+Compiling module ffsrce
+Compiling module X_FF
+Compiling module sffsrce
+Compiling module X_SFF(INIT=1'b1)
+Compiling module X_SFF
+Compiling module X_INV
+Compiling module X_AND4
+Compiling module X_LUT4(INIT=16'b0110100110010110...
+Compiling module x_lut2_mux4
+Compiling module X_LUT2(INIT=4'b0110)
+Compiling module x_lut3_mux4
+Compiling module X_LUT3(INIT=8'b010100)
+Compiling module X_BUF
+Compiling module X_IPAD
+Compiling module X_OPAD
+Compiling module X_AND2
+Compiling module X_OR3
+Compiling module X_AND3
+Compiling module X_CKBUF
+Compiling module X_OBUF
+Compiling module test_usart
+Compiling module test_usart_test_usart_sch_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 67 Verilog Units
+Built simulation executable E:/Git/FPGA/UART_1.0/test_usart_test_usart_sch_tb_isim_translate.exe
+Fuse Memory Usage: 33424 KB
+Fuse CPU Usage: 1905 ms

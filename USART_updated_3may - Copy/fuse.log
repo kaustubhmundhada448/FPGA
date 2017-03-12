@@ -1,0 +1,67 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/Git/FPGA/USART_updated_3may/test_usart_test_usart_sch_tb_isim_beh.exe -prj E:/Git/FPGA/USART_updated_3may/test_usart_test_usart_sch_tb_beh.prj work.test_usart_test_usart_sch_tb work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/Reg_4bit.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/Add_sub_4bit.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/SIPO_reg.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/Parity_gen.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/outputreg_at_end_ofinput.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/nin_counter.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/Digital_Filter.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/decade_counter_new.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/bit10datareg_to_transmit.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/usart_transmiter.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/usart_receiver.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/Sync_Transmitter.v" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/Sync_Reciver.v" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/test_usart.vf" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/test_Bus.v" into library work
+Analyzing Verilog file "E:/Git/FPGA/USART_updated_3may/bit_11.vf" into library work
+Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module XOR2
+Compiling module Parity_gen_MUSER_test_usart
+Compiling module NOR2
+Compiling module FDRE
+Compiling module SIPO_reg_MUSER_test_usart
+Compiling module GND
+Compiling module INV
+Compiling module AND2
+Compiling module Add_sub_4bit_MUSER_test_usart
+Compiling module NAND4
+Compiling module FDCE
+Compiling module Reg_4bit_MUSER_test_usart
+Compiling module FD
+Compiling module nin_counter_MUSER_test_usart
+Compiling module outputreg_at_end_ofinput_MUSER_t...
+Compiling module AND4
+Compiling module FDC
+Compiling module AND3B2
+Compiling module AND3B1
+Compiling module OR3
+Compiling module AND2B1
+Compiling module FJKC_MXILINX_test_usart
+Compiling module Digital_Filter_MUSER_test_usart
+Compiling module OR2
+Compiling module usart_receiver_MUSER_test_usart
+Compiling module VCC
+Compiling module MUXCY
+Compiling module bit10datareg_to_transmit_MUSER_t...
+Compiling module decade_counter_new_MUSER_test_us...
+Compiling module usart_transmiter_MUSER_test_usar...
+Compiling module FJKC_MXILINX_Digital_Filter
+Compiling module Digital_Filter
+Compiling module Sync_Reciver
+Compiling module Sync_Transmitter
+Compiling module test_usart
+Compiling module test_usart_test_usart_sch_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 14 sub-compilation(s) to finish...
+Compiled 37 Verilog Units
+Built simulation executable E:/Git/FPGA/USART_updated_3may/test_usart_test_usart_sch_tb_isim_beh.exe
+Fuse Memory Usage: 29144 KB
+Fuse CPU Usage: 1390 ms

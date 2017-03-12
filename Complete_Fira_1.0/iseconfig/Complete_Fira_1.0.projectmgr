@@ -44,6 +44,9 @@
          <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_6 - usart_receiver</ClosedNode>
          <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_7 - usart_transmiter</ClosedNode>
          <ClosedNode>/ETC_PWM_USART E:|FPGA_Xilinx|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_8 - Precale_434</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|Git|FPGA|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_6 - usart_receiver</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|Git|FPGA|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_7 - usart_transmiter</ClosedNode>
+         <ClosedNode>/ETC_PWM_USART E:|Git|FPGA|Complete_Fira_1.0|ETC_PWM_USART.sch/XLXI_8 - Precale_434</ClosedNode>
          <ClosedNode>/Main_Module E:|FPGA_Xilinx|ETC_WITH_LEDs|Main_Module.sch</ClosedNode>
          <ClosedNode>/OCR_Generator C:|Users|Kaustubh Mundhada|Dropbox|FIRA_FPGA|Encoder_Ticks_Counter|OCR_Generator.sch/XLXI_8 - Twos_Comp</ClosedNode>
          <ClosedNode>/PID_Module E:|FPGA_Xilinx|PID|PID_Module.sch</ClosedNode>
@@ -61,13 +64,13 @@
          <ClosedNode>/usart_transmiter E:|FPGA_Xilinx|USART_updated_3may|usart_transmiter.sch</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ETC_PWM_USART (E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.sch)</SelectedItem>
+         <SelectedItem>XLXI_7 - usart_transmiter (E:/Git/FPGA/Complete_Fira_1.0/usart_transmiter.sch)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000134000000020000000000000000000000000200000064ffffffff000000810000000300000002000001340000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000029c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000029c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>ETC_PWM_USART (E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/ETC_PWM_USART.sch)</CurrentItem>
+      <CurrentItem>XLXI_7 - usart_transmiter (E:/Git/FPGA/Complete_Fira_1.0/usart_transmiter.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -75,35 +78,33 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000196000000010000000100000000000000000000000064ffffffff000000810000000000000001000001960000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>Multiplier_2.sch</SelectedItem>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >12</ScrollbarPosition>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000003f5000000040101000100000000000000000000000064ffffffff000000810000000000000004000002d70000000100000000000000540000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Multiplier_2.sch</CurrentItem>
+      <CurrentItem>E:\Git\FPGA\Complete_Fira_1.0\Add_sub_4bit.sch</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems/>
-      <ScrollbarPosition orientation="vertical" >15</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000001b9000000010001000100000000000000000000000064ffffffff000000810000000000000001000001b90000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000173000000010001000100000000000000000000000064ffffffff000000810000000000000001000001730000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -122,13 +123,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Place &amp; Route</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000185000000010000000100000000000000000000000064ffffffff000000810000000000000001000001850000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000184000000010000000100000000000000000000000064ffffffff000000810000000000000001000001840000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Place &amp; Route</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -184,12 +185,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
 </Project>

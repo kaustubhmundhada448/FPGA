@@ -1,0 +1,28 @@
+Command line:
+   test_usart_test_usart_sch_tb_isim_par.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  63544
+
+Sat Mar 11 11:24:35 2017
+
+
+ Elaboration Time: 0.453125 sec
+
+ Current Memory Usage: 872.776 Meg
+
+ Total Signals          : 3489
+ Total Nets             : 1990
+ Total Signal Drivers   : 2039
+ Total Blocks           : 512
+ Total Primitive Blocks : 384
+ Total Processes        : 2771
+ Total Traceable Variables  : 1154
+ Total Scalar Nets and Variables : 42323
+
+ Total Simulation Time: 14.1094 sec
+
+ Current Memory Usage: 715.489 Meg
+
+Sat Mar 11 11:29:18 2017
+

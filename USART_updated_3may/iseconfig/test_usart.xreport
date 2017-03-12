@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-09-26T02:10:00</DateModified>
+  <DateModified>2017-03-11T11:29:21</DateModified>
   <ModuleName>test_usart</ModuleName>
-  <SummaryTimeStamp>2015-10-12T20:01:26</SummaryTimeStamp>
-  <SavedFilePath>E:/FPGA_Xilinx/USART_updated_3may/iseconfig/test_usart.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/FPGA_Xilinx/USART_updated_3may\</ImplementationReportsDirectory>
-  <DateInitialized>2015-10-12T20:00:43</DateInitialized>
+  <SummaryTimeStamp>2017-03-11T11:10:38</SummaryTimeStamp>
+  <SavedFilePath>E:/Git/FPGA/USART_updated_3may/iseconfig/test_usart.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/Git/FPGA/USART_updated_3may\</ImplementationReportsDirectory>
+  <DateInitialized>2017-02-22T19:26:08</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

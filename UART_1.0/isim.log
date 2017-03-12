@@ -1,0 +1,15 @@
+ISim log file
+Running: E:\Git\FPGA\UART_1.0\test_usart_test_usart_sch_tb_isim_translate.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/Git/FPGA/UART_1.0/test_usart_test_usart_sch_tb_isim_translate.wdb 
+ISim P.28xd (signature 0xa0883be4)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 100.00us
+# restart
+# run 100.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

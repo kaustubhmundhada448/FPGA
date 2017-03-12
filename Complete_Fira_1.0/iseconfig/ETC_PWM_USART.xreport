@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-09-25T21:34:57</DateModified>
+  <DateModified>2017-01-17T22:01:46</DateModified>
   <ModuleName>ETC_PWM_USART</ModuleName>
   <SummaryTimeStamp>2016-09-25T21:34:45</SummaryTimeStamp>
-  <SavedFilePath>E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015/iseconfig/ETC_PWM_USART.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/FPGA_Xilinx/Complete_Fira_1.0_working_22_08_2015\</ImplementationReportsDirectory>
+  <SavedFilePath>E:/Git/FPGA/Complete_Fira_1.0/iseconfig/ETC_PWM_USART.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/Git/FPGA/Complete_Fira_1.0\</ImplementationReportsDirectory>
   <DateInitialized>2015-05-15T16:35:29</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

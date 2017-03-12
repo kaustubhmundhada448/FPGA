@@ -1,0 +1,2 @@
+verilog isim_temp "netgen/par/test_usart_timesim.v"
+verilog isim_temp "test_Bus.v"
