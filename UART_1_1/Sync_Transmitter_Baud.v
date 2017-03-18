@@ -52,15 +52,15 @@ always @(posedge CLK)
 			Count_Baud <= 0;
 		end
 		
-		else 
+		else if(RST != 1)
 		begin
 				Count_Baud <= Count_Baud + 1;
-				if(Count_Baud == 10)
+				if(Count_Baud == 651)
 				begin
 					Count_Baud <= 0;
 				end
 				
-				if(Count_Baud == 5)
+				if(Count_Baud == 300)
 				begin
 					CLK_Baud <= !CLK_Baud;
 				end

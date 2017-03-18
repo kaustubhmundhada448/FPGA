@@ -57,12 +57,12 @@ reg [3:0] counter;
 		counter <= 0;
 		end
 	
-	else if(Serial_IN_O == 1 && Filt_In == 0 && counter == 0)
+	else if(!CLR && Serial_IN_O == 1 && Filt_In == 0)
 		begin
 		status <= 1;
 		end
 		
-	else if(status == 1 && Baud_CLK_O == 0 && CLK_Baud == 1 && counter < 10)
+	else if(!CLR && status == 1 && Baud_CLK_O == 0 && CLK_Baud == 1 && counter < 10)
 		begin
 		Parity_Bit <= Filt_In;
 		Data_Reg[7] <= Parity_Bit;

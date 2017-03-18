@@ -75,10 +75,10 @@ LAB1:    return;
 }
 
 
-extern void simprims_ver_m_00000000000126354981_1080494567_2506530301_init()
+extern void simprims_ver_m_00000000000126354981_1080494567_1039856344_init()
 {
 	static char *pe[] = {(void *)Cont_28_0};
-	xsi_register_didat("simprims_ver_m_00000000000126354981_1080494567_2506530301", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_1080494567_2506530301.didat");
+	xsi_register_didat("simprims_ver_m_00000000000126354981_1080494567_1039856344", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_1080494567_1039856344.didat");
 	xsi_register_executes(pe);
 }
 

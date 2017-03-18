@@ -75,38 +75,38 @@ LAB1:    return;
 }
 
 
-extern void simprims_ver_m_00000000000126354981_0818475687_2506530301_init()
+extern void simprims_ver_m_00000000000126354981_0818475687_1039856344_init()
 {
 	static char *pe[] = {(void *)Cont_28_0};
-	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_2506530301", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_2506530301.didat");
+	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_1039856344", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_1039856344.didat");
 	xsi_register_executes(pe);
 }
 
-extern void simprims_ver_m_00000000000126354981_0818475687_4114229430_init()
+extern void simprims_ver_m_00000000000126354981_0818475687_3765185373_init()
 {
 	static char *pe[] = {(void *)Cont_28_0};
-	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_4114229430", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_4114229430.didat");
+	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_3765185373", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_3765185373.didat");
 	xsi_register_executes(pe);
 }
 
-extern void simprims_ver_m_00000000000126354981_0818475687_1223705720_init()
+extern void simprims_ver_m_00000000000126354981_0818475687_2150669846_init()
 {
 	static char *pe[] = {(void *)Cont_28_0};
-	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_1223705720", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_1223705720.didat");
+	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_2150669846", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_2150669846.didat");
 	xsi_register_executes(pe);
 }
 
-extern void simprims_ver_m_00000000000126354981_0818475687_0682422579_init()
+extern void simprims_ver_m_00000000000126354981_0818475687_1571178387_init()
 {
 	static char *pe[] = {(void *)Cont_28_0};
-	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_0682422579", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_0682422579.didat");
+	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_1571178387", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_1571178387.didat");
 	xsi_register_executes(pe);
 }
 
-extern void simprims_ver_m_00000000000126354981_0818475687_0266085382_init()
+extern void simprims_ver_m_00000000000126354981_0818475687_2806008611_init()
 {
 	static char *pe[] = {(void *)Cont_28_0};
-	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_0266085382", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_0266085382.didat");
+	xsi_register_didat("simprims_ver_m_00000000000126354981_0818475687_2806008611", "isim/test_usart_test_usart_sch_tb_isim_par.exe.sim/simprims_ver/m_00000000000126354981_0818475687_2806008611.didat");
 	xsi_register_executes(pe);
 }
 

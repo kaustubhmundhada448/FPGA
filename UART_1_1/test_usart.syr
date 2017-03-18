@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.35 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.26 secs
+Total CPU time to Xst completion: 0.36 secs
  
 --> Reading design: test_usart.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -325,22 +325,21 @@ Design Statistics
 # IOs                              : 24
 
 Cell Usage :
-# BELS                             : 97
+# BELS                             : 98
 #      AND2B1                      : 1
 #      AND3B1                      : 1
 #      AND3B2                      : 1
 #      AND4                        : 2
 #      GND                         : 1
-#      INV                         : 6
+#      INV                         : 7
 #      LUT1                        : 10
-#      LUT2                        : 3
-#      LUT2_L                      : 2
-#      LUT3                        : 8
-#      LUT3_D                      : 2
-#      LUT3_L                      : 1
-#      LUT4                        : 30
-#      LUT4_D                      : 3
-#      LUT4_L                      : 3
+#      LUT2                        : 4
+#      LUT2_L                      : 1
+#      LUT3                        : 6
+#      LUT3_D                      : 3
+#      LUT4                        : 31
+#      LUT4_D                      : 2
+#      LUT4_L                      : 5
 #      MUXCY                       : 10
 #      OR3                         : 1
 #      VCC                         : 1
@@ -349,8 +348,7 @@ Cell Usage :
 #      FD                          : 9
 #      FDC                         : 1
 #      FDE                         : 17
-#      FDR                         : 11
-#      FDRE                        : 8
+#      FDRE                        : 19
 #      FDRSE                       : 1
 #      FDSE                        : 4
 # Clock Buffers                    : 1
@@ -365,9 +363,9 @@ Device utilization summary:
 
 Selected Device : 3s250ecp132-5 
 
- Number of Slices:                       40  out of   2448     1%  
+ Number of Slices:                       39  out of   2448     1%  
  Number of Slice Flip Flops:             51  out of   4896     1%  
- Number of 4 input LUTs:                 68  out of   4896     1%  
+ Number of 4 input LUTs:                 69  out of   4896     1%  
  Number of IOs:                          24
  Number of bonded IOBs:                  24  out of     92    26%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -409,7 +407,7 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 5.204ns (Maximum Frequency: 192.171MHz)
-   Minimum input arrival time before clock: 5.352ns
+   Minimum input arrival time before clock: 5.419ns
    Maximum output required time after clock: 7.226ns
    Maximum combinational path delay: No path found
 
@@ -420,7 +418,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 5.204ns (frequency: 192.171MHz)
-  Total number of paths / destination ports: 656 / 95
+  Total number of paths / destination ports: 600 / 95
 -------------------------------------------------------------------------
 Delay:               5.204ns (Levels of Logic = 5)
   Source:            Reciever/UUT/XLXI_1 (FF)
@@ -445,9 +443,9 @@ Delay:               5.204ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 46 / 39
+  Total number of paths / destination ports: 69 / 51
 -------------------------------------------------------------------------
-Offset:              5.352ns (Levels of Logic = 3)
+Offset:              5.419ns (Levels of Logic = 3)
   Source:            CLR_Rec (PAD)
   Destination:       Transmitter/Count_Baud_10 (FF)
   Destination Clock: CLK rising
@@ -456,13 +454,13 @@ Offset:              5.352ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   1.106   0.902  CLR_Rec_IBUF (CLR_Rec_IBUF)
+     IBUF:I->O            12   1.106   0.969  CLR_Rec_IBUF (CLR_Rec_IBUF)
      LUT2:I0->O            2   0.612   0.532  Transmitter/CLK_Baud_and00001 (Transmitter/CLK_Baud_and0000)
-     LUT4:I0->O           11   0.612   0.793  Transmitter/Count_Baud_or0000 (Transmitter/Count_Baud_or0000)
-     FDR:R                     0.795          Transmitter/Count_Baud_0
+     LUT4:I0->O           11   0.612   0.793  Transmitter/Count_Baud_or000067 (Transmitter/Count_Baud_or0000)
+     FDRE:R                    0.795          Transmitter/Count_Baud_0
     ----------------------------------------
-    Total                      5.352ns (3.125ns logic, 2.227ns route)
-                                       (58.4% logic, 41.6% route)
+    Total                      5.419ns (3.125ns logic, 2.294ns route)
+                                       (57.7% logic, 42.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
@@ -479,7 +477,7 @@ Offset:              7.226ns (Levels of Logic = 4)
     ----------------------------------------  ------------
      FDE:C->Q              3   0.514   0.603  Reciever/Data_Reg_5 (Reciever/Data_Reg_5)
      LUT4:I0->O            1   0.612   0.387  Reciever/Mxor_Parity_ERR_xo<0>12 (Reciever/Mxor_Parity_ERR_xo<0>12)
-     LUT3:I2->O            1   0.612   0.360  Reciever/Mxor_Parity_ERR_xo<0>14_SW0 (N24)
+     LUT3:I2->O            1   0.612   0.360  Reciever/Mxor_Parity_ERR_xo<0>14_SW0 (N14)
      LUT4:I3->O            1   0.612   0.357  Reciever/Mxor_Parity_ERR_xo<0>14 (parity_err_OBUF)
      OBUF:I->O                 3.169          parity_err_OBUF (parity_err)
     ----------------------------------------
@@ -489,12 +487,12 @@ Offset:              7.226ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 15.76 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.79 secs
  
 --> 
 
-Total memory usage is 305880 kilobytes
+Total memory usage is 301864 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

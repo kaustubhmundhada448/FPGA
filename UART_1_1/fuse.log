@@ -13,24 +13,24 @@ Compiling module X_BUF
 Compiling module X_XOR2
 Compiling module mux
 Compiling module X_MUX2
-Compiling module X_IPAD
-Compiling module X_LUT4(INIT=16'b010100010001000)
-Compiling module X_BUFGMUX(LOC="BUFGMUX_X2Y10")
-Compiling module X_INV(LOC="BUFGMUX_X2Y10")
+Compiling module X_INV(LOC="SLICE_X17Y14")
 Compiling module X_AND2
-Compiling module X_OPAD
-Compiling module X_OBUF
 Compiling module sffsrce
 Compiling module X_SFF
+Compiling module X_OPAD
+Compiling module X_OBUF
+Compiling module X_IPAD
+Compiling module X_BUFGMUX(LOC="BUFGMUX_X2Y11")
+Compiling module X_LUT4(INIT=16'b1010101010101010...
+Compiling module X_SFF(INIT=1'b1)
 Compiling module ffsrce
 Compiling module X_FF
-Compiling module X_SFF(INIT=1'b1)
 Compiling module test_usart
 Compiling module test_usart_test_usart_sch_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 247 Verilog Units
+Compiled 252 Verilog Units
 Built simulation executable E:/Git/FPGA/UART_1_1/test_usart_test_usart_sch_tb_isim_par.exe
-Fuse Memory Usage: 35032 KB
-Fuse CPU Usage: 2686 ms
+Fuse Memory Usage: 33972 KB
+Fuse CPU Usage: 1359 ms

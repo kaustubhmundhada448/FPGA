@@ -43,7 +43,7 @@ reg indone;
 	#1000;
 	CLR = 1;
 	CLR_Rec = 1;
-	#8000;
+	#150000;
 	CLR = 0;
 		CLR_Rec = 0;
 indone = 1;
@@ -57,7 +57,7 @@ indone = 1;
 		 end
 
  	always begin
-		#2500;
+		#150000;
 		if(indone == 1)CLR = ~CLR;
    end
 	

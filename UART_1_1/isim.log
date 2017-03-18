@@ -9,7 +9,10 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 INFO: SDF backannotation was successful with SDF file netgen/par/test_usart_timesim.sdf, for root module /test_usart_test_usart_sch_tb/UUT/.
 Finished circuit initialization process.
-# run 30.00us
-# run 30.00us
-# run 30.00us
-# run 30.00us
+# run 1500.00us
+WARNING: at 1002682 ps: Timing violation in /test_usart_test_usart_sch_tb/UUT/\Transmitter/RST_O /  $setuphold<setup>( I:1002644 ps, CLK:1002682 ps,115 ps,42 ps)
+
+
+WARNING: at 151002682 ps: Timing violation in /test_usart_test_usart_sch_tb/UUT/\Transmitter/RST_O /  $setuphold<setup>( I:151002644 ps, CLK:151002682 ps,115 ps,42 ps)
+
+

@@ -1,7 +1,7 @@
 Release 14.2 Drc P.28xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Mon Mar 13 01:43:04 2017
+Sat Mar 18 15:43:26 2017
 
 drc -z test_usart.ncd test_usart.pcf
 
